@@ -3,7 +3,8 @@
 Reads the JSON directories in ../data_sources/data_sources_json, drops the
 sources removed from the dashboard (SEDAC, CDDIS), and tags every remaining
 entry with its precipitation relevance and topics. Sources from the invitee
-roster are added last: new entries, plus extra endpoints for existing ones.
+roster are added next: new entries, plus extra endpoints for existing ones.
+The USGS entry (Other US) is added last, from its own file.
 
 Run:  python3 build_data.py
 """
@@ -22,6 +23,7 @@ AGENCY_FILES = [
 PROJECTS_FILE = "us-government-meteorology-research-projects_and_non_digital.json"
 ROSTER_FILE = "invitee-roster-sources.json"
 ROSTER_GROUPS = ["Other US", "International"]
+USGS_FILE = "usgs-sources.json"
 
 # Removed from the dashboard entirely.
 REMOVED = {
@@ -192,31 +194,35 @@ def add_unique(items, extra, key):
     items += [x for x in extra if x[key].rstrip("/") not in seen]
 
 
+def data_center_entry(c):
+    """An entry from a data center in the roster or USGS file, which list topics and agency themselves."""
+    return {
+        "id": f"{slug(c['agency'])}-{c['id']}",
+        "agency": c["agency"],
+        "kind": "data-center",
+        "name": c["name"],
+        "fullName": c["fullName"],
+        "host": c["host"],
+        "location": c["location"],
+        "discipline": c["discipline"],
+        "topics": c["topics"],
+        "relevance": "primary",
+        "removalReason": None,
+        "blurb": c["blurb"],
+        "holdings": c["missions"],
+        "formats": c["formats"],
+        "volumeTB": c["volumeTB"],
+        "filesM": c["filesM"],
+        "datasets": c["datasets"],
+        "endpoints": c["endpoints"],
+        "sources": c["sources"],
+    }
+
+
 def add_roster(entries, meta):
     """Adds the invitee-roster sources; returns the roster items that were not added."""
     doc = json.loads((SRC / ROSTER_FILE).read_text())
-    for c in doc["dataCenters"]:
-        entries.append({
-            "id": f"{slug(c['agency'])}-{c['id']}",
-            "agency": c["agency"],
-            "kind": "data-center",
-            "name": c["name"],
-            "fullName": c["fullName"],
-            "host": c["host"],
-            "location": c["location"],
-            "discipline": c["discipline"],
-            "topics": c["topics"],
-            "relevance": "primary",
-            "removalReason": None,
-            "blurb": c["blurb"],
-            "holdings": c["missions"],
-            "formats": c["formats"],
-            "volumeTB": c["volumeTB"],
-            "filesM": c["filesM"],
-            "datasets": c["datasets"],
-            "endpoints": c["endpoints"],
-            "sources": c["sources"],
-        })
+    entries += [data_center_entry(c) for c in doc["dataCenters"]]
     by_id = {e["id"]: e for e in entries}
     unknown = set(doc["additionalEndpoints"]) - set(by_id)
     assert not unknown, f"Unknown ids in additionalEndpoints: {sorted(unknown)}"
@@ -231,11 +237,20 @@ def add_roster(entries, meta):
     return doc["notAdded"]
 
 
+def add_usgs(entries, meta):
+    """Adds the USGS entry (Other US) and its notes to the Other US notes."""
+    doc = json.loads((SRC / USGS_FILE).read_text())
+    entries += [data_center_entry(c) for c in doc["dataCenters"]]
+    other = meta["Other US"]
+    meta["Other US"] = {**other, "notes": other["notes"] + doc["notes"]}
+
+
 def main():
     entries, meta = agency_entries()
     projects, meta["Extra"] = project_entries()
     entries += projects
     not_added = add_roster(entries, meta)
+    add_usgs(entries, meta)
     ids = {e["id"] for e in entries}
     missing = (set(SUGGESTED_REMOVAL) | SECONDARY | set(ENTRY_TOPICS)) - ids
     assert not missing, f"Unknown ids in lookup tables: {sorted(missing)}"

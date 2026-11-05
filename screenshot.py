@@ -22,7 +22,7 @@ with sync_playwright() as p:
         page = browser.new_page(viewport={"width": width, "height": height}, color_scheme=scheme, accept_downloads=True)
         page.on("pageerror", lambda e: errors.append(f"{width}px {scheme}: {e}"))
         page.goto(PAGE, wait_until="domcontentloaded")
-        page.get_by_text("Showing 86 of 86 sources").wait_for()
+        page.get_by_text("Showing 87 of 87 sources").wait_for()
         return page
 
     page = open_page(1400, 900)
@@ -79,6 +79,10 @@ with sync_playwright() as p:
     page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
     page.screenshot(path=OUT / "4b-prism-panel.png")
     print("Other US rows:", page.locator("#result-count").inner_text())
+    page.get_by_role("button", name="Hide all 2 data access endpoints for PRISM").click()
+    page.get_by_role("button", name="Show all 5 data access endpoints for USGS").click()
+    page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
+    page.screenshot(path=OUT / "4e-usgs-panel.png")
     page.get_by_role("button", name="Other US").click()
 
     # International tab: same panel, international sources only.

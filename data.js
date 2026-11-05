@@ -61,7 +61,10 @@ window.PRECIP_DATA = {
     "Only sources and endpoints that were not already on the dashboard were added.",
     "Every URL was checked on 2026-11-05; redirected links use their final address.",
     "Datasets held by a data center already on the dashboard are added as endpoints of that center (additionalEndpoints), not as new entries.",
-    "Research group pages, papers, software tools and missions with no data yet were not added (notAdded)."
+    "Research group pages, papers, software tools and missions with no data yet were not added (notAdded).",
+    "The USGS entry under Other US comes from usgs-sources.json, not the invitee roster.",
+    "Counts are from USGS Data page searches on 2026-11-05 (Type: Data Release and Real-time Data): precipitation 401, rainfall 140, rain 63; 529 unique, 480 with a whole-word match in the title or description, 79 hand-picked as precipitation data.",
+    "Many real-time pages on usgs.gov still link to retired NWIS addresses (waterdata.usgs.gov/.../nwis/...), which return 404; current data is on Water Data for the Nation and the Water Data API."
    ],
    "file": "invitee-roster-sources.json"
   },
@@ -5131,6 +5134,76 @@ window.PRECIP_DATA = {
     {
      "label": "Digital Twin Earth Hydrology (Frontiers 2023)",
      "url": "https://www.frontiersin.org/journals/science/articles/10.3389/fsci.2023.1190191/full"
+    }
+   ]
+  },
+  {
+   "id": "other-us-usgs",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "USGS",
+   "fullName": "U.S. Geological Survey",
+   "host": "US Department of the Interior",
+   "location": "Reston, VA (headquarters) · science centers across the US",
+   "discipline": "Water, hazards & ecosystem data, including rain gauges",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "USGS measures rainfall at many of its streamgages and other monitoring sites (parameter 00045), served through Water Data for the Nation and its API, and its science centers publish data releases. Searching USGS data releases and real-time data on 2026-11-05 found 401 items for precipitation, 140 for rainfall and 63 for rain (529 unique). 480 use one of those words in the title or description, and 79 were hand-picked as precipitation data: 23 real-time gauge pages, 37 station and field records and 19 gridded or derived products. Most come from the Water Resources mission area and its state Water Science Centers.",
+   "holdings": [
+    "Rain gauges at USGS monitoring sites (parameter 00045)",
+    "Water Resources: 287 matching items (state Water Science Centers)",
+    "Ecosystems: 118 matching items",
+    "Natural Hazards: 69 matching items (post-fire and landslide rain gauges)",
+    "Geology, Energy & Minerals: 32 matching items",
+    "Core Science Systems: 16 matching items",
+    "Gridded and derived: CONUS404 bias-adjusted precipitation, CMIP6-LOCA2 precipitation extremes, precipitation frequency rasters"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Water Data for the Nation",
+     "url": "https://waterdata.usgs.gov/"
+    },
+    {
+     "name": "Water Data API: latest precipitation readings (00045)",
+     "url": "https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-continuous/items?parameter_code=00045&f=json"
+    },
+    {
+     "name": "USGS data search: precipitation (401 on 2026-11-05)",
+     "url": "https://www.usgs.gov/products/data?node_data_type%5B0%5D=149098&node_data_type%5B1%5D=149100&node_data_type_1=All&node_topics=All&node_release_year=&search_api_fulltext=precipitation&items_per_page=12&node_states="
+    },
+    {
+     "name": "USGS data search: rainfall (140 on 2026-11-05)",
+     "url": "https://www.usgs.gov/products/data?node_data_type%5B0%5D=149098&node_data_type%5B1%5D=149100&node_data_type_1=All&node_topics=All&node_release_year=&search_api_fulltext=rainfall&items_per_page=12&node_states="
+    },
+    {
+     "name": "USGS data search: rain (63 on 2026-11-05)",
+     "url": "https://www.usgs.gov/products/data?node_data_type%5B0%5D=149098&node_data_type%5B1%5D=149100&node_data_type_1=All&node_topics=All&node_release_year=&search_api_fulltext=rain&items_per_page=12&node_states="
+    }
+   ],
+   "sources": [
+    {
+     "label": "USGS Data",
+     "url": "https://www.usgs.gov/products/data"
+    },
+    {
+     "label": "USGS mission areas",
+     "url": "https://www.usgs.gov/science/mission-areas"
+    },
+    {
+     "label": "Water Resources Mission Area",
+     "url": "https://www.usgs.gov/mission-areas/water-resources"
     }
    ]
   }
