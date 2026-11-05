@@ -22,15 +22,24 @@ with sync_playwright() as p:
         page = browser.new_page(viewport={"width": width, "height": height}, color_scheme=scheme, accept_downloads=True)
         page.on("pageerror", lambda e: errors.append(f"{width}px {scheme}: {e}"))
         page.goto(PAGE, wait_until="domcontentloaded")
-        page.get_by_text("Showing 85 of 85 sources").wait_for()
+        page.get_by_text("Showing 86 of 86 sources").wait_for()
         return page
 
     page = open_page(1400, 900)
     page.screenshot(path=OUT / "1-dashboard.png")
 
-    page.get_by_role("button", name="Show all 7 data access endpoints for NCEI").click()
+    # The button reads "Show all ..." when closed and "Hide all ..." when open.
+    ncei_button = re.compile(r"(Show|Hide) all \d+ data access endpoints for NCEI$")
+    rwrc_button = re.compile(r"(Show|Hide) all \d+ data access endpoints for NCEI-RWRC$")
+    page.get_by_role("button", name=ncei_button).click()
     page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
     page.screenshot(path=OUT / "2-ncei-panel.png")
+    page.get_by_role("button", name=ncei_button).click()
+
+    page.get_by_role("button", name=rwrc_button).click()
+    page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
+    page.screenshot(path=OUT / "2b-rwrc-panel.png")
+    page.get_by_role("button", name=rwrc_button).click()
 
     page.get_by_role("button", name="Save all as").click()
     page.evaluate("window.scrollTo(0, 0)")
@@ -96,6 +105,11 @@ with sync_playwright() as p:
     phone = open_page(390, 844)
     overflow = phone.evaluate("document.documentElement.scrollWidth - window.innerWidth")
     phone.screenshot(path=OUT / "7-phone.png")
+    # The NCEI-RWRC panel has the longest source labels (the six centers and their states).
+    phone.get_by_role("button", name=rwrc_button).click()
+    phone.get_by_role("heading", name="Sources", exact=True).scroll_into_view_if_needed()
+    overflow = max(overflow, phone.evaluate("document.documentElement.scrollWidth - window.innerWidth"))
+    phone.screenshot(path=OUT / "7b-phone-rwrc.png")
 
     print("page errors:", errors or "none")
     print("phone horizontal overflow px:", overflow)

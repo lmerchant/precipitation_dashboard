@@ -83,7 +83,7 @@ ENTRY_TOPICS = {
     "nasa-podaac": ["satellite", "hydrology"], "nasa-gesdisc": ["satellite", "models"],
     "nasa-asdc": ["satellite"], "nasa-nsidc": ["satellite", "snow"], "nasa-obdaac": ["satellite"],
     "nasa-ornl": ["gauges", "models"], "nasa-ghrc": ["satellite", "radar", "field"],
-    "noaa-ncei": ["gauges", "radar", "satellite", "historical"],
+    "noaa-ncei": ["gauges", "radar", "satellite", "historical"], "noaa-rwrc": ["gauges", "historical"],
     "noaa-nodd": ["radar", "satellite", "models"], "noaa-class": ["satellite"],
     "noaa-coops": ["other"], "noaa-ndbc": ["gauges"], "noaa-coastwatch": ["satellite"],
     "noaa-gfdl": ["models"], "noaa-pmel": ["gauges"], "noaa-aoml": ["radar", "field"],

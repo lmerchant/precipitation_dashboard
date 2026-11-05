@@ -867,7 +867,7 @@ window.PRECIP_DATA = {
    ],
    "relevance": "primary",
    "removalReason": null,
-   "blurb": "NOAA’s premier environmental archive — from the seafloor to the surface of the sun. Ingests ~229 TB/month from 130+ observing platforms; world’s largest archive of weather, climate, ocean, and paleoclimate data.",
+   "blurb": "NOAA’s premier environmental archive — from the seafloor to the surface of the sun. Ingests ~229 TB/month from 130+ observing platforms; world’s largest archive of weather, climate, ocean, and paleoclimate data. Its Regional Weather Records Centers are listed separately as NCEI-RWRC.",
    "holdings": [
     "GHCN-Daily & Global Summary of the Day",
     "NEXRAD radar archive",
@@ -947,6 +947,103 @@ window.PRECIP_DATA = {
     {
      "label": "NCEI — Lightning products",
      "url": "https://www.ncei.noaa.gov/products/lightning-products"
+    }
+   ]
+  },
+  {
+   "id": "noaa-rwrc",
+   "agency": "NOAA",
+   "kind": "data-center",
+   "name": "NCEI-RWRC",
+   "fullName": "Regional Weather Records Centers (formerly Regional Climate Centers)",
+   "host": "NCEI (NESDIS), with six host universities",
+   "location": "Lincoln, NE · West Lafayette, IN · Ithaca, NY · Chapel Hill, NC · College Station, TX · Reno, NV",
+   "discipline": "Regional station climate data & climate services",
+   "topics": [
+    "gauges",
+    "historical"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NCEI manages the Regional Climate Center (RCC) Program, now called the Regional Weather Records Center (RWRC) Program: six centers that provide climate services to six regions covering the United States. They provide sector-specific and value-added data products and services, build digital infrastructure for climate information, and combine non-NOAA climate data with NOAA data. All six share ACIS (the Applied Climate Information System), which serves daily station data such as precipitation, snowfall and temperature.",
+   "holdings": [
+    "Daily station data: precipitation, snowfall, snow depth, temperature",
+    "Station normals, records and extremes (NOWData)",
+    "Regional climate summaries, maps and reports",
+    "Drought, agricultural and hazard-planning tools",
+    "Extreme precipitation tools (Northeast RCC)",
+    "Automated Weather Data Network (High Plains RCC)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "web tools"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "ACIS Web Services (all RCCs)",
+     "url": "https://www.rcc-acis.org/docs_webservices.html"
+    },
+    {
+     "name": "SC-ACIS station data (all RCCs)",
+     "url": "https://scacis.rcc-acis.org/"
+    },
+    {
+     "name": "High Plains RCC: Find Data",
+     "url": "https://hprcc.unl.edu/find.php"
+    },
+    {
+     "name": "Midwestern RCC: cli-MATE",
+     "url": "https://mrcc.purdue.edu/CLIMATE/home"
+    },
+    {
+     "name": "Northeast RCC: CLIMOD 2",
+     "url": "http://climod2.nrcc.cornell.edu/"
+    },
+    {
+     "name": "Southeast RCC: NOWData",
+     "url": "https://sercc.com/noaa-online-weather/"
+    },
+    {
+     "name": "Southern RCC: Climate Data Portal",
+     "url": "https://www.srcc.tamu.edu/climate_data_viewer/"
+    },
+    {
+     "name": "Western RCC: Station Viewer",
+     "url": "https://wrcc.app/stations"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NCEI Regional Climate Centers program",
+     "url": "https://www.ncei.noaa.gov/regional/regional-climate-centers"
+    },
+    {
+     "label": "High Plains RCC (University of Nebraska–Lincoln): CO, KS, NE, ND, SD, WY",
+     "url": "https://hprcc.unl.edu/"
+    },
+    {
+     "label": "Midwestern RCC (Purdue University): IL, IN, IA, KY, MI, MN, MO, OH, WI",
+     "url": "https://mrcc.purdue.edu/"
+    },
+    {
+     "label": "Northeast RCC (Cornell University): CT, DE, DC, ME, MD, MA, NH, NJ, NY, PA, RI, VT, WV",
+     "url": "https://www.nrcc.cornell.edu/"
+    },
+    {
+     "label": "Southeast RCC (University of North Carolina at Chapel Hill): AL, FL, GA, NC, SC, VA, PR, USVI",
+     "url": "https://sercc.com/"
+    },
+    {
+     "label": "Southern RCC (Texas A&M University): AR, LA, MS, OK, TN, TX",
+     "url": "https://www.srcc.tamu.edu/"
+    },
+    {
+     "label": "Western RCC (Desert Research Institute): AZ, CA, ID, MT, NV, NM, OR, UT, WA",
+     "url": "https://wrcc.dri.edu/"
     }
    ]
   },
