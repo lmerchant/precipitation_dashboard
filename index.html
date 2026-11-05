@@ -18,11 +18,12 @@
       <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c3.6 4.6 6.5 8.4 6.5 12a6.5 6.5 0 0 1-13 0c0-3.6 2.9-7.4 6.5-12z" fill="var(--accent)"/></svg>
       <div>
         <h1>US Precipitation Data Sources</h1>
-        <p class="brand-sub">NASA · NOAA · NSF · NWS · other US · international · research projects</p>
+        <p class="brand-sub">NASA · NOAA · NSF · NWS · other US · research projects · international</p>
       </div>
     </div>
     <nav class="tabs" role="tablist" aria-label="Pages">
       <button class="tab" role="tab" id="tab-dashboard" aria-controls="view-dashboard" data-view="dashboard" type="button">Dashboard</button>
+      <button class="tab" role="tab" id="tab-international" aria-controls="view-dashboard" data-view="international" type="button">International</button>
       <button class="tab" role="tab" id="tab-removals" aria-controls="view-removals" data-view="removals" type="button">Possible removals <span class="tab-count" id="removal-count"></span></button>
     </nav>
     <button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" type="button">
@@ -67,7 +68,7 @@
           </div>
         </div>
       </div>
-      <div class="filter-row">
+      <div class="filter-row" id="agency-filter">
         <span class="filter-label">Filter on Agency</span>
         <div class="chips" id="agency-chips" role="group" aria-label="Filter on agency"></div>
       </div>

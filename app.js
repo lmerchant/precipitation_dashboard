@@ -15,7 +15,11 @@
     Extra: 'Research projects',
   };
 
-  var state = { view: 'dashboard', query: '', agencies: {}, topics: {}, sort: 'agency', expanded: {} };
+  // The Dashboard and International tabs share one panel; each shows only its own sources.
+  var INTERNATIONAL = 'International';
+
+  // scope: which source list the shared panel last showed ('dashboard' or 'international').
+  var state = { view: 'dashboard', scope: null, query: '', agencies: {}, topics: {}, sort: 'agency', expanded: {} };
 
   function $(id) { return document.getElementById(id); }
 
@@ -42,6 +46,17 @@
 
   function badge(agency) { return '<span class="agency agency-' + cssKey(agency) + '">' + esc(agency) + '</span>'; }
 
+  function scopeEntries() {
+    var intl = state.scope === 'international';
+    return ENTRIES.filter(function (e) { return (e.agency === INTERNATIONAL) === intl; });
+  }
+
+  function scopeAgencies() {
+    var present = {};
+    scopeEntries().forEach(function (e) { present[e.agency] = true; });
+    return AGENCIES.filter(function (a) { return present[a]; });
+  }
+
   function suggestedRemovals() {
     return ENTRIES.filter(function (e) { return e.relevance === 'suggested-removal'; });
   }
@@ -64,19 +79,35 @@
   /* ── tabs ───────────────────────────────────────────── */
 
   function showView(view) {
-    state.view = view === 'removals' ? 'removals' : 'dashboard';
+    state.view = view === 'removals' || view === 'international' ? view : 'dashboard';
     document.querySelectorAll('.tab').forEach(function (t) {
       t.setAttribute('aria-selected', String(t.dataset.view === state.view));
     });
-    $('view-dashboard').hidden = state.view !== 'dashboard';
+    $('view-dashboard').hidden = state.view === 'removals';
     $('view-removals').hidden = state.view !== 'removals';
+    if (state.view !== 'removals' && state.view !== state.scope) {
+      state.scope = state.view;
+      $('view-dashboard').setAttribute('aria-labelledby', 'tab-' + state.view);
+      // Filters from the other tab may name agencies this one doesn't have, so start clean.
+      state.query = ''; state.agencies = {}; state.topics = {}; state.expanded = {};
+      $('search').value = '';
+      note('export-note', '');
+      renderDashboard();
+    }
+  }
+
+  function renderDashboard() {
+    renderStats();
+    renderChips();
+    renderTable();
+    renderNotes();
   }
 
   function initTabs() {
     document.querySelectorAll('.tab').forEach(function (t) {
       t.addEventListener('click', function () {
         showView(t.dataset.view);
-        history.replaceState(null, '', t.dataset.view === 'removals' ? '#removals' : '#');
+        history.replaceState(null, '', t.dataset.view === 'dashboard' ? '#' : '#' + t.dataset.view);
       });
     });
     window.addEventListener('hashchange', function () { showView(location.hash.slice(1)); });
@@ -86,19 +117,21 @@
   /* ── summary ────────────────────────────────────────── */
 
   function renderStats() {
+    var entries = scopeEntries(), agencies = scopeAgencies();
     var byAgency = {};
-    ENTRIES.forEach(function (e) { byAgency[e.agency] = (byAgency[e.agency] || 0) + 1; });
-    var total = ENTRIES.length;
-    var bar = AGENCIES.map(function (a) {
+    entries.forEach(function (e) { byAgency[e.agency] = (byAgency[e.agency] || 0) + 1; });
+    var total = entries.length;
+    var bar = agencies.map(function (a) {
       return '<span style="width:' + (100 * (byAgency[a] || 0) / total) + '%;background:var(--' + cssKey(a) +
         ')" title="' + AGENCY_LABELS[a] + ': ' + (byAgency[a] || 0) + '"></span>';
     }).join('');
     $('stats').innerHTML =
-      stat(total, 'Sources on the dashboard', '<div class="stat-bar" aria-hidden="true">' + bar + '</div>') +
-      AGENCIES.map(function (a) {
+      stat(total, state.scope === 'international' ? 'International sources' : 'Sources on the dashboard',
+        '<div class="stat-bar" aria-hidden="true">' + bar + '</div>') +
+      (agencies.length > 1 ? agencies.map(function (a) {
         return stat(byAgency[a] || 0, STAT_LABELS[a] || AGENCY_LABELS[a] + ' data centers & systems');
-      }).join('');
-    $('removal-count').textContent = suggestedRemovals().length;
+      }).join('') : '');
+    $('stats').classList.toggle('is-single', agencies.length < 2);
   }
 
   function stat(value, label, extra) {
@@ -109,12 +142,13 @@
   /* ── filters ────────────────────────────────────────── */
 
   function renderChips() {
-    var aCounts = {}, tCounts = {};
-    ENTRIES.forEach(function (e) {
+    var aCounts = {}, tCounts = {}, agencies = scopeAgencies();
+    scopeEntries().forEach(function (e) {
       aCounts[e.agency] = (aCounts[e.agency] || 0) + 1;
       e.topics.forEach(function (t) { tCounts[t] = (tCounts[t] || 0) + 1; });
     });
-    $('agency-chips').innerHTML = AGENCIES.map(function (a) {
+    $('agency-filter').hidden = agencies.length < 2;
+    $('agency-chips').innerHTML = agencies.map(function (a) {
       return chip('agency', a, AGENCY_LABELS[a], aCounts[a] || 0, 'var(--' + cssKey(a) + ')', state.agencies[a]);
     }).join('');
     $('topic-chips').innerHTML = Object.keys(DATA.topics).filter(function (t) { return tCounts[t]; }).map(function (t) {
@@ -180,11 +214,11 @@
     return '<ul class="cell-list">' + shown + more(e.endpoints.length - 2, 'link') + '</ul>';
   }
 
-  function shownEntries() { return sortList(ENTRIES.filter(matches)); }
+  function shownEntries() { return sortList(scopeEntries().filter(matches)); }
 
   function renderTable() {
     var list = shownEntries();
-    $('result-count').textContent = 'Showing ' + list.length + ' of ' + ENTRIES.length + ' sources';
+    $('result-count').textContent = 'Showing ' + list.length + ' of ' + scopeEntries().length + ' sources';
     $('empty').hidden = list.length > 0;
     $('source-table').hidden = list.length === 0;
     $('table-body').innerHTML = list.map(rowHtml).join('');
@@ -256,7 +290,7 @@
   function renderNotes() {
     var files = {};
     // "Other US" and "International" share one source file, so list each file once.
-    $('notes').innerHTML = AGENCIES.map(function (a) { return DATA.meta[a]; }).filter(function (m) {
+    $('notes').innerHTML = scopeAgencies().map(function (a) { return DATA.meta[a]; }).filter(function (m) {
       if (files[m.file]) return false;
       files[m.file] = true;
       return true;
@@ -389,12 +423,13 @@
   }
 
   function exportFile(filtered, ext) {
-    return 'us-precipitation-data-sources' + (filtered ? '-filtered' : '') + ext;
+    var prefix = state.scope === 'international' ? 'international' : 'us';
+    return prefix + '-precipitation-data-sources' + (filtered ? '-filtered' : '') + ext;
   }
 
   function exportSummary(file, groups, filtered) {
     var n = Object.keys(groups).reduce(function (s, a) { return s + groups[a].length; }, 0);
-    note('export-note', 'Saved ' + file + ' (' + (filtered ? n + ' of ' + ENTRIES.length : 'all ' + n) +
+    note('export-note', 'Saved ' + file + ' (' + (filtered ? n + ' of ' + scopeEntries().length : 'all ' + n) +
       ' sources; ' + Object.keys(groups).join(', ') + ').');
   }
 
@@ -418,7 +453,8 @@
       delete copy.removalReason;
       return copy;
     });
-    var doc = { title: 'US Precipitation Data Sources', topics: DATA.topics, removed: DATA.removed };
+    var title = state.scope === 'international' ? 'International Precipitation Data Sources' : 'US Precipitation Data Sources';
+    var doc = { title: title, topics: DATA.topics, removed: DATA.removed };
     if (filtered) {
       doc.filters = {
         search: state.query,
@@ -455,7 +491,7 @@
         if (!item) return;
         setOpen(m, false);
         var filtered = m.dataset.scope === 'filtered';
-        var list = filtered ? shownEntries() : ENTRIES;
+        var list = filtered ? shownEntries() : sortList(scopeEntries());
         if (!list.length) { note('export-note', 'No sources match these filters, so there is nothing to save.', true); return; }
         (item.dataset.format === 'excel' ? exportExcel : exportJson)(list, filtered);
       });
@@ -508,11 +544,8 @@
   }
 
   initTheme();
-  initTabs();
-  renderStats();
-  renderChips();
-  renderTable();
-  renderNotes();
+  $('removal-count').textContent = suggestedRemovals().length;
   renderRemovals();
   bind();
+  initTabs();
 })();

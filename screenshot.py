@@ -22,7 +22,7 @@ with sync_playwright() as p:
         page = browser.new_page(viewport={"width": width, "height": height}, color_scheme=scheme, accept_downloads=True)
         page.on("pageerror", lambda e: errors.append(f"{width}px {scheme}: {e}"))
         page.goto(PAGE, wait_until="domcontentloaded")
-        page.get_by_text("Showing 91 of 91 sources").wait_for()
+        page.get_by_text("Showing 85 of 85 sources").wait_for()
         return page
 
     page = open_page(1400, 900)
@@ -71,6 +71,21 @@ with sync_playwright() as p:
     page.screenshot(path=OUT / "4b-prism-panel.png")
     print("Other US rows:", page.locator("#result-count").inner_text())
     page.get_by_role("button", name="Other US").click()
+
+    # International tab: same panel, international sources only.
+    page.get_by_role("tab", name="International").click()
+    page.get_by_text("Showing 6 of 6 sources").wait_for()
+    page.screenshot(path=OUT / "4c-international.png")
+    page.get_by_role("button", name="Save all as").click()
+    with page.expect_download() as dl:
+        page.locator("#save-all-options").get_by_role("menuitem", name="JSON").click()
+    path = OUT / dl.value.suggested_filename
+    dl.value.save_as(path)
+    intl = json.loads(path.read_text())
+    print("international JSON:", path.name, intl["title"], {a: len(v) for a, v in intl["sources"].items()})
+    page.get_by_role("button", name="Show all 2 data access endpoints for GPCC").click()
+    page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
+    page.screenshot(path=OUT / "4d-gpcc-panel.png")
 
     page.get_by_role("tab", name="Possible removals").click()
     page.screenshot(path=OUT / "5-removals.png", full_page=True)
