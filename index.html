@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>US Precipitation Data Sources</title>
+<meta name="description" content="Searchable directory of US government precipitation data sources across NASA, NOAA, NSF, NWS and historical research projects." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5c3.6 4.6 6.5 8.4 6.5 12a6.5 6.5 0 0 1-13 0c0-3.6 2.9-7.4 6.5-12z' fill='%232f6fd6'/%3E%3C/svg%3E" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c3.6 4.6 6.5 8.4 6.5 12a6.5 6.5 0 0 1-13 0c0-3.6 2.9-7.4 6.5-12z" fill="var(--accent)"/></svg>
+      <div>
+        <h1>US Precipitation Data Sources</h1>
+        <p class="brand-sub">NASA · NOAA · NSF · NWS · research projects</p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Pages">
+      <button class="tab" role="tab" id="tab-dashboard" aria-controls="view-dashboard" data-view="dashboard" type="button">Dashboard</button>
+      <button class="tab" role="tab" id="tab-removals" aria-controls="view-removals" data-view="removals" type="button">Possible removals <span class="tab-count" id="removal-count"></span></button>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="page">
+  <!-- ── Dashboard ─────────────────────────────────────────── -->
+  <section id="view-dashboard" role="tabpanel" aria-labelledby="tab-dashboard">
+    <section class="stats" id="stats" aria-label="Summary"></section>
+
+    <section class="controls" aria-label="Filters and search">
+      <div class="controls-top">
+        <div class="search-wrap">
+          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="search" class="search" type="search" placeholder="Search names, products, formats, organizations…" aria-label="Search sources" autocomplete="off" />
+        </div>
+        <div class="save-menus">
+          <div class="save-menu" data-scope="all">
+            <button class="btn btn-sm" id="save-all" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="save-all-options">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+              Save all as
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="menu" id="save-all-options" role="menu" hidden>
+              <button class="menu-item" data-format="excel" role="menuitem" type="button">Excel <span class="menu-hint">.xlsx, all sources, one sheet per agency</span></button>
+              <button class="menu-item" data-format="json" role="menuitem" type="button">JSON <span class="menu-hint">.json, all sources, grouped by agency</span></button>
+            </div>
+          </div>
+          <div class="save-menu" data-scope="filtered">
+            <button class="btn btn-sm" id="save-filtered" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="save-filtered-options">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+              Save filtered as
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="menu" id="save-filtered-options" role="menu" hidden>
+              <button class="menu-item" data-format="excel" role="menuitem" type="button">Excel <span class="menu-hint">.xlsx, shown sources only, one sheet per agency</span></button>
+              <button class="menu-item" data-format="json" role="menuitem" type="button">JSON <span class="menu-hint">.json, shown sources only, grouped by agency</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Filter on Agency</span>
+        <div class="chips" id="agency-chips" role="group" aria-label="Filter on agency"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Filter on Topic</span>
+        <div class="chips" id="topic-chips" role="group" aria-label="Filter on topic"></div>
+      </div>
+      <div class="controls-row">
+        <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+        <div class="selects">
+          <label class="select-label" for="sort">Sort by
+            <select id="sort" class="select">
+              <option value="agency">Agency</option>
+              <option value="name">Name</option>
+              <option value="volume">Archive volume</option>
+              <option value="datasets">Datasets</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <p class="export-note" id="export-note" role="status" aria-live="polite"></p>
+    </section>
+
+    <div class="table-wrap">
+      <table class="data-table" id="source-table">
+        <thead>
+          <tr>
+            <th scope="col">Data Agency</th>
+            <th scope="col">Agency</th>
+            <th scope="col" class="col-wide">Focus</th>
+            <th scope="col">Topic</th>
+            <th scope="col" class="col-wide">Holdings</th>
+            <th scope="col" class="col-access">Source Pages</th>
+            <th scope="col">Data Endpoints</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty" hidden>
+      <p>No sources match these filters.</p>
+      <button class="btn" id="reset" type="button">Clear filters</button>
+    </div>
+
+    <section class="notes" id="notes" aria-label="Notes on the source data"></section>
+  </section>
+
+  <!-- ── Possible removals ────────────────────────────────── -->
+  <section id="view-removals" role="tabpanel" aria-labelledby="tab-removals" hidden>
+    <div class="removal-head">
+      <div>
+        <h2>Sources that could be removed</h2>
+        <p class="lede">These sources hold little or no precipitation data. They are still on the dashboard until you decide to drop them.</p>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-primary" id="save-csv" type="button">Save as CSV</button>
+        <button class="btn" id="save-json" type="button">Save as JSON</button>
+      </div>
+    </div>
+    <p class="export-note" id="removal-note" role="status" aria-live="polite"></p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Source</th>
+            <th scope="col">Agency</th>
+            <th scope="col" class="col-wide">Focus</th>
+            <th scope="col" class="col-wide">Why remove it</th>
+          </tr>
+        </thead>
+        <tbody id="removal-body"></tbody>
+      </table>
+    </div>
+    <section class="already-removed">
+      <h3>Already removed from the dashboard</h3>
+      <ul id="removed-list"></ul>
+    </section>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

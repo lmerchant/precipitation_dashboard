@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Claude Code session files
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local working files (envs, screenshots, downloads, caches)
+.work/
+
+# Exports saved from the dashboard
+us-precipitation-data-sources*.xlsx
+us-precipitation-data-sources*.json
+possible-removals.csv
+possible-removals.json
+
+# Secrets
+.env
+.env.*
