@@ -4,8 +4,16 @@
 
   var DATA = window.PRECIP_DATA;
   var ENTRIES = DATA.entries;
-  var AGENCIES = ['NASA', 'NOAA', 'NSF', 'NWS', 'Extra'];
-  var AGENCY_LABELS = { NASA: 'NASA', NOAA: 'NOAA', NSF: 'NSF', NWS: 'NWS', Extra: 'Research projects' };
+  var AGENCIES = ['NASA', 'NOAA', 'NSF', 'NWS', 'Other US', 'International', 'Extra'];
+  var AGENCY_LABELS = {
+    NASA: 'NASA', NOAA: 'NOAA', NSF: 'NSF', NWS: 'NWS',
+    'Other US': 'Other US', International: 'International', Extra: 'Research projects',
+  };
+  var STAT_LABELS = {
+    'Other US': 'Other US sources',
+    International: 'International sources',
+    Extra: 'Research projects',
+  };
 
   var state = { view: 'dashboard', query: '', agencies: {}, topics: {}, sort: 'agency', expanded: {} };
 
@@ -28,6 +36,11 @@
   }
 
   function fmtCount(n) { return n == null ? 'NA' : n.toLocaleString('en-US'); }
+
+  // Agency names as CSS class and color-variable suffixes ("Other US" -> "other-us").
+  function cssKey(agency) { return agency.toLowerCase().replace(/\s+/g, '-'); }
+
+  function badge(agency) { return '<span class="agency agency-' + cssKey(agency) + '">' + esc(agency) + '</span>'; }
 
   function suggestedRemovals() {
     return ENTRIES.filter(function (e) { return e.relevance === 'suggested-removal'; });
@@ -77,13 +90,13 @@
     ENTRIES.forEach(function (e) { byAgency[e.agency] = (byAgency[e.agency] || 0) + 1; });
     var total = ENTRIES.length;
     var bar = AGENCIES.map(function (a) {
-      return '<span style="width:' + (100 * (byAgency[a] || 0) / total) + '%;background:var(--' + a.toLowerCase() +
+      return '<span style="width:' + (100 * (byAgency[a] || 0) / total) + '%;background:var(--' + cssKey(a) +
         ')" title="' + AGENCY_LABELS[a] + ': ' + (byAgency[a] || 0) + '"></span>';
     }).join('');
     $('stats').innerHTML =
       stat(total, 'Sources on the dashboard', '<div class="stat-bar" aria-hidden="true">' + bar + '</div>') +
       AGENCIES.map(function (a) {
-        return stat(byAgency[a] || 0, a === 'Extra' ? 'Research projects' : AGENCY_LABELS[a] + ' data centers & systems');
+        return stat(byAgency[a] || 0, STAT_LABELS[a] || AGENCY_LABELS[a] + ' data centers & systems');
       }).join('');
     $('removal-count').textContent = suggestedRemovals().length;
   }
@@ -102,7 +115,7 @@
       e.topics.forEach(function (t) { tCounts[t] = (tCounts[t] || 0) + 1; });
     });
     $('agency-chips').innerHTML = AGENCIES.map(function (a) {
-      return chip('agency', a, AGENCY_LABELS[a], aCounts[a] || 0, 'var(--' + a.toLowerCase() + ')', state.agencies[a]);
+      return chip('agency', a, AGENCY_LABELS[a], aCounts[a] || 0, 'var(--' + cssKey(a) + ')', state.agencies[a]);
     }).join('');
     $('topic-chips').innerHTML = Object.keys(DATA.topics).filter(function (t) { return tCounts[t]; }).map(function (t) {
       return chip('topic', t, DATA.topics[t], tCounts[t], null, state.topics[t]);
@@ -182,7 +195,7 @@
     var main = '<tr class="row-main" data-id="' + esc(e.id) + '" aria-expanded="' + open + '">' +
       '<td><span class="src-name">' + esc(e.name) + '</span>' +
         (e.fullName !== e.name ? '<span class="src-full">' + esc(e.fullName) + '</span>' : '') + '</td>' +
-      '<td><span class="agency agency-' + e.agency + '">' + esc(e.agency) + '</span></td>' +
+      '<td>' + badge(e.agency) + '</td>' +
       '<td class="col-wide">' + esc(e.discipline) + '</td>' +
       '<td><div class="topic-list">' +
         e.topics.map(function (t) { return '<span class="topic">' + esc(DATA.topics[t]) + '</span>'; }).join('') + '</div></td>' +
@@ -241,8 +254,13 @@
   }
 
   function renderNotes() {
-    $('notes').innerHTML = AGENCIES.map(function (a) {
-      var m = DATA.meta[a];
+    var files = {};
+    // "Other US" and "International" share one source file, so list each file once.
+    $('notes').innerHTML = AGENCIES.map(function (a) { return DATA.meta[a]; }).filter(function (m) {
+      if (files[m.file]) return false;
+      files[m.file] = true;
+      return true;
+    }).map(function (m) {
       return '<div><h3>' + esc(m.title) + ' <span class="mono dim">(' + esc(m.file) + ')</span></h3><ul>' +
         m.notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul></div>';
     }).join('');
@@ -254,13 +272,16 @@
     $('removal-body').innerHTML = suggestedRemovals().map(function (e) {
       return '<tr><td><span class="src-name">' + esc(e.name) + '</span>' +
         (e.fullName !== e.name ? '<span class="src-full">' + esc(e.fullName) + '</span>' : '') + '</td>' +
-        '<td><span class="agency agency-' + e.agency + '">' + esc(e.agency) + '</span></td>' +
+        '<td>' + badge(e.agency) + '</td>' +
         '<td class="col-wide">' + esc(e.discipline) + '</td>' +
         '<td class="col-wide">' + esc(e.removalReason) + '</td></tr>';
     }).join('');
     $('removed-list').innerHTML = DATA.removed.map(function (r) {
       return '<li><strong>' + esc(r.id.split('-').slice(1).join('-').toUpperCase()) + '</strong> (' +
         esc(r.id.split('-')[0].toUpperCase()) + '): ' + esc(r.reason) + '</li>';
+    }).join('');
+    $('not-added-list').innerHTML = DATA.notAdded.map(function (r) {
+      return '<li><strong>' + link(r.url, r.name) + '</strong>: ' + esc(r.reason) + '</li>';
     }).join('');
   }
 

@@ -22,13 +22,13 @@ with sync_playwright() as p:
         page = browser.new_page(viewport={"width": width, "height": height}, color_scheme=scheme, accept_downloads=True)
         page.on("pageerror", lambda e: errors.append(f"{width}px {scheme}: {e}"))
         page.goto(PAGE, wait_until="domcontentloaded")
-        page.get_by_text("Showing 69 of 69 sources").wait_for()
+        page.get_by_text("Showing 91 of 91 sources").wait_for()
         return page
 
     page = open_page(1400, 900)
     page.screenshot(path=OUT / "1-dashboard.png")
 
-    page.get_by_role("button", name="Show all 3 data access endpoints for NCEI").click()
+    page.get_by_role("button", name="Show all 7 data access endpoints for NCEI").click()
     page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
     page.screenshot(path=OUT / "2-ncei-panel.png")
 
@@ -61,6 +61,16 @@ with sync_playwright() as p:
     page.locator("tr.row-main", has_text="Project Cirrus").get_by_role("button").click()
     page.get_by_role("heading", name="References").scroll_into_view_if_needed()
     page.screenshot(path=OUT / "4-cirrus-panel.png")
+
+    page.get_by_role("button", name="Research projects").click()
+
+    # The roster added two groups; filter to Other US and open PRISM.
+    page.get_by_role("button", name="Other US").click()
+    page.get_by_role("button", name="Show all 2 data access endpoints for PRISM").click()
+    page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
+    page.screenshot(path=OUT / "4b-prism-panel.png")
+    print("Other US rows:", page.locator("#result-count").inner_text())
+    page.get_by_role("button", name="Other US").click()
 
     page.get_by_role("tab", name="Possible removals").click()
     page.screenshot(path=OUT / "5-removals.png", full_page=True)

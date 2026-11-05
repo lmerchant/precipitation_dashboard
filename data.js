@@ -54,6 +54,26 @@ window.PRECIP_DATA = {
     "Source: https://en.wikipedia.org/wiki/List_of_United_States_government_meteorology_research_projects"
    ],
    "file": "us-government-meteorology-research-projects_and_non_digital.json"
+  },
+  "Other US": {
+   "title": "Sources from the Precipitation Pilot invitee roster",
+   "notes": [
+    "Only sources and endpoints that were not already on the dashboard were added.",
+    "Every URL was checked on 2026-11-05; redirected links use their final address.",
+    "Datasets held by a data center already on the dashboard are added as endpoints of that center (additionalEndpoints), not as new entries.",
+    "Research group pages, papers, software tools and missions with no data yet were not added (notAdded)."
+   ],
+   "file": "invitee-roster-sources.json"
+  },
+  "International": {
+   "title": "Sources from the Precipitation Pilot invitee roster",
+   "notes": [
+    "Only sources and endpoints that were not already on the dashboard were added.",
+    "Every URL was checked on 2026-11-05; redirected links use their final address.",
+    "Datasets held by a data center already on the dashboard are added as endpoints of that center (additionalEndpoints), not as new entries.",
+    "Research group pages, papers, software tools and missions with no data yet were not added (notAdded)."
+   ],
+   "file": "invitee-roster-sources.json"
   }
  },
  "removed": [
@@ -64,6 +84,98 @@ window.PRECIP_DATA = {
   {
    "id": "nasa-cddis",
    "reason": "Space geodesy (GNSS, laser ranging); no precipitation holdings."
+  }
+ ],
+ "notAdded": [
+  {
+   "name": "GSFC Mesoscale Atmospheric Processes Lab",
+   "reason": "Research lab page; its data is in GPM, GES DISC and GHRC.",
+   "url": "https://science.gsfc.nasa.gov/earth/mesoscale/"
+  },
+  {
+   "name": "UIUC SecureWater center",
+   "reason": "Research center page; no data portal listed.",
+   "url": "https://securewater.illinois.edu/"
+  },
+  {
+   "name": "UArizona Behrangi group",
+   "reason": "Researcher page; the group's data is GPCP, which is already listed.",
+   "url": "https://has.arizona.edu/people/ali-behrangi"
+  },
+  {
+   "name": "CSU Kummerow precipitation group",
+   "reason": "Research group page; GPROF data is listed under PPS.",
+   "url": "https://rain.atmos.colostate.edu/"
+  },
+  {
+   "name": "UMN HydSens group",
+   "reason": "Research group page; no data portal listed.",
+   "url": "https://www.hydsens.com/"
+  },
+  {
+   "name": "Princeton Villarini group",
+   "reason": "Research group page; no data portal listed.",
+   "url": "https://villarini.scholar.princeton.edu/"
+  },
+  {
+   "name": "Coimbra eoLab",
+   "reason": "Research group page; no data portal listed.",
+   "url": "https://www.uc.pt/eolab/"
+  },
+  {
+   "name": "OU CIWRO",
+   "reason": "Cooperative institute page; its precipitation data is in MRMS and NSSL products.",
+   "url": "https://www.ou.edu/ciwro"
+  },
+  {
+   "name": "ESSIC Bayesian deep learning retrievals",
+   "reason": "News article about a research method; no dataset.",
+   "url": "https://essic.umd.edu/using-bayesian-deep-learning-to-improve-precipitation-retrievals/"
+  },
+  {
+   "name": "OC-SMART",
+   "reason": "Publication about an analysis platform; no precipitation dataset.",
+   "url": "https://researchwith.stevens.edu/en/publications/oc-smart-a-machine-learning-based-data-analysis-platform-for-sate/"
+  },
+  {
+   "name": "Probable Maximum Precipitation (NASEM)",
+   "reason": "National Academies report, not a dataset.",
+   "url": "https://www.nationalacademies.org/publications/27460"
+  },
+  {
+   "name": "WIVERN",
+   "reason": "Proposed ESA mission; no data yet.",
+   "url": "https://wivern.polito.it/"
+  },
+  {
+   "name": "AOS",
+   "reason": "Future NASA mission; no data yet.",
+   "url": "https://science.nasa.gov/mission/aos/"
+  },
+  {
+   "name": "CubeSpark",
+   "reason": "Instrument concept; no data source given.",
+   "url": ""
+  },
+  {
+   "name": "RainyDay",
+   "reason": "Software for storm transposition, not a dataset.",
+   "url": "https://github.com/HydroclimateExtremesGroup/RainyDay"
+  },
+  {
+   "name": "wgrib / wgrib2",
+   "reason": "Software for reading GRIB files, not a dataset.",
+   "url": "https://github.com/NOAA-EMC/wgrib2"
+  },
+  {
+   "name": "GPROF-NN",
+   "reason": "Retrieval code and model weights, not a dataset; GPROF data is listed under PPS.",
+   "url": "https://github.com/simonpf/gprof_nn"
+  },
+  {
+   "name": "Snowfall Rate on data.commerce.gov",
+   "reason": "Link refused automated checks (HTTP 403); the product site sfr.umd.edu is listed under MiRS & SFR instead.",
+   "url": "https://data.commerce.gov/node/241258"
   }
  ],
  "entries": [
@@ -359,7 +471,9 @@ window.PRECIP_DATA = {
     "MERRA-2 reanalysis",
     "SORCE",
     "UARS",
-    "TOMS"
+    "TOMS",
+    "GPCP V3.2",
+    "TROPICS"
    ],
    "formats": [
     "HDF5",
@@ -391,6 +505,18 @@ window.PRECIP_DATA = {
     {
      "name": "Earthdata Access (508 search)",
      "url": "https://access.earthdata.nasa.gov/collections"
+    },
+    {
+     "name": "GPCP monthly V3.2",
+     "url": "https://disc.gsfc.nasa.gov/datasets/GPCPMON_3.2/summary"
+    },
+    {
+     "name": "GPCP daily V3.2",
+     "url": "https://disc.gsfc.nasa.gov/datasets/GPCPDAY_3.2/summary"
+    },
+    {
+     "name": "TROPICS datasets",
+     "url": "https://disc.gsfc.nasa.gov/datasets?keywords=TROPICS"
     }
    ],
    "sources": [
@@ -401,6 +527,10 @@ window.PRECIP_DATA = {
     {
      "label": "GPM product formats (GES DISC)",
      "url": "https://docserver.gesdisc.eosdis.nasa.gov/public/project/GPM/README.GPM.pdf"
+    },
+    {
+     "label": "MIT Lincoln Lab — TROPICS mission",
+     "url": "https://tropics.ll.mit.edu/"
     }
    ]
   },
@@ -744,7 +874,10 @@ window.PRECIP_DATA = {
     "GOES & POES satellite data",
     "World Ocean Database",
     "Paleoclimate proxies (ice cores, tree rings)",
-    "Storm Events Database"
+    "Storm Events Database",
+    "GPCP & CMORPH climate data records",
+    "IGRA radiosonde archive",
+    "Lightning products"
    ],
    "formats": [
     "NetCDF",
@@ -768,6 +901,22 @@ window.PRECIP_DATA = {
     {
      "name": "Weather & Climate Toolkit",
      "url": "https://www.ncei.noaa.gov/products/weather-climate-toolkit"
+    },
+    {
+     "name": "GPCP monthly CDR files",
+     "url": "https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-monthly/access/"
+    },
+    {
+     "name": "GPCP daily CDR files",
+     "url": "https://www.ncei.noaa.gov/data/global-precipitation-climatology-project-gpcp-daily/access/"
+    },
+    {
+     "name": "CMORPH CDR files",
+     "url": "https://www.ncei.noaa.gov/data/cmorph-high-resolution-global-precipitation-estimates/access/"
+    },
+    {
+     "name": "IGRA radiosonde files",
+     "url": "https://www.ncei.noaa.gov/data/integrated-global-radiosonde-archive/access/"
     }
    ],
    "sources": [
@@ -778,6 +927,26 @@ window.PRECIP_DATA = {
     {
      "label": "NESDIS data collections",
      "url": "https://www.nesdis.noaa.gov/data-products-research-services/data-collections"
+    },
+    {
+     "label": "NCEI — GPCP monthly CDR",
+     "url": "https://www.ncei.noaa.gov/products/climate-data-records/precipitation-gpcp-monthly"
+    },
+    {
+     "label": "NCEI — GPCP daily CDR",
+     "url": "https://www.ncei.noaa.gov/products/climate-data-records/precipitation-gpcp-daily"
+    },
+    {
+     "label": "NCEI — CMORPH CDR",
+     "url": "https://www.ncei.noaa.gov/products/climate-data-records/precipitation-cmorph"
+    },
+    {
+     "label": "NCEI — IGRA",
+     "url": "https://www.ncei.noaa.gov/products/weather-balloon/integrated-global-radiosonde-archive"
+    },
+    {
+     "label": "NCEI — Lightning products",
+     "url": "https://www.ncei.noaa.gov/products/lightning-products"
     }
    ]
   },
@@ -826,6 +995,10 @@ window.PRECIP_DATA = {
     {
      "name": "AWS Registry of Open Data",
      "url": "https://registry.opendata.aws/noaa/"
+    },
+    {
+     "name": "GOES on AWS (includes GLM lightning)",
+     "url": "https://registry.opendata.aws/noaa-goes/"
     }
    ],
    "sources": [
@@ -836,6 +1009,10 @@ window.PRECIP_DATA = {
     {
      "label": "Petabyte-scale report",
      "url": "https://repository.library.noaa.gov/view/noaa/59059"
+    },
+    {
+     "label": "NESDIS — Geostationary Lightning Mapper",
+     "url": "https://www.nesdis.noaa.gov/our-satellites/currently-flying/goes-east-west/geostationary-lightning-mapper-glm"
     }
    ]
   },
@@ -1456,7 +1633,9 @@ window.PRECIP_DATA = {
     "NCEP FNL & GDAS analyses",
     "ECMWF & JRA-55 reanalyses",
     "GridRad-Severe radar grids",
-    "Weather Research & Forecasting inputs"
+    "Weather Research & Forecasting inputs",
+    "20th Century Reanalysis",
+    "NCEP/NCAR Reanalysis"
    ],
    "formats": [
     "GRIB",
@@ -1478,6 +1657,14 @@ window.PRECIP_DATA = {
     {
      "name": "Open Science Data Federation (OSDF) access",
      "url": "https://gdex.ucar.edu/about-gdex/ndcc-osdf/"
+    },
+    {
+     "name": "20th Century Reanalysis V2 (d131000)",
+     "url": "https://gdex.ucar.edu/datasets/d131000/"
+    },
+    {
+     "name": "NCEP/NCAR Reanalysis (d090000)",
+     "url": "https://gdex.ucar.edu/datasets/d090000/"
     }
    ],
    "sources": [
@@ -1512,7 +1699,8 @@ window.PRECIP_DATA = {
     "SOCRATES & INSPYRE airborne campaigns",
     "HIAPER Gulfstream V (GV)",
     "Dropsondes & radar systems",
-    "AMDAR/ACARS observations"
+    "AMDAR/ACARS observations",
+    "S2noCliME snowfall campaign"
    ],
    "formats": [
     "netCDF",
@@ -1530,6 +1718,10 @@ window.PRECIP_DATA = {
     {
      "name": "Dataset search & download",
      "url": "https://data.eol.ucar.edu/datasets"
+    },
+    {
+     "name": "S2noCliME project data",
+     "url": "https://data.eol.ucar.edu/project/646"
     }
    ],
    "sources": [
@@ -1540,6 +1732,10 @@ window.PRECIP_DATA = {
     {
      "label": "EOL — WINTRE-MIX project",
      "url": "https://www.eol.ucar.edu/field_projects/wintre-mix"
+    },
+    {
+     "label": "NSF — S2noCliME and other expeditions",
+     "url": "https://www.nsf.gov/news/science-expeditions-snow-hail-air-pollution"
     }
    ]
   },
@@ -2076,7 +2272,8 @@ window.PRECIP_DATA = {
     "Radar-only QPE (Q3) precipitation",
     "Severe weather & rotation tracks",
     "1 km national 3D mosaic",
-    "~20,000 rain gauges ingested hourly"
+    "~20,000 rain gauges ingested hourly",
+    "FLASH flash-flood forecasts"
    ],
    "formats": [
     "GRIB2",
@@ -2098,6 +2295,10 @@ window.PRECIP_DATA = {
     {
      "name": "QPE GIS image service",
      "url": "https://mapservices.weather.noaa.gov/raster/rest/services/obs/mrms_qpe/ImageServer"
+    },
+    {
+     "name": "FLASH flash-flood products (real time)",
+     "url": "https://mrms.ncep.noaa.gov/2D/FLASH/"
     }
    ],
    "sources": [
@@ -2108,6 +2309,10 @@ window.PRECIP_DATA = {
     {
      "label": "NWS STI precipitation analyses",
      "url": "https://www.weather.gov/sti/coastalact_precip"
+    },
+    {
+     "label": "NSSL — FLASH",
+     "url": "https://inside.nssl.noaa.gov/flash/"
     }
    ]
   },
@@ -3778,6 +3983,1055 @@ window.PRECIP_DATA = {
     "National Science Foundation (Funding only)"
    ],
    "archivalSources": []
+  },
+  {
+   "id": "noaa-psl",
+   "agency": "NOAA",
+   "kind": "data-center",
+   "name": "PSL",
+   "fullName": "Physical Sciences Laboratory gridded climate data",
+   "host": "NOAA Office of Oceanic and Atmospheric Research",
+   "location": "Boulder, CO",
+   "discipline": "Gridded precipitation analyses & reanalyses",
+   "topics": [
+    "gauges",
+    "satellite",
+    "models",
+    "historical"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NOAA PSL redistributes widely used gridded climate datasets in NetCDF, with plotting and subsetting tools. Precipitation holdings include GPCP, GPCC, the CPC global and US unified gauge analyses, the NCEP/NCAR reanalyses and the 20th Century Reanalysis (back to 1836).",
+   "holdings": [
+    "GPCP monthly precipitation",
+    "GPCC gauge analyses",
+    "CPC Global Unified Gauge Precipitation",
+    "CPC US Unified daily precipitation (CONUS)",
+    "NCEP/NCAR Reanalysis 1 & NCEP-DOE Reanalysis 2",
+    "20th Century Reanalysis (V2, V2c, V3)"
+   ],
+   "formats": [
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "GPCP monthly (PSL)",
+     "url": "https://psl.noaa.gov/data/gridded/data.gpcp.html"
+    },
+    {
+     "name": "GPCC gauge analyses (PSL)",
+     "url": "https://psl.noaa.gov/data/gridded/data.gpcc.html"
+    },
+    {
+     "name": "CPC Global Unified Gauge Precipitation",
+     "url": "https://psl.noaa.gov/data/gridded/data.cpc.globalprecip.html"
+    },
+    {
+     "name": "CPC US Unified daily precipitation (CONUS)",
+     "url": "https://psl.noaa.gov/data/gridded/data.unified.daily.conus.html"
+    },
+    {
+     "name": "NCEP/NCAR Reanalysis 1",
+     "url": "https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html"
+    },
+    {
+     "name": "NCEP-DOE Reanalysis 2",
+     "url": "https://psl.noaa.gov/data/gridded/data.ncep.reanalysis2.html"
+    },
+    {
+     "name": "20th Century Reanalysis V3",
+     "url": "https://psl.noaa.gov/data/gridded/data.20thC_ReanV3.html"
+    },
+    {
+     "name": "20th Century Reanalysis V2c",
+     "url": "https://psl.noaa.gov/data/gridded/data.20thC_ReanV2c.html"
+    },
+    {
+     "name": "20th Century Reanalysis V2",
+     "url": "https://psl.noaa.gov/data/gridded/data.20thC_ReanV2.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "PSL — 20th Century Reanalysis",
+     "url": "https://psl.noaa.gov/data/20thC_Rean/"
+    },
+    {
+     "label": "PSL — CPC Global Unified Gauge Precipitation",
+     "url": "https://psl.noaa.gov/data/gridded/data.cpc.globalprecip.html"
+    },
+    {
+     "label": "PSL — NCEP/NCAR Reanalysis 1",
+     "url": "https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html"
+    }
+   ]
+  },
+  {
+   "id": "noaa-cpc",
+   "agency": "NOAA",
+   "kind": "data-center",
+   "name": "CPC",
+   "fullName": "Climate Prediction Center precipitation products",
+   "host": "NWS National Centers for Environmental Prediction",
+   "location": "College Park, MD",
+   "discipline": "Gauge & satellite precipitation analyses",
+   "topics": [
+    "gauges",
+    "satellite"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NOAA CPC produces daily gauge-based precipitation analyses for the US and the globe, the CMORPH satellite precipitation estimates, and regional rainfall climatologies such as ARC2 for Africa.",
+   "holdings": [
+    "CPC Unified Gauge-Based Precipitation (US & global)",
+    "CMORPH satellite precipitation",
+    "ARC2 Africa Rainfall Climatology"
+   ],
+   "formats": [
+    "Binary",
+    "NetCDF",
+    "GRIB"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CPC Unified Gauge Precipitation (FTP)",
+     "url": "https://ftp.cpc.ncep.noaa.gov/precip/CPC_UNI_PRCP/"
+    },
+    {
+     "name": "ARC2 Africa rainfall (FTP)",
+     "url": "https://ftp.cpc.ncep.noaa.gov/fews/fewsdata/africa/arc2/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "CPC — CMORPH description",
+     "url": "https://www.cpc.ncep.noaa.gov/products/janowiak/cmorph_description.html"
+    },
+    {
+     "label": "CPC — International desk data",
+     "url": "https://www.cpc.ncep.noaa.gov/products/international/data.shtml"
+    }
+   ]
+  },
+  {
+   "id": "noaa-star-microwave",
+   "agency": "NOAA",
+   "kind": "data-center",
+   "name": "MiRS & SFR",
+   "fullName": "NESDIS STAR microwave precipitation products (MiRS, Snowfall Rate)",
+   "host": "NESDIS Center for Satellite Applications and Research (STAR) and OSPO",
+   "location": "College Park, MD",
+   "discipline": "Passive microwave rain & snowfall rate retrievals",
+   "topics": [
+    "satellite",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Operational NOAA passive microwave retrievals from polar-orbiting satellites: the Microwave Integrated Retrieval System (MiRS) rain rate and hydrometeor products, and the Snowfall Rate (SFR) product from ATMS and AMSU/MHS, developed with UMD ESSIC/CISESS.",
+   "holdings": [
+    "MiRS rain rate & hydrometeor profiles",
+    "Snowfall Rate (SFR) from ATMS, AMSU/MHS",
+    "JPSS, NOAA POES & Metop sensors"
+   ],
+   "formats": [
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "OSPO MiRS products",
+     "url": "https://www.ospo.noaa.gov/products/atmosphere/mirs"
+    },
+    {
+     "name": "CLASS MiRS orbital search",
+     "url": "https://www.class.noaa.gov/search/MIRS_ORB"
+    },
+    {
+     "name": "Snowfall Rate product site",
+     "url": "https://sfr.umd.edu/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "STAR — MiRS",
+     "url": "https://www.star.nesdis.noaa.gov/jpss/mirs.php"
+    },
+    {
+     "label": "ESSIC — Snowfall Rate product and website",
+     "url": "https://essic.umd.edu/progress-on-the-snowfall-rate-product-and-its-new-website/"
+    }
+   ]
+  },
+  {
+   "id": "nasa-pps",
+   "agency": "NASA",
+   "kind": "data-center",
+   "name": "PPS",
+   "fullName": "Precipitation Processing System",
+   "host": "NASA Goddard Space Flight Center",
+   "location": "Greenbelt, MD",
+   "discipline": "GPM & TRMM precipitation processing",
+   "topics": [
+    "satellite",
+    "radar"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "PPS produces and distributes the GPM and TRMM precipitation products at all levels, including inter-calibrated Level 1C radiances, GPROF radiometer retrievals, DPR radar products, combined radar-radiometer products and IMERG. Its archive server needs a free PPS registration.",
+   "holdings": [
+    "GPM & TRMM Level 1C (X-CAL inter-calibrated)",
+    "GPROF passive microwave retrievals",
+    "GPM DPR & TRMM PR radar products",
+    "Combined radar-radiometer (DPR+GMI)",
+    "IMERG"
+   ],
+   "formats": [
+    "HDF5",
+    "NetCDF",
+    "GeoTIFF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "PPS research archive (arthurhou)",
+     "url": "https://arthurhou.pps.eosdis.nasa.gov/"
+    },
+    {
+     "name": "GPM data directory",
+     "url": "https://gpm.nasa.gov/data/directory"
+    }
+   ],
+   "sources": [
+    {
+     "label": "GPM Level 1C algorithm theoretical basis",
+     "url": "https://gpm.nasa.gov/resources/documents/gpm-level-1c-algorithm-theoretical-basis-document-atbd"
+    },
+    {
+     "label": "CSU precipitation group (GPROF)",
+     "url": "https://rain.atmos.colostate.edu/"
+    }
+   ]
+  },
+  {
+   "id": "nasa-gmao",
+   "agency": "NASA",
+   "kind": "data-center",
+   "name": "GMAO",
+   "fullName": "Global Modeling and Assimilation Office",
+   "host": "NASA Goddard Space Flight Center",
+   "location": "Greenbelt, MD",
+   "discipline": "Reanalysis & data assimilation (MERRA-2, GEOS)",
+   "topics": [
+    "models"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "GMAO runs the GEOS model and data assimilation system and produces the MERRA-2 reanalysis and the newer GEOS-R21C reanalysis, which include precipitation fields. MERRA-2 files are distributed by GES DISC.",
+   "holdings": [
+    "MERRA-2 reanalysis",
+    "GEOS-R21C reanalysis",
+    "GEOS forecasts"
+   ],
+   "formats": [
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "GMAO reanalysis",
+     "url": "https://gmao.gsfc.nasa.gov/reanalysis/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "GMAO home",
+     "url": "https://gmao.gsfc.nasa.gov/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-arm",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "ARM",
+   "fullName": "Atmospheric Radiation Measurement user facility",
+   "host": "US Department of Energy",
+   "location": "Oak Ridge, TN (data center) · sites in OK, AK and mobile",
+   "discipline": "Ground-based cloud & precipitation observations",
+   "topics": [
+    "radar",
+    "gauges",
+    "field"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "DOE ARM runs long-term observatories and mobile facilities with precipitation radars, radar wind profilers, disdrometers and rain gauges. Its Data Center serves continuous records and value-added precipitation products.",
+   "holdings": [
+    "Scanning and profiling precipitation radars",
+    "Radar wind profiler precipitation products",
+    "Disdrometers & rain gauges",
+    "Southern Great Plains & North Slope of Alaska sites"
+   ],
+   "formats": [
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "ARM Data Discovery",
+     "url": "https://adc.arm.gov/discovery/"
+    },
+    {
+     "name": "ARM data overview",
+     "url": "https://www.arm.gov/data"
+    }
+   ],
+   "sources": [
+    {
+     "label": "ARM",
+     "url": "https://www.arm.gov/"
+    },
+    {
+     "label": "DOE ASR — radar wind profiler precipitation project",
+     "url": "https://asr.science.energy.gov/projects/13290"
+    }
+   ]
+  },
+  {
+   "id": "other-us-fews-net",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "FEWS NET",
+   "fullName": "Famine Early Warning Systems Network",
+   "host": "USGS Earth Resources Observation and Science (EROS) Center",
+   "location": "Sioux Falls, SD",
+   "discipline": "Drought & rainfall monitoring for food security",
+   "topics": [
+    "satellite",
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "FEWS NET monitors drought and rainfall for food security. The USGS early warning portal serves rainfall estimates and anomalies built on CHIRPS and the CPC ARC2 climatology.",
+   "holdings": [
+    "Rainfall estimates & anomalies",
+    "CHIRPS-based products",
+    "Water requirement satisfaction index"
+   ],
+   "formats": [
+    "GeoTIFF",
+    "BIL"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "USGS FEWS NET data portal",
+     "url": "https://earlywarning.usgs.gov/fews"
+    }
+   ],
+   "sources": [
+    {
+     "label": "FEWS NET",
+     "url": "https://fews.net/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-prism",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "PRISM",
+   "fullName": "PRISM Climate Group",
+   "host": "Oregon State University",
+   "location": "Corvallis, OR",
+   "discipline": "Gridded US precipitation & climate normals",
+   "topics": [
+    "gauges",
+    "models",
+    "historical"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "PRISM produces gridded daily and monthly precipitation and temperature for the contiguous US from 1895 to the present, plus 30-year climate normals, by combining station data with terrain-aware interpolation.",
+   "holdings": [
+    "Daily & monthly precipitation (1981–present)",
+    "Monthly precipitation back to 1895",
+    "30-year climate normals"
+   ],
+   "formats": [
+    "BIL",
+    "GeoTIFF",
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Recent & historical data",
+     "url": "https://prism.oregonstate.edu/data/"
+    },
+    {
+     "name": "30-year normals",
+     "url": "https://prism.oregonstate.edu/normals/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "PRISM Climate Group",
+     "url": "https://prism.oregonstate.edu/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-chirps",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "CHIRPS",
+   "fullName": "Climate Hazards Center InfraRed Precipitation with Station data",
+   "host": "UC Santa Barbara Climate Hazards Center",
+   "location": "Santa Barbara, CA",
+   "discipline": "Quasi-global satellite-gauge rainfall",
+   "topics": [
+    "satellite",
+    "gauges",
+    "historical"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "CHIRPS blends infrared satellite rainfall estimates with station data into a 0.05° quasi-global record from 1981 to near real time, widely used for drought monitoring. Version 3 is the newest release.",
+   "holdings": [
+    "CHIRPS v2.0 (daily, pentad, monthly)",
+    "CHIRPS v3.0"
+   ],
+   "formats": [
+    "GeoTIFF",
+    "NetCDF",
+    "BIL"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CHIRPS v2.0 files",
+     "url": "https://data.chc.ucsb.edu/products/CHIRPS/v2.0/"
+    },
+    {
+     "name": "CHIRPS v3.0 files",
+     "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/"
+    },
+    {
+     "name": "CHIRPS v3 overview",
+     "url": "https://www.chc.ucsb.edu/data/chirps3"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Climate Hazards Center — CHIRPS",
+     "url": "https://www.chc.ucsb.edu/data/chirps"
+    }
+   ]
+  },
+  {
+   "id": "other-us-chrs-persiann",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "CHRS / PERSIANN",
+   "fullName": "Center for Hydrometeorology and Remote Sensing — PERSIANN family",
+   "host": "University of California, Irvine",
+   "location": "Irvine, CA",
+   "discipline": "Satellite precipitation estimates (PERSIANN)",
+   "topics": [
+    "satellite",
+    "historical"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "UC Irvine CHRS produces the PERSIANN family of machine-learning satellite precipitation estimates, including PERSIANN-CDR (1983–present), PERSIANN-CCS and PDIR-Now near-real-time rainfall.",
+   "holdings": [
+    "PERSIANN-CDR",
+    "PERSIANN-CCS",
+    "PDIR-Now"
+   ],
+   "formats": [
+    "NetCDF",
+    "GeoTIFF",
+    "ASCII"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CHRS Data Portal",
+     "url": "https://chrsdata.eng.uci.edu/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "UCI CHRS",
+     "url": "https://chrs.web.uci.edu/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-cloudsat",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "CloudSat DPC",
+   "fullName": "CloudSat Data Processing Center",
+   "host": "Colorado State University, CIRA",
+   "location": "Fort Collins, CO",
+   "discipline": "Spaceborne cloud radar, snowfall & light rain",
+   "topics": [
+    "satellite",
+    "radar",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The CloudSat Data Processing Center at CSU serves products from NASA's CloudSat cloud profiling radar (2006–2023), including precipitation-column, rain profile and snow profile products.",
+   "holdings": [
+    "2C-PRECIP-COLUMN",
+    "2C-RAIN-PROFILE",
+    "2C-SNOW-PROFILE"
+   ],
+   "formats": [
+    "HDF-EOS",
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CloudSat data products",
+     "url": "https://www.cloudsat.cira.colostate.edu/data-products"
+    }
+   ],
+   "sources": [
+    {
+     "label": "CloudSat DPC",
+     "url": "https://www.cloudsat.cira.colostate.edu/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-cocorahs",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "CoCoRaHS",
+   "fullName": "Community Collaborative Rain, Hail and Snow Network",
+   "host": "Colorado State University, Colorado Climate Center",
+   "location": "Fort Collins, CO",
+   "discipline": "Volunteer daily precipitation network",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "CoCoRaHS is a network of tens of thousands of volunteers across the US, Canada and other countries who report daily rain, hail and snow with standard gauges. Reports are open to download.",
+   "holdings": [
+    "Daily precipitation reports",
+    "Snowfall & snow water equivalent",
+    "Hail reports"
+   ],
+   "formats": [
+    "CSV",
+    "XML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CoCoRaHS Data Explorer",
+     "url": "https://dex.cocorahs.org/"
+    },
+    {
+     "name": "Daily precipitation reports",
+     "url": "https://www.cocorahs.org/ViewData/ListDailyPrecipReports.aspx"
+    }
+   ],
+   "sources": [
+    {
+     "label": "CoCoRaHS",
+     "url": "https://www.cocorahs.org/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-colorado-climate-center",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "Colorado Climate Center",
+   "fullName": "Colorado Climate Center",
+   "host": "Colorado State University",
+   "location": "Fort Collins, CO",
+   "discipline": "State climate office records",
+   "topics": [
+    "gauges",
+    "historical"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Colorado's state climate office keeps station precipitation records, drought monitoring and the CoAgMET agricultural weather network, and hosts CoCoRaHS.",
+   "holdings": [
+    "Colorado station precipitation records",
+    "CoAgMET network",
+    "Drought monitoring"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Data access",
+     "url": "https://climate.colostate.edu/data_access_new.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Colorado Climate Center",
+     "url": "https://climate.colostate.edu/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-iem",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "IEM",
+   "fullName": "Iowa Environmental Mesonet",
+   "host": "Iowa State University",
+   "location": "Ames, IA",
+   "discipline": "Station, radar & precipitation archive",
+   "topics": [
+    "gauges",
+    "radar",
+    "historical"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Iowa Environmental Mesonet archives US airport (ASOS) observations, COOP daily precipitation, NEXRAD composites and MRMS precipitation, with download pages and a web API.",
+   "holdings": [
+    "ASOS/AWOS observations (US-wide)",
+    "COOP daily precipitation",
+    "NEXRAD & MRMS composites archive"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "GeoTIFF",
+    "PNG"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "ASOS download",
+     "url": "https://mesonet.agron.iastate.edu/request/download.phtml"
+    },
+    {
+     "name": "IEM API",
+     "url": "https://mesonet.agron.iastate.edu/api/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Iowa Environmental Mesonet",
+     "url": "https://mesonet.agron.iastate.edu/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-iowa-flood-center",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "Iowa Flood Center",
+   "fullName": "Iowa Flood Center / Iowa Flood Information System (IFIS)",
+   "host": "University of Iowa",
+   "location": "Iowa City, IA",
+   "discipline": "Radar rainfall & flood forecasting",
+   "topics": [
+    "hydrology",
+    "radar",
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Iowa Flood Center runs stream sensors and rain gauges, produces radar rainfall estimates and flood forecasts, and shares them through the Iowa Flood Information System (IFIS).",
+   "holdings": [
+    "Radar rainfall estimates",
+    "Rain gauge & stream sensor networks",
+    "Flood forecasts"
+   ],
+   "formats": [
+    "CSV",
+    "GeoTIFF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Data resources",
+     "url": "https://iowafloodcenter.uiowa.edu/data-resources"
+    },
+    {
+     "name": "Iowa Flood Information System",
+     "url": "https://iowafloodcenter.uiowa.edu/ifis"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Iowa Flood Center",
+     "url": "https://iowafloodcenter.uiowa.edu/"
+    }
+   ]
+  },
+  {
+   "id": "other-us-tomorrow-io",
+   "agency": "Other US",
+   "kind": "data-center",
+   "name": "Tomorrow.io",
+   "fullName": "Tomorrow.io weather API and satellite constellation",
+   "host": "Tomorrow.io (commercial)",
+   "location": "Boston, MA",
+   "discipline": "Commercial microwave sounder precipitation",
+   "topics": [
+    "satellite",
+    "radar"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Commercial company flying small microwave sounder and radar satellites for precipitation retrievals and nowcasting. Data is offered through a weather API that needs an account and key.",
+   "holdings": [
+    "Microwave sounder constellation",
+    "Precipitation radar satellites",
+    "Weather API (forecasts & nowcasts)"
+   ],
+   "formats": [
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Weather API reference",
+     "url": "https://docs.tomorrow.io/reference/welcome"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Tomorrow.io space program",
+     "url": "https://www.tomorrow.io/space/"
+    }
+   ]
+  },
+  {
+   "id": "international-gpcc",
+   "agency": "International",
+   "kind": "data-center",
+   "name": "GPCC",
+   "fullName": "Global Precipitation Climatology Centre",
+   "host": "Deutscher Wetterdienst (DWD), Germany",
+   "location": "Offenbach, Germany",
+   "discipline": "Global gauge-based precipitation analyses",
+   "topics": [
+    "gauges",
+    "historical"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "GPCC collects rain gauge data from more than 80,000 stations worldwide and produces gridded monthly and daily land precipitation analyses back to 1891. It supplies the gauge part of GPCP.",
+   "holdings": [
+    "Full Data Monthly & Daily",
+    "Monitoring & First Guess products",
+    "Precipitation climatology"
+   ],
+   "formats": [
+    "NetCDF",
+    "ASCII"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "GPCC download gate",
+     "url": "https://opendata.dwd.de/climate_environment/GPCC/html/download_gate.html"
+    },
+    {
+     "name": "GPCC at NOAA PSL",
+     "url": "https://psl.noaa.gov/data/gridded/data.gpcc.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "DWD — GPCC",
+     "url": "https://www.dwd.de/EN/ourservices/gpcc/gpcc.html"
+    }
+   ]
+  },
+  {
+   "id": "international-gsmap",
+   "agency": "International",
+   "kind": "data-center",
+   "name": "GSMaP",
+   "fullName": "Global Satellite Mapping of Precipitation",
+   "host": "Japan Aerospace Exploration Agency (JAXA) EORC",
+   "location": "Tsukuba, Japan",
+   "discipline": "Multi-satellite global precipitation",
+   "topics": [
+    "satellite"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "JAXA's hourly 0.1° multi-satellite precipitation product built from GPM-constellation microwave radiometers and geostationary infrared, in near-real-time and reanalysis versions.",
+   "holdings": [
+    "GSMaP_NRT & GSMaP_NOW",
+    "GSMaP_MVK (standard)",
+    "GSMaP reanalysis"
+   ],
+   "formats": [
+    "HDF5",
+    "Binary",
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "JAXA Global Rainfall Watch",
+     "url": "https://sharaku.eorc.jaxa.jp/GSMaP/index.htm"
+    },
+    {
+     "name": "JAXA G-Portal",
+     "url": "https://gportal.jaxa.jp/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "JAXA EORC — GSMaP",
+     "url": "https://sharaku.eorc.jaxa.jp/GSMaP/"
+    }
+   ]
+  },
+  {
+   "id": "international-oceanrain",
+   "agency": "International",
+   "kind": "data-center",
+   "name": "OceanRAIN",
+   "fullName": "Ocean Rainfall And Ice-phase precipitation measurement Network",
+   "host": "University of Hamburg ICDC and Deutscher Wetterdienst",
+   "location": "Hamburg, Germany",
+   "discipline": "Shipboard ocean precipitation reference data",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "OceanRAIN records along-track precipitation from optical disdrometers on research vessels, giving a surface reference for satellite precipitation over the ocean (rain, snow and mixed phase).",
+   "holdings": [
+    "OceanRAIN-W (water-cycle parameters)",
+    "OceanRAIN-M (meteorological data)",
+    "OceanRAIN-R (raw disdrometer data)"
+   ],
+   "formats": [
+    "NetCDF",
+    "ASCII"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "OceanRAIN-W (WDCC)",
+     "url": "https://doi.org/10.1594/WDCC/OceanRAIN-W"
+    },
+    {
+     "name": "OceanRAIN-M (WDCC)",
+     "url": "https://doi.org/10.1594/WDCC/OceanRAIN-M"
+    },
+    {
+     "name": "OceanRAIN-R (WDCC)",
+     "url": "https://doi.org/10.1594/WDCC/OceanRAIN-R"
+    },
+    {
+     "name": "OceanRAIN V002 (DWD)",
+     "url": "https://opendata.dwd.de/climate_environment/CDC/help/landing_pages/doi_landingpage_OceanRAIN_V002-en.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "ICDC — OceanRAIN",
+     "url": "https://www.geo.uni-hamburg.de/en/service/icdc/data/atmosphere/oceanrain.html"
+    }
+   ]
+  },
+  {
+   "id": "international-earthcare",
+   "agency": "International",
+   "kind": "data-center",
+   "name": "EarthCARE",
+   "fullName": "Earth Cloud, Aerosol and Radiation Explorer",
+   "host": "European Space Agency (ESA) and JAXA",
+   "location": "Frascati, Italy",
+   "discipline": "Spaceborne Doppler cloud radar",
+   "topics": [
+    "satellite",
+    "radar"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "ESA-JAXA satellite launched in 2024 with the first spaceborne Doppler cloud profiling radar, which observes light rain and snowfall along with clouds and aerosols.",
+   "holdings": [
+    "Cloud Profiling Radar (CPR, Doppler)",
+    "Atmospheric lidar (ATLID)",
+    "Multi-spectral imager & broadband radiometer"
+   ],
+   "formats": [
+    "HDF5",
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "EarthCARE data access",
+     "url": "https://earth.esa.int/eogateway/missions/earthcare/data"
+    }
+   ],
+   "sources": [
+    {
+     "label": "ESA — EarthCARE mission",
+     "url": "https://earth.esa.int/eogateway/missions/earthcare"
+    }
+   ]
+  },
+  {
+   "id": "international-ipwg",
+   "agency": "International",
+   "kind": "data-center",
+   "name": "IPWG",
+   "fullName": "International Precipitation Working Group",
+   "host": "Coordination Group for Meteorological Satellites (CGMS) and WMO",
+   "location": "International",
+   "discipline": "Satellite precipitation validation & benchmarks",
+   "topics": [
+    "satellite"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "IPWG coordinates satellite precipitation research and validation. It publishes the SatRain machine-learning benchmark dataset of satellite observations paired with reference precipitation.",
+   "holdings": [
+    "SatRain benchmark dataset",
+    "Satellite precipitation validation"
+   ],
+   "formats": [
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SatRain benchmark",
+     "url": "https://github.com/ipwgml/satrain"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IPWG",
+     "url": "https://www.eorc.jaxa.jp/IPWG/"
+    },
+    {
+     "label": "SatRain paper (arXiv 2509.08816)",
+     "url": "https://arxiv.org/abs/2509.08816"
+    }
+   ]
+  },
+  {
+   "id": "international-sm2rain",
+   "agency": "International",
+   "kind": "data-center",
+   "name": "SM2RAIN",
+   "fullName": "SM2RAIN soil-moisture-based rainfall",
+   "host": "CNR-IRPI, Italy",
+   "location": "Perugia, Italy",
+   "discipline": "Rainfall from satellite soil moisture",
+   "topics": [
+    "satellite",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "SM2RAIN estimates rainfall from changes in satellite soil moisture, giving global land rainfall records that complement radiometer products. The datasets are published on Zenodo.",
+   "holdings": [
+    "SM2RAIN-ASCAT global rainfall",
+    "Digital Twin Earth Hydrology"
+   ],
+   "formats": [
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SM2RAIN-ASCAT (Zenodo 3405563)",
+     "url": "https://zenodo.org/records/3405563"
+    },
+    {
+     "name": "SM2RAIN dataset (Zenodo 2591215)",
+     "url": "https://zenodo.org/records/2591215"
+    },
+    {
+     "name": "SM2RAIN dataset (Zenodo 8232373)",
+     "url": "https://zenodo.org/records/8232373"
+    },
+    {
+     "name": "SM2RAIN-ASCAT reader (GitHub)",
+     "url": "https://github.com/IRPIhydrology/SM2RAIN_ASCAT_reader"
+    }
+   ],
+   "sources": [
+    {
+     "label": "SM2RAIN-ASCAT paper (ESSD 2019)",
+     "url": "https://essd.copernicus.org/articles/11/1583/2019/"
+    },
+    {
+     "label": "Digital Twin Earth Hydrology (Frontiers 2023)",
+     "url": "https://www.frontiersin.org/journals/science/articles/10.3389/fsci.2023.1190191/full"
+    }
+   ]
   }
  ]
 };
