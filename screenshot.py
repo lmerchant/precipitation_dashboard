@@ -85,6 +85,11 @@ with sync_playwright() as p:
     page.screenshot(path=OUT / "4e-usgs-panel.png")
     page.get_by_role("button", name="Other US").click()
 
+    # Sources with no data endpoints are tagged Non-digital.
+    page.get_by_role("button", name="Non-digital").click()
+    print("Non-digital rows:", page.locator("#result-count").inner_text())
+    page.get_by_role("button", name="Non-digital").click()
+
     # International tab: same panel, international sources only.
     page.get_by_role("tab", name="International").click()
     page.get_by_text("Showing 6 of 6 sources").wait_for()

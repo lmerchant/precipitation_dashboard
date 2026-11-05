@@ -76,7 +76,7 @@ TOPICS = {
     "hydrology": "Hydrology",
     "snow": "Snow & ice",
     "field": "Field campaigns",
-    "historical": "Historical & non-digital",
+    "nondigital": "Non-digital",
     "other": "Other",
 }
 
@@ -85,7 +85,7 @@ ENTRY_TOPICS = {
     "nasa-podaac": ["satellite", "hydrology"], "nasa-gesdisc": ["satellite", "models"],
     "nasa-asdc": ["satellite"], "nasa-nsidc": ["satellite", "snow"], "nasa-obdaac": ["satellite"],
     "nasa-ornl": ["gauges", "models"], "nasa-ghrc": ["satellite", "radar", "field"],
-    "noaa-ncei": ["gauges", "radar", "satellite", "historical"], "noaa-rwrc": ["gauges", "historical"],
+    "noaa-ncei": ["gauges", "radar", "satellite"], "noaa-rwrc": ["gauges"],
     "noaa-nodd": ["radar", "satellite", "models"], "noaa-class": ["satellite"],
     "noaa-coops": ["other"], "noaa-ndbc": ["gauges"], "noaa-coastwatch": ["satellite"],
     "noaa-gfdl": ["models"], "noaa-pmel": ["gauges"], "noaa-aoml": ["radar", "field"],
@@ -168,7 +168,7 @@ def project_entries():
             "host": "; ".join(orgs),
             "location": "",
             "discipline": f"Research project, {p['years']}",
-            "topics": ["field", "historical"] if archival else ["field"],
+            "topics": ["field"],
             "relevance": relevance(entry_id),
             "removalReason": SUGGESTED_REMOVAL.get(entry_id),
             "blurb": f"US government meteorology research project ({p['years']}) run by {', '.join(orgs)}.",
@@ -251,6 +251,10 @@ def main():
     entries += projects
     not_added = add_roster(entries, meta)
     add_usgs(entries, meta)
+    # Sources with no data endpoint at all are tagged Non-digital.
+    for e in entries:
+        if not e["endpoints"]:
+            e["topics"].append("nondigital")
     ids = {e["id"] for e in entries}
     missing = (set(SUGGESTED_REMOVAL) | SECONDARY | set(ENTRY_TOPICS)) - ids
     assert not missing, f"Unknown ids in lookup tables: {sorted(missing)}"

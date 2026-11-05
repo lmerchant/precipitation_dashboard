@@ -8,7 +8,7 @@ window.PRECIP_DATA = {
   "hydrology": "Hydrology",
   "snow": "Snow & ice",
   "field": "Field campaigns",
-  "historical": "Historical & non-digital",
+  "nondigital": "Non-digital",
   "other": "Other"
  },
  "meta": {
@@ -865,8 +865,7 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges",
     "radar",
-    "satellite",
-    "historical"
+    "satellite"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -963,8 +962,7 @@ window.PRECIP_DATA = {
    "location": "Lincoln, NE · West Lafayette, IN · Ithaca, NY · Chapel Hill, NC · College Station, TX · Reno, NV",
    "discipline": "Regional station climate data & climate services",
    "topics": [
-    "gauges",
-    "historical"
+    "gauges"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -2877,8 +2875,7 @@ window.PRECIP_DATA = {
    "location": "",
    "discipline": "Research project, 1947",
    "topics": [
-    "field",
-    "historical"
+    "field"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -2950,8 +2947,7 @@ window.PRECIP_DATA = {
    "location": "",
    "discipline": "Research project, 1962",
    "topics": [
-    "field",
-    "historical"
+    "field"
    ],
    "relevance": "secondary",
    "removalReason": null,
@@ -3052,8 +3048,7 @@ window.PRECIP_DATA = {
    "location": "",
    "discipline": "Research project, 1962–1983",
    "topics": [
-    "field",
-    "historical"
+    "field"
    ],
    "relevance": "secondary",
    "removalReason": null,
@@ -3116,8 +3111,7 @@ window.PRECIP_DATA = {
    "location": "",
    "discipline": "Research project, 1967–1972",
    "topics": [
-    "field",
-    "historical"
+    "field"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -3250,8 +3244,7 @@ window.PRECIP_DATA = {
    "location": "",
    "discipline": "Research project, 1978",
    "topics": [
-    "field",
-    "historical"
+    "field"
    ],
    "relevance": "suggested-removal",
    "removalReason": "Downburst (wind) study; no precipitation records listed.",
@@ -3689,7 +3682,8 @@ window.PRECIP_DATA = {
    "location": "",
    "discipline": "Research project, 2013–2024",
    "topics": [
-    "field"
+    "field",
+    "nondigital"
    ],
    "relevance": "suggested-removal",
    "removalReason": "Mental-health study of tornado survivors; no weather data.",
@@ -3869,7 +3863,8 @@ window.PRECIP_DATA = {
    "location": "",
    "discipline": "Research project, 2017",
    "topics": [
-    "field"
+    "field",
+    "nondigital"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -4053,7 +4048,8 @@ window.PRECIP_DATA = {
    "location": "",
    "discipline": "Research project, 2024–Present",
    "topics": [
-    "field"
+    "field",
+    "nondigital"
    ],
    "relevance": "suggested-removal",
    "removalReason": "Low-level tornado flow; wind focused.",
@@ -4100,8 +4096,7 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges",
     "satellite",
-    "models",
-    "historical"
+    "models"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -4468,8 +4463,7 @@ window.PRECIP_DATA = {
    "discipline": "Gridded US precipitation & climate normals",
    "topics": [
     "gauges",
-    "models",
-    "historical"
+    "models"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -4515,8 +4509,7 @@ window.PRECIP_DATA = {
    "discipline": "Quasi-global satellite-gauge rainfall",
    "topics": [
     "satellite",
-    "gauges",
-    "historical"
+    "gauges"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -4564,8 +4557,7 @@ window.PRECIP_DATA = {
    "location": "Irvine, CA",
    "discipline": "Satellite precipitation estimates (PERSIANN)",
    "topics": [
-    "satellite",
-    "historical"
+    "satellite"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -4693,8 +4685,7 @@ window.PRECIP_DATA = {
    "location": "Fort Collins, CO",
    "discipline": "State climate office records",
    "topics": [
-    "gauges",
-    "historical"
+    "gauges"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -4714,6 +4705,10 @@ window.PRECIP_DATA = {
     {
      "name": "Data access",
      "url": "https://climate.colostate.edu/data_access_new.html"
+    },
+    {
+     "name": "Water year precipitation data by station",
+     "url": "https://climate.colostate.edu/wy_data.html"
     }
    ],
    "sources": [
@@ -4734,8 +4729,7 @@ window.PRECIP_DATA = {
    "discipline": "Station, radar & precipitation archive",
    "topics": [
     "gauges",
-    "radar",
-    "historical"
+    "radar"
    ],
    "relevance": "primary",
    "removalReason": null,
@@ -4867,8 +4861,7 @@ window.PRECIP_DATA = {
    "location": "Offenbach, Germany",
    "discipline": "Global gauge-based precipitation analyses",
    "topics": [
-    "gauges",
-    "historical"
+    "gauges"
    ],
    "relevance": "primary",
    "removalReason": null,
