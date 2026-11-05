@@ -2139,6 +2139,10 @@ window.PRECIP_DATA = {
     {
      "name": "DataONE search",
      "url": "https://search.dataone.org/"
+    },
+    {
+     "name": "Query: precipitation datasets in the USA (JSON)",
+     "url": "https://cn.dataone.org/cn/v2/query/solr/?q=-obsoletedBy:*%20AND%20-formatId:*dataone.org%5C%2Fcollections*%20AND%20-formatId:*dataone.org%5C%2Fportals*%20AND%20attribute:precipitation%20AND%20formatType:METADATA%20AND%20siteText:usa&fl=id,title,datasource&rows=200&wt=json"
     }
    ],
    "sources": [
