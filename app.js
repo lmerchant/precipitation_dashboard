@@ -4,10 +4,10 @@
 
   var DATA = window.PRECIP_DATA;
   var ENTRIES = DATA.entries;
-  var AGENCIES = ['NASA', 'NOAA', 'NSF', 'NWS', 'Other US', 'International', 'Extra'];
+  var AGENCIES = ['NASA', 'NOAA', 'NSF', 'NWS', 'Other US', 'State agencies', 'International', 'Extra'];
   var AGENCY_LABELS = {
-    NASA: 'NASA', NOAA: 'NOAA', NSF: 'NSF', NWS: 'NWS',
-    'Other US': 'Other US', International: 'International', Extra: 'Research projects',
+    NASA: 'NASA', NOAA: 'NOAA', NSF: 'NSF', NWS: 'NWS', 'Other US': 'Other US',
+    'State agencies': 'State agencies', International: 'International', Extra: 'Research projects',
   };
   var STAT_LABELS = {
     'Other US': 'Other US sources',
@@ -15,11 +15,18 @@
     Extra: 'Research projects',
   };
 
-  // The Dashboard and International tabs share one panel; each shows only its own sources.
-  var INTERNATIONAL = 'International';
+  // The Dashboard, State agencies and International tabs share one panel; each shows only its own sources.
+  var SCOPE_GROUPS = { states: 'State agencies', international: 'International' };
+  var SCOPE_TITLES = {
+    dashboard: 'US Precipitation Data Sources',
+    states: 'US State and Local Precipitation Data Sources',
+    international: 'International Precipitation Data Sources',
+  };
+  var SCOPE_FILES = { dashboard: 'us', states: 'us-state-and-local', international: 'international' };
 
-  // scope: which source list the shared panel last showed ('dashboard' or 'international').
-  var state = { view: 'dashboard', scope: null, query: '', agencies: {}, topics: {}, sort: 'agency', expanded: {} };
+  // scope: which source list the shared panel last showed ('dashboard', 'states' or 'international').
+  // stateCode: the State filter on the State agencies tab ('' for all states).
+  var state = { view: 'dashboard', scope: null, query: '', agencies: {}, topics: {}, stateCode: '', sort: 'agency', expanded: {} };
 
   function $(id) { return document.getElementById(id); }
 
@@ -46,10 +53,19 @@
 
   function badge(agency) { return '<span class="agency agency-' + cssKey(agency) + '">' + esc(agency) + '</span>'; }
 
-  function scopeEntries() {
-    var intl = state.scope === 'international';
-    return ENTRIES.filter(function (e) { return (e.agency === INTERNATIONAL) === intl; });
+  function groupScope(agency) {
+    return Object.keys(SCOPE_GROUPS).filter(function (s) { return SCOPE_GROUPS[s] === agency; })[0] || 'dashboard';
   }
+
+  function scopeEntries() {
+    return ENTRIES.filter(function (e) { return groupScope(e.agency) === state.scope; });
+  }
+
+  function isStates() { return state.scope === 'states'; }
+
+  // State names by two-letter code, from entries that cover a single state.
+  var STATE_NAMES = {};
+  ENTRIES.forEach(function (e) { if (e.stateCodes && e.stateCodes.length === 1) STATE_NAMES[e.stateCodes[0]] = e.state; });
 
   function scopeAgencies() {
     var present = {};
@@ -79,7 +95,7 @@
   /* ── tabs ───────────────────────────────────────────── */
 
   function showView(view) {
-    state.view = view === 'removals' || view === 'international' ? view : 'dashboard';
+    state.view = view === 'removals' || SCOPE_GROUPS[view] ? view : 'dashboard';
     document.querySelectorAll('.tab').forEach(function (t) {
       t.setAttribute('aria-selected', String(t.dataset.view === state.view));
     });
@@ -89,15 +105,19 @@
       state.scope = state.view;
       $('view-dashboard').setAttribute('aria-labelledby', 'tab-' + state.view);
       // Filters from the other tab may name agencies this one doesn't have, so start clean.
-      state.query = ''; state.agencies = {}; state.topics = {}; state.expanded = {};
+      state.query = ''; state.agencies = {}; state.topics = {}; state.stateCode = ''; state.expanded = {};
       $('search').value = '';
       note('export-note', '');
+      $('state-filter-label').hidden = !isStates();
+      $('col-agency').textContent = isStates() ? 'State' : 'Agency';
+      $('sort-agency').textContent = isStates() ? 'State' : 'Agency';
       renderDashboard();
     }
   }
 
   function renderDashboard() {
     renderStats();
+    renderStateFilter();
     renderChips();
     renderTable();
     renderNotes();
@@ -117,6 +137,7 @@
   /* ── summary ────────────────────────────────────────── */
 
   function renderStats() {
+    if (isStates()) { renderStateStats(); return; }
     var entries = scopeEntries(), agencies = scopeAgencies();
     var byAgency = {};
     entries.forEach(function (e) { byAgency[e.agency] = (byAgency[e.agency] || 0) + 1; });
@@ -134,12 +155,37 @@
     $('stats').classList.toggle('is-single', agencies.length < 2);
   }
 
+  function renderStateStats() {
+    var entries = scopeEntries(), codes = {}, datasets = 0, tested = 0;
+    entries.forEach(function (e) {
+      e.stateCodes.forEach(function (c) { codes[c] = true; });
+      datasets += e.datasetDetails.length;
+      tested += e.datasetDetails.filter(function (d) { return d.verification === 'download tested'; }).length;
+    });
+    $('stats').innerHTML = stat(entries.length, 'State and local sources') +
+      stat(Object.keys(codes).length, 'States with a source') +
+      stat(datasets, 'Datasets') + stat(tested, 'Downloads tested');
+    $('stats').classList.remove('is-single');
+  }
+
   function stat(value, label, extra) {
     return '<div class="stat"><span class="stat-value">' + value + '</span><span class="stat-label">' +
       esc(label) + '</span>' + (extra || '') + '</div>';
   }
 
   /* ── filters ────────────────────────────────────────── */
+
+  function renderStateFilter() {
+    if (!isStates()) return;
+    var counts = {};
+    scopeEntries().forEach(function (e) { e.stateCodes.forEach(function (c) { counts[c] = (counts[c] || 0) + 1; }); });
+    var codes = Object.keys(counts).filter(function (c) { return STATE_NAMES[c]; })
+      .sort(function (a, b) { return STATE_NAMES[a].localeCompare(STATE_NAMES[b]); });
+    $('state-filter').innerHTML = '<option value="">All states</option>' + codes.map(function (c) {
+      return '<option value="' + c + '"' + (c === state.stateCode ? ' selected' : '') + '>' +
+        esc(STATE_NAMES[c]) + ' (' + counts[c] + ')</option>';
+    }).join('');
+  }
 
   function renderChips() {
     var aCounts = {}, tCounts = {}, agencies = scopeAgencies();
@@ -164,11 +210,12 @@
 
   function matches(e) {
     if (state.query) {
-      var hay = [e.name, e.fullName, e.host, e.location, e.discipline, e.blurb, e.agency,
+      var hay = [e.name, e.fullName, e.host, e.location, e.discipline, e.blurb, e.agency, e.state, e.orgType,
         e.holdings.join(' '), e.formats.join(' '),
         e.endpoints.map(function (x) { return x.name; }).join(' ')].join(' ').toLowerCase();
       if (hay.indexOf(state.query) === -1) return false;
     }
+    if (state.stateCode && (!e.stateCodes || e.stateCodes.indexOf(state.stateCode) === -1)) return false;
     var agencies = Object.keys(state.agencies);
     if (agencies.length && agencies.indexOf(e.agency) === -1) return false;
     var topics = Object.keys(state.topics);
@@ -178,7 +225,9 @@
 
   function sortList(list) {
     var byName = function (a, b) { return a.name.localeCompare(b.name); };
-    var byAgency = function (a, b) { return AGENCIES.indexOf(a.agency) - AGENCIES.indexOf(b.agency); };
+    var byAgency = function (a, b) {
+      return AGENCIES.indexOf(a.agency) - AGENCIES.indexOf(b.agency) || (a.state || '').localeCompare(b.state || '');
+    };
     var desc = function (key) {
       return function (a, b) { return (b[key] == null ? -1 : b[key]) - (a[key] == null ? -1 : a[key]) || byName(a, b); };
     };
@@ -229,7 +278,7 @@
     var main = '<tr class="row-main" data-id="' + esc(e.id) + '" aria-expanded="' + open + '">' +
       '<td><span class="src-name">' + esc(e.name) + '</span>' +
         (e.fullName !== e.name ? '<span class="src-full">' + esc(e.fullName) + '</span>' : '') + '</td>' +
-      '<td>' + badge(e.agency) + '</td>' +
+      '<td>' + (e.state ? '<span class="state-name">' + esc(e.state) + '</span>' : badge(e.agency)) + '</td>' +
       '<td class="col-wide">' + esc(e.discipline) + '</td>' +
       '<td><div class="topic-list">' +
         e.topics.map(function (t) { return '<span class="topic">' + esc(DATA.topics[t]) + '</span>'; }).join('') + '</div></td>' +
@@ -258,6 +307,17 @@
       }).join('') + '</tbody></table></div>';
   }
 
+  // State entries list each dataset with its time step, period of record and whether a download was tested.
+  function datasetsTable(e) {
+    return '<div class="detail-col detail-col-endpoints"><h4>Datasets</h4>' +
+      '<table class="ep-table"><thead><tr><th scope="col">Dataset</th><th scope="col">Time step</th>' +
+      '<th scope="col">Period of record</th><th scope="col">Download</th></tr></thead><tbody>' +
+      e.datasetDetails.map(function (d) {
+        return '<tr><td>' + link(d.accessUrl, d.name) + '</td><td>' + esc(d.temporalResolution) + '</td><td>' +
+          esc(d.periodOfRecord) + '</td><td>' + esc(d.verification) + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+  }
+
   function metricsLine(e) {
     var items = [
       ['Archive volume', fmtVolume(e.volumeTB)],
@@ -272,6 +332,8 @@
   function detailHtml(e) {
     var isProject = e.kind === 'research-project';
     var facts = [];
+    if (e.state) facts.push((e.stateCodes.length > 1 ? 'States: ' + esc(e.stateCodes.join(', ')) : 'State: ' + esc(e.state)));
+    if (e.orgType) facts.push('Host type: ' + esc(e.orgType));
     if (e.host) facts.push((isProject ? 'Organizations: ' : 'Host: ') + esc(e.host));
     if (e.location) facts.push('Location: ' + esc(e.location));
     if (e.years) facts.push('Years: ' + esc(e.years) + (e.ongoing ? ' (ongoing)' : ''));
@@ -281,10 +343,10 @@
       list('About', facts),
       list('Holdings', e.holdings.map(esc)),
       isProject ? '' : list('Sources', cited),
-      endpointsTable(e),
+      e.datasetDetails ? datasetsTable(e) : endpointsTable(e),
       isProject ? list('References', cited, 'detail-col-refs') : '',
     ].join('');
-    return metricsLine(e) + '<p class="detail-blurb">' + esc(e.blurb) + '</p><div class="detail">' + cols + '</div>';
+    return (e.datasetDetails ? '' : metricsLine(e)) + '<p class="detail-blurb">' + esc(e.blurb) + '</p><div class="detail">' + cols + '</div>';
   }
 
   function renderNotes() {
@@ -363,7 +425,8 @@
   }
 
   function centerRow(e) {
-    return {
+    var row = e.state ? { 'State': e.stateCodes.length > 1 ? e.stateCodes.join(', ') : e.state, 'Host type': e.orgType } : {};
+    return Object.assign(row, {
       'Name': e.name,
       'Full name': e.fullName,
       'Focus': e.discipline,
@@ -378,7 +441,7 @@
       'Datasets': e.datasets,
       'Data access': joinLinks(e.endpoints, 'name'),
       'Sources': joinLinks(e.sources, 'label'),
-    };
+    });
   }
 
   function projectRow(e) {
@@ -423,8 +486,7 @@
   }
 
   function exportFile(filtered, ext) {
-    var prefix = state.scope === 'international' ? 'international' : 'us';
-    return prefix + '-precipitation-data-sources' + (filtered ? '-filtered' : '') + ext;
+    return SCOPE_FILES[state.scope] + '-precipitation-data-sources' + (filtered ? '-filtered' : '') + ext;
   }
 
   function exportSummary(file, groups, filtered) {
@@ -453,11 +515,11 @@
       delete copy.removalReason;
       return copy;
     });
-    var title = state.scope === 'international' ? 'International Precipitation Data Sources' : 'US Precipitation Data Sources';
-    var doc = { title: title, topics: DATA.topics, removed: DATA.removed };
+    var doc = { title: SCOPE_TITLES[state.scope], topics: DATA.topics, removed: DATA.removed };
     if (filtered) {
       doc.filters = {
         search: state.query,
+        state: state.stateCode ? STATE_NAMES[state.stateCode] : '',
         agencies: Object.keys(state.agencies),
         topics: Object.keys(state.topics).map(function (t) { return DATA.topics[t]; }),
       };
@@ -512,6 +574,7 @@
   function bind() {
     $('search').addEventListener('input', function (ev) { state.query = ev.target.value.trim().toLowerCase(); renderTable(); });
     $('sort').addEventListener('change', function (ev) { state.sort = ev.target.value; renderTable(); });
+    $('state-filter').addEventListener('change', function (ev) { state.stateCode = ev.target.value; renderTable(); });
     document.querySelector('.controls').addEventListener('click', function (ev) {
       var c = ev.target.closest('.chip');
       if (!c) return;
@@ -527,8 +590,9 @@
       renderTable();
     });
     $('reset').addEventListener('click', function () {
-      state.query = ''; state.agencies = {}; state.topics = {};
+      state.query = ''; state.agencies = {}; state.topics = {}; state.stateCode = '';
       $('search').value = '';
+      renderStateFilter();
       renderChips();
       renderTable();
     });

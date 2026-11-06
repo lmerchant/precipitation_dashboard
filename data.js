@@ -77,6 +77,15 @@ window.PRECIP_DATA = {
     "Research group pages, papers, software tools and missions with no data yet were not added (notAdded)."
    ],
    "file": "invitee-roster-sources.json"
+  },
+  "State agencies": {
+   "title": "State-agency precipitation data",
+   "notes": [
+    "50 of 50 states researched on 2026-11-05, one research run per state; 126 sources and 168 datasets, 114 of them download-tested.",
+    "Includes state agencies, state climate offices, mesonets, regional water agencies, county and city agencies and university networks hosted in the state. Pages that only link to federal tools, tools built on ACIS, static normals maps and the six regional climate centers (see NCEI-RWRC) are left out.",
+    "States with no qualifying source: Tennessee."
+   ],
+   "file": "state-agencies-sources.json"
   }
  },
  "removed": [
@@ -4453,52 +4462,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "other-us-prism",
-   "agency": "Other US",
-   "kind": "data-center",
-   "name": "PRISM",
-   "fullName": "PRISM Climate Group",
-   "host": "Oregon State University",
-   "location": "Corvallis, OR",
-   "discipline": "Gridded US precipitation & climate normals",
-   "topics": [
-    "gauges",
-    "models"
-   ],
-   "relevance": "primary",
-   "removalReason": null,
-   "blurb": "PRISM produces gridded daily and monthly precipitation and temperature for the contiguous US from 1895 to the present, plus 30-year climate normals, by combining station data with terrain-aware interpolation.",
-   "holdings": [
-    "Daily & monthly precipitation (1981–present)",
-    "Monthly precipitation back to 1895",
-    "30-year climate normals"
-   ],
-   "formats": [
-    "BIL",
-    "GeoTIFF",
-    "NetCDF"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Recent & historical data",
-     "url": "https://prism.oregonstate.edu/data/"
-    },
-    {
-     "name": "30-year normals",
-     "url": "https://prism.oregonstate.edu/normals/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "PRISM Climate Group",
-     "url": "https://prism.oregonstate.edu/"
-    }
-   ]
-  },
-  {
    "id": "other-us-chirps",
    "agency": "Other US",
    "kind": "data-center",
@@ -4672,142 +4635,6 @@ window.PRECIP_DATA = {
     {
      "label": "CoCoRaHS",
      "url": "https://www.cocorahs.org/"
-    }
-   ]
-  },
-  {
-   "id": "other-us-colorado-climate-center",
-   "agency": "Other US",
-   "kind": "data-center",
-   "name": "Colorado Climate Center",
-   "fullName": "Colorado Climate Center",
-   "host": "Colorado State University",
-   "location": "Fort Collins, CO",
-   "discipline": "State climate office records",
-   "topics": [
-    "gauges"
-   ],
-   "relevance": "primary",
-   "removalReason": null,
-   "blurb": "Colorado's state climate office keeps station precipitation records, drought monitoring and the CoAgMET agricultural weather network, and hosts CoCoRaHS.",
-   "holdings": [
-    "Colorado station precipitation records",
-    "CoAgMET network",
-    "Drought monitoring"
-   ],
-   "formats": [
-    "CSV"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Data access",
-     "url": "https://climate.colostate.edu/data_access_new.html"
-    },
-    {
-     "name": "Water year precipitation data by station",
-     "url": "https://climate.colostate.edu/wy_data.html"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Colorado Climate Center",
-     "url": "https://climate.colostate.edu/"
-    }
-   ]
-  },
-  {
-   "id": "other-us-iem",
-   "agency": "Other US",
-   "kind": "data-center",
-   "name": "IEM",
-   "fullName": "Iowa Environmental Mesonet",
-   "host": "Iowa State University",
-   "location": "Ames, IA",
-   "discipline": "Station, radar & precipitation archive",
-   "topics": [
-    "gauges",
-    "radar"
-   ],
-   "relevance": "primary",
-   "removalReason": null,
-   "blurb": "The Iowa Environmental Mesonet archives US airport (ASOS) observations, COOP daily precipitation, NEXRAD composites and MRMS precipitation, with download pages and a web API.",
-   "holdings": [
-    "ASOS/AWOS observations (US-wide)",
-    "COOP daily precipitation",
-    "NEXRAD & MRMS composites archive"
-   ],
-   "formats": [
-    "CSV",
-    "JSON",
-    "GeoTIFF",
-    "PNG"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "ASOS download",
-     "url": "https://mesonet.agron.iastate.edu/request/download.phtml"
-    },
-    {
-     "name": "IEM API",
-     "url": "https://mesonet.agron.iastate.edu/api/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Iowa Environmental Mesonet",
-     "url": "https://mesonet.agron.iastate.edu/"
-    }
-   ]
-  },
-  {
-   "id": "other-us-iowa-flood-center",
-   "agency": "Other US",
-   "kind": "data-center",
-   "name": "Iowa Flood Center",
-   "fullName": "Iowa Flood Center / Iowa Flood Information System (IFIS)",
-   "host": "University of Iowa",
-   "location": "Iowa City, IA",
-   "discipline": "Radar rainfall & flood forecasting",
-   "topics": [
-    "hydrology",
-    "radar",
-    "gauges"
-   ],
-   "relevance": "primary",
-   "removalReason": null,
-   "blurb": "The Iowa Flood Center runs stream sensors and rain gauges, produces radar rainfall estimates and flood forecasts, and shares them through the Iowa Flood Information System (IFIS).",
-   "holdings": [
-    "Radar rainfall estimates",
-    "Rain gauge & stream sensor networks",
-    "Flood forecasts"
-   ],
-   "formats": [
-    "CSV",
-    "GeoTIFF"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Data resources",
-     "url": "https://iowafloodcenter.uiowa.edu/data-resources"
-    },
-    {
-     "name": "Iowa Flood Information System",
-     "url": "https://iowafloodcenter.uiowa.edu/ifis"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Iowa Flood Center",
-     "url": "https://iowafloodcenter.uiowa.edu/"
     }
    ]
   },
@@ -5197,6 +5024,10473 @@ window.PRECIP_DATA = {
     {
      "label": "Water Resources Mission Area",
      "url": "https://www.usgs.gov/mission-areas/water-resources"
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-al-aaes-weather-exchange",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Alabama Agricultural Experiment Station Weather Exchange",
+   "fullName": "Alabama Agricultural Experiment Station (AAES) - Auburn's Weather Exchange",
+   "host": "Auburn University (platform run by Medius Ag, LLC under contract)",
+   "location": "Auburn, AL",
+   "discipline": "Weather station records from agricultural research units",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Alabama Agricultural Experiment Station, run by Auburn University, collects weather data at its 15 outlying research units around the state. Current and historic records can be viewed and downloaded as CSV through the Weather Exchange, hosted by the contractor Medius Ag, which replaced the older AWIS site that had served AAES weather data since the late 1990s.",
+   "holdings": [
+    "Current and historic weather observations (including rainfall, per the platform's ~70 parameters; not verified) from 15 AAES outlying units"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Auburn's Weather Exchange",
+     "url": "https://wx.medius.re/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AAES launches new weather exchange (Auburn College of Agriculture)",
+     "url": "https://agriculture.auburn.edu/?p=66258"
+    },
+    {
+     "label": "Encyclopedia of Alabama: Alabama Agricultural Experiment Station",
+     "url": "https://encyclopediaofalabama.org/article/alabama-agricultural-experiment-station-aaes/"
+    }
+   ],
+   "state": "Alabama",
+   "stateCodes": [
+    "AL"
+   ],
+   "orgType": "state-designated network (university-operated)",
+   "datasetDetails": [
+    {
+     "name": "Auburn's Weather Exchange",
+     "landingUrl": "https://agriculture.auburn.edu/?p=66258",
+     "accessUrl": "https://wx.medius.re/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented",
+     "periodOfRecord": "Not documented (historic data included; AAES weather data distributed since the late 1990s)",
+     "coverage": "station-specific",
+     "originalCollector": "Alabama Agricultural Experiment Station (data collected by Medius Ag under contract)",
+     "access": "Free account required",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "Not tested: wx.medius.re returns only a login page and requires creating an account (choose 'Medius Wx - Auburn'). CSV download and parameter list come from the AAES announcement; whether precipitation is an exported field was not verified.",
+     "citations": [
+      "https://agriculture.auburn.edu/?p=66258",
+      "https://wx.medius.re/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-al-almnet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Alabama Mesonet (ALMNet), Alabama A&M University",
+   "fullName": "The Alabama MesoNet (ALMNet), Alabama A&M University",
+   "host": "Alabama A&M University",
+   "location": "Normal, AL",
+   "discipline": "Agricultural weather and soil station records, north and central Alabama",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Alabama A&M University runs ALMNet, about 20 weather and soil stations mostly on farms in north and central Alabama, some shared with the USDA NRCS SCAN network. Its site serves monthly tables of daily values, including precipitation in inches, for each station back to 2002.",
+   "holdings": [
+    "Monthly tables of daily station values (temperature, precipitation, humidity, soil moisture and temperature, solar radiation, wind) from about 20 ALMNet stations, 2002-present"
+   ],
+   "formats": [
+    "HTML table"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "ALMNet station data tables",
+     "url": "https://wx.aamu.edu/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "ALMNet home",
+     "url": "https://wx.aamu.edu/"
+    },
+    {
+     "label": "Example station page (AAMU Campus)",
+     "url": "https://wx.aamu.edu/Station.php?2053"
+    }
+   ],
+   "state": "Alabama",
+   "stateCodes": [
+    "AL"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "ALMNet station data tables",
+     "landingUrl": "https://wx.aamu.edu/",
+     "accessUrl": "https://wx.aamu.edu/",
+     "formats": [
+      "HTML table"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (monthly tables); monthly and yearly summaries",
+     "periodOfRecord": "2002-present (varies by station)",
+     "coverage": "station-specific",
+     "originalCollector": "Alabama A&M University (some stations shared with USDA NRCS SCAN)",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation in inches (English pages) or metric pages. The AAMU Campus table for October 2026 showed zeros for temperature, suggesting sensor problems at that station; QC not documented.",
+     "verification": "download tested",
+     "testNote": "Requested https://wx.aamu.edu/monthdat.php?2053+2010+06 (AAMU Campus, June 2010): HTML table of daily values with a monthly precipitation total of 2.24 in and a note 'precipitation in inches'. No CSV export found; data are HTML tables.",
+     "citations": [
+      "https://wx.aamu.edu/Station.php?2053",
+      "https://wx.aamu.edu/monthdat.php?2053+2010+06"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-al-disl-arcos",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Dauphin Island Sea Lab ARCOS",
+   "fullName": "Alabama's Real-Time Coastal Observing System (ARCOS), Dauphin Island Sea Lab",
+   "host": "Dauphin Island Sea Lab (Alabama Marine Environmental Sciences Consortium)",
+   "location": "Dauphin Island, AL",
+   "discipline": "Coastal meteorological and hydrographic station records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Since 2003 the Dauphin Island Sea Lab has run real-time coastal stations in and around Mobile Bay and along the Alabama coast (Mobile and Baldwin counties). It publishes yearly 1-minute meteorological files per station, including precipitation, as zipped CSV, collected by DISL with support from ADCNR, NOAA and RESTORE Act funding.",
+   "holdings": [
+    "Yearly 1-minute meteorological CSV files (precipitation, air temperature, wind, pressure, radiation, humidity) for about a dozen coastal stations"
+   ],
+   "formats": [
+    "CSV (zipped)"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "ARCOS pregenerated station data files",
+     "url": "https://disl.edu/arcos#the-data"
+    }
+   ],
+   "sources": [
+    {
+     "label": "ARCOS home and data page",
+     "url": "https://disl.edu/arcos"
+    },
+    {
+     "label": "ARCOS data range checking criteria",
+     "url": "https://www.disl.edu/arcos/datarange/"
+    },
+    {
+     "label": "DISL history",
+     "url": "https://www.disl.edu/about/our-history/"
+    }
+   ],
+   "state": "Alabama",
+   "stateCodes": [
+    "AL"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "ARCOS pregenerated station data files",
+     "landingUrl": "https://disl.edu/arcos",
+     "accessUrl": "https://disl.edu/arcos#the-data",
+     "formats": [
+      "CSV (zipped)"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "1-minute",
+     "periodOfRecord": "Network operating since 2003; meteorological files listed from 2011 (e.g. Bon Secour, Cedar Point) or later through 2025, varying by station",
+     "coverage": "regional: Mobile Bay and Alabama coast (Mobile and Baldwin counties)",
+     "originalCollector": "Dauphin Island Sea Lab",
+     "access": "Free, no account",
+     "qualityNotes": "Timestamps in UTC. Each value has a quality flag (-9 missing, 0 not evaluated, 1 bad, 2 questionable, 3 good). The parameters table gives precipitation (precip1) in inches, while the range check is stated as 0-3 mm/min; units not verified.",
+     "verification": "download tested",
+     "testNote": "Fetched https://api.disl.edu/arcos/pregen/bsp_met_min.2024.csv.zip (Battleship Park 2024, ~9.7 MB; server ignored the range request) into memory and printed the first lines: header ts,precip1,precip1flag,airtemp1,... and 1-minute rows from 2024-01-01 00:00 UTC with precip1=0, flag 3.",
+     "citations": [
+      "https://disl.edu/arcos",
+      "https://www.disl.edu/arcos/datarange/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-al-south-alabama-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "South Alabama Mesonet",
+   "fullName": "University of South Alabama Mesonet (USA Mesonet)",
+   "host": "University of South Alabama, Department of Earth Sciences (CHILI)",
+   "location": "Mobile, AL",
+   "discipline": "1-minute weather station records, north-central Gulf Coast",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The University of South Alabama has run the South Alabama Mesonet since 2004, about 26 stations in southern Alabama counties plus a few in Mississippi and Florida, measuring rainfall every minute with paired tipping-bucket gauges. Its archived-data page offers custom CSV or fixed-width downloads by station and date range; funding comes from NSF, NOAA grants and donations.",
+   "holdings": [
+    "1-minute station observations including precipitation over the last minute and since midnight (two gauges) from about 26 stations, 2004-present"
+   ],
+   "formats": [
+    "CSV",
+    "fixed-width text"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "South Alabama Mesonet archived meteorological data",
+     "url": "http://chiliweb.southalabama.edu/archived_data.php"
+    }
+   ],
+   "sources": [
+    {
+     "label": "South Alabama Mesonet Tracks Rainfall Records (USA news)",
+     "url": "https://www.southalabama.edu/colleges/artsandsci/news/mesonet.html"
+    },
+    {
+     "label": "USA Mesonet receives NOAA funding (USA press release)",
+     "url": "https://www.southalabama.edu/departments/publicrelations/pressreleases/072924mesonetfunding.html"
+    },
+    {
+     "label": "Wayback capture of the archived-data page (July 2026)",
+     "url": "http://web.archive.org/web/2026/http://chiliweb.southalabama.edu/archived_data.php"
+    }
+   ],
+   "state": "Alabama",
+   "stateCodes": [
+    "AL"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "South Alabama Mesonet archived meteorological data",
+     "landingUrl": "http://chiliweb.southalabama.edu/",
+     "accessUrl": "http://chiliweb.southalabama.edu/archived_data.php",
+     "formats": [
+      "CSV",
+      "fixed-width text"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "1-minute",
+     "periodOfRecord": "2004-present (varies by station)",
+     "coverage": "regional: southern Alabama (Mobile, Baldwin and other southern counties) plus nearby Mississippi and Florida",
+     "originalCollector": "University of South Alabama Mesonet",
+     "access": "Free, no account",
+     "qualityNotes": "Two precipitation sensors (TB3 and TX tipping buckets), each with last-minute and since-midnight totals; monthly QC graphs published. Units not documented on the form.",
+     "verification": "download documented",
+     "testNote": "Live site chiliweb.southalabama.edu failed the TLS handshake on 2026-11-05 (HTTP redirects to HTTPS); the newer mesonet.southalabama.edu has no download. A July 2026 Wayback capture shows the form (begin/end date, station, CSV or Fixed format, posting to archived_download.php) with precipitation fields.",
+     "citations": [
+      "http://web.archive.org/web/2026/http://chiliweb.southalabama.edu/archived_data.php",
+      "https://www.southalabama.edu/colleges/artsandsci/news/mesonet.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ak-dnr-dggs-weather-stations",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Alaska DGGS Weather Observation Network",
+   "fullName": "Alaska Department of Natural Resources, Division of Geological & Geophysical Surveys - Alaska Weather Observation Network (Digital Data Series 25)",
+   "host": "Alaska Department of Natural Resources",
+   "location": "Fairbanks, AK",
+   "discipline": "Remote and high-elevation hazard-monitoring weather stations",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "DGGS operates weather stations, mostly at remote and high-elevation sites studied for landslide and other geologic hazards (e.g. Barry Arm in Prince William Sound, Southeast Alaska ridges). Each station page offers the complete record or the last 7 days as CSV, including 15-minute rain totals. DGGS collects the data; some stations were funded through cooperative agreements with USGS.",
+   "holdings": [
+    "Per-station 15-minute weather records including rain totals, 2015-present, published as DDS 25"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "DGGS Weather Stations (station CSV downloads)",
+     "url": "https://dggs.alaska.gov/weatherstations/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "DDS 25 publication page",
+     "url": "https://dggs.alaska.gov/pubs/id/31686"
+    },
+    {
+     "label": "DDS 25 metadata",
+     "url": "https://dggs.alaska.gov/webpubs/metadata/DDS25.faq.html"
+    }
+   ],
+   "state": "Alaska",
+   "stateCodes": [
+    "AK"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "DGGS Weather Stations (station CSV downloads)",
+     "landingUrl": "https://dggs.alaska.gov/weatherstations/",
+     "accessUrl": "https://dggs.alaska.gov/weatherstations/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute (varies by station configuration)",
+     "periodOfRecord": "2015-present (varies by station)",
+     "coverage": "station-specific",
+     "originalCollector": "Alaska Division of Geological & Geophysical Surveys",
+     "access": "Free, no account",
+     "qualityNotes": "Raw instrument output, not quality controlled; sensors vary by station; gaps where stations stopped transmitting. Rain in mm (rain_mm_tot, 15-minute total); timestamps in Alaska local time.",
+     "verification": "download tested",
+     "testNote": "Requested https://dggs.alaska.gov/weatherstations/csv/8?days=7 (Barry Arm East) on 2026-11-05 and printed the first lines: header includes rain_mm_tot and cumu_rain_mm, rows at 15-minute steps from 10/29/26 14:00 with rain_mm_tot 0.",
+     "citations": [
+      "https://dggs.alaska.gov/weatherstations/",
+      "https://dggs.alaska.gov/webpubs/metadata/DDS25.faq.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ak-uaf-snap",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UAF SNAP Alaska + Arctic Geospatial Data API",
+   "fullName": "Scenarios Network for Alaska + Arctic Planning (SNAP), International Arctic Research Center, University of Alaska Fairbanks - Alaska + Arctic Geospatial Data API",
+   "host": "International Arctic Research Center, University of Alaska Fairbanks",
+   "location": "Fairbanks, AK",
+   "discipline": "Gridded historical and downscaled precipitation for Alaska",
+   "topics": [
+    "models"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "SNAP, a UAF research program, serves gridded climate data through a public API. For precipitation it offers daily totals from a 4 km WRF dynamical downscaling of ERA5 reanalysis (1960-2023, central Alaska and neighboring Canada) and a 2 km historical baseline downscaled from CRU TS 4.0, plus model projections. The estimates are model products built by SNAP from ECMWF ERA5 and University of East Anglia CRU TS inputs, not gauge records.",
+   "holdings": [
+    "ERA5-WRF 4 km daily precipitation (rainnc_sum), 1960-2023, point queries with CSV or JSON output",
+    "CRU TS 4.0-based 2 km historical precipitation summaries and downscaled CMIP projections (taspr and precipitation endpoints)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SNAP Data API (ERA5-WRF and CRU-based precipitation)",
+     "url": "https://earthmaps.io/era5wrf"
+    }
+   ],
+   "sources": [
+    {
+     "label": "SNAP Data API home",
+     "url": "https://earthmaps.io/"
+    },
+    {
+     "label": "Temperature and precipitation endpoint docs",
+     "url": "https://earthmaps.io/precipitation"
+    }
+   ],
+   "state": "Alaska",
+   "stateCodes": [
+    "AK"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "SNAP Data API (ERA5-WRF and CRU-based precipitation)",
+     "landingUrl": "https://earthmaps.io/",
+     "accessUrl": "https://earthmaps.io/era5wrf",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily (ERA5-WRF); monthly, seasonal, annual and multi-decade summaries (CRU-based)",
+     "periodOfRecord": "1960-2023 (ERA5-WRF); 1901-2015 historical baseline (CRU TS 4.0, Not verified for this endpoint)",
+     "coverage": "regional: central Alaska landmass for ERA5-WRF; statewide for CRU-based 2 km data",
+     "originalCollector": "SNAP (UAF) model output, from ECMWF ERA5 reanalysis and CRU TS 4.0 (University of East Anglia)",
+     "access": "Free, no account",
+     "qualityNotes": "Model-derived estimates, not observations. ERA5-WRF rainnc_sum is daily accumulated precipitation in mm; WRF v4.3.3 run in 2-day segments with 6-hour spin-up and spectral nudging.",
+     "verification": "download tested",
+     "testNote": "Requested https://earthmaps.io/era5wrf/point/65.0628/-146.1627?vars=rainnc_sum&format=csv; it returned a commented header and date,rainnc_sum rows starting 1960-01-01,3.0. A taspr point query for Fairbanks returned JSON with CRU_historical pr statistics for 1950-2009.",
+     "citations": [
+      "https://earthmaps.io/era5wrf",
+      "https://earthmaps.io/precipitation"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-az-azmet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "AZMet (Arizona Meteorological Network)",
+   "fullName": "Arizona Meteorological Network (AZMet), University of Arizona Cooperative Extension",
+   "host": "University of Arizona, College of Agriculture, Life and Environmental Sciences / Cooperative Extension",
+   "location": "Tucson, AZ",
+   "discipline": "Agricultural weather station network (hourly and daily precipitation)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "AZMet runs automated weather stations at agricultural and urban sites in Arizona, mostly in the low deserts, and measures precipitation along with temperature, humidity, solar radiation and wind. It serves daily and hourly data through a free JSON API (2020 to present) and as raw comma-delimited text files per station and year (1987 to present). The University of Arizona collects the observations. Its overview page names ADWR as a partner and says it relies on private donations after state budget cuts, but no current state mandate or funding was verified.",
+   "holdings": [
+    "AZMet Web API: 15-minute (last 14 days), hourly and daily station observations as JSON, 2020 to present",
+    "Legacy raw daily and hourly ASCII files per station and year, 1987 to present"
+   ],
+   "formats": [
+    "JSON",
+    "CSV (comma-delimited text)"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "AZMet Web API (observations)",
+     "url": "https://api.azmet.arizona.edu/v1/observations/daily/az01/2020-01-01T00:00/P0D"
+    },
+    {
+     "name": "AZMet legacy raw data archive",
+     "url": "https://azmet.arizona.edu/azmet/az-data.htm"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AZMet home page",
+     "url": "https://azmet.arizona.edu/"
+    },
+    {
+     "label": "Extension bulletin: Programmatic access to AZMet data via web API",
+     "url": "https://extension.arizona.edu/publication/programmatic-access-azmet-data-web-api"
+    },
+    {
+     "label": "AZMet brief overview (partners, funding)",
+     "url": "https://azmet.arizona.edu/azmet/azmet04.htm"
+    },
+    {
+     "label": "Raw data format 2003-present",
+     "url": "https://azmet.arizona.edu/azmet/raw2003.htm"
+    }
+   ],
+   "state": "Arizona",
+   "stateCodes": [
+    "AZ"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "AZMet Web API (observations)",
+     "landingUrl": "https://extension.arizona.edu/publication/programmatic-access-azmet-data-web-api",
+     "accessUrl": "https://api.azmet.arizona.edu/v1/observations/daily/az01/2020-01-01T00:00/P0D",
+     "formats": [
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute (last 14 days only); hourly; daily",
+     "periodOfRecord": "2020-present for hourly and daily; earlier data are in the legacy archive",
+     "coverage": "station-specific",
+     "originalCollector": "University of Arizona AZMet",
+     "access": "Free, no account",
+     "qualityNotes": "Daily fields include precip_total_mm and precip_total_in, plus a meta_needs_review flag. AZMet says hourly and daily data get automated and manual QC. Its site notes false non-zero precipitation at some urban turf sites (Desert Ridge, Phoenix Encanto, Phoenix Greenway) caused by irrigation.",
+     "verification": "download tested",
+     "testNote": "Requested https://api.azmet.arizona.edu/v1/observations/daily/az01/2024-07-01T00:00/P2D. Got JSON daily records for Tucson (az01) with precip_total_mm 0.0 and precip_total_in 0.00 for 2024-07-01.",
+     "citations": [
+      "https://extension.arizona.edu/publication/programmatic-access-azmet-data-web-api",
+      "https://azmet.arizona.edu/"
+     ]
+    },
+    {
+     "name": "AZMet legacy raw data archive",
+     "landingUrl": "https://azmet.arizona.edu/azmet/az-data.htm",
+     "accessUrl": "https://azmet.arizona.edu/azmet/az-data.htm",
+     "formats": [
+      "CSV (comma-delimited text)"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly; daily",
+     "periodOfRecord": "1987-present (varies by station)",
+     "coverage": "station-specific",
+     "originalCollector": "University of Arizona AZMet",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation is in mm (format pages give a 0.03937 conversion to inches). Column layout changed in 2003 (see raw1987.htm and raw2003.htm). Files have no header row.",
+     "verification": "download tested",
+     "testNote": "Fetched the first lines of https://azmet.arizona.edu/azmet/data/0195rd.txt (Tucson daily, 1995). Got comma-delimited daily records. The raw2003 format page lists precipitation (mm) as a daily column.",
+     "citations": [
+      "https://azmet.arizona.edu/azmet/az-data.htm",
+      "https://azmet.arizona.edu/azmet/01.htm",
+      "https://azmet.arizona.edu/azmet/raw2003.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-az-fcd-maricopa",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Flood Control District of Maricopa County rainfall data",
+   "fullName": "Flood Control District of Maricopa County (FCDMC) ALERT precipitation gage network",
+   "host": "Flood Control District of Maricopa County",
+   "location": "Phoenix, AZ",
+   "discipline": "County ALERT rain-gauge network (subdaily to annual precipitation)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Flood Control District of Maricopa County runs about 378 automated ALERT precipitation gages across Maricopa County (the Phoenix metro area) and parts of surrounding counties. It serves real-time rainfall text reports, a historic report tool, water-year workbooks of daily totals at all gages, and per-gage Excel rainfall histories. The District collects the observations.",
+   "holdings": [
+    "Real-time rainfall text reports: daily, month-to-date and year-to-date totals, and 15-minute to 72-hour values at all gages",
+    "Water-year Excel workbooks of daily totals at all gages (period of record on the page starts October 2010)",
+    "Per-gage rainfall history workbooks (summary statistics and annual records), also as one ZIP of 361 files through 09/30/2024",
+    "Historic precipitation report tool for 15-minute to 72-hour values at a chosen past date"
+   ],
+   "formats": [
+    "TXT",
+    "XLSX",
+    "ZIP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "FCDMC real-time rainfall text reports",
+     "url": "https://alert.fcd.maricopa.gov/alert/Rain/htmlprec.txt"
+    },
+    {
+     "name": "FCDMC daily totals and per-gage rainfall history workbooks",
+     "url": "https://www.maricopa.gov/625/Rainfall-Data"
+    },
+    {
+     "name": "FCDMC historic precipitation report",
+     "url": "https://alert.fcd.maricopa.gov/prpt_hist.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "FCDMC Rainfall Data page",
+     "url": "https://www.maricopa.gov/625/Rainfall-Data"
+    },
+    {
+     "label": "FCDMC ALERT system overview (PDF)",
+     "url": "https://alert.fcd.maricopa.gov/alert/APC.pdf"
+    }
+   ],
+   "state": "Arizona",
+   "stateCodes": [
+    "AZ"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "FCDMC real-time rainfall text reports",
+     "landingUrl": "https://www.maricopa.gov/625/Rainfall-Data",
+     "accessUrl": "https://alert.fcd.maricopa.gov/alert/Rain/htmlprec.txt",
+     "formats": [
+      "TXT"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute, 1-, 3-, 6-, 24- and 72-hour values (prpt.txt); 6- and 24-hour totals (ev_rain.txt); daily, month-to-date and calendar-year-to-date totals (htmlprec.txt)",
+     "periodOfRecord": "Current conditions only (rolling)",
+     "coverage": "regional: Maricopa County and parts of neighboring counties",
+     "originalCollector": "Flood Control District of Maricopa County",
+     "access": "Free, no account",
+     "qualityNotes": "Report header says data are preliminary and unedited; '----' marks missing data. Values in inches. Other report files: https://alert.fcd.maricopa.gov/alert/Rain/prpt.txt and https://alert.fcd.maricopa.gov/alert/Rain/ev_rain.txt.",
+     "verification": "download tested",
+     "testNote": "Fetched the first lines of htmlprec.txt. Got the Daily Precipitation Report for the 24 hours ending 11/05/26 at 0500, with gage name, ID, 24-hour, month-to-date and calendar-year totals in inches (e.g. ASU South 0.94 in).",
+     "citations": [
+      "https://www.maricopa.gov/625/Rainfall-Data"
+     ]
+    },
+    {
+     "name": "FCDMC daily totals and per-gage rainfall history workbooks",
+     "landingUrl": "https://www.maricopa.gov/625/Rainfall-Data",
+     "accessUrl": "https://www.maricopa.gov/625/Rainfall-Data",
+     "formats": [
+      "XLSX",
+      "ZIP"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (water-year workbooks); annual and maximum-period statistics (per-gage histories)",
+     "periodOfRecord": "Daily totals from October 2010 on the page (earlier summaries in Publications); per-gage histories through 09/30/2024, from gage installation",
+     "coverage": "regional: Maricopa County and parts of neighboring counties",
+     "originalCollector": "Flood Control District of Maricopa County",
+     "access": "Free, no account",
+     "qualityNotes": "Water-year files are named like https://alert.fcd.maricopa.gov/alert/Rain/pcp_WY_2026.xlsx; per-gage files like https://alert.fcd.maricopa.gov/alert/Rain/FOPR/11000_FOPR.xlsx; the full set is https://alert.fcd.maricopa.gov/alert/Rain/FOPR/Master_Rain_xlsx_2025.zip (about 90 MB, 361 files). Severe-event table: https://alert.fcd.maricopa.gov/alert/Rain/stormsdb.xlsx.",
+     "verification": "download documented",
+     "testNote": "The Rainfall Data page links the water-year and per-gage .xlsx files and the ZIP, and a HEAD request for the ZIP returned 200 application/zip. A sample per-gage workbook could not be fetched because the sandbox proxy then refused alert.fcd.maricopa.gov twice, so its contents were not opened.",
+     "citations": [
+      "https://www.maricopa.gov/625/Rainfall-Data"
+     ]
+    },
+    {
+     "name": "FCDMC historic precipitation report",
+     "landingUrl": "https://www.maricopa.gov/625/Rainfall-Data",
+     "accessUrl": "https://alert.fcd.maricopa.gov/prpt_hist.html",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute, 1-, 3-, 6-, 24- and 72-hour values ending at a chosen date/time",
+     "periodOfRecord": "From gage installation (page note)",
+     "coverage": "regional: Maricopa County and parts of neighboring counties",
+     "originalCollector": "Flood Control District of Maricopa County",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented",
+     "verification": "not verified",
+     "testNote": "Opened the form page, which asks for an end date/time and notes that stored data go back to gage installation. A report was not generated, so the output format was not checked.",
+     "citations": [
+      "https://alert.fcd.maricopa.gov/prpt_hist.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-az-rainlog",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "RainLog.org",
+   "fullName": "RainLog.org citizen rain-gauge network, University of Arizona",
+   "host": "University of Arizona (Cooperative Extension; developed by the SAHRA center)",
+   "location": "Tucson, AZ",
+   "discipline": "Citizen-science daily rainfall network",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "RainLog is a volunteer rain-gauge network started in 2005 by the University of Arizona's SAHRA center and Cooperative Extension. Over 1,000 volunteers report daily rainfall from backyard gauges, mostly in Arizona with some in neighboring states. The site serves a public JSON query service and a full-data ZIP export; volunteers collect the observations.",
+   "holdings": [
+    "Daily volunteer rainfall readings (with snow fields and quality labels), queryable by gauge and date and as a full-data ZIP export"
+   ],
+   "formats": [
+    "JSON",
+    "ZIP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "RainLog data query and download",
+     "url": "https://rainlog.org/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "RainLog.org",
+     "url": "https://rainlog.org/"
+    },
+    {
+     "label": "SciStarter project page (history, partners)",
+     "url": "https://scistarter.org/rainlogorg"
+    },
+    {
+     "label": "UA Cooperative Extension newsletter mentioning RainLog",
+     "url": "https://cals.arizona.edu/cochise/mg/sites/cals.arizona.edu.cochise.mg/files/newsletter/Sep17.pdf"
+    }
+   ],
+   "state": "Arizona",
+   "stateCodes": [
+    "AZ"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "RainLog data query and download",
+     "landingUrl": "https://rainlog.org/",
+     "accessUrl": "https://rainlog.org/",
+     "formats": [
+      "JSON",
+      "ZIP"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "2005-present (varies by gauge)",
+     "coverage": "statewide",
+     "originalCollector": "RainLog volunteer observers",
+     "access": "Free, no account",
+     "qualityNotes": "Readings carry a quality label (e.g. 'Good') and remarks; rainAmount is in inches. Volunteer data; no further QC documented.",
+     "verification": "download tested",
+     "testNote": "POSTed a date-range query (2025-09-18, limit 3) to https://rainlog.org/api/1.0/Reading/getFiltered, the endpoint the site's own app uses. Got JSON readings with rainAmount 0.04, 0.19 and 1.13 in. A HEAD request to https://rainlog.org/api/1.0/DataDump/globalData returned a ZIP attachment (rainlog_all_data-2026-11-05.zip), which was not downloaded. The API is not publicly documented.",
+     "citations": [
+      "https://rainlog.org/",
+      "https://scistarter.org/rainlogorg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-az-santa-rita-experimental-range",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Santa Rita Experimental Range precipitation network",
+   "fullName": "Santa Rita Experimental Range (SRER) rain gauge network, University of Arizona",
+   "host": "University of Arizona, School of Natural Resources and the Environment",
+   "location": "Tucson, AZ",
+   "discipline": "Long-term research-range monthly precipitation",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Santa Rita Experimental Range, south of Tucson in Pima County, has measured monthly precipitation at up to 75 rain gauges since 1922; UA sources give 24 to 28 gauges as still active. The University of Arizona serves the full record as one Excel file (the current file runs through October 2026). The database metadata credits funding from the USDA Forest Service Rocky Mountain Research Station and the University of Arizona; the original collector is the SRER monitoring program.",
+   "holdings": [
+    "Monthly precipitation at up to 75 SRER rain gauges, 1922 to present, with gauge coordinates and name history"
+   ],
+   "formats": [
+    "XLSX"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SRER precipitation database",
+     "url": "https://santarita.arizona.edu/data-resources/data-download/precipitation"
+    }
+   ],
+   "sources": [
+    {
+     "label": "SRER precipitation data download page",
+     "url": "https://santarita.arizona.edu/data-resources/data-download/precipitation"
+    },
+    {
+     "label": "SRER precipitation measurement protocol (2022)",
+     "url": "https://www.santarita.arizona.edu/sites/santarita.arizona.edu/files/Precipitation%20Measurement%20Protocol_2022June01.pdf"
+    }
+   ],
+   "state": "Arizona",
+   "stateCodes": [
+    "AZ"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "SRER precipitation database",
+     "landingUrl": "https://santarita.arizona.edu/data-resources/data-download/precipitation",
+     "accessUrl": "https://santarita.arizona.edu/data-resources/data-download/precipitation",
+     "formats": [
+      "XLSX"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "monthly",
+     "periodOfRecord": "1922-present (varies by gauge); file current through October 2026",
+     "coverage": "regional: Santa Rita Experimental Range, Pima County",
+     "originalCollector": "Santa Rita Experimental Range monitoring program (University of Arizona; funding credited to USDA Forest Service RMRS and UA)",
+     "access": "Free, no account",
+     "qualityNotes": "Values are in hundredths of an inch (125 = 1.25 in); -9999 means missing. Built from handwritten records and earlier digitized data. The landing page asks users to acknowledge the database.",
+     "verification": "download tested",
+     "testNote": "Downloaded precip2026-10.xlsx (about 226 KB) and read the first rows: columns STATION, YEAR, JAN-DEC; the first row is gauge BOX, 1922, with -9999 for Jan-May and 30, 284, 272 for Jun-Aug.",
+     "citations": [
+      "https://santarita.arizona.edu/data-resources/data-download/precipitation"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-az-fcd-yavapai",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Yavapai County Flood Control District ALERT data",
+   "fullName": "Yavapai County Flood Control District ALERT System",
+   "host": "Yavapai County Flood Control District",
+   "location": "Prescott, AZ",
+   "discipline": "County ALERT rain-gauge network (event-based precipitation)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Yavapai County Flood Control District runs an ALERT network of about 107 rain gauges, plus stream and weather stations, across Yavapai County in central Arizona (Prescott, Verde Valley and surroundings). Its NovaStar data web service and Data Explorer return gauge time series as CSV or JSON. The District collects most observations; the network also receives some gauges owned by neighboring agencies such as the Maricopa and Mohave county districts.",
+   "holdings": [
+    "NovaStar data web service and Data Explorer: station catalog and precipitation time series (event-based and yearly) as CSV or JSON"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Yavapai County NovaStar data web service",
+     "url": "https://azyavapai.trilynx-novastar.systems/novastar/dataws-ui/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Rainfall and Weather Data page",
+     "url": "https://www.yavapaiaz.gov/Resident-Services/Flood-Control/Rainfall-and-Weather-Data"
+    },
+    {
+     "label": "ALERT System History",
+     "url": "https://www.yavapaiaz.gov/Resident-Services/Flood-Control/Rainfall-and-Weather-Data/ALERT-System-History"
+    }
+   ],
+   "state": "Arizona",
+   "stateCodes": [
+    "AZ"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Yavapai County NovaStar data web service",
+     "landingUrl": "https://www.yavapaiaz.gov/Resident-Services/Flood-Control/Rainfall-and-Weather-Data",
+     "accessUrl": "https://azyavapai.trilynx-novastar.systems/novastar/dataws-ui/",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "event-based (irregular tip reports); yearly totals",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: Yavapai County",
+     "originalCollector": "Yavapai County Flood Control District (some gauges from neighboring agencies)",
+     "access": "Free, no account",
+     "qualityNotes": "Values in inches with a flag and score column. The service disclaimer says ALERT data are preliminary and subject to revision. The county page lists the Data Explorer under 'Data Request'.",
+     "verification": "download tested",
+     "testNote": "Requested https://azyavapai.trilynx-novastar.systems/novastar/data/api/v1/ts?locId=54428&dataType=Precip&dataInterval=IrregSecond with periodStart 2025-09-18 and periodEnd 2025-09-19 and format=CSV. Got a CSV (dateTime,value,flag,score) for ADOT Rim Camp with 0.04 in reports on 2025-09-18.",
+     "citations": [
+      "https://www.yavapaiaz.gov/Resident-Services/Flood-Control/Rainfall-and-Weather-Data",
+      "https://azyavapai.trilynx-novastar.systems/novastar/data/api/v1/stations"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ar-uada-weather",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UADA Weather App (Division of Agriculture)",
+   "fullName": "University of Arkansas System Division of Agriculture Weather Station Network",
+   "host": "University of Arkansas System Division of Agriculture (Arkansas Agricultural Experiment Station)",
+   "location": "Fayetteville, AR",
+   "discipline": "Agricultural research-station weather observations",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "A web app with daily and hourly weather exports, including precipitation, from Division of Agriculture research stations. It currently has one station, at the Milo J. Shult Agricultural Research & Extension Center in Fayetteville, with data from April 2022. A 20-station statewide network (13 research and extension centers and 7 Discovery Farms) is being added with a $425,000 USDA NIFA grant, not state funding. The Division of Agriculture collects the observations.",
+   "holdings": [
+    "Daily and hourly station weather (precipitation, air temperature, humidity, solar radiation, reference ET) with CSV export"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "UADA Weather App daily/hourly CSV export",
+     "url": "https://weatherstation.uada.edu/api/daily/csv?start_date=2026-10-01&end_date=2026-10-05&unit=imperial"
+    }
+   ],
+   "sources": [
+    {
+     "label": "UADA Weather App",
+     "url": "https://weatherstation.uada.edu/"
+    },
+    {
+     "label": "2026 announcement of the statewide network",
+     "url": "https://uaex.uada.edu/media-resources/news/2026/february/02-10-2026-ark-weather-stations-grant.aspx"
+    },
+    {
+     "label": "ADHE budget for UA Division of Agriculture (FY26)",
+     "url": "https://adhe.edu/File/UA-DivofAgri%20FY26.pdf"
+    },
+    {
+     "label": "UA news release on the NIFA grant",
+     "url": "https://news.uark.edu/articles/80756/"
+    }
+   ],
+   "state": "Arkansas",
+   "stateCodes": [
+    "AR"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "UADA Weather App daily/hourly CSV export",
+     "landingUrl": "https://weatherstation.uada.edu/",
+     "accessUrl": "https://weatherstation.uada.edu/api/daily/csv?start_date=2026-10-01&end_date=2026-10-05&unit=imperial",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly",
+     "periodOfRecord": "2022-04 to present (Fayetteville station); new stations from 2026",
+     "coverage": "station-specific",
+     "originalCollector": "University of Arkansas System Division of Agriculture (Arkansas Agricultural Experiment Station)",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation in inches (imperial) or cm (metric, unit=metric). QC and provisional status not documented.",
+     "verification": "download tested",
+     "testNote": "GET /api/daily/csv?start_date=2026-10-01&end_date=2026-10-03&unit=imperial (re-tested 2026-11-05) returned a CSV with a 'Precipitation (in)' column (2026-10-02 = 0.11, 2026-10-03 = 0.05). An earlier test of /api/hourly/csv for 2026-10-02 returned hourly rows. Requests for 2020-2021 returned only the header, and the earliest row is 2022-04-07.",
+     "citations": [
+      "https://weatherstation.uada.edu/",
+      "https://uaex.uada.edu/media-resources/news/2026/february/02-10-2026-ark-weather-stations-grant.aspx"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ca-cal-adapt",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Cal-Adapt (California Energy Commission)",
+   "fullName": "Cal-Adapt climate data platform",
+   "host": "California Energy Commission (funding and oversight); developed by UC Berkeley Geospatial Innovation Facility and Eagle Rock Analytics",
+   "location": "Sacramento, CA",
+   "discipline": "Gridded historical and projected precipitation",
+   "topics": [
+    "models",
+    "other"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Cal-Adapt serves gridded daily precipitation for California through a public API, including Livneh historical observations (1950-2013, derived from NOAA Cooperative Observer stations) and LOCA downscaled climate projections. The California Energy Commission funds and oversees it; UC Berkeley and Eagle Rock Analytics built it.",
+   "holdings": [
+    "Livneh daily historical gridded precipitation 1950-2013 (API point/area queries)",
+    "LOCA downscaled precipitation projections (10 GCMs, RCP4.5/8.5)"
+   ],
+   "formats": [
+    "JSON",
+    "GeoTIFF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Cal-Adapt API raster series",
+     "url": "https://api.cal-adapt.org/api/series/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Cal-Adapt home",
+     "url": "https://cal-adapt.org/"
+    },
+    {
+     "label": "Cal-Adapt data catalog",
+     "url": "https://berkeley-gif.github.io/caladapt-docs/data-catalog.html"
+    }
+   ],
+   "state": "California",
+   "stateCodes": [
+    "CA"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "Cal-Adapt API raster series",
+     "landingUrl": "https://berkeley-gif.github.io/caladapt-docs/data-catalog.html",
+     "accessUrl": "https://api.cal-adapt.org/api/series/",
+     "formats": [
+      "JSON",
+      "GeoTIFF"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily; annual",
+     "periodOfRecord": "Livneh historical 1950-2013; LOCA projections to 2100",
+     "coverage": "statewide",
+     "originalCollector": "Livneh et al. (2015) from NOAA COOP stations; LOCA projections from Scripps Institution of Oceanography",
+     "access": "Free, no account",
+     "qualityNotes": "Units for pr_day_livneh not stated in the API response (values look like mm/day; not verified).",
+     "verification": "download tested",
+     "testNote": "Requested /api/series/pr_day_livneh/events/?g=POINT(-121.4687 38.5938)&start=2010-01-01&end=2010-01-05; got 5 daily values (2.36, 0.08, 0, 0, 0).",
+     "citations": [
+      "https://api.cal-adapt.org/api/series/pr_day_livneh/?format=json",
+      "https://berkeley-gif.github.io/caladapt-docs/data-catalog.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ca-dwr",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "California DWR (CDEC, CIMIS, State Climatologist)",
+   "fullName": "California Department of Water Resources",
+   "host": "California Natural Resources Agency",
+   "location": "Sacramento, CA",
+   "discipline": "Statewide hydrologic and agricultural weather station precipitation",
+   "topics": [
+    "gauges",
+    "hydrology",
+    "other"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "DWR runs the California Data Exchange Center (CDEC), which stores real-time and historical precipitation from DWR and many cooperating agencies, and the CIMIS agricultural weather network with hourly and daily rainfall. It also publishes a closed Northern Region annual-gauge record (1944-2024), tree-ring precipitation reconstructions and stochastic weather-generator data on the state open data portal. The California State Climatologist is a DWR position.",
+   "holdings": [
+    "CDEC station precipitation query (event, hourly, daily, monthly; CSV servlet)",
+    "CIMIS weather station network hourly and daily precipitation (API with free appKey)",
+    "Annual Precipitation Data for Northern California 1944-2024 (33 NRO gauges, CSV)",
+    "Paleo tree-ring precipitation and streamflow reconstructions (CSV)",
+    "Gridded Weather Generator perturbed historical and stochastic precipitation (TXT/CSV/NetCDF)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "XML",
+    "TXT",
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CDEC Station Data Query (CSV)",
+     "url": "https://cdec.water.ca.gov/queryCSV.html"
+    },
+    {
+     "name": "CIMIS Web API",
+     "url": "https://et.water.ca.gov/Rest/Index"
+    },
+    {
+     "name": "Annual Precipitation Data for Northern California 1944-2024",
+     "url": "https://data.cnra.ca.gov/dataset/3147d563-3615-4683-a4be-75143361d948/resource/997e4289-31a5-471f-81a9-6203536ecfd6/download/lwu-precip-data-to-2024_basic_flatfile_withcoordinates.csv"
+    },
+    {
+     "name": "Paleo Tree-Ring Hydroclimatic Reconstructions",
+     "url": "https://data.ca.gov/dataset/paleo-dendrochronological-tree-ring-hydroclimatic-reconstructions-for-northern-and-southern-cal"
+    },
+    {
+     "name": "Gridded Weather Generator Temperature and Precipitation",
+     "url": "https://data.ca.gov/dataset/gridded-weather-generator-perturbations-of-historical-detrended-and-stochastically-generated-te"
+    }
+   ],
+   "sources": [
+    {
+     "label": "CDEC home",
+     "url": "https://cdec.water.ca.gov/"
+    },
+    {
+     "label": "California Precipitation Data (Federated) on data.ca.gov",
+     "url": "https://data.ca.gov/dataset/california-precipitation-data-federated"
+    },
+    {
+     "label": "CIMIS home",
+     "url": "https://cimis.water.ca.gov/"
+    },
+    {
+     "label": "AASC California state climatologist",
+     "url": "https://stateclimate.org/state/california"
+    }
+   ],
+   "state": "California",
+   "stateCodes": [
+    "CA"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "CDEC Station Data Query (CSV)",
+     "landingUrl": "https://data.ca.gov/dataset/california-precipitation-data-federated",
+     "accessUrl": "https://cdec.water.ca.gov/queryCSV.html",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "event, hourly, daily, monthly (by duration code); varies by station",
+     "periodOfRecord": "Varies by station; not documented as a single range",
+     "coverage": "statewide",
+     "originalCollector": "DWR and numerous cooperating agencies that report to CDEC (for example utilities such as PG&E for the PP1-PP5 groups)",
+     "access": "Free, no account",
+     "qualityNotes": "Values in inches; data flags defined at https://cdec.water.ca.gov/reportapp/javareports?name=FlagList. Real-time data are provisional; a quality-controlled summary is in the HYD report.",
+     "verification": "download tested",
+     "testNote": "Requested CSVDataServlet?Stations=BLC&SensorNums=45&dur_code=D&Start=2025-01-01&End=2025-01-05; got 5 daily PPT INC rows (e.g. 0.90 in on 2025-01-03). Also 8SI monthly (sensor 2) returned 2.95, 7.72, 15.63 in for Oct-Dec 2025.",
+     "citations": [
+      "https://cdec.water.ca.gov/queryCSV.html",
+      "https://data.ca.gov/dataset/california-precipitation-data-federated",
+      "https://cdec.water.ca.gov/reportapp/javareports?name=FlagList"
+     ]
+    },
+    {
+     "name": "CIMIS Web API",
+     "landingUrl": "https://cimis.water.ca.gov/",
+     "accessUrl": "https://et.water.ca.gov/Rest/Index",
+     "formats": [
+      "JSON",
+      "XML",
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly; daily",
+     "periodOfRecord": "1982-present (API earliest date 1982-06-07; varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "California DWR (CIMIS weather station network)",
+     "access": "Free account and appKey required for weather data; station metadata open",
+     "qualityNotes": "Data items day-precip and hly-precip (WSN stations only); English or metric units via unitOfMeasure. QC flag codes are documented by CIMIS; details not verified here. CSV is via the web report page (data.ca.gov listing), not the API.",
+     "verification": "download documented",
+     "testNote": "Station endpoint https://et.water.ca.gov/api/station/2 returned Five Points station metadata (connected 1982-06-07). Precipitation data require an appKey and were not requested.",
+     "citations": [
+      "https://et.water.ca.gov/Rest/Index",
+      "https://data.ca.gov/dataset/cimis-weather-station-data",
+      "https://cimis.water.ca.gov/WSNReportCriteria.aspx"
+     ]
+    },
+    {
+     "name": "Annual Precipitation Data for Northern California 1944-2024",
+     "landingUrl": "https://data.ca.gov/dataset/annual-precipitation-data-for-northern-california-1944-2024",
+     "accessUrl": "https://data.cnra.ca.gov/dataset/3147d563-3615-4683-a4be-75143361d948/resource/997e4289-31a5-471f-81a9-6203536ecfd6/download/lwu-precip-data-to-2024_basic_flatfile_withcoordinates.csv",
+     "formats": [
+      "CSV",
+      "PDF"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "annual (water year; per gauge service interval)",
+     "periodOfRecord": "1944-2024 (varies by station); monitoring ended, dataset final",
+     "coverage": "regional: Northern California (DWR Northern Region, 33 stations)",
+     "originalCollector": "California DWR Northern Region Office",
+     "access": "Free, no account",
+     "qualityNotes": "Total precipitation in inches; notes_flagged_results column; methods in the accompanying PDF.",
+     "verification": "download tested",
+     "testNote": "Fetched first lines of the CSV: columns station_name, county, gage service dates, total_precipitation_inches, water_year, coordinates; e.g. Ball Mountain (Tehama) 39.51 in for WY1951.",
+     "citations": [
+      "https://data.ca.gov/dataset/annual-precipitation-data-for-northern-california-1944-2024"
+     ]
+    },
+    {
+     "name": "Paleo Tree-Ring Hydroclimatic Reconstructions",
+     "landingUrl": "https://data.ca.gov/dataset/paleo-dendrochronological-tree-ring-hydroclimatic-reconstructions-for-northern-and-southern-cal",
+     "accessUrl": "https://data.ca.gov/dataset/paleo-dendrochronological-tree-ring-hydroclimatic-reconstructions-for-northern-and-southern-cal",
+     "formats": [
+      "CSV",
+      "ZIP",
+      "PDF"
+     ],
+     "dataType": "other",
+     "temporalResolution": "annual",
+     "periodOfRecord": "Northern California from year 900; Southern California from year 1116 (varies by series)",
+     "coverage": "regional: Northern and Southern California river basins",
+     "originalCollector": "Tree-ring reconstructions by Meko et al. (2014, 2017) for DWR",
+     "access": "Free, no account",
+     "qualityNotes": "Reconstructed precipitation in inches with 50% bounds; -999 marks missing values.",
+     "verification": "download tested",
+     "testNote": "Fetched header and first rows of the Northern and Southern California reconstruction CSVs; they contain columns such as KFL_Reconstruction_Precip_Inches and SanGab_Reconstruction_Precip_inches.",
+     "citations": [
+      "https://data.ca.gov/dataset/paleo-dendrochronological-tree-ring-hydroclimatic-reconstructions-for-northern-and-southern-cal"
+     ]
+    },
+    {
+     "name": "Gridded Weather Generator Temperature and Precipitation",
+     "landingUrl": "https://data.ca.gov/dataset/gridded-weather-generator-perturbations-of-historical-detrended-and-stochastically-generated-te",
+     "accessUrl": "https://data.ca.gov/dataset/gridded-weather-generator-perturbations-of-historical-detrended-and-stochastically-generated-te",
+     "formats": [
+      "TXT",
+      "CSV",
+      "NetCDF",
+      "XLSX"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily",
+     "periodOfRecord": "100-year perturbed historical (Product A) and 1000-year stochastic (Product B) series; base climate from Livneh 1915-2018 and PRISM",
+     "coverage": "statewide",
+     "originalCollector": "DWR weather generator built on Livneh and PRISM gridded observations",
+     "access": "Free, no account (files on DWR Box)",
+     "qualityNotes": "Synthetic/perturbed data for planning, not observations. Precipitation in mm; 1/16-degree grid and HUC8 watershed averages.",
+     "verification": "download documented",
+     "testNote": "Box links (cadwr.box.com) returned a redirect to the Box viewer; files are large and were not downloaded.",
+     "citations": [
+      "https://data.ca.gov/dataset/gridded-weather-generator-perturbations-of-historical-detrended-and-stochastically-generated-te"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ca-orange-county-public-works",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Orange County Public Works (OC Water Data Portal)",
+   "fullName": "County of Orange Public Works, OC Environmental Resources",
+   "host": "County of Orange",
+   "location": "Santa Ana, CA",
+   "discipline": "County rain-gauge records for Orange County",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Orange County Public Works serves current and historic rainfall and stream-gauge records for Orange County through a Kisters Hydstra water data portal with a JSON web service. Records come from the county's ALERT gauges and older daily cooperative gauges, some going back to the 1950s. The county collects the data.",
+   "holdings": [
+    "Rainfall time series for county ALERT and daily gauges (Hydstra portal and JSON web service)"
+   ],
+   "formats": [
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "OC Water Data Portal (Hydstra web service)",
+     "url": "http://hydstra.ocpublicworks.com/web.htm"
+    }
+   ],
+   "sources": [
+    {
+     "label": "OC Environmental Resources monitoring and data",
+     "url": "https://pwer.oc.gov/service-areas/oc-environmental-resources/monitoring-and-data"
+    }
+   ],
+   "state": "California",
+   "stateCodes": [
+    "CA"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "OC Water Data Portal (Hydstra web service)",
+     "landingUrl": "https://pwer.oc.gov/service-areas/oc-environmental-resources/monitoring-and-data",
+     "accessUrl": "http://hydstra.ocpublicworks.com/web.htm",
+     "formats": [
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "event/ALERT records aggregated by the service (e.g. daily totals); daily for older gauges",
+     "periodOfRecord": "Varies by station (e.g. Costa Mesa daily from 1955; Brea from 1989)",
+     "coverage": "regional: Orange County",
+     "originalCollector": "County of Orange (OC Public Works ALERT network and cooperative gauges)",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall in inches (variables 11.00, 11.01 daily, 11.50 ALERT transmitted); quality codes returned per value. Download options in the portal UI not reviewed.",
+     "verification": "download tested",
+     "testNote": "cgi/webservice.exe get_ts_traces for site COSTAMESA, variable 11.00, daily totals 2023-01-14 to 2023-01-17 returned 1.28, 0.58, 0.34, 0.00 in with quality code 1.",
+     "citations": [
+      "http://hydstra.ocpublicworks.com/web.htm",
+      "https://pwer.oc.gov/service-areas/oc-environmental-resources/monitoring-and-data"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ca-san-diego-county-fcd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "San Diego County Flood Control District ALERT",
+   "fullName": "San Diego County Flood Control District, ALERT Flood Warning System",
+   "host": "County of San Diego Department of Public Works",
+   "location": "San Diego, CA",
+   "discipline": "County ALERT rain-gauge network",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "San Diego County Flood Control District runs the county's ALERT flood warning network and shows current and recent rain and stream readings on a OneRain website. Users can download up to 60 days of sensor data there; longer records are provided on request. The district collects the data.",
+   "holdings": [
+    "ALERT rainfall sensor data, San Diego County (OneRain site, up to 60 days per download)"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "San Diego County ALERT OneRain site",
+     "url": "https://sandiego.onerain.com/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Real-time and historical data page",
+     "url": "https://www.sandiegocounty.gov/content/sdc/sdcfcd/data.html"
+    }
+   ],
+   "state": "California",
+   "stateCodes": [
+    "CA"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "San Diego County ALERT OneRain site",
+     "landingUrl": "https://www.sandiegocounty.gov/content/sdc/sdcfcd/data.html",
+     "accessUrl": "https://sandiego.onerain.com/",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented (ALERT event data)",
+     "periodOfRecord": "ALERT data back to 1982 per Project Clean Water; online download limited to 60 days",
+     "coverage": "regional: San Diego County",
+     "originalCollector": "San Diego County Flood Control District",
+     "access": "Free, no account; requests needed for more than 60 days",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "County page states that downloads of more than 60 days are not possible due to server limits. The OneRain site was not queried by script.",
+     "citations": [
+      "https://www.sandiegocounty.gov/content/sdc/sdcfcd/data.html",
+      "https://projectcleanwater.org/download/rainfall-data/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ca-valley-water",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Santa Clara Valley Water District (Valley Water)",
+   "fullName": "Santa Clara Valley Water District",
+   "host": "Santa Clara Valley Water District (state special district)",
+   "location": "San Jose, CA",
+   "discipline": "Rain-gauge network for Santa Clara County",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Valley Water covers all of Santa Clara County in the south San Francisco Bay Area. Its Surface Water Data Portal offers CSV or JSON downloads and a public API for 48 district precipitation gauges, plus stream and reservoir sensors. The district collects the data itself.",
+   "holdings": [
+    "ALERT precipitation gauge time series, Santa Clara County (CSV/JSON download and API)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Valley Water Surface Water Data download and API",
+     "url": "https://alertdata.valleywater.org/download.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Surface Water Data Portal",
+     "url": "https://alert.valleywater.org/"
+    },
+    {
+     "label": "API documentation",
+     "url": "https://alertdata.valleywater.org/api.html"
+    }
+   ],
+   "state": "California",
+   "stateCodes": [
+    "CA"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "Valley Water Surface Water Data download and API",
+     "landingUrl": "https://alert.valleywater.org/",
+     "accessUrl": "https://alertdata.valleywater.org/download.html",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: Santa Clara County",
+     "originalCollector": "Santa Clara Valley Water District",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation in inches. Gauge readings are described as preliminary; QC not documented.",
+     "verification": "download tested",
+     "testNote": "Sensor list (/Sensor/all) shows 48 Precipitation gauges; /SensorData/6001/range/2025-01-01/2025-01-03?format=csv (Alamitos) returned 15-minute rows with header 'Timestamp,Precipitation (in.)'.",
+     "citations": [
+      "https://alertdata.valleywater.org/download.html",
+      "https://alertdata.valleywater.org/swagger/v1/swagger.json"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ca-ucnrs-dendra",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UC Natural Reserve System climate stations (Dendra)",
+   "fullName": "University of California Natural Reserve System Climate Monitoring Network, served through Dendra",
+   "host": "University of California Natural Reserve System",
+   "location": "Oakland, CA",
+   "discipline": "Reserve weather stations across California",
+   "topics": [
+    "gauges",
+    "other"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The UC Natural Reserve System runs about 35 weather stations at UC reserves from Mendocino to San Diego, measuring rainfall, temperature, soil moisture and more. The stations were originally installed and maintained by the Western Regional Climate Center; UC NRS now serves the feeds through Dendra, which has a public map interface and API.",
+   "holdings": [
+    "UC Nature reserve weather stations: 10-minute rainfall and other variables (Dendra API)"
+   ],
+   "formats": [
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Dendra API (UC Nature stations)",
+     "url": "https://api.dendra.science/v2/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Delivering environmental data from the NRS",
+     "url": "https://ucnature.org/delivering-environmental-data-from-the-nrs/"
+    },
+    {
+     "label": "Dendra",
+     "url": "https://dendra.science/"
+    }
+   ],
+   "state": "California",
+   "stateCodes": [
+    "CA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Dendra API (UC Nature stations)",
+     "landingUrl": "https://dendra.science/",
+     "accessUrl": "https://api.dendra.science/v2/",
+     "formats": [
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "10-minute (station dependent)",
+     "periodOfRecord": "Not documented (varies by station)",
+     "coverage": "regional: UC reserves across California",
+     "originalCollector": "UC Natural Reserve System (stations originally installed by WRCC/DRI)",
+     "access": "Free, no account (API)",
+     "qualityNotes": "Rainfall datastreams in millimeters, tagged 'ReadytoUse' or raw; cumulative logger series also exist.",
+     "verification": "download tested",
+     "testNote": "Organization 'UC Nature' lists 39 stations; datastream 'Rainfall' at Angelo South Meadow returned 10-minute values (0.254, 0.508 mm) for 2025-02-04.",
+     "citations": [
+      "https://ucnature.org/delivering-environmental-data-from-the-nrs/",
+      "https://api.dendra.science/v2/organizations"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ca-ucsd-cw3e",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UC San Diego CW3E surface meteorological network",
+   "fullName": "Center for Western Weather and Water Extremes (CW3E) Surface Meteorological Observations",
+   "host": "Scripps Institution of Oceanography, UC San Diego",
+   "location": "La Jolla, CA",
+   "discipline": "Watershed precipitation and soil-moisture stations",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "CW3E at Scripps runs a network of surface meteorology stations, mostly in California watersheds, measuring precipitation, temperature, pressure and soil moisture. It serves 2-minute, hourly and daily files for about 100 station folders in an open web directory; an archived subset is in the UC San Diego Library. CW3E collects the data.",
+   "holdings": [
+    "2-minute, hourly and water-year daily station files including precipitation (open directory)"
+   ],
+   "formats": [
+    "TXT"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CW3E_SurfaceMetObs data share",
+     "url": "https://cw3e-datashare.ucsd.edu/CW3E_SurfaceMetObs/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Data share guide",
+     "url": "https://cw3e-datashare.ucsd.edu/CW3E_SurfaceMetObs/00_CW3E_SurfaceMetObs_Guide.txt"
+    },
+    {
+     "label": "UC San Diego Library collection",
+     "url": "https://library.ucsd.edu/dc/collection/bb3729724s"
+    }
+   ],
+   "state": "California",
+   "stateCodes": [
+    "CA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "CW3E_SurfaceMetObs data share",
+     "landingUrl": "https://cw3e-datashare.ucsd.edu/CW3E_SurfaceMetObs/00_CW3E_SurfaceMetObs_Guide.txt",
+     "accessUrl": "https://cw3e-datashare.ucsd.edu/CW3E_SurfaceMetObs/",
+     "formats": [
+      "TXT"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "2-minute; hourly; daily",
+     "periodOfRecord": "Varies by station (e.g. DLA folders 2020-present)",
+     "coverage": "regional: CW3E station sites, mainly California watersheds (states of all sites not verified)",
+     "originalCollector": "CW3E, Scripps Institution of Oceanography",
+     "access": "Free, no account",
+     "qualityNotes": "Raw, unprocessed data per station README; precipitation in mm; -99.99 marks missing values; QC process under development.",
+     "verification": "download tested",
+     "testNote": "DLA/2025/Hourly/DLA_20251114.txt returned hourly comma-separated rows; column 8 (Precipitation, mm per DLA_HourlyData_README.txt) had 7.0, 4.0, 3.4 mm in the first hours.",
+     "citations": [
+      "https://cw3e-datashare.ucsd.edu/CW3E_SurfaceMetObs/00_CW3E_SurfaceMetObs_Guide.txt",
+      "https://cw3e-datashare.ucsd.edu/CW3E_SurfaceMetObs/DLA/DLA_HourlyData_README.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ca-ventura-county-hydrodata",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Ventura County Public Works Hydrodata",
+   "fullName": "Ventura County Public Works Agency, Watershed Protection Hydrologic Data Server",
+   "host": "County of Ventura (Ventura County Watershed Protection District)",
+   "location": "Ventura, CA",
+   "discipline": "County rain-gauge records for Ventura County",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Ventura County Public Works runs a hydrologic data server for Ventura County's rain and stream gauges, with daily, hourly and monthly rainfall downloadable per station and water year. Data are collected by the county's Watershed Protection program from ALERT and other gauges, and are marked published or preliminary.",
+   "holdings": [
+    "Rainfall daily, hourly and monthly totals per station (HTML/CSV/JSON/XML)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Ventura County Hydrodata rainfall downloads",
+     "url": "https://hydrology.venturacounty.gov/hydrodata/get-stations/?dataset=rain_day"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Station page example",
+     "url": "https://hydrology.venturacounty.gov/hydrodata/get-station/?siteid=301"
+    },
+    {
+     "label": "Hydrodata FAQ",
+     "url": "https://hydrology.venturacounty.gov/hydrodata/faq.php"
+    }
+   ],
+   "state": "California",
+   "stateCodes": [
+    "CA"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Ventura County Hydrodata rainfall downloads",
+     "landingUrl": "https://hydrology.venturacounty.gov/hydrodata/get-stations/?dataset=rain_day",
+     "accessUrl": "https://hydrology.venturacounty.gov/hydrodata/get-stations/?dataset=rain_day",
+     "formats": [
+      "CSV",
+      "JSON",
+      "XML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly; monthly",
+     "periodOfRecord": "Varies by station (e.g. station 301: 1998-2011)",
+     "coverage": "regional: Ventura County",
+     "originalCollector": "Ventura County Public Works / Watershed Protection District",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall in inches with code, quality code and publish flag (published vs preliminary) per row; FAQ explains caveats.",
+     "verification": "download tested",
+     "testNote": "rain-data/daily.php?site_id=301&wy=2005&format=csv returned a header block (Old Man Mountain, ALERT precipitation gage) and rows '24 Hour Total Ending At,Rainfall (in),Code,Quality Code,Publish'. The daily-rain station list links about 280 stations.",
+     "citations": [
+      "https://hydrology.venturacounty.gov/hydrodata/get-station/?siteid=301",
+      "https://hydrology.venturacounty.gov/hydrodata/faq.php"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-co-colorado-climate-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Colorado Climate Center (State Climatologist)",
+   "fullName": "Colorado Climate Center, Office of the Colorado State Climatologist",
+   "host": "Colorado State University, Department of Atmospheric Science",
+   "location": "Fort Collins, CO",
+   "discipline": "Agricultural weather network and statewide station climate data",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The official state climatology office runs CoAgMET, a network of about 130 agricultural weather stations (active and inactive) with 5-minute, hourly and daily precipitation since 1992. It also serves 5-minute and hourly archives, from 1996, for the Fort Collins weather station on the CSU main campus, whose daily record goes back to 1889. Its NOAA cooperative-station query tool draws on ACIS and is listed separately as non-qualifying.",
+   "holdings": [
+    "CoAgMET weather station data (5-minute, hourly, daily) via a URL-based API",
+    "Fort Collins (CSU main campus) weather station 5-minute and hourly archive, 1996-present"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CoAgMET data API",
+     "url": "https://coagmet.colostate.edu/data/url-builder"
+    },
+    {
+     "name": "Fort Collins Weather Station data archive",
+     "url": "https://climate.colostate.edu/~autowx/fclwx_access.php"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Colorado Climate Center",
+     "url": "https://climate.colostate.edu/"
+    },
+    {
+     "label": "CoAgMET",
+     "url": "https://coagmet.colostate.edu/"
+    },
+    {
+     "label": "CoAgMET API documentation",
+     "url": "https://coagmet.colostate.edu/data/doc.html"
+    },
+    {
+     "label": "Fort Collins Weather Station",
+     "url": "https://climate.colostate.edu/~autowx/"
+    }
+   ],
+   "state": "Colorado",
+   "stateCodes": [
+    "CO"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "CoAgMET data API",
+     "landingUrl": "https://coagmet.colostate.edu/",
+     "accessUrl": "https://coagmet.colostate.edu/data/url-builder",
+     "formats": [
+      "CSV",
+      "JSON",
+      "XML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; hourly; daily",
+     "periodOfRecord": "1992-present (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "Colorado Climate Center (CoAgMET), including Northern Water stations integrated into the network",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation field 'precip', inches (US) or mm (metric). A QC (Raw) option exists; other QC details are not documented here.",
+     "verification": "download tested",
+     "testNote": "Requested data/daily/fcl01.csv?from=2024-05-01&to=2024-05-05&fields=precip&header=yes. Got 5 daily 'Liquid Precip' values in inches for Fort Collins (0.02 on 5/1). The metadata.csv listing shows about 128 stations, the earliest from 1992.",
+     "citations": [
+      "https://coagmet.colostate.edu/data/doc.html",
+      "https://coagmet.colostate.edu/data/metadata.csv?header=yes"
+     ]
+    },
+    {
+     "name": "Fort Collins Weather Station data archive",
+     "landingUrl": "https://climate.colostate.edu/~autowx/",
+     "accessUrl": "https://climate.colostate.edu/~autowx/fclwx_access.php",
+     "formats": [
+      "CSV",
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; hourly",
+     "periodOfRecord": "1996-present (electronic archive); station daily record since 1889 not served by this form",
+     "coverage": "station-specific",
+     "originalCollector": "Colorado Climate Center (CSU Fort Collins main campus weather station)",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation column 'Prec' in inches. A precipitation data disclaimer page exists (climate.colostate.edu/~autowx/prec_disclaimer.html); other QC is not documented.",
+     "verification": "download tested",
+     "testNote": "POST to fclwx_results.php with year 2024, month 5, day 1, table Hourly, format csv. Got hourly rows for 2024-05-01 with column Prec (in), values 0.00.",
+     "citations": [
+      "https://climate.colostate.edu/~autowx/fclwx_access.php",
+      "https://climate.colostate.edu/~autowx/prec_disclaimer.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-co-cdss-climate-stations",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Colorado DWR/CWCB CDSS Climate Stations",
+   "fullName": "Colorado's Decision Support Systems (CDSS) Climate Station Data, Colorado Division of Water Resources and Colorado Water Conservation Board",
+   "host": "Colorado Department of Natural Resources",
+   "location": "Denver, CO",
+   "discipline": "Statewide climate station precipitation records (redistributed)",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The state's water decision-support system serves daily and monthly precipitation for about 4,700 station records across Colorado through a web tool and a free REST API. The observations come from NOAA cooperative and first-order stations, CoCoRaHS volunteers, NRCS SNOTEL, CoAgMET and Northern Water (NCWCD); CDSS redistributes them.",
+   "holdings": [
+    "Climate station daily time series (precipitation, snow, temperature, evaporation)",
+    "Climate station monthly time series",
+    "Climate station inventory with period of record by data type"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CDSS REST API climate station data",
+     "url": "https://dwr.state.co.us/Rest/GET/api/v2/climatedata/climatestationtsday/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "CDSS Climate Stations tool",
+     "url": "https://dwr.state.co.us/Tools/ClimateStations"
+    },
+    {
+     "label": "CDSS REST API help",
+     "url": "https://dwr.state.co.us/Rest/GET/Help"
+    }
+   ],
+   "state": "Colorado",
+   "stateCodes": [
+    "CO"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "CDSS REST API climate station data",
+     "landingUrl": "https://dwr.state.co.us/Tools/ClimateStations",
+     "accessUrl": "https://dwr.state.co.us/Rest/GET/api/v2/climatedata/climatestationtsday/",
+     "formats": [
+      "CSV",
+      "JSON",
+      "XML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; monthly",
+     "periodOfRecord": "1852-present (earliest precipitation record; varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "NOAA (COOP/first-order), CoCoRaHS, NRCS, CoAgMET, Northern Colorado Water Conservancy District",
+     "access": "Free, no account (anonymous limit 1,000 calls/day; optional free API key)",
+     "qualityNotes": "Units in inches (measUnit field). Source flags flagA-flagD are passed through, e.g. T for trace. DWR recommends getting data directly from the original provider where possible.",
+     "verification": "download tested",
+     "testNote": "Requested climatestationtsday?format=csv&siteId=USW00003017&measType=Precip for 2024-05-01 to 2024-05-06. Got 6 daily rows for Denver Intl AP with value 0.000 in, flag T on 5/1, dataSource NOAA.",
+     "citations": [
+      "https://dwr.state.co.us/Rest/GET/Help",
+      "https://dwr.state.co.us/Rest/GET/api/v2/climatedata/climatestationsdatatypes/?format=csv&measType=Precip"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-co-energy-office-open-data-weather",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Colorado Energy Office weather datasets (data.colorado.gov)",
+   "fullName": "Colorado Energy Office weather and precipitation datasets on the Colorado Information Marketplace",
+   "host": "Colorado Energy Office; Colorado Information Marketplace (data.colorado.gov)",
+   "location": "Denver, CO",
+   "discipline": "Archived station precipitation tables (redistributed)",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The state open data portal hosts static tables published by the Colorado Energy Office. One holds CoCoRaHS volunteer rain, hail and snow observations across Colorado from 1999 to 2015. Others hold weather station records with accumulated precipitation, such as NREL's Boulder station (1996-2015). The original collectors are CoCoRaHS, NREL and the other station operators named on each dataset; the tables are not updated.",
+   "holdings": [
+    "Rain Hail and Snow in Colorado 2015 (CoCoRaHS daily observations, 1999-2015)",
+    "Weather Station tables for Boulder, Golden, South Park, Lowry Range, Aurora, San Luis Valley, Pueblo, Swink (single years or multi-year archives)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Colorado Energy Office weather tables (Socrata API)",
+     "url": "https://data.colorado.gov/Environment/Rain-Hail-and-Snow-in-Colorado-2015/mqid-8hv2"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Rain Hail and Snow in Colorado 2015",
+     "url": "https://data.colorado.gov/Environment/Rain-Hail-and-Snow-in-Colorado-2015/mqid-8hv2"
+    },
+    {
+     "label": "Weather Station in Boulder Colorado 2015",
+     "url": "https://data.colorado.gov/Environment/Weather-Station-in-Boulder-Colorado-2015/pfjr-vhp3"
+    }
+   ],
+   "state": "Colorado",
+   "stateCodes": [
+    "CO"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "Colorado Energy Office weather tables (Socrata API)",
+     "landingUrl": "https://data.colorado.gov/Environment/Rain-Hail-and-Snow-in-Colorado-2015/mqid-8hv2",
+     "accessUrl": "https://data.colorado.gov/Environment/Rain-Hail-and-Snow-in-Colorado-2015/mqid-8hv2",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (CoCoRaHS); 10-minute (NREL Boulder); varies by dataset",
+     "periodOfRecord": "1999-2015 (CoCoRaHS); 1996-2015 (Boulder); varies by dataset",
+     "coverage": "statewide",
+     "originalCollector": "CoCoRaHS volunteers; NREL and other station operators named per dataset",
+     "access": "Free, no account",
+     "qualityNotes": "Archived static copies, not updated. Field 'prcp' is inches (CoCoRaHS). Boulder 'precipitationaccumulated' units not documented on the portal.",
+     "verification": "download tested",
+     "testNote": "Requested resource/mqid-8hv2.csv?$limit=3. Got CoCoRaHS rows from 2014-01-01 with prcp 0.11 and 0.00. resource/pfjr-vhp3.csv?$limit=3 returned 10-minute Boulder rows from 1996-09-24 with a precipitationaccumulated column.",
+     "citations": [
+      "https://data.colorado.gov/api/views/mqid-8hv2.json",
+      "https://data.colorado.gov/api/views/pfjr-vhp3.json"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ct-dot-weather-roundup",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "CT DOT Weather Roundup",
+   "fullName": "Connecticut Department of Transportation Regional Weather Reports (Weather Roundup)",
+   "host": "Connecticut Department of Transportation",
+   "location": "Newington, CT",
+   "discipline": "Storm-event precipitation and snowfall totals at DOT locations",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "CT DOT publishes event-based weather reports giving precipitation and snowfall totals measured at its locations around the state. The data.ct.gov catalog lists them (first published 2017, updated 2026), and they are served as an HTML index on dotdata.ct.gov. DOT collects the measurements itself. News outlets describe the totals as unofficial.",
+   "holdings": [
+    "Regional Weather Reports: per-storm precipitation and snowfall totals by DOT location"
+   ],
+   "formats": [
+    "HTML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Regional Weather Reports (CT DOT Weather Roundup)",
+     "url": "http://www.dotdata.ct.gov/WeatherRoundUp/WRU_Index.HTM"
+    }
+   ],
+   "sources": [
+    {
+     "label": "data.ct.gov dataset page",
+     "url": "https://data.ct.gov/d/megi-jdev"
+    },
+    {
+     "label": "data.gov catalog record",
+     "url": "https://catalog.data.gov/dataset/regional-weather-reports-ct-department-of-transportation-weather-roundup"
+    }
+   ],
+   "state": "Connecticut",
+   "stateCodes": [
+    "CT"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "Regional Weather Reports (CT DOT Weather Roundup)",
+     "landingUrl": "https://data.ct.gov/d/megi-jdev",
+     "accessUrl": "http://www.dotdata.ct.gov/WeatherRoundUp/WRU_Index.HTM",
+     "formats": [
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "per storm event",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "Connecticut Department of Transportation",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented. The catalog says reports are produced for individual weather events. Media describe the DOT totals as unofficial.",
+     "verification": "download documented",
+     "testNote": "WebFetch and curl both returned 'Request Rejected' (bot block) from www.dotdata.ct.gov, and web.archive.org could not be fetched. The data.ct.gov and data.gov catalog records describe the precipitation and snowfall totals and list the HTML index as the only resource. Report format and date range not verified.",
+     "citations": [
+      "https://catalog.data.gov/dataset/regional-weather-reports-ct-department-of-transportation-weather-roundup",
+      "https://data.ct.gov/d/megi-jdev"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ct-state-climate-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Connecticut State Climate Center (UConn)",
+   "fullName": "Connecticut State Climate Center",
+   "host": "University of Connecticut, Department of Natural Resources and the Environment",
+   "location": "Storrs, CT",
+   "discipline": "Statewide station precipitation records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The official state climate office at UConn hosts a single ZIP archive of daily station records for Connecticut: 159 station CSV files, 1893-2014, with daily and monthly normals. The daily records are NOAA NCDC GHCN-Daily extracts (mostly NWS Cooperative Observer stations) and include daily precipitation (PRCP). The archive is static, and newer data must be requested by form.",
+   "holdings": [
+    "Daily station data archive (GHCN-Daily extracts, 1893-2014) with 1981-2010 daily and monthly normals"
+   ],
+   "formats": [
+    "CSV",
+    "ZIP",
+    "XLS",
+    "PDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Connecticut climate data archive (ZIP)",
+     "url": "https://cscc-nre.media.uconn.edu/wp-content/uploads/sites/3419/2021/12/CTClimateCenterData-3.zip"
+    }
+   ],
+   "sources": [
+    {
+     "label": "CSCC Climate Data page",
+     "url": "https://cscc.nre.uconn.edu/climate-data/"
+    },
+    {
+     "label": "CSCC home (official State Climate Office statement)",
+     "url": "https://cscc.nre.uconn.edu"
+    },
+    {
+     "label": "AASC Connecticut entry",
+     "url": "https://stateclimate.org/state/connecticut/"
+    }
+   ],
+   "state": "Connecticut",
+   "stateCodes": [
+    "CT"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Connecticut climate data archive (ZIP)",
+     "landingUrl": "https://cscc.nre.uconn.edu/climate-data/",
+     "accessUrl": "https://cscc-nre.media.uconn.edu/wp-content/uploads/sites/3419/2021/12/CTClimateCenterData-3.zip",
+     "formats": [
+      "CSV",
+      "ZIP",
+      "XLS",
+      "PDF"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "1893-2014 (varies by station; files named by station and years, e.g. ANSONIA 1 NE 1966-2014)",
+     "coverage": "statewide",
+     "originalCollector": "NOAA NCDC GHCN-Daily (mainly NWS Cooperative Observer and airport stations); file format and GHCND_documentation.pdf match NCDC Climate Data Online exports",
+     "access": "Free, no account",
+     "qualityNotes": "GHCN-Daily CSV layout with Measurement, Quality and Source flags and Time of Observation for each element. -9999 marks missing values. PRCP units not stated in the file header (CDO standard exports use hundredths of inches); see the included GHCND_documentation.pdf. Archive last modified June 2024 and ends in 2014.",
+     "verification": "download tested",
+     "testNote": "The ZIP is about 20 MB, so it was not downloaded in full. Ranged requests read its central directory: 324 entries (161 'Daily data by station name' CSVs, 81 daily-normal and 81 monthly-normal PDF/XLS files, and GHCND_documentation.pdf). A range read and decompression of 'ANSONIA 1 NE 1966-2014.csv' showed a header with STATION, DATE, PRCP, SNOW, SNWD, TMAX and TMIN, and rows such as 19660401 with PRCP -9999 (missing).",
+     "citations": [
+      "https://cscc.nre.uconn.edu/climate-data/",
+      "https://cscc.nre.uconn.edu/data-requests/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-de-deos",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Delaware Environmental Observing System (DEOS)",
+   "fullName": "Delaware Environmental Observing System, Center for Environmental Monitoring and Analysis (Office of the Delaware State Climatologist)",
+   "host": "University of Delaware, Center for Environmental Monitoring and Analysis (CEMA)",
+   "location": "Newark, DE",
+   "discipline": "Statewide real-time and historical station precipitation",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "DEOS is Delaware's statewide monitoring network of more than 100 stations, run by the University of Delaware's CEMA, which the State Climatologist directs, with day-to-day operations funded by the State. It serves 5-minute, hourly and daily precipitation per station as CSV, multi-station daily/monthly/yearly precipitation summaries through its Almanac service, and an API for registered users. Station pages also integrate partner networks (DelDOT, DNERR, NWS, USGS).",
+   "holdings": [
+    "Station Data Summary: per-station daily view with hourly or 5-minute precipitation, CSV download",
+    "DEOS Almanac: daily, monthly and yearly precipitation totals for all stations, with interpolated maps and CSV export",
+    "DEOS Data API Service: 5-minute, hourly and daily data, registration required"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "DEOS Station Data Summary (daily view CSV)",
+     "url": "https://deos.udel.edu/data/monthly_summary/index.php"
+    },
+    {
+     "name": "DEOS Almanac",
+     "url": "https://deos.udel.edu/almanac/"
+    },
+    {
+     "name": "DEOS Data API Service",
+     "url": "https://deos.udel.edu/data/api/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "DEOS data products",
+     "url": "https://deos.udel.edu/data/"
+    },
+    {
+     "label": "DEOS partners (State funding)",
+     "url": "https://deos.udel.edu/about/partners.php"
+    },
+    {
+     "label": "AASC Delaware state climate office",
+     "url": "https://stateclimate.org/state/delaware"
+    }
+   ],
+   "state": "Delaware",
+   "stateCodes": [
+    "DE"
+   ],
+   "orgType": "state-designated network (university-operated)",
+   "datasetDetails": [
+    {
+     "name": "DEOS Station Data Summary (daily view CSV)",
+     "landingUrl": "https://deos.udel.edu/data/monthly_summary/index.php",
+     "accessUrl": "https://deos.udel.edu/data/monthly_summary/index.php",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; hourly; daily (monthly table)",
+     "periodOfRecord": "Station period of record, network from 2004 (varies by station); Not documented per station",
+     "coverage": "statewide",
+     "originalCollector": "University of Delaware CEMA (DEOS network); some stations from partner networks",
+     "access": "Free, no account",
+     "qualityNotes": "Page states data are preliminary and subject to further validation. Precip in inches (converted from mm); '--' marks missing values; blue shading marks multi-day totals where daily values may be invalid.",
+     "verification": "download tested",
+     "testNote": "Requested daily_view.php?station=DAGF&date=2025-06-05&interval=hourly&download=csv; got CSV with 'Precip (in)' column (0.00 values). Same for 2006-06-05, confirming history back to at least 2006.",
+     "citations": [
+      "https://deos.udel.edu/data/monthly_summary/daily_view.php?station=DAGF&date=2025-06-05&interval=hourly",
+      "https://deos.udel.edu/data/"
+     ]
+    },
+    {
+     "name": "DEOS Almanac",
+     "landingUrl": "https://deos.udel.edu/almanac/",
+     "accessUrl": "https://deos.udel.edu/almanac/",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; monthly; yearly; custom date range",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "University of Delaware CEMA (DEOS network)",
+     "access": "Free, no account",
+     "qualityNotes": "Returns per-station SUM, MEAN, MIN, MAX, STD_DEV and observation count in inches; maps are kriging-interpolated in the browser. QC not documented.",
+     "verification": "download tested",
+     "testNote": "Queried the Almanac's backend services.cema.udel.edu/almanac/almanac.php with start=2025-06-01, end=2025-06-30, data_type=Precipitation, method=total, mode=months; got JSON with per-station SUM (e.g. 2.37 in, OB_COUNT 30). Page offers 'download csv'.",
+     "citations": [
+      "https://deos.udel.edu/almanac/",
+      "https://deos.udel.edu/data/"
+     ]
+    },
+    {
+     "name": "DEOS Data API Service",
+     "landingUrl": "https://deos.udel.edu/data/api/",
+     "accessUrl": "https://deos.udel.edu/data/api/",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; hourly; daily",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "University of Delaware CEMA (DEOS network)",
+     "access": "Free account required (registration form)",
+     "qualityNotes": "Not documented on the landing page; redistribution requires prior CEMA permission.",
+     "verification": "download documented",
+     "testNote": "Not tested: requires registration at services.cema.udel.edu/deos_services/register. Landing page describes real-time and historical data at 5-minute, hourly and daily resolution with a user guide.",
+     "citations": [
+      "https://deos.udel.edu/data/api/",
+      "https://services.cema.udel.edu/deos_services/register"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-fawn",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "FAWN (Florida Automated Weather Network)",
+   "fullName": "Florida Automated Weather Network",
+   "host": "University of Florida Institute of Food and Agricultural Sciences (UF/IFAS)",
+   "location": "Gainesville, FL",
+   "discipline": "Statewide agricultural weather station network",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "UF/IFAS runs about 40 automated weather stations from the Panhandle to Homestead that record rainfall and other weather every 15 minutes. Yearly CSV files of 15-minute observations, hourly and daily summaries are posted for public download, along with a report generator and data feeds.",
+   "holdings": [
+    "Yearly CSV files of 15-minute observations and hourly/daily summaries (fawnpub)",
+    "QC-flagged and gap-free 15-minute CSV sets",
+    "Report Generator and data feeds (CSV, JSON, XHTML)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "FAWN yearly CSV data (fawnpub)",
+     "url": "https://fawn.ifas.ufl.edu/data/fawnpub/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "FAWN Data Access",
+     "url": "https://fawn.ifas.ufl.edu/data/"
+    },
+    {
+     "label": "UF/IFAS news, 1998: FAWN funded by 1997 Legislature appropriation",
+     "url": "https://blogs.ifas.ufl.edu/news/1998/01/14/new-florida-automated-weather-network-fawn-goes-online"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "FAWN yearly CSV data (fawnpub)",
+     "landingUrl": "https://fawn.ifas.ufl.edu/data/",
+     "accessUrl": "https://fawn.ifas.ufl.edu/data/fawnpub/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute; hourly; daily",
+     "periodOfRecord": "1997-present (daily summary files by year; varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "UF/IFAS FAWN",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall in inches ('Rainfall Amount (in) Sum'). A separate set carries QC flags; a gap-free set covers 30 stations 2005-2020.",
+     "verification": "download tested",
+     "testNote": "Requested the first 1.5 KB of daily_summaries/BY_YEAR/2026_daily.csv; header includes 'Rainfall Amount (in) Sum' and station 110 shows 0.44 in on 2026-01-03.",
+     "citations": [
+      "https://fawn.ifas.ufl.edu/data/",
+      "https://fawn.ifas.ufl.edu/data/fawnpub/daily_summaries/BY_YEAR/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-florida-climate-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Florida Climate Center (State Climatologist)",
+   "fullName": "Florida Climate Center, Office of the State Climatologist",
+   "host": "Florida State University, Center for Ocean-Atmospheric Prediction Studies (COAPS)",
+   "location": "Tallahassee, FL",
+   "discipline": "Long-term daily station precipitation records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The state climatologist's office at FSU serves daily precipitation and temperature for about 100 long-term Florida stations as CSV files. The observations were collected by the National Weather Service (First Order and Cooperative stations) and the FAA; the center serves the files itself.",
+   "holdings": [
+    "Downloadable Data Tool: daily precipitation and temperature for ~100 long-term NWS and FAA stations"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Florida Climate Center Downloadable Data Tool",
+     "url": "https://climatecenter.fsu.edu/climate-data-access-tools/downloadable-data"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Downloadable Data Tool page",
+     "url": "https://climatecenter.fsu.edu/climate-data-access-tools/downloadable-data"
+    },
+    {
+     "label": "AASC state climate office listing",
+     "url": "https://stateclimate.org/state/florida"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Florida Climate Center Downloadable Data Tool",
+     "landingUrl": "https://climatecenter.fsu.edu/climate-data-access-tools/downloadable-data",
+     "accessUrl": "https://climatecenter.fsu.edu/climate-data-access-tools/downloadable-data",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Year menu runs 1931-2025; varies by station",
+     "coverage": "statewide",
+     "originalCollector": "NOAA National Weather Service (First Order and Cooperative stations) and FAA; source archive not documented",
+     "access": "Free, no account",
+     "qualityNotes": "Missing precipitation coded -99.99. Units not stated (values appear to be inches). QC not documented.",
+     "verification": "download tested",
+     "testNote": "POSTed the page's form (station 88758 Tallahassee Rgnl AP, 2020-01-01 to 2020-01-05, variable precipitation) to /php/climate_visualization/Climate_Data.php; got CSV with header COOPID, YEAR, MONTH, DAY, precipitation and values such as 0.04 and 0.25.",
+     "citations": [
+      "https://climatecenter.fsu.edu/climate-data-access-tools/downloadable-data",
+      "https://stateclimate.org/state/florida"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-fdacs-forest-service-rainfall",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Florida Forest Service Daily Rainfall Reports",
+   "fullName": "Florida Department of Agriculture and Consumer Services, Florida Forest Service - Daily Rainfall Reports",
+   "host": "Florida Department of Agriculture and Consumer Services (FDACS)",
+   "location": "Tallahassee, FL",
+   "discipline": "Daily rainfall at forestry observation sites",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Florida Forest Service publishes daily rainfall totals from its own observing sites, queried by forestry district, month and year. Results come back as web tables by county and site.",
+   "holdings": [
+    "District Rainfall by Month: daily rainfall at Florida Forest Service observing sites"
+   ],
+   "formats": [
+    "HTML table"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Florida Forest Service District Rainfall by Month",
+     "url": "https://fireweather.fdacs.gov/rainfall/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Daily Rainfall Reports page",
+     "url": "https://fireweather.fdacs.gov/rainfall/"
+    },
+    {
+     "label": "SWFWMD Hydrologic Data page linking it",
+     "url": "https://www.swfwmd.state.fl.us/resources/data-maps/hydrologic-data"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "Florida Forest Service District Rainfall by Month",
+     "landingUrl": "https://fireweather.fdacs.gov/rainfall/",
+     "accessUrl": "https://fireweather.fdacs.gov/rainfall/",
+     "formats": [
+      "HTML table"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Year menu offers 2001-present",
+     "coverage": "statewide",
+     "originalCollector": "FDACS Florida Forest Service observing sites",
+     "access": "Free, no account",
+     "qualityNotes": "Inches; TR = trace (less than 1/10 inch, per the page). No file export; QC not documented.",
+     "verification": "download tested",
+     "testNote": "POSTed District=Jacksonville, month=9, year=2025 to fmis_rainfall.py; got daily rainfall tables by county and site (e.g. Southside 2.20). The same query for October 2026 (Tallahassee) returned an empty table.",
+     "citations": [
+      "https://fireweather.fdacs.gov/rainfall/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-lee-county-natural-resources",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Lee County Natural Resources rain gauges",
+   "fullName": "Lee County Department of Natural Resources - Rain Gauge Data",
+   "host": "Lee County, Florida",
+   "location": "Fort Myers, FL",
+   "discipline": "County rain-gauge network",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Lee County runs about two dozen telemetered rain gauges that record every 15 minutes, and serves verified totals through its own query page with CSV export. Coverage is Lee County in southwest Florida.",
+   "holdings": [
+    "Rain Gauge Data query: 15-minute, daily, monthly and yearly totals per gauge, 1990-present"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Lee County Rain Gauge Data",
+     "url": "https://naturalresources.leegov.com/Home/RainGauge"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Lee County rainfall program page",
+     "url": "https://www.leefl.gov/naturalresources/hydrological-monitoring/rainfall"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Lee County Rain Gauge Data",
+     "landingUrl": "https://www.leefl.gov/naturalresources/hydrological-monitoring/rainfall",
+     "accessUrl": "https://naturalresources.leegov.com/Home/RainGauge",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute; daily; monthly; yearly",
+     "periodOfRecord": "Year menu 1990-present; varies by gauge",
+     "coverage": "regional: Lee County",
+     "originalCollector": "Lee County Department of Natural Resources",
+     "access": "Free, no account",
+     "qualityNotes": "Page states data verified up to 2026-10-29; a flag column marks some values. Units not stated (values appear to be inches).",
+     "verification": "download tested",
+     "testNote": "POSTed the query form (Id=20 Lakes Park, daily, 10/01/2026-10/05/2026); page returned a table with Total Rainfall 0.44, 0, 0.1, 0, 0 and Copy/CSV export buttons.",
+     "citations": [
+      "https://naturalresources.leegov.com/Home/RainGauge",
+      "https://www.leefl.gov/naturalresources/hydrological-monitoring/rainfall"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-sfwmd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "South Florida WMD (DBHYDRO)",
+   "fullName": "South Florida Water Management District - DBHYDRO environmental database",
+   "host": "South Florida Water Management District",
+   "location": "West Palm Beach, FL",
+   "discipline": "Rain-gauge and NEXRAD rainfall for south Florida",
+   "topics": [
+    "gauges",
+    "radar",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "DBHYDRO is the district's hydrologic and water quality database for its 16-county region of south Florida (Orlando area to the Keys), including rainfall by station and NEXRAD radar rainfall estimates. DBHYDRO Insights, which replaced the DBHYDRO Browser in 2025, offers table downloads; a programmatic API needs SFWMD-issued credentials.",
+   "holdings": [
+    "DBHYDRO Insights: rain-gauge time series with table downloads",
+    "NEXRAD radar rainfall estimates (DBHYDRO)",
+    "DBHYDRO data service API (client_id/secret on request)"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "DBHYDRO Insights",
+     "url": "https://insights.sfwmd.gov/#/homepage"
+    }
+   ],
+   "sources": [
+    {
+     "label": "DBHYDRO page",
+     "url": "https://www.sfwmd.gov/dbhydro"
+    },
+    {
+     "label": "DBHYDRO Insights API documentation",
+     "url": "https://www.sfwmd.gov/sites/default/files/documents/hydrodataservicedocumentation.pdf"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "DBHYDRO Insights",
+     "landingUrl": "https://www.sfwmd.gov/dbhydro",
+     "accessUrl": "https://insights.sfwmd.gov/#/homepage",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented (varies by station)",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: South Florida WMD (16 counties of south Florida)",
+     "originalCollector": "SFWMD and cooperating agencies",
+     "access": "Free, no account for the web app; API requires SFWMD client credentials",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "The app's public sites endpoint (insights.api.sfwmd.gov/v1/insights/sites) returned station JSON, but the time-series request was not identified in the app bundle and the data-service API needs credentials; rainfall download not tested.",
+     "citations": [
+      "https://www.sfwmd.gov/dbhydro",
+      "https://www.sfwmd.gov/sites/default/files/documents/hydrodataservicedocumentation.pdf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-swfwmd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Southwest Florida WMD",
+   "fullName": "Southwest Florida Water Management District",
+   "host": "Southwest Florida Water Management District",
+   "location": "Brooksville, FL",
+   "discipline": "Rain-gauge records and area rainfall summaries for west-central Florida",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Its Environmental Data Portal is the district's official database of water levels, flows, water quality and rainfall, with gauge data at 15-minute, hourly, daily and event scales for west-central Florida (Tampa Bay area to Charlotte and Highlands counties). The district also posts area-weighted monthly rainfall summaries by county, region and watershed back to 1915.",
+   "holdings": [
+    "Environmental Data Portal: rain-gauge time series",
+    "Rainfall summary spreadsheets by county, region and USGS watershed, 1915-previous year"
+   ],
+   "formats": [
+    "XLSX"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SWFWMD Environmental Data Portal",
+     "url": "https://edp.swfwmd.state.fl.us/applications/login.html?publicuser=Guest#waterdata-external/stationoverview"
+    },
+    {
+     "name": "SWFWMD Rainfall Data by Region",
+     "url": "https://www.swfwmd.state.fl.us/resources/data-maps/rainfall-summary-data-region"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Hydrologic Data page",
+     "url": "https://www.swfwmd.state.fl.us/resources/data-maps/hydrologic-data"
+    },
+    {
+     "label": "Guide to Hydrologic Data",
+     "url": "https://www.swfwmd.state.fl.us/sites/default/files/medias/documents/Guide_To_Hydrologic_Data.pdf"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "SWFWMD Environmental Data Portal",
+     "landingUrl": "https://www.swfwmd.state.fl.us/resources/data-maps/hydrologic-data",
+     "accessUrl": "https://edp.swfwmd.state.fl.us/applications/login.html?publicuser=Guest#waterdata-external/stationoverview",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute; hourly; daily; event",
+     "periodOfRecord": "Not documented (varies by station)",
+     "coverage": "regional: Southwest Florida WMD (west-central Florida)",
+     "originalCollector": "SWFWMD data collection sites",
+     "access": "Free, guest access",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "The sandbox proxy refused edp.swfwmd.state.fl.us twice; not tested. The district guide documents downloads through EDP.",
+     "citations": [
+      "https://www.swfwmd.state.fl.us/resources/data-maps/hydrologic-data",
+      "https://www.swfwmd.state.fl.us/sites/default/files/medias/documents/Guide_To_Hydrologic_Data.pdf"
+     ]
+    },
+    {
+     "name": "SWFWMD Rainfall Data by Region",
+     "landingUrl": "https://www.swfwmd.state.fl.us/resources/data-maps/rainfall-summary-data-region",
+     "accessUrl": "https://www.swfwmd.state.fl.us/resources/data-maps/rainfall-summary-data-region",
+     "formats": [
+      "XLSX"
+     ],
+     "dataType": "other",
+     "temporalResolution": "monthly; seasonal; annual; water year",
+     "periodOfRecord": "1915-previous calendar year",
+     "coverage": "regional: Southwest Florida WMD by county, district region and USGS watershed",
+     "originalCollector": "SWFWMD (area-weighted from rainfall records; inputs per the district's calculation PDF)",
+     "access": "Free, no account",
+     "qualityNotes": "Inches, area-weighted averages; method in Rainfall_Summary_Stat_Calculations.pdf.",
+     "verification": "download documented",
+     "testNote": "regn.xlsx redirects from www4 to www5.swfwmd.state.fl.us; the connection returned no data to curl and WebFetch rejected the certificate; not tested.",
+     "citations": [
+      "https://www.swfwmd.state.fl.us/resources/data-maps/rainfall-summary-data-region"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-sjrwmd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "St. Johns River WMD",
+   "fullName": "St. Johns River Water Management District",
+   "host": "St. Johns River Water Management District",
+   "location": "Palatka, FL",
+   "discipline": "Rain-gauge and radar rainfall for northeast and east-central Florida",
+   "topics": [
+    "gauges",
+    "radar",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Its Monitoring Data Portal (KISTERS WISKI Web) lets the public view, graph and download hourly and daily rainfall from the district's rain-gauge network in northeast and east-central Florida (the St. Johns River basin). The district also lists NEXRAD radar rainfall estimates.",
+   "holdings": [
+    "Monitoring Data Portal: rain-gauge time series (hourly totals, daily aggregates) with quality codes",
+    "Radar rainfall (NEXRAD) daily/monthly/annual estimates"
+   ],
+   "formats": [
+    "Zarr (portal data store)"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SJRWMD Monitoring Data Portal",
+     "url": "https://mdp.sjrwmd.com/"
+    },
+    {
+     "name": "SJRWMD radar rainfall",
+     "url": "http://webapub.sjrwmd.com/agws10/radrain/index.htm"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Hydrologic data collection program and reports",
+     "url": "https://www.sjrwmd.com/?p=4007"
+    },
+    {
+     "label": "Portal configuration",
+     "url": "https://mdp.sjrwmd.com/config/sjrwmd_external.json"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "SJRWMD Monitoring Data Portal",
+     "landingUrl": "https://www.sjrwmd.com/?p=4007",
+     "accessUrl": "https://mdp.sjrwmd.com/",
+     "formats": [
+      "Zarr (portal data store)"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly; daily",
+     "periodOfRecord": "Varies by station (portal offers 'Complete' period of record)",
+     "coverage": "regional: St. Johns River WMD (northeast and east-central Florida)",
+     "originalCollector": "SJRWMD rain-gauge network",
+     "access": "Free, no account",
+     "qualityNotes": "Each value carries a quality code, included in downloads (per portal FAQ). Export file format of the UI not documented. Units: Not verified.",
+     "verification": "download tested",
+     "testNote": "Read the portal's public data store (data/internet/timeseries/00005/RN_00005/Rain/h_Total_Agg_P1D, blosc/lz4 Zarr) and decoded it: 751 daily values from 1991-05-15 to 1993-06-03 for station 00005, e.g. 0.004 on 1993-05-31. The UI export itself was not run.",
+     "citations": [
+      "https://mdp.sjrwmd.com/config/sjrwmd_external.json",
+      "https://www.sjrwmd.com/?p=4007"
+     ]
+    },
+    {
+     "name": "SJRWMD radar rainfall",
+     "landingUrl": "https://www.sjrwmd.com/?p=4007",
+     "accessUrl": "http://webapub.sjrwmd.com/agws10/radrain/index.htm",
+     "formats": [],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily; monthly; annual",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: St. Johns River WMD",
+     "originalCollector": "NWS NEXRAD radar, gauge-adjusted (processing not documented)",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented. USF Water Atlas links a 'verified' NEXRAD FTP folder (ftp://secure.sjrwmd.com/nexrad/verified/).",
+     "verification": "download documented",
+     "testNote": "Page returned HTTP 403 from a web application firewall to curl; not tested.",
+     "citations": [
+      "https://www.sjrwmd.com/?p=4007",
+      "https://orange.wateratlas.usf.edu/rainfall/estimates/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-srwmd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Suwannee River WMD",
+   "fullName": "Suwannee River Water Management District",
+   "host": "Suwannee River Water Management District",
+   "location": "Live Oak, FL",
+   "discipline": "Rain-gauge records for north-central Florida",
+   "topics": [
+    "gauges",
+    "radar"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Serves a full daily rainfall record for each of its rain gauges in the Suwannee River basin of north-central Florida (Alachua to Taylor counties, plus some Georgia sites). Most gauges are run by the district; some files include USGS data.",
+   "holdings": [
+    "Rainfall Stations interactive map: per-station daily rainfall XLSX files",
+    "Real-time rainfall page",
+    "Doppler radar rainfall estimates since Feb 2001 (on request)"
+   ],
+   "formats": [
+    "XLSX"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SRWMD Rainfall Stations map (per-station daily XLSX)",
+     "url": "http://www.mysuwanneeriver.org/portal/rainfall.htm"
+    }
+   ],
+   "sources": [
+    {
+     "label": "SRWMD Water Data Portal",
+     "url": "https://www.mysuwanneeriver.com/507/Water-Data-Portal"
+    },
+    {
+     "label": "Station list behind the map",
+     "url": "http://www.mysuwanneeriver.org/portal/rainfall.xml"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "SRWMD Rainfall Stations map (per-station daily XLSX)",
+     "landingUrl": "https://www.mysuwanneeriver.com/507/Water-Data-Portal",
+     "accessUrl": "http://www.mysuwanneeriver.org/portal/rainfall.htm",
+     "formats": [
+      "XLSX"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Varies by station; ends with the previous day",
+     "coverage": "regional: Suwannee River WMD (north-central Florida)",
+     "originalCollector": "SRWMD; some files carry USGS data",
+     "access": "Free, no account",
+     "qualityNotes": "Inches. Quality codes: Missing, Reviewed, Estimated, Provisional. Disclaimer notes data may be provisional.",
+     "verification": "download tested",
+     "testNote": "Downloaded the 245 KB file data/rain/229/229_Daily_Total.xlsx (Forest Grove, Alachua) to scratch and parsed it: site header, 'Rainfall totals are in inches', 9,628 rows ending 2026-11-04 with values such as 0.26, 0.16, 0.03.",
+     "citations": [
+      "http://www.mysuwanneeriver.org/portal/rainfall.xml",
+      "https://www.mysuwanneeriver.com/507/Water-Data-Portal"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-fl-usf-water-atlas",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "USF Water Atlas",
+   "fullName": "WaterAtlas.org (USF Water Institute, with county partners)",
+   "host": "University of South Florida Water Institute",
+   "location": "Tampa, FL",
+   "discipline": "County water atlases with rain-gauge and radar rainfall data",
+   "topics": [
+    "gauges",
+    "radar"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The USF Water Institute runs county and regional Water Atlas sites (Orange, Hillsborough, Pinellas, Lee/CHNEP, Sarasota, Seminole and others) that collect rain-gauge records into a database for graphing and raw download. Gauges are run by others, for example Lee County Natural Resources; radar estimates come from the water management districts.",
+   "holdings": [
+    "Data Mapper: continuous rain-gauge data with raw download",
+    "Radar-based rainfall estimates (2 km pixels, WBID) with ArcGIS map service"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Water Atlas rainfall and Data Mapper",
+     "url": "https://orange.wateratlas.usf.edu/rainfall"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Orange County Water Atlas rainfall page",
+     "url": "https://orange.wateratlas.usf.edu/rainfall"
+    },
+    {
+     "label": "Radar-based rainfall estimates",
+     "url": "https://orange.wateratlas.usf.edu/rainfall/estimates/"
+    }
+   ],
+   "state": "Florida",
+   "stateCodes": [
+    "FL"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Water Atlas rainfall and Data Mapper",
+     "landingUrl": "https://orange.wateratlas.usf.edu/rainfall",
+     "accessUrl": "https://orange.wateratlas.usf.edu/rainfall",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented (continuous gauges)",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: Florida counties with a Water Atlas edition",
+     "originalCollector": "County agencies and water management districts (e.g. Lee County DNR); radar estimates from SWFWMD and SJRWMD",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "Rainfall page says users can download raw data from the Data Mapper; /datamapper/ returned HTTP 401 to curl, so no download was tested.",
+     "citations": [
+      "https://orange.wateratlas.usf.edu/rainfall",
+      "https://orange.wateratlas.usf.edu/rainfall/estimates/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ga-gfc-weather",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Georgia Forestry Commission Weather Stations",
+   "fullName": "Georgia Forestry Commission Automated Weather Data / Weather Data-NFDRS Data Retrieval System",
+   "host": "Georgia Forestry Commission",
+   "location": "Georgia (stations statewide)",
+   "discipline": "Statewide fire-weather station observations including rainfall",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Georgia Forestry Commission runs about 22 active automated fire-weather stations across Georgia and collects the data itself. It posts monthly daily-summary text files for each station and year, back to 1998 at the longest-running sites. Each file has daily rain amount and rain duration alongside temperature, humidity, KBDI and wind. A separate retrieval tool returns hourly or 1300 observations, including rain.",
+   "holdings": [
+    "Summary of daily data: per-station yearly text files with daily rain (in) and rain duration, 1998-present",
+    "Weather Data/NFDRS Data Retrieval System: hourly or 1300 weather observations including rain"
+   ],
+   "formats": [
+    "TXT"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "GFC Climate Data (daily summaries)",
+     "url": "https://weather.gfc.state.ga.us/climate/climate.aspx"
+    },
+    {
+     "name": "GFC Weather Data/NFDRS Data Retrieval System",
+     "url": "https://weather.gfc.state.ga.us/Getwxdata/Getwxdata.aspx"
+    }
+   ],
+   "sources": [
+    {
+     "label": "GFC weather home page",
+     "url": "https://weather.gfc.state.ga.us/"
+    },
+    {
+     "label": "GFC data quality note",
+     "url": "https://weather.gfc.state.ga.us/climate/dataquality.aspx"
+    }
+   ],
+   "state": "Georgia",
+   "stateCodes": [
+    "GA"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "GFC Climate Data (daily summaries)",
+     "landingUrl": "https://weather.gfc.state.ga.us/climate/climate.aspx",
+     "accessUrl": "https://weather.gfc.state.ga.us/climate/climate.aspx",
+     "formats": [
+      "TXT"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (midnight to midnight), one file per station-year with monthly tables",
+     "periodOfRecord": "1998-present (varies by station; some stations inactive or relocated)",
+     "coverage": "statewide",
+     "originalCollector": "Georgia Forestry Commission",
+     "access": "Free, no account",
+     "qualityNotes": "Rain in inches, plus rain duration. The GFC data quality page (last updated 2001) says data are assumed good and staff meteorologists may correct sensor errors by hand. Monthly summaries are posted on the 5th of the following month.",
+     "verification": "download tested",
+     "testNote": "Fetched https://weather.gfc.state.ga.us/climate/coo.25 (Adel, 2025); the January 2025 table lists daily max/min temperature and daily rain (for example 0.90 in on Jan 13).",
+     "citations": [
+      "https://weather.gfc.state.ga.us/climate/climate.aspx",
+      "https://weather.gfc.state.ga.us/climate/coo.25"
+     ]
+    },
+    {
+     "name": "GFC Weather Data/NFDRS Data Retrieval System",
+     "landingUrl": "https://weather.gfc.state.ga.us/Getwxdata/Getwxdata.aspx",
+     "accessUrl": "https://weather.gfc.state.ga.us/Getwxdata/Getwxdata.aspx",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "hourly or daily 1300 observation",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "Georgia Forestry Commission",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "Opened the form: station picker, starting year, and variable checkboxes including rain (Rn01), with a choice of hourly or 1300 data. No query was submitted, and the output format was not checked.",
+     "citations": [
+      "https://weather.gfc.state.ga.us/Getwxdata/Getwxdata.aspx"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ga-uga-aemn",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UGA Georgia Weather Network (AEMN)",
+   "fullName": "Georgia Automated Environmental Monitoring Network, University of Georgia",
+   "host": "University of Georgia, College of Agricultural and Environmental Sciences (Griffin campus)",
+   "location": "Griffin, GA",
+   "discipline": "Statewide agricultural weather station network",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The University of Georgia runs more than 80 automated weather stations across Georgia, mostly in farm areas, and collects the data itself. Its Historical Data page returns daily max/min temperature and rainfall for any station and date range back to 1996. A Rainfall Calculator gives totals and rainy-day counts for a chosen period.",
+   "holdings": [
+    "Historical Data query: daily Tmax, Tmin and rainfall per station, 1996-present",
+    "Rainfall Calculator: precipitation totals and rainy-day counts per station for a chosen period, by year"
+   ],
+   "formats": [
+    "HTML table"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "AEMN Historical Data query",
+     "url": "http://www.georgiaweather.net/?variable=HI&site=GRIFFIN"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Georgia Weather network home",
+     "url": "http://www.georgiaweather.net/"
+    },
+    {
+     "label": "UGA Extension climate blog on AEMN",
+     "url": "https://site.extension.uga.edu/climate/2015/05/climate-data-sources-georgia-automated-environmental-monitoring-network"
+    },
+    {
+     "label": "2013 news report on network funding",
+     "url": "https://www.wtxl.com/news/financial-picture-improves-for-weather-network/article_ff5ad404-9639-11e2-bf7c-001a4bcf6878.html"
+    }
+   ],
+   "state": "Georgia",
+   "stateCodes": [
+    "GA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "AEMN Historical Data query",
+     "landingUrl": "http://www.georgiaweather.net/",
+     "accessUrl": "http://www.georgiaweather.net/?variable=HI&site=GRIFFIN",
+     "formats": [
+      "HTML table"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (stations record 15-minute data; the query returns daily values)",
+     "periodOfRecord": "1996-present (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "University of Georgia Automated Environmental Monitoring Network",
+     "access": "Free, no account",
+     "qualityNotes": "Rain in inches (US units). QC not documented.",
+     "verification": "download tested",
+     "testNote": "Sent a POST to ?variable=HI&site=GRIFFIN for Oct 1-3, 2026; the table returned daily Tmax/Tmin and Rain (in), for example 0.09 in on Oct 02. The URL pattern takes other station codes in site=.",
+     "citations": [
+      "http://www.georgiaweather.net/?variable=HI&site=GRIFFIN",
+      "http://www.georgiaweather.net/?content=calculator&variable=rf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-hi-hcdp-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Hawaii Climate Data Portal and Hawaii Mesonet",
+   "fullName": "Hawaiʻi Climate Data Portal (HCDP) and Hawaiʻi Mesonet",
+   "host": "University of Hawaii at Manoa (Water Resources Research Center; Hawaii EPSCoR)",
+   "location": "Honolulu, HI",
+   "discipline": "Statewide station and gridded rainfall; Mesonet station data",
+   "topics": [
+    "gauges",
+    "models"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "HCDP serves statewide station rainfall tables and 250 m gridded rainfall maps for the main Hawaiian Islands, monthly and daily, from 1990 to the present. Its station data are compiled from many networks (NWS/NCEI, RAWS, SCAN, USGS, HaleNet, the Hawaii Mesonet and others). It also serves data from the Hawaii Mesonet, the statewide network of about 100 planned telemetered stations run by UH WRRC, through a live dashboard and a free token API.",
+   "holdings": [
+    "Daily and monthly station rainfall CSV files and gridded rainfall maps (GeoTIFF), 1990-present, via the data portal and public file store",
+    "Hawaii Mesonet station measurements (15-minute rainfall and other variables) via the HCDP / Hawaii Mesonet API and live dashboard"
+   ],
+   "formats": [
+    "CSV",
+    "GeoTIFF",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "HCDP Data Portal (rainfall station and gridded data)",
+     "url": "https://rainfall.ikewai.org"
+    },
+    {
+     "name": "HCDP / Hawaii Mesonet API",
+     "url": "https://hcdp.github.io/hcdp_api_docs/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "HCDP home",
+     "url": "https://www.hawaii.edu/climate-data-portal/"
+    },
+    {
+     "label": "Access Data page",
+     "url": "https://www.hawaii.edu/climate-data-portal/data-portal/"
+    },
+    {
+     "label": "Hawaii Mesonet page (funding)",
+     "url": "https://www.hawaii.edu/climate-data-portal/hawaii-mesonet/"
+    },
+    {
+     "label": "API sign-up",
+     "url": "https://www.hawaii.edu/climate-data-portal/hcdp-hawaii-mesonet-api/"
+    },
+    {
+     "label": "CWRM board submittal (Mesonet funding)",
+     "url": "https://files.hawaii.gov/dlnr/cwrm/submittal/2025/sb20250218C4.pdf"
+    }
+   ],
+   "state": "Hawaii",
+   "stateCodes": [
+    "HI"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "HCDP Data Portal (rainfall station and gridded data)",
+     "landingUrl": "https://www.hawaii.edu/climate-data-portal/data-portal/",
+     "accessUrl": "https://rainfall.ikewai.org",
+     "formats": [
+      "CSV",
+      "GeoTIFF"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily; monthly",
+     "periodOfRecord": "1990-present (new rainfall production; station coverage varies)",
+     "coverage": "statewide",
+     "originalCollector": "Multiple networks compiled by UH (NWS/NCEI COOP, RAWS, NRCS SCAN, USGS, HaleNet, Hawaii Mesonet and others); grids produced by HCDP",
+     "access": "Free, no account (portal export and public file store)",
+     "qualityNotes": "Station files list SKN station key, network, island, elevation, coordinates and one column per month/day; values in mm. Missing values are NA. 'Partial' station files are filled where gaps exist. Recent months may be provisional; not documented in detail on the pages read.",
+     "verification": "download tested",
+     "testNote": "Requested the first bytes of the public HCDP files rainfall_new_month_statewide_partial_station_data_2024.csv, 1990.csv and 2026.csv and rainfall_new_day_statewide_partial_station_data_2024_01.csv on ikeauth.its.hawaii.edu. All returned station metadata plus monthly/daily rainfall values (e.g. LOWER KAHUKU CS, RAWS, Jan 2024 = 161.29). The 1989 file does not exist. A byte-range request for the 2024-01 statewide monthly GeoTIFF also succeeded (HTTP 206).",
+     "citations": [
+      "https://www.hawaii.edu/climate-data-portal/data-portal/",
+      "https://ikeauth.its.hawaii.edu/files/v2/download/public/system/ikewai-annotated-data/HCDP/production/rainfall/new/month/statewide/partial/station_data/2024/rainfall_new_month_statewide_partial_station_data_2024.csv",
+      "https://par.nsf.gov/biblio/10546266-hawaii-climate-data-portal-hcdp"
+     ]
+    },
+    {
+     "name": "HCDP / Hawaii Mesonet API",
+     "landingUrl": "https://www.hawaii.edu/climate-data-portal/hcdp-hawaii-mesonet-api/",
+     "accessUrl": "https://hcdp.github.io/hcdp_api_docs/",
+     "formats": [
+      "JSON",
+      "CSV",
+      "GeoTIFF"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute (Mesonet live data); daily; monthly",
+     "periodOfRecord": "Mesonet: about 2022-present (first stations installed 2022; varies by station); HCDP products 1990-present",
+     "coverage": "statewide",
+     "originalCollector": "UH Water Resources Research Center (Hawaii Mesonet stations, incl. former HaleNet stations); HCDP compiled station data from multiple networks",
+     "access": "Free API token required (request form)",
+     "qualityNotes": "API base https://api.hcdp.ikewai.org with Bearer token. Endpoints include /mesonet/db/measurements, /mesonet/db/stations, /stations, /raster, /raster/timeseries and /genzip. HCDP says the stored Mesonet data are quality-controlled; QC flags were not documented on the pages read.",
+     "verification": "download documented",
+     "testNote": "Read the OpenAPI file (hcdp_api.yaml). An unauthenticated request to /mesonet/db/stations returned HTTP 401 asking for an API token, so no data was retrieved.",
+     "citations": [
+      "https://hcdp.github.io/hcdp_api_docs/hcdp_api.yaml",
+      "https://www.hawaii.edu/climate-data-portal/hawaii-mesonet/",
+      "https://www.hawaii.edu/climate-data-portal/hawaii-mesonet-data/#/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-hi-rainfall-atlas",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Rainfall Atlas of Hawaii",
+   "fullName": "Rainfall Atlas of Hawaiʻi (2011), UH Manoa Department of Geography and Environment",
+   "host": "University of Hawaii at Manoa, Department of Geography and Environment",
+   "location": "Honolulu, HI",
+   "discipline": "Gridded rainfall maps and station rainfall tables, 1920-2012",
+   "topics": [
+    "gauges",
+    "models"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Rainfall Atlas serves statewide gridded rainfall maps and the rain-gauge station tables behind them. Downloads include month-year rainfall maps for 1920-2012, island monthly rainfall index tables, and station monthly data through 2012, besides the 1978-2007 mean maps. It was built for the state Commission on Water Resource Management (with the US Army Corps of Engineers). Station records come from many networks (NWS COOP, USGS, plantations, private observers).",
+   "holdings": [
+    "Month-year rainfall rasters 1920-2012 and island monthly rainfall index (CSV/XLSX)",
+    "Rain-gauge station tables (monthly; filled and processed original data through 2012)",
+    "Mean monthly and annual rainfall grids, isohyets and GIS layers (1978-2007 base period)"
+   ],
+   "formats": [
+    "CSV",
+    "XLSX",
+    "ESRI grid",
+    "ASCII grid",
+    "Shapefile",
+    "KML",
+    "TIF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Rainfall Atlas of Hawaii downloads",
+     "url": "https://rainfall.geography.hawaii.edu/downloads"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Rainfall Atlas home",
+     "url": "https://rainfall.geography.hawaii.edu/"
+    },
+    {
+     "label": "Acknowledgements (CWRM agreement)",
+     "url": "https://rainfall.geography.hawaii.edu/acknowledgements"
+    }
+   ],
+   "state": "Hawaii",
+   "stateCodes": [
+    "HI"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "Rainfall Atlas of Hawaii downloads",
+     "landingUrl": "https://rainfall.geography.hawaii.edu/downloads",
+     "accessUrl": "https://rainfall.geography.hawaii.edu/downloads",
+     "formats": [
+      "CSV",
+      "XLSX",
+      "ESRI grid",
+      "ASCII grid",
+      "Shapefile",
+      "KML",
+      "TIF"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "monthly",
+     "periodOfRecord": "1920-2012 (month-year maps and station data); mean maps for 1978-2007",
+     "coverage": "statewide",
+     "originalCollector": "Rain-gauge records from multiple networks (NWS COOP, USGS, sugar and pineapple plantations, others) compiled by UH Geography",
+     "access": "Free, no account",
+     "qualityNotes": "Station tables give values in inches and mm with standard deviations and counts. A gap-filled dataset and processed original data are provided separately. No updates since 2012 (current products are on HCDP).",
+     "verification": "download tested",
+     "testNote": "Requested the first 700 bytes of Tabular/FinalStationData_Used_csv.csv from atlas.uhtapis.org. It returned a header with station SKN, name, coordinates and monthly mean rainfall columns (JanAvgIN ... AnnAvgMM). A byte-range request for Oa_MonthlyRainfallIndex_1920_2012.xlsx returned an XLSX (HTTP 206). Month-year rasters (.rar) were not downloaded.",
+     "citations": [
+      "https://rainfall.geography.hawaii.edu/downloads",
+      "https://atlas.uhtapis.org/rainfall/assets/files/Tabular/FinalStationData_Used_csv.csv"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-hi-uh-cropnet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UH CropNet Weather Stations",
+   "fullName": "CropNet Weather Stations, University of Hawaii at Manoa Civil & Environmental Engineering",
+   "host": "University of Hawaii at Manoa, Department of Civil & Environmental Engineering",
+   "location": "Honolulu, HI",
+   "discipline": "Farm weather stations: daily rainfall and reference ET",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "CropNet is a small UH network of farm weather stations (HOBO and Campbell loggers) on Oahu, Maui and Hawaii Island, plus Guam. It publishes a daily-updated spreadsheet of reference evapotranspiration and rainfall for all stations, and an API for individual measurements. The stations are run by UH Civil & Environmental Engineering.",
+   "holdings": [
+    "Daily rainfall and ET0 spreadsheet for all stations (updated daily)"
+   ],
+   "formats": [
+    "XLSX"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CropNet ET0 and rainfall spreadsheet",
+     "url": "https://cropnet.eng.hawaii.edu/HOBO_CAMPBELL_ET0_Rain.xlsx"
+    }
+   ],
+   "sources": [
+    {
+     "label": "CropNet home",
+     "url": "https://cropnet.eng.hawaii.edu/"
+    }
+   ],
+   "state": "Hawaii",
+   "stateCodes": [
+    "HI"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "CropNet ET0 and rainfall spreadsheet",
+     "landingUrl": "https://cropnet.eng.hawaii.edu/",
+     "accessUrl": "https://cropnet.eng.hawaii.edu/HOBO_CAMPBELL_ET0_Rain.xlsx",
+     "formats": [
+      "XLSX"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: about 12 farm sites on Oahu, Maui and Hawaii Island (plus Guam)",
+     "originalCollector": "UH Manoa Civil & Environmental Engineering (CropNet)",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "A byte-range request returned an XLSX file (HTTP 206; full file about 2.8 MB). Fetching the whole file to read rows was blocked by the sandbox, so rainfall columns were not confirmed. The page also mentions a CropNet API, but its URL was not found.",
+     "citations": [
+      "https://cropnet.eng.hawaii.edu/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-id-state-climate-services",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Idaho State Climate Services",
+   "fullName": "Idaho State Climate Services (Idaho Climate Services), University of Idaho Extension",
+   "host": "University of Idaho (files hosted by the University of Idaho Library's INSIDE Idaho and geocatalog)",
+   "location": "Moscow, ID",
+   "discipline": "Historical statewide station precipitation and climatology GIS",
+   "topics": [
+    "gauges",
+    "other"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Idaho state climate office at the University of Idaho serves a legacy daily database of National Weather Service cooperative-station records for Idaho from 1892 to 2008, through the University Library. The data were collected by the National Weather Service, and the file is not updated.",
+   "holdings": [
+    "Daily Climatological Data for Idaho (Historical): NWS stations, July 1892 - May 2008, Access database"
+   ],
+   "formats": [
+    "Microsoft Access (MDB in ZIP)"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Daily Climatological Data for Idaho (Historical)",
+     "url": "https://insideidaho.org/data/ago/ics/daily-climate-data.zip"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AASC state climatologist listing",
+     "url": "https://stateclimate.org/state/idaho"
+    },
+    {
+     "label": "Idaho Climate Services page",
+     "url": "https://www.uidaho.edu/extension/water/climate"
+    },
+    {
+     "label": "data.gov: Daily Climatological Data for Idaho (Historical)",
+     "url": "https://catalog.data.gov/dataset/daily-climatological-data-for-idaho-historical"
+    },
+    {
+     "label": "data.gov: Precipitation for Idaho; Mean Annual (1961-90)",
+     "url": "https://catalog.data.gov/dataset/precipitation-for-idaho-mean-annual-1961-90"
+    }
+   ],
+   "state": "Idaho",
+   "stateCodes": [
+    "ID"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Daily Climatological Data for Idaho (Historical)",
+     "landingUrl": "https://geocatalog-uidaho.hub.arcgis.com/documents/uidaho::daily-climatological-data-for-idaho-historical",
+     "accessUrl": "https://insideidaho.org/data/ago/ics/daily-climate-data.zip",
+     "formats": [
+      "Microsoft Access (MDB in ZIP)"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "July 1892 - May 2008 (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "National Weather Service cooperative observer stations",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented. Contributed to INSIDE Idaho in 1999; static archive, not updated.",
+     "verification": "download documented",
+     "testNote": "HEAD request returned 200, application/zip, 40,304,155 bytes (last modified 2019-12-05); the first 300 bytes show a ZIP entry dailyClimateData/dailyClimateData_id_ics.mdb. Not downloaded in full (bulk file), so precipitation fields were not inspected; data.gov describes it as daily climatological data.",
+     "citations": [
+      "https://catalog.data.gov/dataset/daily-climatological-data-for-idaho-historical",
+      "https://insideidaho.org/data/ago/ics/daily-climate-data.zip"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-id-nkn-gridmet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Northwest Knowledge Network gridMET",
+   "fullName": "Northwest Knowledge Network (NKN), University of Idaho: gridMET daily gridded surface meteorology",
+   "host": "University of Idaho",
+   "location": "Moscow, ID",
+   "discipline": "Daily gridded precipitation for the contiguous US",
+   "topics": [
+    "models",
+    "other"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The University of Idaho's Northwest Knowledge Network hosts gridMET, a daily 4-km gridded surface meteorology dataset (including precipitation) for the contiguous US from 1979 to yesterday, created by John Abatzoglou's Climatology Lab (now at UC Merced). Values are model-interpolated estimates built from station and reanalysis data, not gauge records; the last 60 days are preliminary.",
+   "holdings": [
+    "gridMET daily precipitation (precipitation_amount), CONUS, ~4 km, 1979-present, NetCDF via THREDDS/OPeNDAP and direct download"
+   ],
+   "formats": [
+    "NetCDF",
+    "OPeNDAP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "gridMET (THREDDS aggregated catalog)",
+     "url": "http://thredds.northwestknowledge.net:8080/thredds/reacch_climate_MET_aggregated_catalog.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "gridMET page (Climatology Lab)",
+     "url": "https://www.climatologylab.org/gridmet.html"
+    },
+    {
+     "label": "NKN THREDDS catalog (uidaho.edu)",
+     "url": "https://tds-proxy.nkn.uidaho.edu/thredds/reacch_climate_MET_aggregated_catalog.html"
+    }
+   ],
+   "state": "Idaho",
+   "stateCodes": [
+    "ID"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "gridMET (THREDDS aggregated catalog)",
+     "landingUrl": "https://www.climatologylab.org/gridmet.html",
+     "accessUrl": "http://thredds.northwestknowledge.net:8080/thredds/reacch_climate_MET_aggregated_catalog.html",
+     "formats": [
+      "NetCDF",
+      "OPeNDAP"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily",
+     "periodOfRecord": "1979-present",
+     "coverage": "regional: contiguous US (includes all of Idaho)",
+     "originalCollector": "University of Idaho (gridMET); input datasets not verified",
+     "access": "Free, no account",
+     "qualityNotes": "Last 60 days preliminary. Stored as packed integers with scale factor and offset; precipitation in mm.",
+     "verification": "download tested",
+     "testNote": "OPeNDAP ASCII request to agg_met_pr_1979_CurrentYear_CONUS.nc for precipitation_amount, 3 days at one grid cell, returned values 0, 0, 0 with day coordinates 28854-28856.",
+     "citations": [
+      "https://www.climatologylab.org/gridmet.html",
+      "http://thredds.northwestknowledge.net:8080/thredds/reacch_climate_MET_aggregated_catalog.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-il-chicago-park-district",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Chicago Park District Beach Weather Stations",
+   "fullName": "Chicago Park District, Beach Weather Stations - Automated Sensors (City of Chicago Data Portal)",
+   "host": "Chicago Park District",
+   "location": "Chicago, IL",
+   "discipline": "Hourly lakefront weather-station rain",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Chicago Park District runs automated weather sensors at three Lake Michigan beaches (63rd Street, Foster and Oak Street) and publishes hourly readings, including rain intensity, interval rain and daily total rain, on the City of Chicago open data portal. Data run from May 2015 and are mainly collected during the summer season.",
+   "holdings": [
+    "Beach Weather Stations - Automated Sensors: hourly rain and weather at three Chicago beaches, 2015-present"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "API"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Beach Weather Stations - Automated Sensors",
+     "url": "https://data.cityofchicago.org/Parks-Recreation/Beach-Weather-Stations-Automated-Sensors/k7hf-8y75"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Dataset metadata",
+     "url": "https://data.cityofchicago.org/api/views/k7hf-8y75.json"
+    }
+   ],
+   "state": "Illinois",
+   "stateCodes": [
+    "IL"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Beach Weather Stations - Automated Sensors",
+     "landingUrl": "https://data.cityofchicago.org/Parks-Recreation/Beach-Weather-Stations-Automated-Sensors/k7hf-8y75",
+     "accessUrl": "https://data.cityofchicago.org/Parks-Recreation/Beach-Weather-Stations-Automated-Sensors/k7hf-8y75",
+     "formats": [
+      "CSV",
+      "JSON",
+      "API"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly",
+     "periodOfRecord": "2015-05-22 to present (limited earlier measurements; gaps outside summer season)",
+     "coverage": "station-specific",
+     "originalCollector": "Chicago Park District",
+     "access": "Free, no account",
+     "qualityNotes": "Rain intensity in mm/h, interval rain in mm since the last hourly reading, total rain in mm since midnight; precipitation type codes 0/40/60/70. Data may be missing outside the summer season.",
+     "verification": "download tested",
+     "testNote": "Requested the 4 latest rows from the Socrata CSV endpoint (resource/k7hf-8y75.csv); rows for Foster and Oak Street on 2026-11-05 came back with interval_rain values of 0.",
+     "citations": [
+      "https://data.cityofchicago.org/api/views/k7hf-8y75.json",
+      "https://data.cityofchicago.org/resource/k7hf-8y75.csv"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-il-isws",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Illinois State Water Survey / State Climatologist",
+   "fullName": "Illinois State Water Survey (Prairie Research Institute), including the Illinois State Climatologist Office and the Water and Atmospheric Resources Monitoring (WARM) Program",
+   "host": "Prairie Research Institute, University of Illinois Urbana-Champaign",
+   "location": "Champaign, IL",
+   "discipline": "Statewide climate-network and station precipitation records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Illinois State Water Survey hosts the State Climatologist and runs the Illinois Climate Network, 19 automated stations across the state with daily records from about 1989. Daily ICN files (including total daily precipitation) are served from the WARM site after a free registration. The State Climatologist also posts daily Champaign-Urbana observation tables by year.",
+   "holdings": [
+    "Illinois Climate Network daily data files (archive about 1989 to last full year, plus current year)",
+    "Champaign-Urbana daily weather observation tables, by year (2019-2026 on the page)"
+   ],
+   "formats": [
+    "CSV",
+    "HTML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Illinois Climate Network daily data (WARM)",
+     "url": "https://warm.isws.illinois.edu/warm/datatype.asp"
+    },
+    {
+     "name": "Champaign-Urbana daily observations",
+     "url": "https://stateclimatologist.isws.illinois.edu/data/champaign-urbana/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "ISWS State Climatologist page",
+     "url": "https://isws.illinois.edu/resources/illinois-state-climatologist/"
+    },
+    {
+     "label": "AASC Illinois state program",
+     "url": "https://stateclimate.org/state/illinois"
+    },
+    {
+     "label": "About ISWS",
+     "url": "https://isws.illinois.edu/about/"
+    },
+    {
+     "label": "ICN daily data column headers",
+     "url": "https://warm.isws.illinois.edu/warm/dayhead.asp"
+    }
+   ],
+   "state": "Illinois",
+   "stateCodes": [
+    "IL"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Illinois Climate Network daily data (WARM)",
+     "landingUrl": "https://warm.isws.illinois.edu/warm/datatype.asp",
+     "accessUrl": "https://warm.isws.illinois.edu/warm/datatype.asp",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "about 1989-present (beginning dates vary by station)",
+     "coverage": "statewide",
+     "originalCollector": "Illinois State Water Survey (Illinois Climate Network, WARM Program)",
+     "access": "Free account required (WARM registration; 'Access will remain free of charge')",
+     "qualityNotes": "Column 'precip' is total daily precipitation in inches, with error flag column 'pcer'. Daily values are totals of instruments polled every 10 seconds.",
+     "verification": "download documented",
+     "testNote": "Requests for the daily file list (cdflist.asp?typ=a) and monthly tables (data/datalist.asp) returned the WARM login page; no account was created. The column-header page confirms the precip field.",
+     "citations": [
+      "https://warm.isws.illinois.edu/warm/datatype.asp",
+      "https://warm.isws.illinois.edu/warm/dayhead.asp",
+      "https://warm.isws.illinois.edu/warm/signup.asp"
+     ]
+    },
+    {
+     "name": "Champaign-Urbana daily observations",
+     "landingUrl": "https://stateclimatologist.isws.illinois.edu/data/champaign-urbana/",
+     "accessUrl": "https://stateclimatologist.isws.illinois.edu/data/champaign-urbana/",
+     "formats": [
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (8 AM to 8 AM)",
+     "periodOfRecord": "2019-2026 on the page; earlier data are pointed to MRCC cli-MATE",
+     "coverage": "station-specific",
+     "originalCollector": "Illinois State Climatologist Office, Illinois State Water Survey (Champaign-Urbana station; observer not documented)",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation and snowfall in inches; T marks a trace. Published as Excel workbooks saved as web pages, one sheet per month.",
+     "verification": "download tested",
+     "testNote": "Fetched the January 2025 sheet of urbana-monthly-2025.htm; it lists daily precipitation (for example 0.07 in on Jan 1, 0.18 in on Jan 6), snowfall and snow depth.",
+     "citations": [
+      "https://stateclimatologist.isws.illinois.edu/data/champaign-urbana/",
+      "https://climate.isws.illinois.edu/statecli/urbana/urbana-monthly-2025.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-il-mwrd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "MWRD of Greater Chicago Rain Gauges",
+   "fullName": "Metropolitan Water Reclamation District of Greater Chicago",
+   "host": "Metropolitan Water Reclamation District of Greater Chicago",
+   "location": "Chicago, IL",
+   "discipline": "Daily rain-gauge totals for the Chicago-area waterway system",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "MWRD, the wastewater and stormwater agency for most of Cook County, collects daily readings from its rain gauges (12 on its older display page) and reports basin averages for the North, Central and South basins. Its Rain Gauge Viewer shows daily gauge values by date and exports them to CSV.",
+   "holdings": [
+    "Rain Gauge Viewer: daily precipitation by MWRD gauge, with CSV export"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "MWRD Rain Gauge Viewer",
+     "url": "https://gispub.mwrd.org/raingaugeviewer/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "MWRD CSO page linking the viewer",
+     "url": "https://geohub.mwrd.org/pages/cso"
+    },
+    {
+     "label": "Older MWRD rain gauge display",
+     "url": "http://apps.mwrd.org/cso/displayrain.aspx?passdate=7%2F24%2F20"
+    }
+   ],
+   "state": "Illinois",
+   "stateCodes": [
+    "IL"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "MWRD Rain Gauge Viewer",
+     "landingUrl": "https://gispub.mwrd.org/raingaugeviewer/",
+     "accessUrl": "https://gispub.mwrd.org/raingaugeviewer/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Not documented (CSO data before April 2016 are in separate archives)",
+     "coverage": "regional: MWRD service area (most of Cook County)",
+     "originalCollector": "Metropolitan Water Reclamation District of Greater Chicago",
+     "access": "Free, no account (web viewer)",
+     "qualityNotes": "Precipitation field in the viewer's service; units shown as inches on the older display page. QC not documented.",
+     "verification": "download documented",
+     "testNote": "The viewer's script queries the ArcGIS layer CSO/RainGauges_Precipitation (fields RainGaugeID, Name, Precipitation, Basin, DateRecorded). Direct queries returned 'Token Required' and the viewer proxy needs a browser session, so no sample was retrieved.",
+     "citations": [
+      "https://gispub.mwrd.org/raingaugeviewer/",
+      "https://gispub.mwrd.org/raingaugeviewer/js/config.js",
+      "https://geohub.mwrd.org/pages/cso"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-in-state-climate-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Indiana State Climate Office (Purdue Mesonet)",
+   "fullName": "Indiana State Climate Office, Purdue University",
+   "host": "Purdue University, College of Agriculture",
+   "location": "West Lafayette, IN",
+   "discipline": "Statewide automated weather-station precipitation",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Indiana State Climate Office at Purdue runs the Purdue Mesonet (formerly PAAWS), a statewide network of automated weather stations that measure precipitation, temperature, soil moisture, wind and radiation. Its Data Hub serves per-station graphs and downloadable tables at 30-minute, hourly and daily steps, with free access to historical data.",
+   "holdings": [
+    "Purdue Mesonet Data Hub: per-station tabular downloads at 30-minute, hourly and daily steps (5-minute and monthly also listed), including precipitation"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Purdue Mesonet Data Hub",
+     "url": "https://ag.purdue.edu/indiana-state-climate/purdue-mesonet/purdue-mesonet-data-hub/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Purdue Mesonet about page",
+     "url": "https://ag.purdue.edu/indiana-state-climate/purdue-mesonet/about"
+    },
+    {
+     "label": "Data Hub instructions",
+     "url": "https://ag.purdue.edu/indiana-state-climate/purdue-mesonet/data-hub-instructions/"
+    },
+    {
+     "label": "Station metadata",
+     "url": "https://ag.purdue.edu/indiana-state-climate/purdue-mesonet/site-metadata/"
+    },
+    {
+     "label": "AASC Indiana listing",
+     "url": "https://stateclimate.org/state/indiana"
+    }
+   ],
+   "state": "Indiana",
+   "stateCodes": [
+    "IN"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Purdue Mesonet Data Hub",
+     "landingUrl": "https://ag.purdue.edu/indiana-state-climate/purdue-mesonet/data-hub-instructions/",
+     "accessUrl": "https://ag.purdue.edu/indiana-state-climate/purdue-mesonet/purdue-mesonet-data-hub/",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "30-minute; hourly; daily (5-minute and monthly also listed); sensors sampled every 3 seconds",
+     "periodOfRecord": "Not documented (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "Indiana State Climate Office, Purdue Mesonet",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "The Data Hub is an embedded Tableau view (tableau.itap.purdue.edu, view IndianaMesonetDashboard/MapView). The instructions page describes clicking a station and choosing 'Download tabular data' with a precipitation variable. curl to the Tableau host was blocked by the sandbox, and WebFetch rejected its certificate, so no sample was retrieved and the download file format is not verified.",
+     "citations": [
+      "https://ag.purdue.edu/indiana-state-climate/purdue-mesonet/data-hub-instructions/",
+      "https://ag.purdue.edu/indiana-state-climate/wp-content/uploads/2025/07/2025_PurdueMesonet_Factsheet-1.pdf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-in-indianamap-cocorahs-water-year",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "IndianaMap CoCoRaHS water-year precipitation (IGWS)",
+   "fullName": "Precipitation Network Totals 2010-2018 Water Years, CoCoRaHS Indiana (IndianaMap)",
+   "host": "Indiana Geographic Information Office (IndianaMap) with Indiana Geological and Water Survey",
+   "location": "Indianapolis, IN",
+   "discipline": "Annual station precipitation totals and interpolated annual grids",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Indiana's state GIS server (IndianaMap) serves layers compiled by the Indiana Geological and Water Survey from CoCoRaHS volunteer rain-gauge water-year summaries. They cover water years 2010-2018 (Oct-Sep): station points with total precipitation, days reported, snow totals and links to CoCoRaHS reports, plus interpolated annual precipitation rasters built from stations with 301 or more days of reports. The original observations were collected by CoCoRaHS volunteers.",
+   "holdings": [
+    "Precipitation_Stations_2010 to 2018: CoCoRaHS station points with water-year precipitation totals (651-752 stations per year)",
+    "Annual_Precipitation_2010 to 2018: interpolated water-year precipitation rasters (MapServer)"
+   ],
+   "formats": [
+    "Esri feature service (JSON, GeoJSON)",
+    "Esri map service"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "IndianaMap CoCoRaHS water-year precipitation layers",
+     "url": "https://gisdata.in.gov/server/rest/services/Hosted/Precipitation_Stations_2015/FeatureServer"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Layer item info (description and credits)",
+     "url": "https://gisdata.in.gov/server/rest/services/Hosted/Precipitation_Stations_2015/FeatureServer/info/iteminfo"
+    },
+    {
+     "label": "Annual raster service example",
+     "url": "https://gisdata.in.gov/server/rest/services/Annual_Precipitation_2018/MapServer"
+    }
+   ],
+   "state": "Indiana",
+   "stateCodes": [
+    "IN"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "IndianaMap CoCoRaHS water-year precipitation layers",
+     "landingUrl": "https://gisdata.in.gov/server/rest/services/Hosted/Precipitation_Stations_2015/FeatureServer/info/iteminfo",
+     "accessUrl": "https://gisdata.in.gov/server/rest/services/Hosted/Precipitation_Stations_2015/FeatureServer",
+     "formats": [
+      "Esri feature service (JSON, GeoJSON)",
+      "Esri map service"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "annual (water year, October-September)",
+     "periodOfRecord": "Water years 2010-2018",
+     "coverage": "statewide",
+     "originalCollector": "CoCoRaHS volunteer observers; compiled by Indiana Geological and Water Survey",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation in inches. Totals come from CoCoRaHS Water Year Summary reports, with fields for days covered and multi-day reports. Rasters use only stations with 301 or more days reported. One service per water year (Precipitation_Stations_YYYY, Annual_Precipitation_YYYY).",
+     "verification": "download tested",
+     "testNote": "Queried Precipitation_Stations_2015/FeatureServer/0 for 2 records (f=json). Got IN-AL-1 Fort Wayne 4.1 NE with ptotsum 30.06 over 182 days covered, and IN-AL-5 Huntertown 2.6 ESE with ptotsum 39.12 over 365 days.",
+     "citations": [
+      "https://gisdata.in.gov/server/rest/services/Hosted/Precipitation_Stations_2015/FeatureServer/info/iteminfo",
+      "https://gisdata.in.gov/server/rest/services/Annual_Precipitation_2018/MapServer"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ia-iem",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Iowa Environmental Mesonet",
+   "fullName": "Iowa Environmental Mesonet (IEM), Department of Agronomy, Iowa State University",
+   "host": "Iowa State University",
+   "location": "Ames, IA",
+   "discipline": "Station archives and gridded precipitation for Iowa and the nation",
+   "topics": [
+    "gauges",
+    "radar",
+    "models"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "IEM collects, archives and serves weather observations and gridded products. Its Iowa COOP daily records come from NWS cooperative observers, with quality-controlled updates from the Iowa State Climatologist (IDALS). It also serves national ASOS/AWOS airport observations (NWS/FAA), Iowa State's own Soil Moisture Network, the IEMRE daily grids, Stage IV rainfall grids, and an archive of NOAA MRMS precipitation grids.",
+   "holdings": [
+    "NWS COOP daily precipitation (Climodat), long-term station records",
+    "ASOS/AWOS hourly and sub-hourly precipitation archive (national)",
+    "ISU Soil Moisture Network daily and hourly rainfall",
+    "IEM Reanalysis (IEMRE) daily gridded precipitation",
+    "IEM Rainfall: Stage IV-based daily point estimates and GIS shapefiles",
+    "MRMS precipitation grid archive (mtarchive)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "netCDF",
+    "Shapefile",
+    "GRIB2"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "IEM NWS COOP daily data download (Climodat)",
+     "url": "https://mesonet.agron.iastate.edu/request/coop/fe.phtml"
+    },
+    {
+     "name": "IEM ASOS/AWOS download",
+     "url": "https://mesonet.agron.iastate.edu/request/download.phtml"
+    },
+    {
+     "name": "ISU Soil Moisture Network daily data",
+     "url": "https://mesonet.agron.iastate.edu/agclimate/hist/daily.php"
+    },
+    {
+     "name": "IEM Reanalysis (IEMRE)",
+     "url": "https://mesonet.agron.iastate.edu/iemre/"
+    },
+    {
+     "name": "IEM Rainfall (Stage IV point and shapefile)",
+     "url": "https://mesonet.agron.iastate.edu/rainfall/"
+    },
+    {
+     "name": "IEM MRMS archive (mtarchive)",
+     "url": "https://mtarchive.geol.iastate.edu/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "About the IEM",
+     "url": "https://mesonet.agron.iastate.edu/info/iem.php"
+    },
+    {
+     "label": "Climodat dataset documentation",
+     "url": "https://mesonet.agron.iastate.edu/info/datasets/climodat.html"
+    },
+    {
+     "label": "IEM API documentation",
+     "url": "https://mesonet.agron.iastate.edu/api/1/docs"
+    }
+   ],
+   "state": "Iowa",
+   "stateCodes": [
+    "IA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "IEM NWS COOP daily data download (Climodat)",
+     "landingUrl": "https://mesonet.agron.iastate.edu/info/datasets/climodat.html",
+     "accessUrl": "https://mesonet.agron.iastate.edu/request/coop/fe.phtml",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Year selector starts in 1870; varies by station",
+     "coverage": "statewide",
+     "originalCollector": "NWS Cooperative Observer Program; QC updates from the Iowa State Climatologist (IDALS)",
+     "access": "Free, no account",
+     "qualityNotes": "IEM ingests COOP reports in real time. Older data come from NCEI archives and RCC ACIS web services, merged by IEM, and missing values may be estimated (a precip_est flag is provided). Units are inches. The dataset is IEM-built rather than an ACIS query, so it is kept here.",
+     "verification": "download tested",
+     "testNote": "Requested /api/1/daily.json?station=IA0200&network=IACLIMATE&year=2025&month=6 and got daily precip values (for example 2025-06-03 0.38 in). coop.py returned rows for station IA0200 but an empty prcp column for that query.",
+     "citations": [
+      "https://mesonet.agron.iastate.edu/info/datasets/climodat.html",
+      "https://mesonet.agron.iastate.edu/api/1/docs"
+     ]
+    },
+    {
+     "name": "IEM ASOS/AWOS download",
+     "landingUrl": "https://mesonet.agron.iastate.edu/request/download.phtml",
+     "accessUrl": "https://mesonet.agron.iastate.edu/request/download.phtml",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly and sub-hourly (5-minute where available)",
+     "periodOfRecord": "Not verified",
+     "coverage": "regional: national (all US states plus international networks)",
+     "originalCollector": "NWS/FAA ASOS and AWOS (METAR reports); IEM archives networks for other states and countries",
+     "access": "Free, no account",
+     "qualityNotes": "p01i is the 1-hour precipitation in inches, and M means missing. Coverage is national/global, hosted in Iowa.",
+     "verification": "download tested",
+     "testNote": "Requested asos.py?station=DSM&data=p01i for 2025-06-15 (report_type=3) and got hourly rows with p01i values (0.00 in).",
+     "citations": [
+      "https://mesonet.agron.iastate.edu/request/download.phtml"
+     ]
+    },
+    {
+     "name": "ISU Soil Moisture Network daily data",
+     "landingUrl": "https://mesonet.agron.iastate.edu/agclimate/",
+     "accessUrl": "https://mesonet.agron.iastate.edu/agclimate/hist/daily.php",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "Iowa State University Soil Moisture Network",
+     "access": "Free, no account",
+     "qualityNotes": "rain_in_tot is in inches. Hourly data are at agclimate/hist/hourly.php.",
+     "verification": "download tested",
+     "testNote": "Requested isusm.py?mode=daily&station=AEEI4&vars=rain_in_tot for 2025-06-01 to 2025-06-20 and got daily rows with rainfall values.",
+     "citations": [
+      "https://mesonet.agron.iastate.edu/agclimate/"
+     ]
+    },
+    {
+     "name": "IEM Reanalysis (IEMRE)",
+     "landingUrl": "https://mesonet.agron.iastate.edu/iemre/",
+     "accessUrl": "https://mesonet.agron.iastate.edu/iemre/",
+     "formats": [
+      "netCDF",
+      "JSON"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily; hourly",
+     "periodOfRecord": "Not verified",
+     "coverage": "statewide",
+     "originalCollector": "IEM analysis from NCEP Stage IV, MRMS and PRISM precipitation and quality-controlled Iowa COOP data",
+     "access": "Free, no account",
+     "qualityNotes": "Point JSON returns daily_precip_in, mrms_precip_in and prism_precip_in in inches. The grid extent beyond Iowa was not verified.",
+     "verification": "download tested",
+     "testNote": "Requested /iemre/daily/2025-06-15/41.99/-93.62/json and got daily_precip_in 0.98, mrms_precip_in 0.95 and prism_precip_in 0.62.",
+     "citations": [
+      "https://mesonet.agron.iastate.edu/iemre/"
+     ]
+    },
+    {
+     "name": "IEM Rainfall (Stage IV point and shapefile)",
+     "landingUrl": "https://mesonet.agron.iastate.edu/rainfall/",
+     "accessUrl": "https://mesonet.agron.iastate.edu/rainfall/",
+     "formats": [
+      "Shapefile",
+      "CSV"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "NOAA NCEP Stage IV precipitation analysis",
+     "access": "Free, no account",
+     "qualityNotes": "Offers point requests by year and GIS shapefiles. The IEM notes that its GIS services are not widely tested.",
+     "verification": "download documented",
+     "testNote": "The page loaded and shows the point-request and GIS shapefile options. No file was requested.",
+     "citations": [
+      "https://mesonet.agron.iastate.edu/rainfall/"
+     ]
+    },
+    {
+     "name": "IEM MRMS archive (mtarchive)",
+     "landingUrl": "https://mtarchive.geol.iastate.edu/",
+     "accessUrl": "https://mtarchive.geol.iastate.edu/",
+     "formats": [
+      "GRIB2"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "hourly to 72-hour accumulations, by product",
+     "periodOfRecord": "Not verified",
+     "coverage": "regional: CONUS",
+     "originalCollector": "NOAA NSSL/NCEP Multi-Radar Multi-Sensor (MRMS)",
+     "access": "Free, no account",
+     "qualityNotes": "Coverage is CONUS (national), archived by IEM at Iowa State. File-level documentation was not reviewed.",
+     "verification": "download documented",
+     "testNote": "Listed the directory /2025/06/15/mrms/ncep/MultiSensor_QPE_24H_Pass2/ (HTTP index loaded). No GRIB file was downloaded.",
+     "citations": [
+      "https://mtarchive.geol.iastate.edu/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ia-iowa-flood-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Iowa Flood Center hydrostations",
+   "fullName": "Iowa Flood Center, IIHR-Hydroscience & Engineering, University of Iowa",
+   "host": "University of Iowa",
+   "location": "Iowa City, IA",
+   "discipline": "Statewide hydrostation rain gauges (15-minute)",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Iowa Flood Center runs more than 50 hydrostations across Iowa, with a goal of one per county. They record rainfall, soil moisture and temperature, wind and shallow groundwater levels every 15 minutes. Data appear live in the Iowa Flood Information System, and historical data download as CSV or JSON from the HydroIowa data share.",
+   "holdings": [
+    "IFC hydrostation 15-minute rainfall (data share download and API)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "IFC HydroIowa data share",
+     "url": "https://hydroiowa.org/data-share/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Hydrologic Monitoring Network",
+     "url": "https://iowafloodcenter.uiowa.edu/services/hydrologic-monitoring-network"
+    },
+    {
+     "label": "Data Resources",
+     "url": "https://iowafloodcenter.uiowa.edu/data-resources"
+    },
+    {
+     "label": "Iowa Code chapter 466C",
+     "url": "https://www.legis.iowa.gov/docs/code/466C.pdf"
+    }
+   ],
+   "state": "Iowa",
+   "stateCodes": [
+    "IA"
+   ],
+   "orgType": "state-designated network (university-operated)",
+   "datasetDetails": [
+    {
+     "name": "IFC HydroIowa data share",
+     "landingUrl": "https://iowafloodcenter.uiowa.edu/services/hydrologic-monitoring-network",
+     "accessUrl": "https://hydroiowa.org/data-share/",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute",
+     "periodOfRecord": "Varies by station; for example HS0003 (Durant) was installed 2024-07-19",
+     "coverage": "statewide",
+     "originalCollector": "Iowa Flood Center",
+     "access": "Free, no account",
+     "qualityNotes": "The API returns accum (interval accumulation; units not documented, likely inches), accumInterval in seconds and validTime in UTC. QC status is not documented.",
+     "verification": "download tested",
+     "testNote": "Requested https://hydroiowa.org/api/hydrostation/6003/data/20250601/20250602/?rain and got JSON 15-minute rain records (accum, accumInterval 900, validTime). /api/hydrostation/6003/info returned the station metadata.",
+     "citations": [
+      "https://hydroiowa.org/data-share/",
+      "https://iowafloodcenter.uiowa.edu/services/hydrologic-monitoring-network"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ks-kansas-mesonet-wdl",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Kansas Mesonet and Office of the State Climatologist",
+   "fullName": "Kansas Mesonet and Kansas Office of the State Climatologist, Weather Data Library, Kansas State University",
+   "host": "Kansas State University, K-State Research and Extension",
+   "location": "Manhattan, KS",
+   "discipline": "Statewide station and county precipitation records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Kansas State University Weather Data Library houses the Kansas Office of the State Climatologist and runs the Kansas Mesonet. The Mesonet serves hourly and daily data, including precipitation, from about 122 stations, among them stations of the Big Bend and Equus Beds groundwater management districts. The climate office also publishes a county monthly precipitation file from 1895 to present.",
+   "holdings": [
+    "Kansas Mesonet hourly and daily station data (CSV/SHEF export and REST API)",
+    "Monthly precipitation by county, 1895 to present (text file)"
+   ],
+   "formats": [
+    "CSV",
+    "SHEF",
+    "TXT"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Kansas Mesonet station data",
+     "url": "https://mesonet.k-state.edu/rest/stationdata/?stn=Manhattan&int=day&t_start=20261001000000&t_end=20261004000000&vars=PRECIP"
+    },
+    {
+     "name": "Monthly Precipitation by County",
+     "url": "https://mesonet.k-state.edu/data/1895curr+Monthly+Precipitation+by+County.txt"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Kansas Mesonet about page",
+     "url": "https://mesonet.k-state.edu/about/"
+    },
+    {
+     "label": "Kansas Office of the State Climatologist",
+     "url": "https://mesonet.k-state.edu/climate/"
+    },
+    {
+     "label": "AASC Kansas state climatologist",
+     "url": "https://stateclimate.org/state/kansas"
+    },
+    {
+     "label": "Mesonet data usage policy",
+     "url": "https://mesonet.k-state.edu/about/usage/"
+    }
+   ],
+   "state": "Kansas",
+   "stateCodes": [
+    "KS"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Kansas Mesonet station data",
+     "landingUrl": "https://mesonet.k-state.edu/weather/historical/",
+     "accessUrl": "https://mesonet.k-state.edu/rest/stationdata/?stn=Manhattan&int=day&t_start=20261001000000&t_end=20261004000000&vars=PRECIP",
+     "formats": [
+      "CSV",
+      "SHEF"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly; daily (REST API also has a 5-minute interval per community clients, Not verified)",
+     "periodOfRecord": "1985-present (Colby daily is earliest; varies by station, e.g. Alma 5SE daily from Aug 2025)",
+     "coverage": "statewide",
+     "originalCollector": "Kansas Mesonet (K-State Research and Extension), including Big Bend GMD and Equus Beds GMD stations",
+     "access": "Free, no account; the Historical Weather page limits hourly requests to 31 days and daily requests to 366 days; automated scraping or ingestion requires written consent",
+     "qualityNotes": "All data are preliminary and may change after quality control. Precipitation is from tipping-bucket gauges (per the NCAR PECAN readme). Precipitation units are Not documented on the parameters page.",
+     "verification": "download tested",
+     "testNote": "GET /rest/stationdata/ for Manhattan, int=day, 2026-10-01 to 2026-10-04, vars=PRECIP returned CSV 'TIMESTAMP,STATION,PRECIP' with values 33.02, 81.28, 0.0, 0.0. /rest/stationnames/ returned a station list with county, latitude/longitude and network.",
+     "citations": [
+      "https://mesonet.k-state.edu/weather/historical/",
+      "https://mesonet.k-state.edu/about/usage/",
+      "https://soilwater.github.io/pynotes-agriscience/exercises/request_web_data.html",
+      "https://mesonet.k-state.edu/rest/stationnames/"
+     ]
+    },
+    {
+     "name": "Monthly Precipitation by County",
+     "landingUrl": "https://mesonet.k-state.edu/climate/precip/county/",
+     "accessUrl": "https://mesonet.k-state.edu/data/1895curr+Monthly+Precipitation+by+County.txt",
+     "formats": [
+      "TXT",
+      "CSV"
+     ],
+     "dataType": "other",
+     "temporalResolution": "monthly; annual",
+     "periodOfRecord": "1895-present",
+     "coverage": "statewide",
+     "originalCollector": "Not documented (compiled by the K-State Weather Data Library; the county map page also cites NOAA Regional Climate Centers/ACIS monthly precipitation)",
+     "access": "Free, no account",
+     "qualityNotes": "Tab-delimited county-by-year table in inches, with a Normal row per county. The file was last modified 2026-10-29 and includes 2026 through September. Whether the values are computed from ACIS data is Not verified.",
+     "verification": "download tested",
+     "testNote": "Read the first lines of the file. It returned the header 'Average Precipitation by County' with Allen County rows for 1895 and 1896, plus 2024-2026 monthly values. The county map page also offers an Export CSV button (not tested).",
+     "citations": [
+      "https://mesonet.k-state.edu/climate/precip/county/",
+      "https://mesonet.k-state.edu/data/1895curr+Monthly+Precipitation+by+County.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ks-overland-park-stormwatch",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Overland Park StormWatch",
+   "fullName": "StormWatch ALERT Flood Warning System, City of Overland Park",
+   "host": "City of Overland Park",
+   "location": "Overland Park, KS",
+   "discipline": "Kansas City metro real-time rain and stream gauges",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "StormWatch is the City of Overland Park's ALERT flood warning website. It serves rainfall, stream and weather data for the Kansas City metro area, with site lists for Johnson County, Overland Park, Olathe, Lenexa, Shawnee, Kansas City KS, Kansas City MO and other cities. Each rain sensor page offers CSV, tab and spreadsheet downloads of raw and hourly readings.",
+   "holdings": [
+    "StormWatch rain gauge sensor data (CSV/tab/XLS export, raw and hourly bins)"
+   ],
+   "formats": [
+    "CSV",
+    "TSV",
+    "XLS"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "StormWatch rain gauge sensor data",
+     "url": "https://www.stormwatch.com/list/?view=6fb9a4d7-6f43-4a33-aaac-f6f6df13&sensor_class=10&mode=sensor"
+    }
+   ],
+   "sources": [
+    {
+     "label": "StormWatch home page",
+     "url": "https://www.stormwatch.com/"
+    }
+   ],
+   "state": "Kansas",
+   "stateCodes": [
+    "KS"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "StormWatch rain gauge sensor data",
+     "landingUrl": "https://www.stormwatch.com/",
+     "accessUrl": "https://www.stormwatch.com/list/?view=6fb9a4d7-6f43-4a33-aaac-f6f6df13&sensor_class=10&mode=sensor",
+     "formats": [
+      "CSV",
+      "TSV",
+      "XLS"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "event-based rain increments (raw); hourly and daily bins",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: Kansas City metro area (Johnson County and Wyandotte County cities in Kansas, plus Kansas City MO)",
+     "originalCollector": "StormWatch ALERT network (City of Overland Park and partner cities). Per-gauge operator is Not documented.",
+     "access": "Free, no account (session cookie needed; download links carry a page token)",
+     "qualityNotes": "The site says the data have not been verified for accuracy. Exports include a Data Quality column (e.g. 'A'). Units are inches.",
+     "verification": "download tested",
+     "testNote": "Opened the Rain Increment sensor page for site_id=10 and followed its CSV link (/api/file/, last 7 days). It returned 'Reading,Receive,Value,Unit,Data Quality' rows, e.g. '11/03/2026 05:26:19 PM,...,0.04,in,A'.",
+     "citations": [
+      "https://www.stormwatch.com/",
+      "https://www.stormwatch.com/sensor/?site_id=10&site=fad65865-34ea-41f4-b552-69a9939e7dd9&device_id=12&device=0bd88e7a-711c-43aa-aeb7-890e79166e70"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ky-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Kentucky Mesonet / Kentucky Climate Center",
+   "fullName": "Kentucky Mesonet, operated by the Kentucky Climate Center at Western Kentucky University",
+   "host": "Western Kentucky University",
+   "location": "Bowling Green, KY",
+   "discipline": "Statewide mesonet station precipitation and weather observations",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Kentucky Mesonet is a statewide network (84 sites in 78 counties per a 2025 legislative presentation) that measures precipitation and other weather variables every 5 minutes. It is operated by the Kentucky Climate Center at WKU, the state climate office, which serves monthly station summaries, live tables and an archive request system; the state GIS hub also redistributes a current-observation feed.",
+   "holdings": [
+    "Monthly climatological summaries by station, with CSV export",
+    "Live data tables of the last 24 hours of station observations",
+    "Archived Mesonet data by request (dr.kymeso.net)",
+    "Current-observation feature service on the Kentucky open GIS hub"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "ArcGIS Feature Service"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Kentucky Mesonet Monthly Summaries",
+     "url": "https://www.kymesonet.org/data/summary"
+    },
+    {
+     "name": "Kentucky Mesonet Live Data Tables",
+     "url": "https://www.kymesonet.org/data/table"
+    },
+    {
+     "name": "Kentucky Mesonet Data Request",
+     "url": "https://dr.kymeso.net"
+    },
+    {
+     "name": "Kentucky Weather Observation Points (KY open GIS hub)",
+     "url": "https://services3.arcgis.com/ghsX9CKghMvyYjBU/arcgis/rest/services/ky_mesonet_feed_wgs84_gdb/FeatureServer"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Kentucky Mesonet data products",
+     "url": "https://www.kymesonet.org/data"
+    },
+    {
+     "label": "Kentucky Mesonet overview",
+     "url": "https://www.kymesonet.org/about/overview"
+    },
+    {
+     "label": "Kentucky Climate Center about page",
+     "url": "https://www.kyclimate.org/about"
+    },
+    {
+     "label": "Data request policy",
+     "url": "https://www.kyclimate.org/data-request-policy"
+    },
+    {
+     "label": "AASC Kentucky listing",
+     "url": "https://stateclimate.org/state/kentucky"
+    },
+    {
+     "label": "Legislative presentation (2025)",
+     "url": "https://apps.legislature.ky.gov/CommitteeDocuments/392/37927/DisasterTaskForce_KYMesonet_20250910.pdf"
+    }
+   ],
+   "state": "Kentucky",
+   "stateCodes": [
+    "KY"
+   ],
+   "orgType": "state-designated network (university-operated)",
+   "datasetDetails": [
+    {
+     "name": "Kentucky Mesonet Monthly Summaries",
+     "landingUrl": "https://www.kymesonet.org/data",
+     "accessUrl": "https://www.kymesonet.org/data/summary",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "monthly summary (with daily-based counts)",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "Kentucky Mesonet (Kentucky Climate Center, WKU)",
+     "access": "Free, no account",
+     "qualityNotes": "English or metric units selectable; summary computed in local time. Mesonet data are quality-controlled at WKU per the overview page.",
+     "verification": "download documented",
+     "testNote": "Opened https://www.kymesonet.org/data/summary/FARM in a browser: Warren County South monthly summary for 11/2026 showed Total Precipitation 1.89 in. and days with precipitation thresholds, with an 'Export CSV' button. The page is built client-side, so the CSV was not fetched by script.",
+     "citations": [
+      "https://www.kymesonet.org/data",
+      "https://www.kymesonet.org/data/summary/FARM"
+     ]
+    },
+    {
+     "name": "Kentucky Mesonet Live Data Tables",
+     "landingUrl": "https://www.kymesonet.org/data",
+     "accessUrl": "https://www.kymesonet.org/data/table",
+     "formats": [
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute",
+     "periodOfRecord": "Last 24 hours only",
+     "coverage": "statewide",
+     "originalCollector": "Kentucky Mesonet (Kentucky Climate Center, WKU)",
+     "access": "Free, no account",
+     "qualityNotes": "Real-time data; precipitation reported as PRCP_SUM (inches in the English display).",
+     "verification": "download tested",
+     "testNote": "curl https://www.kymesonet.org/api/data/current/FARM (the site's own current-observation call) returned JSON for timestamp 202611052300 with PRCP_SUM 0 alongside TAIR_AVG, RELH_AVG and other fields. The data page says tables can be viewed and downloaded for the last 24 hours.",
+     "citations": [
+      "https://www.kymesonet.org/data",
+      "https://www.kymesonet.org/api/data/current/FARM"
+     ]
+    },
+    {
+     "name": "Kentucky Mesonet Data Request",
+     "landingUrl": "https://www.kyclimate.org/data-request-policy",
+     "accessUrl": "https://dr.kymeso.net",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented (stations report every 5 minutes)",
+     "periodOfRecord": "Not documented (over 1 billion observations archived)",
+     "coverage": "statewide",
+     "originalCollector": "Kentucky Mesonet (Kentucky Climate Center, WKU)",
+     "access": "Free for state government, education, research and personal use; cost-recovery fee may apply to commercial requests",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "dr.kymeso.net loads a request form ('Step-by-Step Data Request' or 'Quick Data Request'); its description lists temperature, precipitation and wind data. A request was not submitted.",
+     "citations": [
+      "https://dr.kymeso.net",
+      "https://www.kyclimate.org/data-request-policy",
+      "https://www.kymesonet.org/about/overview"
+     ]
+    },
+    {
+     "name": "Kentucky Weather Observation Points (KY open GIS hub)",
+     "landingUrl": "https://opengisdata.ky.gov/api/search/v1/collections/all/items?q=precipitation&limit=20",
+     "accessUrl": "https://services3.arcgis.com/ghsX9CKghMvyYjBU/arcgis/rest/services/ky_mesonet_feed_wgs84_gdb/FeatureServer",
+     "formats": [
+      "ArcGIS Feature Service",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "current observation (5-minute table)",
+     "periodOfRecord": "Current conditions only",
+     "coverage": "statewide",
+     "originalCollector": "Kentucky Mesonet (Kentucky Climate Center, WKU); listed on the hub by Kentucky_DGI",
+     "access": "Free, no account",
+     "qualityNotes": "precipitation_today is a text field such as '0 in.'; no historical values.",
+     "verification": "download tested",
+     "testNote": "Queried layer 0 with resultRecordCount=1: returned Adair County - CMBA observation at 2026-11-05 17:00 CST with precipitation_today '0 in.'.",
+     "citations": [
+      "https://opengisdata.ky.gov/api/search/v1/collections/all/items?q=precipitation&limit=20",
+      "https://www.arcgis.com/sharing/rest/content/items/5cc922869f0047a89546e07a7ed800db?f=json"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ky-uk-ag-weather-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "University of Kentucky Ag Weather Center",
+   "fullName": "University of Kentucky Agricultural Weather Center (UKAWC)",
+   "host": "University of Kentucky, Department of Biosystems & Agricultural Engineering",
+   "location": "Lexington, KY",
+   "discipline": "Agricultural weather and Kentucky rainfall summaries",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The UK Ag Weather Center serves Kentucky rainfall as text files: monthly statewide and climate-division rainfall back to 1895, rolling rainfall summaries for Mesonet and NWS sites, and a daily climate database for Kentucky and nearby NWS and Ag Weather stations from 1971. The pages do not name the original collector of the long-term statewide series.",
+   "holdings": [
+    "Monthly statewide and climate-division rainfall text files (1895-present)",
+    "Rainfall climate summary tables for Mesonet and NWS sites (1-180 days)",
+    "Kydata daily climate database (1971-present)"
+   ],
+   "formats": [
+    "TXT",
+    "Delimited text"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Historical monthly rainfall text files",
+     "url": "https://weather.uky.edu/all_ky_rain.txt"
+    },
+    {
+     "name": "Rainfall climate summary tables",
+     "url": "https://weather.uky.edu/kyclisum/kypmsites_30days_sum.txt"
+    },
+    {
+     "name": "Kydata daily climate database",
+     "url": "https://weather.uky.edu/cgi-bin/ky_clim_data_www.pl"
+    }
+   ],
+   "sources": [
+    {
+     "label": "UKAWC Kentucky Mesonet and climate data page",
+     "url": "https://weather.uky.edu/kymesonet.html"
+    }
+   ],
+   "state": "Kentucky",
+   "stateCodes": [
+    "KY"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Historical monthly rainfall text files",
+     "landingUrl": "https://weather.uky.edu/kymesonet.html",
+     "accessUrl": "https://weather.uky.edu/all_ky_rain.txt",
+     "formats": [
+      "TXT"
+     ],
+     "dataType": "other",
+     "temporalResolution": "monthly",
+     "periodOfRecord": "1895-2021 in the statewide file (title says 1895-2014)",
+     "coverage": "statewide",
+     "originalCollector": "Not documented",
+     "access": "Free, no account",
+     "qualityNotes": "Statewide and climate-division (CD-1 to CD-4) averages; units not stated (values consistent with inches); incomplete years marked with *; last row 2021 is partial.",
+     "verification": "download tested",
+     "testNote": "Fetched all_ky_rain.txt: header 'Kentucky Monthly Statewide Precipitation (1895-2014)', normals row 1895-2010 (annual 47.90), and rows for 2021 (partial), 2020 (annual 58.07), 2019 (61.32). curl failed on a TLS certificate error, so it was read with WebFetch.",
+     "citations": [
+      "https://weather.uky.edu/kymesonet.html",
+      "https://weather.uky.edu/all_ky_rain.txt"
+     ]
+    },
+    {
+     "name": "Rainfall climate summary tables",
+     "landingUrl": "https://weather.uky.edu/kymesonet.html",
+     "accessUrl": "https://weather.uky.edu/kyclisum/kypmsites_30days_sum.txt",
+     "formats": [
+      "TXT"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "rolling 1-180 day totals",
+     "periodOfRecord": "Rolling recent period only",
+     "coverage": "statewide",
+     "originalCollector": "Kentucky Mesonet and NWS sites (per the UKAWC page)",
+     "access": "Free, no account",
+     "qualityNotes": "Marked 'Not for Legal purposes'; departures based on climate-division averages.",
+     "verification": "download tested",
+     "testNote": "Fetched kypmsites_30days_sum.txt: period 20261006-20261104, rows such as 'ALBANY 1N ... 1.84 -1.14 62' with precipitation total, departure and percent of normal.",
+     "citations": [
+      "https://weather.uky.edu/kymesonet.html",
+      "https://weather.uky.edu/kyclisum/kypmsites_30days_sum.txt"
+     ]
+    },
+    {
+     "name": "Kydata daily climate database",
+     "landingUrl": "https://weather.uky.edu/kymesonet.html",
+     "accessUrl": "https://weather.uky.edu/cgi-bin/ky_clim_data_www.pl",
+     "formats": [
+      "Delimited text"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (7 PM to 7 PM)",
+     "periodOfRecord": "1971-present",
+     "coverage": "statewide",
+     "originalCollector": "NWS and Ag Weather stations (per the UKAWC page)",
+     "access": "Free, no account",
+     "qualityNotes": "Page says data should not be used for legal purposes; variables are not listed on the form.",
+     "verification": "not verified",
+     "testNote": "Opened the query form (station list, date range 1971-2026, delimited output option); did not submit a query, so precipitation in the output was not confirmed.",
+     "citations": [
+      "https://weather.uky.edu/cgi-bin/ky_clim_data_www.pl"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-la-lsu-agcenter-lais",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "LSU AgCenter Louisiana Agriclimatic Information System (LAIS)",
+   "fullName": "Louisiana Agriclimatic Information System, LSU AgCenter",
+   "host": "LSU AgCenter, Department of Biological and Agricultural Engineering",
+   "location": "Baton Rouge, LA",
+   "discipline": "Agricultural weather station rainfall at LSU AgCenter research stations",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The LSU AgCenter runs automated weather stations at its research stations across Louisiana and serves their data through a report builder with CSV and Excel export. Reports include daily (midnight), hourly and minute summaries with rainfall in inches. The report builder lists 10 stations, while the home page says 7. The current system starts in May 2019; an older portal shows 2001-2019 data as HTML only.",
+   "holdings": [
+    "Daily, hourly and minute weather reports with rainfall from 10 stations (BenHur, Chase, Crowley, DeanLee, Iberia, R&D Research, Hammond, Red River, Houma, StGabUSDACR6), 2019-05-26 to present",
+    "Legacy LAIS portal with HTML reports for late August 2001 to late May 2019 (no export found)"
+   ],
+   "formats": [
+    "CSV",
+    "Excel"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "LAIS Reports (report builder)",
+     "url": "https://weather.lsuagcenter.com/Reports"
+    }
+   ],
+   "sources": [
+    {
+     "label": "LAIS home page",
+     "url": "https://weather.lsuagcenter.com/"
+    },
+    {
+     "label": "Legacy LAIS portal (2001-2019)",
+     "url": "https://app.lsuagcenter.com/weather-historical"
+    }
+   ],
+   "state": "Louisiana",
+   "stateCodes": [
+    "LA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "LAIS Reports (report builder)",
+     "landingUrl": "https://weather.lsuagcenter.com/",
+     "accessUrl": "https://weather.lsuagcenter.com/Reports",
+     "formats": [
+      "CSV",
+      "Excel"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (midnight); hourly; minute",
+     "periodOfRecord": "2019-05-26 to present (date picker minimum); legacy portal late Aug 2001 to late May 2019",
+     "coverage": "station-specific",
+     "originalCollector": "LSU AgCenter (LAIS weather stations)",
+     "access": "Free, no account",
+     "qualityNotes": "Rain in inches. The home page says dataloggers sample every 3 seconds and derive daily, hourly and minute values. QC not documented.",
+     "verification": "download tested",
+     "testNote": "POSTed to https://weather.lsuagcenter.com/Reports/LoadReport with report=R1 (Daily Summary), station=3 (Crowley) for 10/1/2026-10/3/2026. It returned a 3-row table with a Rain (in) column (0.88, 0.17, 0.08) plus Export to Excel and Export as CSV buttons; the CSV is generated in the browser from the table.",
+     "citations": [
+      "https://weather.lsuagcenter.com/",
+      "https://weather.lsuagcenter.com/Reports"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-la-ldeq-air-met",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Louisiana DEQ Ambient Air Monitoring Meteorological Data",
+   "fullName": "Louisiana Department of Environmental Quality, Ambient Air Monitoring Data & Reports",
+   "host": "Louisiana Department of Environmental Quality",
+   "location": "Baton Rouge, LA",
+   "discipline": "Meteorological data from air-monitoring sites, including hourly rainfall",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "LDEQ posts yearly Excel files of meteorological data from its ambient air-monitoring sites, collected by LDEQ. The 2024 file has an hourly precipitation sheet (inches) for the Baton Rouge Capitol site, alongside wind, temperature, humidity, solar radiation and pressure. It also has wind data for Dutchtown. Files are posted for 2020-2024; only the 2024 file was checked for rainfall.",
+   "holdings": [
+    "Yearly Met Excel files 2020-2024; the 2024 file has hourly precipitation for Baton Rouge Capitol"
+   ],
+   "formats": [
+    "Excel"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "LDEQ yearly meteorological data files",
+     "url": "https://deq.louisiana.gov/page/ambient-air-monitoring-data-reports"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Ambient Air Monitoring Data & Reports",
+     "url": "https://deq.louisiana.gov/page/ambient-air-monitoring-data-reports"
+    }
+   ],
+   "state": "Louisiana",
+   "stateCodes": [
+    "LA"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "LDEQ yearly meteorological data files",
+     "landingUrl": "https://deq.louisiana.gov/page/ambient-air-monitoring-data-reports",
+     "accessUrl": "https://deq.louisiana.gov/page/ambient-air-monitoring-data-reports",
+     "formats": [
+      "Excel"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly (with monthly summaries)",
+     "periodOfRecord": "Files posted for 2020-2024; rainfall confirmed in the 2024 file only",
+     "coverage": "station-specific",
+     "originalCollector": "Louisiana Department of Environmental Quality",
+     "access": "Free, no account",
+     "qualityNotes": "Sheet header: 'BATON ROUGE/CAPITOL - PRECIPITATION UNIT - Inches (rainfall)'. The page says 2024 and earlier files are historical and may not be ADA-compliant; older data is available by request. QC not documented.",
+     "verification": "download tested",
+     "testNote": "Downloaded https://www.deq.louisiana.gov/assets/Air_Data_Sets/MET_2024.xlsx (about 457 KB) to a scratch folder and read sheet BCPC24. It has a DATE column and hour columns 0-23; the January 2024 rows include hourly values such as 0.07, 0.22, 0.19 and 0.27 in.",
+     "citations": [
+      "https://deq.louisiana.gov/page/ambient-air-monitoring-data-reports",
+      "https://www.deq.louisiana.gov/assets/Air_Data_Sets/MET_2024.xlsx"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-me-maine-climate-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Maine Climate Office (Maine Mesonet)",
+   "fullName": "Maine Climate Office / Maine State Climate Office, University of Maine",
+   "host": "University of Maine (Cooperative Extension and Climate Change Institute)",
+   "location": "Orono, ME",
+   "discipline": "Maine Mesonet station precipitation and weather records",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Maine Climate Office, overseen by State Climatologist Sean Birkel, hosts data from the new Maine Mesonet, a University of Maine-led network of research-grade stations planned to reach 26 sites in all 16 counties. Per-station monthly CSV files give 5-minute, hourly and daily values including total precipitation, snow depth, temperature, wind and soil moisture. UMaine Cooperative Extension installs the stations and the New York State Mesonet team at UAlbany collects, processes and quality-controls the data.",
+   "holdings": [
+    "Maine Mesonet station data: 5-minute, hourly and daily CSV files per station and month, including total_precip [mm]"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Maine Mesonet station data",
+     "url": "https://mco.umaine.edu/mesonet/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Maine Climate Office home",
+     "url": "https://mco.umaine.edu/"
+    },
+    {
+     "label": "Maine Climate Office about page",
+     "url": "https://mco.umaine.edu/about/"
+    },
+    {
+     "label": "AASC Maine state program",
+     "url": "https://stateclimate.org/state/maine"
+    },
+    {
+     "label": "UAlbany news: NYS Mesonet collaborates on Maine network",
+     "url": "https://www.albany.edu/news-center/news/2026-new-york-state-mesonet-collaborates-maine-statewide-weather-network"
+    }
+   ],
+   "state": "Maine",
+   "stateCodes": [
+    "ME"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Maine Mesonet station data",
+     "landingUrl": "https://mco.umaine.edu/mesonet/",
+     "accessUrl": "https://mco.umaine.edu/mesonet/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; hourly; daily",
+     "periodOfRecord": "2025-present (varies by station; Jonesboro daily file starts 2025-10-16)",
+     "coverage": "statewide",
+     "originalCollector": "University of Maine Maine Mesonet (UMaine Cooperative Extension stations; data processed by the New York State Mesonet at UAlbany)",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation column total_precip [mm]; missing values are blank fields. Data are quality-controlled by the NYS Mesonet team per UAlbany; provisional status not documented. Files follow csv/{5min|hly|dly}/{stn}/{stn}_{freq}_{YYYYMM}_primary.csv under the Mesonet page.",
+     "verification": "download tested",
+     "testNote": "curl of https://mco.umaine.edu/mesonet/csv/dly/orno/orno_dly_202610_primary.csv returned a header with total_precip [mm] and daily rows (e.g. 2026-10-02 total_precip 3.35); the hourly file orno_hly_202610_primary.csv also returned rows with total_precip. File paths were read from the page's mesonet_chart.min.js.",
+     "citations": [
+      "https://mco.umaine.edu/mesonet/",
+      "https://mco.umaine.edu/mesonet/js_v28/mesonet_chart.min.js",
+      "https://www.albany.edu/news-center/news/2026-new-york-state-mesonet-collaborates-maine-statewide-weather-network"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-md-mde-shellfish-rainfall",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "MDE Shellfish Program Rainfall",
+   "fullName": "Maryland Department of the Environment, Shellfish Program monthly rainfall of harvesting waters",
+   "host": "Maryland Department of the Environment",
+   "location": "Not documented",
+   "discipline": "Monthly rainfall totals by shellfish growing area",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "An MDE ArcGIS layer of monthly rainfall for 49 shellfish growing areas around the Chesapeake Bay and the Atlantic coastal bays. Each area has one row per month (Jan-Dec), plus a running total and average. When checked, the layer held only 2026 values (January-September). The layer does not say who collected the underlying observations.",
+   "holdings": [
+    "Monthly rainfall by shellfish growing area (ArcGIS feature layer, queryable)"
+   ],
+   "formats": [
+    "JSON",
+    "ArcGIS REST"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Shellfish Harvesting Classifications: Rainfall layer",
+     "url": "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6/query?where=1%3D1&outFields=*&returnGeometry=false&f=json"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Layer description (ArcGIS REST)",
+     "url": "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6"
+    }
+   ],
+   "state": "Maryland",
+   "stateCodes": [
+    "MD"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "Shellfish Harvesting Classifications: Rainfall layer",
+     "landingUrl": "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6",
+     "accessUrl": "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+     "formats": [
+      "JSON",
+      "ArcGIS REST"
+     ],
+     "dataType": "other",
+     "temporalResolution": "monthly",
+     "periodOfRecord": "2026 only when checked (January-September 2026 filled)",
+     "coverage": "regional: Maryland shellfish growing areas (Chesapeake Bay, tidal rivers, Atlantic coastal bays)",
+     "originalCollector": "Not documented",
+     "access": "Free, no account",
+     "qualityNotes": "Fields: MDEname, Year, Jan-Dec, SS, Total_Of_R, AVG_. Units are not documented (values look like inches). Months not yet reported are null.",
+     "verification": "download tested",
+     "testNote": "Queried 3 records (outFields=*, no geometry). Got Baltimore Harbor 2026: Jan 3.24, Jul 8.77, Sep 4.25, Oct-Dec null. The count query returned 49 features, and the min/max Year statistic returned 2026/2026.",
+     "citations": [
+      "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-md-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Maryland Mesonet",
+   "fullName": "Maryland Mesonet",
+   "host": "University of Maryland, Department of Atmospheric and Oceanic Science, in partnership with the Maryland Department of Emergency Management",
+   "location": "College Park, MD",
+   "discipline": "Statewide mesonet station observations including rainfall",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "A statewide network of closely spaced weather stations (about 10 miles apart) built and run by UMD's Department of Atmospheric and Oceanic Science with the Maryland Department of Emergency Management. Stations measure rainfall intensity and amount, snow depth, and other weather and soil variables, sampled every 3 seconds and processed every minute. Downloads need a login on the Mesonet site. Hourly summaries and minute data can also be requested through a form.",
+   "holdings": [
+    "Station data download (login required)",
+    "Data request form for hourly summaries and minute-by-minute data"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Maryland Mesonet Data Download",
+     "url": "https://mesonet.umd.edu/data-download/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Maryland Mesonet home",
+     "url": "https://mesonet.umd.edu/"
+    },
+    {
+     "label": "Notes on Our Data",
+     "url": "https://mesonet.umd.edu/about-the-data/"
+    },
+    {
+     "label": "FAQs",
+     "url": "https://mesonet.umd.edu/fa-qs/"
+    },
+    {
+     "label": "Mesonet Data Request (UMD Climate Resilience Network portal)",
+     "url": "https://climate-data.umd.edu/dataset/mesonet-data-request"
+    },
+    {
+     "label": "UMD Today: State, UMD partner to build weather observation system",
+     "url": "https://today.umd.edu/state-umd-partner-to-build-world-class-weather-observation-system"
+    }
+   ],
+   "state": "Maryland",
+   "stateCodes": [
+    "MD"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "Maryland Mesonet Data Download",
+     "landingUrl": "https://mesonet.umd.edu/about-the-data/",
+     "accessUrl": "https://mesonet.umd.edu/data-download/",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "1-minute processing; hourly summaries and minute data offered by request",
+     "periodOfRecord": "Not documented (network launched 2022)",
+     "coverage": "statewide",
+     "originalCollector": "University of Maryland Department of Atmospheric and Oceanic Science (Maryland Mesonet)",
+     "access": "Login account required for the Data Download page; data requests through an online form",
+     "qualityNotes": "Website display units: rainfall and snowfall in inches. The About page says current data 'will be freely available via the Maryland Mesonet website in the near future'. No license is specified on the portal.",
+     "verification": "not verified",
+     "testNote": "The Data Download page shows only a login form ('Please login to see this page'), so it was not tested. An older public download page on weather.umd.edu that queries 7 Mesonet stations returned a database access error to a 5-minute request.",
+     "citations": [
+      "https://mesonet.umd.edu/data-download/",
+      "https://mesonet.umd.edu/about-the-data/",
+      "https://climate-data.umd.edu/dataset/mesonet-data-request",
+      "https://weather.umd.edu/wordpress/mesonet-data-download/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-md-umd-micronet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UMD Micronet",
+   "fullName": "University of Maryland Weather Micronet (UMD Mesoterps)",
+   "host": "University of Maryland, Department of Atmospheric and Oceanic Science",
+   "location": "College Park, MD",
+   "discipline": "Campus weather station network with 1-minute rainfall",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "A network of weather stations on the University of Maryland College Park campus, run through UMD Weather (UMD Atmospheric and Oceanic Science students). The download form serves rain rate, 1-minute rainfall and total daily rain, along with other weather variables, for 9 listed campus stations, as CSV or XLSX. It covers only the College Park campus.",
+   "holdings": [
+    "Micronet station data download (rain rate, 1-minute rainfall, total daily rain)"
+   ],
+   "formats": [
+    "CSV",
+    "XLSX",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "UMD Micronet Data Download",
+     "url": "https://weather.umd.edu/wordpress/micronet/data-request/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Micronet Data Download page",
+     "url": "https://weather.umd.edu/wordpress/micronet/data-request/"
+    },
+    {
+     "label": "UMD Micronet",
+     "url": "https://weather.umd.edu/wordpress/micronet/"
+    }
+   ],
+   "state": "Maryland",
+   "stateCodes": [
+    "MD"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "UMD Micronet Data Download",
+     "landingUrl": "https://weather.umd.edu/wordpress/micronet/",
+     "accessUrl": "https://weather.umd.edu/wordpress/micronet/data-request/",
+     "formats": [
+      "CSV",
+      "XLSX",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "1-minute; daily totals",
+     "periodOfRecord": "Not documented",
+     "coverage": "station-specific",
+     "originalCollector": "University of Maryland Department of Atmospheric and Oceanic Science (UMD Weather Micronet)",
+     "access": "Free, no account",
+     "qualityNotes": "Rain Rate in in/hr, 1-min Rainfall in inches, Total Daily Rain in inches. Times can be Unix, UTC or Eastern. QC is not documented.",
+     "verification": "download tested",
+     "testNote": "POSTed to the form's backend (wp-content/plugins/meso-fsct/functions/get-data.php) for the Van Munching Hall station (mesoterp1DB), archive table, columns dateTime and rain, for 2026-10-01 to 2026-10-03 UTC. Got JSON 1-minute records with rain values of 0 and 0.01.",
+     "citations": [
+      "https://weather.umd.edu/wordpress/micronet/data-request/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ma-bwsc-rainfall",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Boston Water and Sewer Commission Rainfall Data",
+   "fullName": "Boston Water and Sewer Commission rain gauge network",
+   "host": "Boston Water and Sewer Commission",
+   "location": "Boston, MA",
+   "discipline": "City rain-gauge network, 5-minute to yearly totals",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "BWSC runs solar-powered rain gauges on public buildings across the City of Boston. The gauges report every five minutes. Its rainfall web interface shows five-minute, daily, five-day, monthly and yearly totals for each gauge and exports CSV. The interface currently lists 10 gauges and years 2010-2026, although the city open data page says records go back to 1999.",
+   "holdings": [
+    "Rainfall interface: 5-minute daily detail, daily, five-day, monthly and yearly totals per gauge, CSV export"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "BWSC rainfall data interface",
+     "url": "https://www.bwsc.org/environment-education/rainfall-garden"
+    }
+   ],
+   "sources": [
+    {
+     "label": "BWSC Rainfall Data page",
+     "url": "https://www.bwsc.org/environment-education/rainfall-garden"
+    },
+    {
+     "label": "Analyze Boston (data.boston.gov) Rainfall Data entry",
+     "url": "https://data.boston.gov/dataset/rainfall-data"
+    },
+    {
+     "label": "Gauge list (JSON endpoint used by the interface)",
+     "url": "https://www.bwsc.org/ajax/rainfall/sites"
+    }
+   ],
+   "state": "Massachusetts",
+   "stateCodes": [
+    "MA"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "BWSC rainfall data interface",
+     "landingUrl": "https://www.bwsc.org/environment-education/rainfall-garden",
+     "accessUrl": "https://www.bwsc.org/environment-education/rainfall-garden",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; daily; five-day; monthly; yearly",
+     "periodOfRecord": "Interface offers 2010-present; data.boston.gov says as far back as 1999, depending on gauge installation",
+     "coverage": "regional: City of Boston",
+     "originalCollector": "Boston Water and Sewer Commission",
+     "access": "Free, no account",
+     "qualityNotes": "Values in inches. BWSC says the gauges are calibrated periodically but snow, hail, severe weather, tampering, debris or failed parts can cause lost data and under-reported totals. Not described as quality-controlled.",
+     "verification": "download tested",
+     "testNote": "The interface's JSON endpoints (found in its JavaScript) were queried. /ajax/rainfall/sites returned 10 gauges (e.g. 2238 Allston - Union Sq.). /ajax/rainfall/monthly/2238/2024 returned a total of 45.76 in with monthly values (January 7.38, February 0.80, ...). /ajax/rainfall/daily/details/2238/20261030 returned 5-minute values (0.00). /ajax/rainfall/daily/2238/2025/9 returned an empty day list. The CSV export button in the browser was not tried.",
+     "citations": [
+      "https://www.bwsc.org/environment-education/rainfall-garden",
+      "https://data.boston.gov/dataset/rainfall-data",
+      "https://www.bwsc.org/ajax/rainfall/monthly/2238/2024"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ma-buzzards-bay-nep",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Buzzards Bay NEP Climate Data",
+   "fullName": "Buzzards Bay National Estuary Program, Massachusetts Office of Coastal Zone Management",
+   "host": "Massachusetts Office of Coastal Zone Management (Executive Office of Energy and Environmental Affairs)",
+   "location": "Mattapoisett, MA",
+   "discipline": "Historical rainfall for the Buzzards Bay area",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Buzzards Bay NEP, a planning unit of the state Office of Coastal Zone Management, hosts Excel files of rainfall measured at the UMass Cranberry Experiment Station in East Wareham. They hold daily totals for 1988-1998 and monthly totals for 1988-2007. The station data were provided by the Cranberry Station and compiled by NEP staff. They cover the Buzzards Bay watershed in southeastern Massachusetts.",
+   "holdings": [
+    "Daily rainfall, UMass Cranberry Experiment Station, East Wareham, 1988-1998 (XLS)",
+    "Monthly rainfall, East Wareham, 1988-2007 (XLS)"
+   ],
+   "formats": [
+    "XLS"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Wareham rainfall files (Buzzards Bay NEP climate data page)",
+     "url": "https://buzzardsbay.org/technical-data/climate/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Buzzards Bay NEP climate data page",
+     "url": "https://buzzardsbay.org/technical-data/climate/"
+    },
+    {
+     "label": "Buzzards Bay NEP home (states it is a unit of MA CZM)",
+     "url": "https://buzzardsbay.org/"
+    },
+    {
+     "label": "Monthly rainfall file",
+     "url": "https://buzzardsbay.org/download/wareham-rain-monthly.xls"
+    },
+    {
+     "label": "Daily rainfall file",
+     "url": "https://buzzardsbay.org/download/bbprain.xls"
+    }
+   ],
+   "state": "Massachusetts",
+   "stateCodes": [
+    "MA"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "Wareham rainfall files (Buzzards Bay NEP climate data page)",
+     "landingUrl": "https://buzzardsbay.org/technical-data/climate/",
+     "accessUrl": "https://buzzardsbay.org/technical-data/climate/",
+     "formats": [
+      "XLS"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; monthly",
+     "periodOfRecord": "Daily 1988-1998; monthly October 1988-December 2007",
+     "coverage": "station-specific",
+     "originalCollector": "UMass Cranberry Experiment Station, East Wareham (data provided by Caroline DeMoranville; compiled by Buzzards Bay NEP)",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall in inches. The page notes 232 trace entries with no numeric value and gives inconsistent record lengths for its statistics. Static archive, no longer updated.",
+     "verification": "download tested",
+     "testNote": "Downloaded wareham-rain-monthly.xls (24.6 KB). Sheet1 has 232 rows with columns Month/Year, Total, yr total. First rows: Oct 1988 3.92, Nov 1988 8.55, Dec 1988 1.40. Last row: Dec 2007 6.11, year total 45.9. The daily file (bbprain.xls, 115 KB) was not opened.",
+     "citations": [
+      "https://buzzardsbay.org/technical-data/climate/",
+      "https://buzzardsbay.org/download/wareham-rain-monthly.xls"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ma-harvard-forest-met",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Harvard Forest Met Stations",
+   "fullName": "Harvard Forest Fisher Meteorological Station (Harvard Forest Data Archive and Data in Real Time)",
+   "host": "Harvard University, Harvard Forest",
+   "location": "Petersham, MA",
+   "discipline": "Long-term weather station data, central Massachusetts",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Harvard Forest posts current-month 15-minute and daily tables for its Fisher Meteorological Station, including precipitation, and updates them every 15 minutes. The archive dataset HF001 holds the full record since 2001 as CSV files. Harvard Forest collects the data, with a heated rain gauge. It covers one site in central Massachusetts.",
+   "holdings": [
+    "Real-time Fisher station 15-minute and daily tables (current month, CSV)",
+    "HF001 archive: hourly 2001-2004, 15-minute since 2005, daily since 2001 (CSV)"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Harvard Forest Met & Hydro Stations real-time tables",
+     "url": "https://harvardforest.fas.harvard.edu/data-archives/data-in-real-time/met-hydro-stations/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Met & Hydro Stations page",
+     "url": "https://harvardforest.fas.harvard.edu/data-archives/data-in-real-time/met-hydro-stations/"
+    },
+    {
+     "label": "HF001 dataset page",
+     "url": "https://harvardforest1.fas.harvard.edu/exist/apps/datasets/showData.html?id=HF001"
+    },
+    {
+     "label": "Current-month daily table (metric CSV)",
+     "url": "https://harvardforest1.fas.harvard.edu/weather/dfm.csv"
+    }
+   ],
+   "state": "Massachusetts",
+   "stateCodes": [
+    "MA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Harvard Forest Met & Hydro Stations real-time tables",
+     "landingUrl": "https://harvardforest.fas.harvard.edu/data-archives/data-in-real-time/met-hydro-stations/",
+     "accessUrl": "https://harvardforest.fas.harvard.edu/data-archives/data-in-real-time/met-hydro-stations/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute; daily (archive also hourly 2001-2004 and monthly/annual)",
+     "periodOfRecord": "2001-present (real-time tables hold the current month; HF001 v.35 archive covers 2001-2025)",
+     "coverage": "station-specific",
+     "originalCollector": "Harvard Forest, Harvard University",
+     "access": "Free, no account; HF001 archive under CC0",
+     "qualityNotes": "prec in mm (metric) or inches (English). Real-time values are not checked; out-of-range values are NA. Archive data are checked monthly with E/M/Q flags, and daily gaps are estimated from nearby stations. The Met One 385 heated gauge may undercatch in wind or cold.",
+     "verification": "download tested",
+     "testNote": "Requested the first 800 bytes of dfm.csv (current-month daily, metric): header includes prec, and rows for 2026-11-01 to 2026-11-04 showed prec 0.0. qfm.csv (15-minute) returned rows from 2026-11-01T00:00 with prec 0.0. The HF001 archive files were not downloaded.",
+     "citations": [
+      "https://harvardforest.fas.harvard.edu/data-archives/data-in-real-time/met-hydro-stations/",
+      "https://harvardforest1.fas.harvard.edu/weather/dfm.csv",
+      "https://harvardforest1.fas.harvard.edu/exist/apps/datasets/showData.html?id=HF001"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ma-dcr-precipitation-database",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Massachusetts DCR Precipitation Database",
+   "fullName": "Department of Conservation and Recreation, Office of Water Resources Precipitation Database",
+   "host": "Massachusetts Department of Conservation and Recreation (Executive Office of Energy and Environmental Affairs)",
+   "location": "Boston, MA",
+   "discipline": "Statewide monthly station precipitation totals",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "DCR's Office of Water Resources keeps a database of monthly precipitation totals by station, with snow and ice melted to inches of water. It draws on observers across the state and on cooperative agencies, and DCR says it runs about 60 precipitation stations. The public Excel file lists 188 stations by year from 1838 to 2019. The same page posts monthly regional precipitation composites and SPI tables (2014-2020) for the seven drought regions.",
+   "holdings": [
+    "Precipitation Database Data 2019: monthly station totals, 1838-2019, Excel",
+    "Rain Gage Locations station list (Excel)",
+    "Monthly precipitation composite and average precipitation statistics by drought region, 2014-2020 (file attachments)",
+    "Monthly SPI tables by region, 2017-2020"
+   ],
+   "formats": [
+    "XLS"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Precipitation Database Data 2019 (XLS)",
+     "url": "https://www.mass.gov/doc/precipitation-database-data-2019/download"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Precipitation Data page (mass.gov)",
+     "url": "https://www.mass.gov/info-details/precipitation-data"
+    },
+    {
+     "label": "Wayback snapshot of Precipitation Data page, 2026-04-18",
+     "url": "https://web.archive.org/web/20260418032412/https://www.mass.gov/info-details/precipitation-data"
+    },
+    {
+     "label": "Rain Gage Locations (XLS)",
+     "url": "https://www.mass.gov/doc/rain-gage-locations/download"
+    }
+   ],
+   "state": "Massachusetts",
+   "stateCodes": [
+    "MA"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "Precipitation Database Data 2019 (XLS)",
+     "landingUrl": "https://www.mass.gov/info-details/precipitation-data",
+     "accessUrl": "https://www.mass.gov/doc/precipitation-database-data-2019/download",
+     "formats": [
+      "XLS"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "monthly",
+     "periodOfRecord": "1838-2019 (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "DCR Office of Water Resources, from volunteer observers and cooperative agencies; DCR's Water Resources Commission staff also take data from the NWS NOWData tool",
+     "access": "Free, no account. Older or other data by email request to climate.data@state.ma.us",
+     "qualityNotes": "Monthly totals in inches, with snow and ice melted. Blank cells mark missing months. Columns: STATION, YEAR, JAN-DEC, CITY, Region Composite Station, Region, Basin Name. QC procedures not documented.",
+     "verification": "download tested",
+     "testNote": "mass.gov returns HTTP 403 to scripts, so the Wayback copy of this URL (captured 2025-09-02) was downloaded (4.07 MB XLS). Sheet 'Selected Period of Record' has 13,002 rows and 188 stations, 1838-2019. First data row: AMH307 (Amherst) 2000, JAN 3.04, FEB 3.39, ... DEC 4.41. The April 2026 snapshot of the landing page still links this file. Whether the live page still offers it was not verified.",
+     "citations": [
+      "https://web.archive.org/web/20260418032412/https://www.mass.gov/info-details/precipitation-data",
+      "https://web.archive.org/web/20250902051400/https://www.mass.gov/doc/precipitation-database-data-2019/download"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-mi-ann-arbor-rain-gauges",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "City of Ann Arbor rain gauges",
+   "fullName": "City of Ann Arbor - Rainfall at City-Operated Rain Gauges",
+   "host": "City of Ann Arbor",
+   "location": "Ann Arbor, MI",
+   "discipline": "City tipping-bucket rain gauge records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The City of Ann Arbor runs five tipping-bucket rain gauges (Barton Dam, South Industrial Hwy, Jackson Ave/Parklake Ave, UM North Campus area and City Hall) and publishes their rainfall as one CSV on its open data portal. The gauges record every 5 minutes; the file gives 15-minute increments from 2013.",
+   "holdings": [
+    "Rainfall at City-Operated Rain Gauges CSV (15-minute, 2013-present)"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Rainfall at City-Operated Rain Gauges",
+     "url": "https://ckan.a2gov.org/dataset/9c24a5f2-df1f-4174-9dde-b7c7eda3a84d/resource/505863f0-bd80-40fa-b7e7-7054b627d8ab/download/city_of_ann_arbor_rainfall.csv"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Ann Arbor open data dataset page",
+     "url": "https://data.a2gov.org/city-of-ann-arbor/rainfall-at-city-operated-rain-gauges"
+    }
+   ],
+   "state": "Michigan",
+   "stateCodes": [
+    "MI"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Rainfall at City-Operated Rain Gauges",
+     "landingUrl": "https://data.a2gov.org/city-of-ann-arbor/rainfall-at-city-operated-rain-gauges",
+     "accessUrl": "https://ckan.a2gov.org/dataset/9c24a5f2-df1f-4174-9dde-b7c7eda3a84d/resource/505863f0-bd80-40fa-b7e7-7054b627d8ab/download/city_of_ann_arbor_rainfall.csv",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute (gauges record 5-minute)",
+     "periodOfRecord": "2013-present",
+     "coverage": "station-specific",
+     "originalCollector": "City of Ann Arbor",
+     "access": "Free, no account",
+     "qualityNotes": "Gauges have intermittently gone offline or reported invalid totals; some invalid values removed but gaps remain. Each gauge gets a 0.00 record for 11:45pm-midnight unless rain fell, and a temporary 0.00 record marks each gauge's latest report.",
+     "verification": "download tested",
+     "testNote": "Range request for the first 600 bytes returned header 'site,rainfall,period' and rows such as 'Jackson,0.01,2026-11-05 01:30:00'.",
+     "citations": [
+      "https://data.a2gov.org/city-of-ann-arbor/rainfall-at-city-operated-rain-gauges"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-mi-enviroweather",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "MSU Enviroweather (MAWN)",
+   "fullName": "Enviroweather Automated Weather Station Network (formerly Michigan Automated Weather Network, MAWN)",
+   "host": "Michigan State University (MSU Extension and MSU AgBioResearch)",
+   "location": "East Lansing, MI",
+   "discipline": "Statewide automated agricultural weather station precipitation",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "MSU's Enviroweather network of automated weather stations across Michigan, formerly known as MAWN. Its Custom Reports (Data-on-Demand) tool returns daily, hourly and five-minute precipitation and other variables for any station as ASCII or CSV. The stations are run by MSU with support from Project GREEEN, the Michigan Agricultural Experiment Station and MSU Extension.",
+   "holdings": [
+    "Daily, hourly and five-minute station data, including precipitation, through Custom Reports (Data-on-Demand)"
+   ],
+   "formats": [
+    "CSV",
+    "ASCII text"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Enviroweather Custom Reports (Data-on-Demand)",
+     "url": "https://mawn.geo.msu.edu/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Enviroweather / MAWN station network page",
+     "url": "https://mawn.geo.msu.edu/"
+    },
+    {
+     "label": "Station Data-on-Demand form (Elk Rapids, daily)",
+     "url": "https://mawn.geo.msu.edu/station.asp?id=elk&rt=24"
+    },
+    {
+     "label": "Enviroweather site",
+     "url": "https://enviroweather.msu.edu/"
+    },
+    {
+     "label": "State News on Project GREEEN funding",
+     "url": "https://statenews.com/article/2011/05/msubased_website_aids_farmers_with_data_field_recommendations"
+    }
+   ],
+   "state": "Michigan",
+   "stateCodes": [
+    "MI"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "Enviroweather Custom Reports (Data-on-Demand)",
+     "landingUrl": "https://mawn.geo.msu.edu/station.asp?id=elk&rt=24",
+     "accessUrl": "https://mawn.geo.msu.edu/",
+     "formats": [
+      "CSV",
+      "ASCII text"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly; five-minute",
+     "periodOfRecord": "Varies by station (the Elk Rapids form offers years from 2003)",
+     "coverage": "statewide",
+     "originalCollector": "MSU Enviroweather / Michigan Automated Weather Network (MAWN)",
+     "access": "Free, no account",
+     "qualityNotes": "Units selectable (US or metric); daily precipitation in inches. Report footer notes a change to date/time labels. QC status Not documented.",
+     "verification": "download tested",
+     "testNote": "POSTed the station form to https://mawn.geo.msu.edu/dod.asp for Elk Rapids (id=elk), daily precipitation, 2025-06-01 to 2025-06-05, CSV: returned 'date,pcpn' rows (e.g. 06/04/2025,0.55) with footer 'Data provided by the Michigan Automated Weather Network (MAWN) and Enviro-weather Program.'",
+     "citations": [
+      "https://mawn.geo.msu.edu/",
+      "https://mawn.geo.msu.edu/station.asp?id=elk&rt=24"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-mi-macomb-county-rain-gauges",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Macomb County Public Works rain gauges",
+   "fullName": "Macomb County Public Works Office - Rainfall Reports",
+   "host": "Macomb County Public Works Office",
+   "location": "Clinton Township, MI",
+   "discipline": "County 5-minute rain gauge network",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Macomb County Public Works maintains a rain gauge network across Macomb County (26 gauges in the page text; its gauge map is labelled 36) recording precipitation every 5 minutes. An interactive map, hosted by the vendor Aquasight, shows near real-time rainfall and offers historical data for download.",
+   "holdings": [
+    "Interactive rain gauge map with near real-time and historical data downloads"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Macomb County Rain Fall Data Map",
+     "url": "https://external.aquasight.io/ffe22858-c684-4749-97d2-9afd1d1d6e8f/rain-gauges"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Macomb County rainfall reports page",
+     "url": "https://www.macombgov.org/departments/public-works/public-works-resources/rainfall-reports"
+    }
+   ],
+   "state": "Michigan",
+   "stateCodes": [
+    "MI"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Macomb County Rain Fall Data Map",
+     "landingUrl": "https://www.macombgov.org/departments/public-works/public-works-resources/rainfall-reports",
+     "accessUrl": "https://external.aquasight.io/ffe22858-c684-4749-97d2-9afd1d1d6e8f/rain-gauges",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: Macomb County",
+     "originalCollector": "Macomb County Public Works Office",
+     "access": "Free, no account",
+     "qualityNotes": "Map data are raw and reviewed monthly by Public Works staff for quality assurance. Map values are cumulative event totals (an event follows 24 hours without precipitation and accumulates 0.01 inch or more).",
+     "verification": "download documented",
+     "testNote": "The county page says the map offers historical data for download; the map is a JavaScript application (Aquasight) that curl cannot query, so no sample was retrieved and the download format was not confirmed.",
+     "citations": [
+      "https://www.macombgov.org/departments/public-works/public-works-resources/rainfall-reports"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-mi-state-climatologist",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Michigan State Climatologist's Office",
+   "fullName": "Michigan State Climatologist's Office, Michigan State University",
+   "host": "Michigan State University, Department of Geography",
+   "location": "East Lansing, MI",
+   "discipline": "Archived southeast Michigan (SEMCOG) gauge precipitation",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The official state climate office at MSU hosts an archive of Southeast Michigan Council of Governments (SEMCOG) precipitation gauge data as monthly text files of daily and hourly totals, 1988-2005, plus station coordinates. Coverage is southeast Michigan (station groups such as Ann Arbor, Pinckney, Chelsea and Ypsilanti). The gauges belong to the SEMCOG network; the office redistributes the summaries.",
+   "holdings": [
+    "SEMCOG daily and hourly precipitation summaries (monthly text files), 1988-2005"
+   ],
+   "formats": [
+    "TXT"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SEMCOG Precipitation Summaries",
+     "url": "https://climate.geo.msu.edu/semcog/sem/semtable.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Main SEMCOG page",
+     "url": "https://climate.geo.msu.edu/semcog/sem/mainsem.html"
+    },
+    {
+     "label": "State Climatologist's Office home",
+     "url": "https://climate.geo.msu.edu/"
+    },
+    {
+     "label": "AASC Michigan entry",
+     "url": "https://stateclimate.org/state/michigan"
+    }
+   ],
+   "state": "Michigan",
+   "stateCodes": [
+    "MI"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "SEMCOG Precipitation Summaries",
+     "landingUrl": "https://climate.geo.msu.edu/semcog/sem/mainsem.html",
+     "accessUrl": "https://climate.geo.msu.edu/semcog/sem/semtable.html",
+     "formats": [
+      "TXT"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly",
+     "periodOfRecord": "1988-2005 (table runs January 1988 to June 2005)",
+     "coverage": "regional: southeast Michigan (SEMCOG region)",
+     "originalCollector": "Southeast Michigan Council of Governments (SEMCOG) gauge network",
+     "access": "Free, no account",
+     "qualityNotes": "Values in hundredths of an inch; '.' marks zero/no precipitation. Monthly maps provided from 1997. Other QC Not documented.",
+     "verification": "download tested",
+     "testNote": "Fetched the first 1.5 KB of https://climate.geo.msu.edu/semcog/sem/daily/2005/0506smry.txt (SEMCOG DAILY PRECIPITATION SUMMARY, June 2005, daily totals x 1/100 inch by station, e.g. A 1 monthly total 251) and of the matching hourly file 0506hrly.txt.",
+     "citations": [
+      "https://climate.geo.msu.edu/semcog/sem/semtable.html",
+      "https://climate.geo.msu.edu/semcog/sem/semlatlon.txt",
+      "https://climate.geo.msu.edu/semcog/sem/daily/2005/0506smry.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-mn-metropolitan-council-eims",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Metropolitan Council EIMS",
+   "fullName": "Metropolitan Council Environmental Services, Environmental Information Management System (EIMS)",
+   "host": "Metropolitan Council",
+   "location": "St. Paul, MN",
+   "discipline": "Twin Cities metro rain-gauge precipitation",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Metropolitan Council, the regional agency for the Twin Cities seven-county metro area, serves precipitation from its Environmental Services rain gauges (for example heated tipping buckets at wastewater plants) through its EIMS database. Some gauges carry copied records from other operators, such as the NWS gauge at MSP Airport through 2011.",
+   "holdings": [
+    "Rain-gauge precipitation (continuous and daily aggregate time series) for MCES gauges in the Twin Cities seven-county metro"
+   ],
+   "formats": [
+    "CSV",
+    "TSV",
+    "XLSX",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "EIMS rain gauge data download",
+     "url": "https://eims.metc.state.mn.us/Download"
+    }
+   ],
+   "sources": [
+    {
+     "label": "EIMS FAQ",
+     "url": "https://eims.metc.state.mn.us/Faq"
+    },
+    {
+     "label": "East Bethel Rain Gauge site page",
+     "url": "https://eims.metc.state.mn.us/Site/RG23"
+    },
+    {
+     "label": "MSP Airport Rain Gauge site page",
+     "url": "https://eims.metc.state.mn.us/Site/RG20"
+    }
+   ],
+   "state": "Minnesota",
+   "stateCodes": [
+    "MN"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "EIMS rain gauge data download",
+     "landingUrl": "https://eims.metc.state.mn.us/Site/RG23",
+     "accessUrl": "https://eims.metc.state.mn.us/Download",
+     "formats": [
+      "CSV",
+      "TSV",
+      "XLSX",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "continuous (sub-daily); daily aggregate; monthly view",
+     "periodOfRecord": "Not documented (varies by gauge; MSP Airport records copied until 2011)",
+     "coverage": "regional: Twin Cities seven-county metropolitan area",
+     "originalCollector": "Metropolitan Council Environmental Services; MSP Airport gauge operated by the National Weather Service",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation in inches with a QUALIFIER column (e.g. 'Valid'). The file opens with a Minnesota Government Data Practices Act disclaimer. The FAQ says the database is updated daily.",
+     "verification": "download tested",
+     "testNote": "POST /api/Search/ValidateSiteIds returned a Download URL. GET https://eims.metc.state.mn.us/Download?startDate=01-01-2005&endDate=12-31-2010&siteIds=RG20&parameterIds=2260&format=csv returned CSV rows such as RG20, 03/30/2007, Precipitation, 1.02, inches, Valid. A June 2024 request for RG23 returned only the header row.",
+     "citations": [
+      "https://eims.metc.state.mn.us/Faq",
+      "https://eims.metc.state.mn.us/Site/RG23",
+      "https://eims.metc.state.mn.us/Site/RG20"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-mn-dnr",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Minnesota DNR State Climatology Office and Cooperative Stream Gaging",
+   "fullName": "Minnesota Department of Natural Resources, Division of Ecological and Water Resources (State Climatology Office; DNR/MPCA Cooperative Stream Gaging)",
+   "host": "Minnesota Department of Natural Resources",
+   "location": "St. Paul, MN",
+   "discipline": "Statewide volunteer-network station precipitation, gridded monthly precipitation, and stream-gauge precipitation",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The DNR State Climatology Office archives precipitation from MNgage/HIDEN, a network of more than 1,000 volunteer observers that also takes in NWS COOP, SWCD and CoCoRaHS reports. It serves the data through station retrieval tools and a 10-km gridded monthly precipitation database. The DNR/MPCA Cooperative Stream Gaging network also offers daily precipitation downloads for gauging sites that record it.",
+   "holdings": [
+    "MNgage/HIDEN station precipitation retrieval (daily and monthly, by target location, multi-day totals, county annual reports)",
+    "Gridded monthly precipitation database (10-km grid nodes)",
+    "Cooperative Stream Gaging precipitation downloads (daily, by site)"
+   ],
+   "formats": [
+    "CSV",
+    "HTML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "MNgage (HIDEN) precipitation retrieval tools",
+     "url": "https://climateapps.dnr.state.mn.us/hidradius/radius_new.asp"
+    },
+    {
+     "name": "Monthly Precipitation Data from Gridded Database",
+     "url": "https://climateapps.dnr.state.mn.us/gridded_data/precip/monthly/monthly_gridded_precip.asp"
+    },
+    {
+     "name": "Cooperative Stream Gaging data download",
+     "url": "https://webapps.dnr.state.mn.us/csg/api/v1/download"
+    }
+   ],
+   "sources": [
+    {
+     "label": "State Climatology Office about page",
+     "url": "https://www.dnr.state.mn.us/climate/about_us.html"
+    },
+    {
+     "label": "Monthly climate data tools",
+     "url": "https://dnr.state.mn.us/climate/historical/monthly.html"
+    },
+    {
+     "label": "Precipitation grids explanation",
+     "url": "https://climateapps.dnr.state.mn.us/gridded_data/precip/monthly/explain_grids.htm"
+    },
+    {
+     "label": "Cooperative Stream Gaging",
+     "url": "https://www.dnr.state.mn.us/waters/csg/index.html"
+    }
+   ],
+   "state": "Minnesota",
+   "stateCodes": [
+    "MN"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "MNgage (HIDEN) precipitation retrieval tools",
+     "landingUrl": "https://dnr.state.mn.us/climate/historical/monthly.html",
+     "accessUrl": "https://climateapps.dnr.state.mn.us/hidradius/radius_new.asp",
+     "formats": [
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; monthly; multi-day totals",
+     "periodOfRecord": "Not documented (the nearest-station tool's year menu runs 1850-2026; the multi-day totals tool's runs 1958-2026)",
+     "coverage": "statewide",
+     "originalCollector": "MNgage/HIDEN volunteer observers (DNR, Soil and Water Conservation Districts, NWS COOP, CoCoRaHS and others), compiled by the DNR State Climatology Office",
+     "access": "Free, no account",
+     "qualityNotes": "Values in inches. The nearest-station tool lets the user set the number of missing days allowed. The multi-day tool lists UTM X/Y (NAD83) and totals in inches, which can be saved to a file. Not documented otherwise.",
+     "verification": "download documented",
+     "testNote": "On 2026-11-05 the forms loaded. POST queries to radius_new.asp (monthly, near Minneapolis, 2024), HIDENmapFile.asp (statewide, June 1-3, 2024) and HIDENannual/HIDENannual.asp (Anoka County, 2024) each returned HTTP 500, as did a GET of the single-day tool HIDENmapMisc.asp.",
+     "citations": [
+      "https://climateapps.dnr.state.mn.us/hidradius/radius_new.asp",
+      "https://climateapps.dnr.state.mn.us/hidradius/HIDENmapFile.asp",
+      "https://climateapps.dnr.state.mn.us/HIDENannual/",
+      "https://climateapps.dnr.state.mn.us/gridded_data/precip/monthly/explain_grids.htm"
+     ]
+    },
+    {
+     "name": "Monthly Precipitation Data from Gridded Database",
+     "landingUrl": "https://climateapps.dnr.state.mn.us/gridded_data/precip/monthly/explain_grids.htm",
+     "accessUrl": "https://climateapps.dnr.state.mn.us/gridded_data/precip/monthly/monthly_gridded_precip.asp",
+     "formats": [
+      "CSV",
+      "HTML"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "monthly",
+     "periodOfRecord": "1891-present (per the 2008 explanation page: NWS observer data for 1891-1972, HIDEN data from 1973)",
+     "coverage": "statewide",
+     "originalCollector": "NWS cooperative observers and HIDEN/MNgage volunteer observers; grids computed by the DNR State Climatology Office",
+     "access": "Free, no account",
+     "qualityNotes": "Grid nodes spaced 10 km apart, interpolated from irregular station data. The page includes 1991-2020 normals. Update frequency not documented.",
+     "verification": "download documented",
+     "testNote": "The page selects a target location on a map and builds a data table, with a button that saves the table as <county>_Gridded_datatable.csv (seen in the page script). A scripted POST with UTM and lat/lon values returned the intro page with no table, so no values were confirmed.",
+     "citations": [
+      "https://climateapps.dnr.state.mn.us/gridded_data/precip/monthly/monthly_gridded_precip.asp",
+      "https://climateapps.dnr.state.mn.us/gridded_data/precip/monthly/explain_grids.htm",
+      "https://dnr.state.mn.us/climate/historical/monthly.html"
+     ]
+    },
+    {
+     "name": "Cooperative Stream Gaging data download",
+     "landingUrl": "https://www.dnr.state.mn.us/waters/csg/index.html",
+     "accessUrl": "https://webapps.dnr.state.mn.us/csg/api/v1/download",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Varies by site (the tested site returned daily precipitation for 2000)",
+     "coverage": "station-specific",
+     "originalCollector": "Minnesota DNR and Minnesota Pollution Control Agency (site providers also include USGS and USACE)",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation in inches, with quality text (e.g. 'Good Archived Daily') and type (approved/provisional). The bundled metadata_readme.csv says recent data are provisional. Precipitation is variable 11; the sites API flags it for 450 of 1,247 sites.",
+     "verification": "download tested",
+     "testNote": "GET https://webapps.dnr.state.mn.us/csg/api/v1/download?ids=01009001&vars=11 returned a zip with csg_01009001_11_precipitation.csv (station,tstamp,value,quality,var_name,type; for example 2000-09-26, 0.01, Precipitation (in.), approved), a gagings CSV and metadata_readme.csv.",
+     "citations": [
+      "https://www.dnr.state.mn.us/waters/csg/index.html",
+      "https://webapps.dnr.state.mn.us/csg/api/v1/sites",
+      "https://maps.dnr.state.mn.us/ewr/csg/lib/config.js"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ms-mdeq-aermet-met-data",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "MDEQ AERMET Met Data",
+   "fullName": "Mississippi Department of Environmental Quality, Office of Pollution Control, Air Division: AERMET Preprocessed Meteorological Data",
+   "host": "Mississippi Department of Environmental Quality",
+   "location": "Jackson, MS",
+   "discipline": "Hourly airport surface meteorology for air dispersion modeling",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "MDEQ's Air Division posts AERMOD-ready meteorological files for 18 airport stations in and near Mississippi, covering 2021-2025. The hourly surface (.sfc) files include a precipitation code and hourly precipitation amount. The original observations are NWS/FAA airport (ASOS/AWOS) data taken from NCEI's GHCNh archive, processed by MDEQ with AERMET v26135.",
+   "holdings": [
+    "AERMET surface and profile files, 2021-2025, 18 stations (one zip per station)"
+   ],
+   "formats": [
+    "ZIP",
+    "AERMET SFC text"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "AERMET preprocessed met data",
+     "url": "https://www.mdeq.ms.gov/air/nsr-air-quality-modeling-2/met-data"
+    }
+   ],
+   "sources": [
+    {
+     "label": "MDEQ met data page",
+     "url": "https://www.mdeq.ms.gov/air/nsr-air-quality-modeling-2/met-data"
+    },
+    {
+     "label": "Processing documentation (PDF)",
+     "url": "https://www.mdeq.ms.gov/wp-content/uploads/2026/07/MS-AERMOD-Ready-Met-Files-2025-2.pdf"
+    }
+   ],
+   "state": "Mississippi",
+   "stateCodes": [
+    "MS"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "AERMET preprocessed met data",
+     "landingUrl": "https://www.mdeq.ms.gov/air/nsr-air-quality-modeling-2/met-data",
+     "accessUrl": "https://www.mdeq.ms.gov/air/nsr-air-quality-modeling-2/met-data",
+     "formats": [
+      "ZIP",
+      "AERMET SFC text"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly",
+     "periodOfRecord": "2021-2025",
+     "coverage": "station-specific",
+     "originalCollector": "NWS/FAA airport stations (ASOS/AWOS) via NCEI GHCNh; upper air from NOAA IGRA",
+     "access": "Free, no account",
+     "qualityNotes": "Processed for dispersion modeling, not as a precipitation product. Documentation says NCEI-flagged suspect values and wind values disagreeing with METAR text are set to missing, with a QC log in each station dataset. Precipitation amount column in the .sfc file (units per AERMET format); missing-value codes per AERMET (e.g. -9, -999).",
+     "verification": "download tested",
+     "testNote": "Range request (first 64 KB) of KJAN21_25-1.zip (3.16 MB); inflated the first member KJAN2021.sfc and read hourly rows for 2021-01-01 with precipitation code 11 and amounts 0.50 and 3.30 in the precipitation column.",
+     "citations": [
+      "https://www.mdeq.ms.gov/air/nsr-air-quality-modeling-2/met-data",
+      "https://www.mdeq.ms.gov/wp-content/uploads/2026/07/MS-AERMOD-Ready-Met-Files-2025-2.pdf",
+      "https://www.mdeq.ms.gov/wp-content/uploads/2026/07/KJAN21_25-1.zip"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ms-msu-delta-ag-weather-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "MSU Delta Agricultural Weather Center",
+   "fullName": "Delta Agricultural Weather Center, Delta Research and Extension Center, Mississippi State University",
+   "host": "Mississippi State University (Mississippi Agricultural and Forestry Experiment Station and MSU Extension Service)",
+   "location": "Stoneville, MS",
+   "discipline": "Agricultural weather station precipitation (Delta and other Mississippi sites)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "MSU's Delta Agricultural Weather Center runs automated weather stations, mostly on farms and experiment stations in the Mississippi Delta and elsewhere in the state, that record precipitation, temperature, humidity, wind, solar radiation and soil temperature. Each station page offers 30-day daily and 7-day hourly tables, and a customizable report returns daily or hourly fields (including precipitation in inches) for a chosen period. The center collects the data itself.",
+   "holdings": [
+    "Per-station 30-day daily and 7-day hourly tables with precipitation",
+    "Customizable data report (daily or hourly; last 7/30 days, all, or custom dates)"
+   ],
+   "formats": [
+    "HTML table"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "DAWC station data tables and customizable report",
+     "url": "https://deltaweather.extension.msstate.edu/weather-station-result/DREC-2050"
+    }
+   ],
+   "sources": [
+    {
+     "label": "DAWC home",
+     "url": "https://deltaweather.extension.msstate.edu/"
+    },
+    {
+     "label": "DAWC about (funders)",
+     "url": "https://deltaweather.extension.msstate.edu/about"
+    },
+    {
+     "label": "DREC weather center page",
+     "url": "https://drec.msstate.edu/node/200"
+    },
+    {
+     "label": "Station list",
+     "url": "https://deltaweather.extension.msstate.edu/stations"
+    }
+   ],
+   "state": "Mississippi",
+   "stateCodes": [
+    "MS"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "DAWC station data tables and customizable report",
+     "landingUrl": "https://deltaweather.extension.msstate.edu/stations",
+     "accessUrl": "https://deltaweather.extension.msstate.edu/weather-station-result/DREC-2050",
+     "formats": [
+      "HTML table"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly (15-minute real-time readings per home page)",
+     "periodOfRecord": "Network operational since May 1998 (Stoneville records since 1915 per DREC page); period available online varies by station, Not documented",
+     "coverage": "regional: Mississippi Delta plus other MSU experiment stations and farms across Mississippi",
+     "originalCollector": "MSU Delta Agricultural Weather Center (MAFES and MSU Extension)",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation in inches (n.nn), daily total. Station count differs between pages (41 fixed per home page; 25 fixed and 20 seasonal per DREC page); some stations appear inactive (Belzoni last reading 2026-05-11). QC Not documented.",
+     "verification": "download tested",
+     "testNote": "GET https://deltaweather.extension.msstate.edu/30-days-daily-table/DREC-2004 (Stoneville AWS) returned an HTML table of 32 daily rows starting 10/06/2026 with a precipitation column (0 on the first days). A POST to the customizable report form for Belzoni returned an empty-station error and later retries were blocked by the sandbox, so the custom report itself was not tested.",
+     "citations": [
+      "https://deltaweather.extension.msstate.edu/",
+      "https://drec.msstate.edu/node/200",
+      "https://deltaweather.extension.msstate.edu/30-days-daily-table/DREC-2004"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-mo-missouri-climate-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Missouri Climate Center / Missouri Mesonet",
+   "fullName": "Missouri Climate Center (Missouri State Climatologist) and Missouri Mesonet, University of Missouri",
+   "host": "University of Missouri, College of Agriculture, Food and Natural Resources (School of Natural Resources) and MU Extension",
+   "location": "Columbia, MO",
+   "discipline": "Statewide automated weather station precipitation (daily and hourly)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Missouri Climate Center, the official state climatology office at the University of Missouri, maintains the Missouri Mesonet, a statewide network of automated weather stations started in 1992 by MU Extension's Commercial Agriculture Program. Its Missouri Historical Agricultural Weather Database query returns daily or hourly precipitation and other variables for about 40 listed stations, in English or metric units.",
+   "holdings": [
+    "Missouri Historical Agricultural Weather Database: daily and hourly station queries (precipitation, temperature, humidity, wind, solar radiation, soil temperature)"
+   ],
+   "formats": [
+    "HTML table"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Missouri Mesonet Historical Weather Database (Daily and Hourly Weather Query)",
+     "url": "http://agebb.missouri.edu/weather/history/index.asp"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AASC state climatologist listing",
+     "url": "https://stateclimate.org/state/missouri"
+    },
+    {
+     "label": "Missouri Climate Center home",
+     "url": "http://climate.missouri.edu/"
+    },
+    {
+     "label": "Missouri Climate Center: Missouri Climate Data",
+     "url": "http://climate.missouri.edu/modata.php"
+    },
+    {
+     "label": "Missouri Weather Stations: about the data",
+     "url": "http://agebb.missouri.edu/weather/stations/in1s.htm"
+    },
+    {
+     "label": "MU Extension news: MU weather stations",
+     "url": "https://extension.missouri.edu/news/mu-weather-stations-provide-real-time-data-across-the-state"
+    }
+   ],
+   "state": "Missouri",
+   "stateCodes": [
+    "MO"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Missouri Mesonet Historical Weather Database (Daily and Hourly Weather Query)",
+     "landingUrl": "http://climate.missouri.edu/modata.php",
+     "accessUrl": "http://agebb.missouri.edu/weather/history/index.asp",
+     "formats": [
+      "HTML table"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly",
+     "periodOfRecord": "Query form offers years from 2000 onward; network established 1992; accumulated precipitation data begin September 13, 1994 (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "University of Missouri Extension Commercial Agriculture Program / Missouri Mesonet",
+     "access": "Free, no account",
+     "qualityNotes": "Units selectable (English: inches; metric). QC and missing-data codes Not documented.",
+     "verification": "download tested",
+     "testNote": "GET report.asp for station alb (Albany, Gentry County), daily, field 70 (Total Precipitation), 2025-06-01 to 2025-06-05 returned an HTML table of daily totals in inches (0.94 in on June 3). An hourly query (field 75) for 2025-06-03 returned hourly precipitation rows.",
+     "citations": [
+      "http://agebb.missouri.edu/weather/history/index.asp",
+      "http://agebb.missouri.edu/weather/stations/in1s.htm",
+      "https://extension.missouri.edu/news/mu-weather-stations-provide-real-time-data-across-the-state"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-mt-montana-climate-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Montana Climate Office",
+   "fullName": "Montana Climate Office, University of Montana",
+   "host": "University of Montana (W.A. Franke College of Forestry and Conservation)",
+   "location": "Missoula, MT",
+   "discipline": "Statewide mesonet station precipitation and gridded drought precipitation layers",
+   "topics": [
+    "gauges",
+    "models"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The official state climate office runs the Montana Mesonet, more than 215 weather and soil-moisture stations installed since 2016, and serves their hourly and daily precipitation through a free API. It also publishes current precipitation accumulation, departure and percentile GeoTIFFs for its drought dashboard, computed from gridMET (University of Idaho Climatology Lab).",
+   "holdings": [
+    "Montana Mesonet API: hourly and daily station precipitation (CSV, JSON), 2016-present",
+    "Drought-indicator precipitation rasters: current accumulation, departure from normal, percent of normal and percentile over 15- to 730-day windows (GeoTIFF), from gridMET"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "GeoTIFF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Montana Mesonet API",
+     "url": "https://mesonet.climate.umt.edu/api/v2/docs"
+    },
+    {
+     "name": "MCO drought-indicator precipitation rasters",
+     "url": "https://data.climate.umt.edu/drought-indicators/precipitation/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Montana Climate Office home",
+     "url": "https://climate.umt.edu/"
+    },
+    {
+     "label": "About MCO (official state climate office)",
+     "url": "https://climate.umt.edu/about/"
+    },
+    {
+     "label": "AASC state climatologist listing",
+     "url": "https://stateclimate.org/state/montana"
+    },
+    {
+     "label": "Montana Mesonet overview",
+     "url": "https://climate.umt.edu/mesonet/"
+    },
+    {
+     "label": "Mesonet API documentation",
+     "url": "https://climate.umt.edu/mesonet/api/"
+    },
+    {
+     "label": "D3 drought dashboard methods",
+     "url": "https://d3drought.org/methods.html"
+    }
+   ],
+   "state": "Montana",
+   "stateCodes": [
+    "MT"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Montana Mesonet API",
+     "landingUrl": "https://climate.umt.edu/mesonet/api/",
+     "accessUrl": "https://mesonet.climate.umt.edu/api/v2/docs",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly; daily (5-minute latest values also available)",
+     "periodOfRecord": "2016-present (varies by station install date)",
+     "coverage": "statewide",
+     "originalCollector": "Montana Climate Office (Montana Mesonet stations, including the HydroMet sub-network)",
+     "access": "Free, no account",
+     "qualityNotes": "Range, step, persistence and shared-sensor QA/QC checks raise flags (precipitation valid range 0-500 mm, max step 25 mm); provisional status and API handling of flagged values not documented. Daily CSV reports Precipitation [in].",
+     "verification": "download tested",
+     "testNote": "Requested https://mesonet.climate.umt.edu/api/v2/observations/daily/?stations=aceabsar&start_time=2024-06-01&end_time=2024-06-04&elements=ppt&type=csv; got CSV with columns station, datetime, Precipitation [in] and daily values (0.0 for 2024-06-01 to 06-03). The stations endpoint returned station metadata CSV.",
+     "citations": [
+      "https://climate.umt.edu/mesonet/api/",
+      "https://climate.umt.edu/mesonet/",
+      "https://climate.umt.edu/mesonet/qaqc/"
+     ]
+    },
+    {
+     "name": "MCO drought-indicator precipitation rasters",
+     "landingUrl": "https://d3drought.org/",
+     "accessUrl": "https://data.climate.umt.edu/drought-indicators/precipitation/",
+     "formats": [
+      "GeoTIFF"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "Rolling accumulation windows (15, 30, 45, 60, 90, 120, 180, 365, 730 days, water year, year to date); current values only",
+     "periodOfRecord": "Current period only (files overwritten as gridMET updates); gridMET source 1979-present",
+     "coverage": "regional: contiguous US (per D3 dashboard)",
+     "originalCollector": "gridMET (University of Idaho Climatology Lab), processed by the Montana Climate Office",
+     "access": "Free, no account",
+     "qualityNotes": "Derived from gridMET daily precipitation (about 4 km, mm/day); files include raw accumulation, departure from normal (mm), percent of normal and percentile. Units of raw files and provisional status not documented.",
+     "verification": "download documented",
+     "testNote": "Directory listing shows files such as current_raw_30.tif and current_percent_of_normal_30.tif; a HEAD request for current_percent_of_normal_30.tif returned image/tiff, 549,705 bytes, last modified 2026-11-05. Raster values were not read (binary GeoTIFF).",
+     "citations": [
+      "https://data.climate.umt.edu/drought-indicators/precipitation/",
+      "https://d3drought.org/",
+      "https://d3drought.org/methods.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ne-dwee-nerain",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Nebraska DWEE NeRAIN",
+   "fullName": "Nebraska Department of Water, Energy, and Environment - Nebraska Rainfall Assessment and Information Network (NeRAIN)",
+   "host": "Nebraska Department of Water, Energy, and Environment",
+   "location": "Lincoln, NE",
+   "discipline": "Statewide volunteer daily rain-gauge network",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NeRAIN is a statewide network of volunteer observers who read rain gauges each morning and report daily precipitation, snow and hail. The Nebraska Department of Water, Energy, and Environment hosts it in cooperation with the Natural Resources Districts and CoCoRaHS. The site serves daily station tables, statewide and NRD summaries, multi-day totals, and snow and hail reports, with years from 2004 onward. No account is needed.",
+   "holdings": [
+    "NeRAIN daily precipitation, snow and hail reports by station, county, NRD or statewide"
+   ],
+   "formats": [
+    "HTML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NeRAIN Reports",
+     "url": "https://dwee-data.nebraska.gov/nerain/Report/DailyPrecipitationSummary/Statewide/0/2026"
+    }
+   ],
+   "sources": [
+    {
+     "label": "DWEE NeRAIN news release",
+     "url": "https://dwee.nebraska.gov/node/5453"
+    },
+    {
+     "label": "NeRAIN home",
+     "url": "https://dwee-data.nebraska.gov/nerain/"
+    },
+    {
+     "label": "Upper Big Blue NRD NeRAIN page",
+     "url": "https://upperbigblue.org/nerain-nebraska-rainfall-assessment-and-information-network"
+    }
+   ],
+   "state": "Nebraska",
+   "stateCodes": [
+    "NE"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "NeRAIN Reports",
+     "landingUrl": "https://dwee-data.nebraska.gov/nerain/",
+     "accessUrl": "https://dwee-data.nebraska.gov/nerain/Report/DailyPrecipitationSummary/Statewide/0/2026",
+     "formats": [
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (also monthly/annual summaries and multi-day totals)",
+     "periodOfRecord": "2004-present (year menu starts at 2004; varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "NeRAIN volunteer observers (with NRD and DWEE coordinators)",
+     "access": "Free, no account",
+     "qualityNotes": "Values are in inches; reports give rain gauge type (for example Standard, Other) and reading time. QC is not documented.",
+     "verification": "download tested",
+     "testNote": "The Daily Precipitation Detail report for 2026-11-03 statewide returned an HTML table with station ID, address, gauge type, precipitation in inches, date and time read. For example, linc060 North Platte 2.4 WNW, Standard, 0.000, 2026-11-03 07:00. The 2026 statewide daily summary returned daily maximum values with entry counts. No CSV export was found.",
+     "citations": [
+      "https://dwee-data.nebraska.gov/nerain/Report/DailyPrecipitationDetail/Statewide/0/0/2026-11-03",
+      "https://dwee-data.nebraska.gov/nerain/Report/DailyPrecipitationSummary/Statewide/0/2026",
+      "https://dwee.nebraska.gov/node/5453"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ne-nsco-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Nebraska State Climate Office / Nebraska Mesonet",
+   "fullName": "Nebraska State Climate Office and Nebraska Mesonet",
+   "host": "University of Nebraska-Lincoln",
+   "location": "Lincoln, NE",
+   "discipline": "Statewide automated weather station network",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Nebraska Mesonet is a statewide network of automated weather and soil stations run by the Nebraska State Climate Office at UNL. Its stations measure precipitation every minute, with tipping-bucket gauges and, at new stations, weighing gauges, plus snow depth. Users get 1-minute, 5-minute, hourly or daily data by submitting the Data Access request form.",
+   "holdings": [
+    "Nebraska Mesonet station data (precipitation and other variables) by data request form"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Nebraska Mesonet Data Access",
+     "url": "https://nemesonet.unl.edu/data-access"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Nebraska Mesonet About Us",
+     "url": "https://nemesonet.unl.edu/about/about-us"
+    },
+    {
+     "label": "Nebraska State Climate Office Data page",
+     "url": "https://nsco.unl.edu/data"
+    },
+    {
+     "label": "AASC state climatologist listing",
+     "url": "https://stateclimate.org/state/nebraska"
+    },
+    {
+     "label": "UNL Research news on Mesonet expansion",
+     "url": "https://research.unl.edu/blog/nebraska-mesonet-launches-improved-real-time-weather-data/"
+    }
+   ],
+   "state": "Nebraska",
+   "stateCodes": [
+    "NE"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Nebraska Mesonet Data Access",
+     "landingUrl": "https://nemesonet.unl.edu/data-access",
+     "accessUrl": "https://nemesonet.unl.edu/data-access",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "1-minute; 5-minute; hourly; daily",
+     "periodOfRecord": "Station start dates in the request form begin in 2015; the network began in 1981, but the form does not show whether older data are available",
+     "coverage": "statewide",
+     "originalCollector": "Nebraska State Climate Office (Nebraska Mesonet)",
+     "access": "Free; request form requires name, contact and organization details, intended use, agreement to the terms of use, and a reCAPTCHA",
+     "qualityNotes": "The terms of use say the data are not reviewed and should be considered preliminary. Tipping-bucket gauges are used at most stations; new stations get weighing gauges that also measure liquid-water equivalent. The form says fields marked with an asterisk have limited data before 2024, but Precipitation is not one of them.",
+     "verification": "download documented",
+     "testNote": "Not tested. The form needs personal details and a reCAPTCHA. The Data Access page source lists the intervals (1 minute, 5 minutes, hourly, daily), a Precipitation field and 166 stations. The output format is not documented.",
+     "citations": [
+      "https://nemesonet.unl.edu/data-access",
+      "https://nemesonet.unl.edu/about/about-us",
+      "https://nemesonet.unl.edu/about/terms-of-use"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ne-urnrd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Upper Republican NRD Rainfall Monitoring Network",
+   "fullName": "Upper Republican Natural Resources District",
+   "host": "Upper Republican Natural Resources District",
+   "location": "Imperial, NE",
+   "discipline": "District rain gauges in southwest Nebraska",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Upper Republican NRD covers Perkins, Chase and Dundy counties in southwest Nebraska. It runs a District Rainfall Monitoring Network of 13 precipitation sites. The data are published on the Nebraska DWEE Real Time Water (AQUARIUS WebPortal) site.",
+   "holdings": [
+    "District Rainfall Monitoring Network, 13 precipitation sites, on the DWEE Real Time Water portal"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "URNRD District Rainfall Monitoring Network",
+     "url": "https://dwee.aquaticinformatics.net/Data/Dashboard/1230"
+    }
+   ],
+   "sources": [
+    {
+     "label": "URNRD Rain, Evapotranspiration, Groundwater Levels, and Weather Data",
+     "url": "https://www.urnrd.org/programs-regulations/rain-evapotranspiration-groundwater-levels-and-weather-data"
+    },
+    {
+     "label": "URNRD contact",
+     "url": "https://www.urnrd.org/contact"
+    }
+   ],
+   "state": "Nebraska",
+   "stateCodes": [
+    "NE"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "URNRD District Rainfall Monitoring Network",
+     "landingUrl": "https://www.urnrd.org/programs-regulations/rain-evapotranspiration-groundwater-levels-and-weather-data",
+     "accessUrl": "https://dwee.aquaticinformatics.net/Data/Dashboard/1230",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: Perkins, Chase and Dundy counties (southwest Nebraska)",
+     "originalCollector": "Upper Republican Natural Resources District",
+     "access": "Free; the portal requires accepting a disclaimer first",
+     "qualityNotes": "The portal disclaimer says that data from entities other than DWEE are for general information and should be downloaded from the original source. Units and QC are not documented.",
+     "verification": "not verified",
+     "testNote": "Not tested. Every portal URL redirects to a Disclaimer page with Accept/Reject buttons, and the disclaimer was not accepted. Whether these gauges can be exported was not confirmed.",
+     "citations": [
+      "https://www.urnrd.org/programs-regulations/rain-evapotranspiration-groundwater-levels-and-weather-data",
+      "https://dwee.aquaticinformatics.net/Disclaimer?returnUrl=%2FData%2FDashboard%2F1230"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nv-ccrfcd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Clark County Regional Flood Control District",
+   "fullName": "Clark County Regional Flood Control District (Flood Threat Recognition System)",
+   "host": "Clark County Regional Flood Control District",
+   "location": "Las Vegas, NV",
+   "discipline": "Flood-warning rain-gauge network, Clark County",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Regional Flood Control District runs the Flood Threat Recognition System rain gauges in Clark County (the Las Vegas Valley area). It collects the data itself. It serves yearly ZIP files of daily gauge totals from 1988 and a per-station tool that exports interval data as CSV.",
+   "holdings": [
+    "Historical rainfall: yearly ZIP/CSV files of daily totals per gauge",
+    "Gauge Info station data: per-station interval data with CSV download"
+   ],
+   "formats": [
+    "CSV",
+    "ZIP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CCRFCD historical rainfall yearly files",
+     "url": "https://gustfront.ccrfcd.org/gaugeinfo/Historical"
+    },
+    {
+     "name": "CCRFCD Gauge Info station data",
+     "url": "https://gustfront.ccrfcd.org/gaugeinfo/station/4274"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Historical rainfall page",
+     "url": "https://regionalflood.org/programs_and_services/rainfall_and_weather/flood_threat_recognition_system/historical_rainfall.php"
+    },
+    {
+     "label": "Gauge Info help",
+     "url": "https://gustfront.ccrfcd.org/gaugeinfo/Help"
+    },
+    {
+     "label": "Rainfall and weather",
+     "url": "https://regionalflood.org/programs_and_services/rainfall_and_weather/index.php"
+    }
+   ],
+   "state": "Nevada",
+   "stateCodes": [
+    "NV"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "CCRFCD historical rainfall yearly files",
+     "landingUrl": "https://regionalflood.org/programs_and_services/rainfall_and_weather/flood_threat_recognition_system/historical_rainfall.php",
+     "accessUrl": "https://gustfront.ccrfcd.org/gaugeinfo/Historical",
+     "formats": [
+      "CSV",
+      "ZIP"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "1988-present (yearly files for every year except the current year)",
+     "coverage": "regional: Clark County",
+     "originalCollector": "Clark County Regional Flood Control District",
+     "access": "Free, no account",
+     "qualityNotes": "Provisional and subject to change. Values in inches. A NULL value means no data for that gauge that day. Not official data for Las Vegas. The Lakes DB (4359) includes sprinkler catch, and Town Wash DB (2594) can read high from condensation.",
+     "verification": "download tested",
+     "testNote": "Range-requested the first 200 KB of https://gustfront.ccrfcd.org/data/rainfall_2024.zip (556 KB total). It holds rainfall_2024.csv with the header stn_id,date_and_time,value and rows such as 2,\"2024-04-05 00:00:00\",0.",
+     "citations": [
+      "https://gustfront.ccrfcd.org/gaugeinfo/Historical",
+      "https://regionalflood.org/programs_and_services/rainfall_and_weather/flood_threat_recognition_system/historical_rainfall.php"
+     ]
+    },
+    {
+     "name": "CCRFCD Gauge Info station data",
+     "landingUrl": "https://gustfront.ccrfcd.org/gaugeinfo/Help",
+     "accessUrl": "https://gustfront.ccrfcd.org/gaugeinfo/station/4274",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "user-selected interval (subdaily)",
+     "periodOfRecord": "Not documented",
+     "coverage": "station-specific",
+     "originalCollector": "Clark County Regional Flood Control District",
+     "access": "Free, no account",
+     "qualityNotes": "Provisional. Live data refresh every minute.",
+     "verification": "download documented",
+     "testNote": "The station 4274 page shows end date, start date (or last hours) and interval selectors, a Download CSV button, and the heading 'Precipitation data for Gauge ID 4274'. The Help page documents the CSV download. The CSV itself was not requested.",
+     "citations": [
+      "https://gustfront.ccrfcd.org/gaugeinfo/Help",
+      "https://gustfront.ccrfcd.org/gaugeinfo/station/4274"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nv-dri-cemp",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "DRI Community Environmental Monitoring Program",
+   "fullName": "Community Environmental Monitoring Program (CEMP), Desert Research Institute",
+   "host": "Desert Research Institute (Nevada System of Higher Education)",
+   "location": "Las Vegas, NV",
+   "discipline": "Environmental monitoring stations around the Nevada National Security Site",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "CEMP is a network of 30 monitoring stations (24 in Nevada, others in Utah and California) in communities around and downwind of the Nevada National Security Site. DRI manages the program and NNSA's Nevada Field Office provides funding and equipment. Each station has a rain gauge. DRI's site serves 10-minute and summary data, including total precipitation, through public tables and a JSON API.",
+   "holdings": [
+    "CEMP data tables and public API: daily summary (10-minute detail), daily time series and monthly summary, with precipitation"
+   ],
+   "formats": [
+    "JSON",
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CEMP data tables and public API",
+     "url": "https://cemp.dri.edu/data/tables/daily-summary/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "About CEMP",
+     "url": "https://cemp.dri.edu/about/"
+    },
+    {
+     "label": "Public stations API",
+     "url": "https://cemp.dri.edu/wp-json/cemp-data/v1/public/stations"
+    }
+   ],
+   "state": "Nevada",
+   "stateCodes": [
+    "NV"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "CEMP data tables and public API",
+     "landingUrl": "https://cemp.dri.edu/data/tables/daily-summary/",
+     "accessUrl": "https://cemp.dri.edu/data/tables/daily-summary/",
+     "formats": [
+      "JSON",
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "10-minute, hourly, daily and monthly summaries",
+     "periodOfRecord": "1999-present (station start dates from 1999-06-30)",
+     "coverage": "regional: communities around the Nevada National Security Site (south-central Nevada, plus Utah and California)",
+     "originalCollector": "Desert Research Institute CEMP, funded by DOE NNSA Nevada Field Office",
+     "access": "Free, no account",
+     "qualityNotes": "Data are provisional. The schema labels 'pre' as Total Precipitation in inches. CSV export endpoints appear in the site's API route list and page code but were not tested.",
+     "verification": "download tested",
+     "testNote": "GET https://cemp.dri.edu/wp-json/cemp-data/v1/public/stations returned 30 stations. GET .../public/daily-summary-table/data?station_id=tono&date=2025-02-15 returned 10-minute Tonopah records with pre=0.00. The schema endpoint lists pre as Total Precipitation in inches.",
+     "citations": [
+      "https://cemp.dri.edu/about/",
+      "https://cemp.dri.edu/wp-json/cemp-data/v1/public/stations",
+      "https://cemp.dri.edu/wp-json/cemp-data/v1/public/daily-summary-table/schema?station_id=tono&date=2025-02-15"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nv-ndwr",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Nevada Division of Water Resources",
+   "fullName": "Nevada Division of Water Resources, Department of Conservation and Natural Resources",
+   "host": "Nevada Department of Conservation and Natural Resources",
+   "location": "Carson City, NV",
+   "discipline": "High-altitude storage precipitation gauge network",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NDWR reads a network of high-altitude storage precipitation gauges across Nevada. The sites were chosen from a 1960s USGS/Soil Conservation Service recharge program. Field crews weigh the catch once or twice a year. The readings (3,622 records from 69 sites, 38 still active) are served through an ArcGIS feature service and a station lookup tool.",
+   "holdings": [
+    "Precipitation Monitoring Sites and Measures feature service (annual and interim gauge catch, inches)",
+    "Precipitation station lookup tool on tools.water.nv.gov"
+   ],
+   "formats": [
+    "JSON",
+    "ArcGIS REST"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NDWR Monitoring Sites Precipitation feature service",
+     "url": "https://arcgis.water.nv.gov/arcgis/rest/services/NDWR/Monitoring_Sites_Precipitation/FeatureServer"
+    },
+    {
+     "name": "NDWR Precipitation station tool",
+     "url": "https://tools.water.nv.gov/Precipitation.aspx"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NDWR data page",
+     "url": "https://water.nv.gov/index.php/data"
+    },
+    {
+     "label": "Feature service description",
+     "url": "https://arcgis.water.nv.gov/arcgis/rest/services/NDWR/Monitoring_Sites_Precipitation/FeatureServer/info/iteminfo"
+    },
+    {
+     "label": "DCNR open data hub",
+     "url": "https://data-ndcnr.hub.arcgis.com/search?q=precipitation"
+    }
+   ],
+   "state": "Nevada",
+   "stateCodes": [
+    "NV"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "NDWR Monitoring Sites Precipitation feature service",
+     "landingUrl": "https://arcgis.water.nv.gov/arcgis/rest/services/NDWR/Monitoring_Sites_Precipitation/FeatureServer/info/iteminfo",
+     "accessUrl": "https://arcgis.water.nv.gov/arcgis/rest/services/NDWR/Monitoring_Sites_Precipitation/FeatureServer",
+     "formats": [
+      "JSON",
+      "ArcGIS REST"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "annual (July) and interim (October) storage-gauge readings",
+     "periodOfRecord": "1947-07-31 to 2026-07-22 (varies by site)",
+     "coverage": "statewide",
+     "originalCollector": "Nevada Division of Water Resources field crews",
+     "access": "Free, no account (CC0 1.0 license per the service description)",
+     "qualityNotes": "Precip_Catch is weighed and reported in inches. Measure_Type is Annual, Interim or New Installation. Southern Nevada Branch Office sites are read annually, Elko Branch Office sites in July and October. Ignore the Date Updated field. Sites with a null Reporting_End are active.",
+     "verification": "download tested",
+     "testNote": "Queried layer 0 (Precipitation Monitoring Sites, 69 records, 38 with null Reporting_End) and table 1 (Precipitation Monitoring Measures, 3,622 records). The first records were SiteID 49 (Adams Ranch, Clark County) with annual Precip_Catch values of 18.6, 23.5 and 31.0. Min/max Measure_Date statistics gave 1947-07-31 and 2026-07-22.",
+     "citations": [
+      "https://arcgis.water.nv.gov/arcgis/rest/services/NDWR/Monitoring_Sites_Precipitation/FeatureServer",
+      "https://arcgis.water.nv.gov/arcgis/rest/services/NDWR/Monitoring_Sites_Precipitation/FeatureServer/info/iteminfo"
+     ]
+    },
+    {
+     "name": "NDWR Precipitation station tool",
+     "landingUrl": "https://water.nv.gov/index.php/data",
+     "accessUrl": "https://tools.water.nv.gov/Precipitation.aspx",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "Nevada Division of Water Resources",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented",
+     "verification": "not verified",
+     "testNote": "The page lets users pick a station by current name, historical name or county, then submit. Bash could not reach water.nv.gov, and WebFetch showed only the form (38 stations listed). No export format or result table was confirmed.",
+     "citations": [
+      "https://tools.water.nv.gov/Precipitation.aspx",
+      "https://water.nv.gov/index.php/data"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nh-des-forecast-system",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "NHDES Forecast System portal",
+   "fullName": "New Hampshire Department of Environmental Services Forecast System web portal (Real-Time Data & Information for Watersheds in New Hampshire)",
+   "host": "New Hampshire Department of Environmental Services (Dam Maintenance Program); hosted by contractor RTI International",
+   "location": "Concord, NH",
+   "discipline": "Real-time lake, river and meteorological station data",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NHDES's public Forecast System portal shows observed lake and river levels and meteorological data from monitoring stations throughout the state. Its API serves hourly and daily point precipitation series from NHDES lake and flood-control dam stations, plus series tagged HADS (the NWS Hydrometeorological Automated Data System). The portal was built and is hosted by RTI International under an NHDES contract.",
+   "holdings": [
+    "Point Precipitation Increment (hourly and daily) at NHDES and HADS stations, served through the portal's JSON API"
+   ],
+   "formats": [
+    "JSON",
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NHDES Forecast System precipitation series",
+     "url": "https://nhdes.rtiamanzi.org/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NHDES Forecast System portal",
+     "url": "https://nhdes.rtiamanzi.org/"
+    },
+    {
+     "label": "NHDES request to Governor and Council, Sept 21, 2023 (Item 88)",
+     "url": "https://pub-53c5014580f5456185d5efde8511a616.r2.dev/2023-10-18/Item_88.pdf"
+    }
+   ],
+   "state": "New Hampshire",
+   "stateCodes": [
+    "NH"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "NHDES Forecast System precipitation series",
+     "landingUrl": "https://nhdes.rtiamanzi.org/",
+     "accessUrl": "https://nhdes.rtiamanzi.org/",
+     "formats": [
+      "JSON",
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly; daily",
+     "periodOfRecord": "Not documented (sample data returned for July 2020 at Milton 3-Ponds; none for July 2010)",
+     "coverage": "statewide",
+     "originalCollector": "NHDES (34 series tagged NHDES); NWS HADS (20 series tagged HADS)",
+     "access": "Free, no account",
+     "qualityNotes": "Units inches (parameter PTPX, 'Point Precipitation Increment'). Described as near real-time; QC status Not documented.",
+     "verification": "download tested",
+     "testNote": "GET https://nhdes.rtiamanzi.org/api/timeseries/?parameter__code=PTPX&format=json listed 54 hourly series. POST to https://nhdes.rtiamanzi.org/api/plotly/ (the call the portal makes) for Milton 3-Ponds, 2026-11-03 to 2026-11-05, returned 49 hourly values (0.0 in); the daily plot returned 11 daily values for 2020-06-30 to 2020-07-10. The portal's plot code includes a 'Download data as csv' button, not exercised.",
+     "citations": [
+      "https://nhdes.rtiamanzi.org/api/timeseries/?parameter__code=PTPX&format=json",
+      "https://pub-53c5014580f5456185d5efde8511a616.r2.dev/2023-10-18/Item_88.pdf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nh-plymouth-state-weather-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Plymouth State Weather Center climate data retrieval",
+   "fullName": "Plymouth State Weather Center - Plymouth State Climate Data Retrieval Page",
+   "host": "Plymouth State University",
+   "location": "New Hampshire",
+   "discipline": "Historical daily station temperature and precipitation (global)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Plymouth State's Weather Center serves a query tool that returns daily maximum/minimum temperature, 24-hour precipitation and present weather for a station chosen by its 5-digit WMO number, worldwide, from 1 October 1977 to 31 December 1991. The data come from NCDC's 'Global Daily Summary - Temperature and Precipitation 1977-1991' CD-ROM; New Hampshire stations such as Concord (72605) are included.",
+   "holdings": [
+    "Global Daily Summary temperature and precipitation by station, 1977-1991 (NCDC CD-ROM)"
+   ],
+   "formats": [
+    "Text (fixed-width)"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Plymouth State Climate Data Retrieval",
+     "url": "https://vortex.plymouth.edu/~wxp/sfc/climo/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Plymouth State Climate Data Retrieval Page",
+     "url": "https://vortex.plymouth.edu/~wxp/sfc/climo/"
+    },
+    {
+     "label": "Data format description",
+     "url": "https://vortex.plymouth.edu/~wxp/sfc/climo/format.html"
+    }
+   ],
+   "state": "New Hampshire",
+   "stateCodes": [
+    "NH"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Plymouth State Climate Data Retrieval",
+     "landingUrl": "https://vortex.plymouth.edu/~wxp/sfc/climo/",
+     "accessUrl": "https://vortex.plymouth.edu/~wxp/sfc/climo/",
+     "formats": [
+      "Text (fixed-width)"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "1977-10-01 to 1991-12-31 (as available)",
+     "coverage": "station-specific",
+     "originalCollector": "National Climatic Data Center (Global Daily Summary CD-ROM)",
+     "access": "Free, no account",
+     "qualityNotes": "24-hour precipitation in 0.1 mm; missing is -999; precipitation flags give derivation and ending hour. UTC dates.",
+     "verification": "download tested",
+     "testNote": "Queried https://vortex.plymouth.edu/wxp/cgi-bin/sfc/retrieve-clim.cgi?ident=72605 (Concord, NH); returned header '72605 ... 10/01/77 12/31/91 5393 ... CONCORD' and daily rows with PCPN values (e.g. 771002 PCPN 305).",
+     "citations": [
+      "https://vortex.plymouth.edu/~wxp/sfc/climo/",
+      "https://vortex.plymouth.edu/~wxp/sfc/climo/format.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nh-unh-weather-station",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UNH Weather Station (Morse Hall)",
+   "fullName": "University of New Hampshire Weather Station, Morse Hall, Durham",
+   "host": "University of New Hampshire",
+   "location": "Durham, NH",
+   "discipline": "Single-station 1-minute weather record",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "A rooftop weather station on Morse Hall at UNH in Durham, collected by UNH, with an archive starting 25 February 2000. The site serves one raw data file per day with 1-minute samples, including rainfall in inches.",
+   "holdings": [
+    "Daily raw files of 1-minute samples (wind, temperature, PAR, rain, RH), 2000-present"
+   ],
+   "formats": [
+    "CSV",
+    "TXT"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "UNH Weather Station raw data files",
+     "url": "https://weather.sr.unh.edu/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "UNH Weather Statistics",
+     "url": "https://weather.sr.unh.edu/"
+    },
+    {
+     "label": "About the UNH Weather Station",
+     "url": "https://weather.sr.unh.edu/display.mp?FILE=about"
+    }
+   ],
+   "state": "New Hampshire",
+   "stateCodes": [
+    "NH"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "UNH Weather Station raw data files",
+     "landingUrl": "https://weather.sr.unh.edu/display.mp?FILE=about",
+     "accessUrl": "https://weather.sr.unh.edu/",
+     "formats": [
+      "CSV",
+      "TXT"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "1-minute",
+     "periodOfRecord": "2000-02-25 to present (some days missing)",
+     "coverage": "station-specific",
+     "originalCollector": "University of New Hampshire",
+     "access": "Free, no account",
+     "qualityNotes": "Rain in inches since last sample. Before July 2016 rows are comma-separated with a format code (121/124/126/131), Julian day and hhmm time; from July 2016 (CR1000 logger) a header row with Rain_in_Tot. Missing samples on some days; the home page reports daily completeness.",
+     "verification": "download tested",
+     "testNote": "Fetched the first lines of https://weather.sr.unh.edu/data/2026/309.txt (header Datetime,...,Rain_in_Tot,... with 1-minute rows for 2026-11-05) and https://weather.sr.unh.edu/data/2010/100.txt (format-126 rows with rain delta).",
+     "citations": [
+      "https://weather.sr.unh.edu/display.mp?FILE=about",
+      "https://weather.sr.unh.edu/data/2026/309.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nj-state-climate-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "NJ State Climate Office / NJ Weather Network",
+   "fullName": "New Jersey State Climate Office (Office of the New Jersey State Climatologist), NJ Weather Network (NJWxNet)",
+   "host": "Rutgers University, New Jersey Agricultural Experiment Station, Department of Environmental Sciences",
+   "location": "New Brunswick, NJ",
+   "discipline": "Statewide mesonet and multi-network station precipitation",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The state climate office at Rutgers runs the NJ Weather Network. It combines its own mesonet of about 70 stations, polled every 5 minutes, with stations from ASOS (NWS), RWIS (NJDOT), RAWS and USGS, and some stations in nearby states. Its Tabular Data viewer exports 5-minute, hourly, daily and monthly precipitation by station.",
+   "holdings": [
+    "NJ Weather Network Tabular Data viewer: 5-minute, hourly, daily and monthly station data, including precipitation, with CSV export"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NJ Weather Network Tabular Data",
+     "url": "https://climate.rutgers.edu/data"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NJ State Climate Office home",
+     "url": "https://climate.rutgers.edu/"
+    },
+    {
+     "label": "About the NJ State Climate Office",
+     "url": "https://climate.rutgers.edu/about"
+    },
+    {
+     "label": "NJ Weather Network",
+     "url": "https://climate.rutgers.edu/njwxnet"
+    },
+    {
+     "label": "AASC state climatologist listing",
+     "url": "https://stateclimate.org/state/new-jersey"
+    },
+    {
+     "label": "ONJSC 2018 handout",
+     "url": "https://climate.rutgers.edu/stateclim/misc/ONJSC_2018_handout.pdf"
+    }
+   ],
+   "state": "New Jersey",
+   "stateCodes": [
+    "NJ"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "NJ Weather Network Tabular Data",
+     "landingUrl": "https://climate.rutgers.edu/data",
+     "accessUrl": "https://climate.rutgers.edu/data",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; hourly; daily; monthly",
+     "periodOfRecord": "Varies by station; e.g. the South Harrison mesonet station has an activation date of 2008-01-29. A network-wide start is not documented.",
+     "coverage": "statewide",
+     "originalCollector": "NJ State Climate Office mesonet; NWS ASOS; NJDOT RWIS; RAWS; USGS; plus some stations in nearby states",
+     "access": "Free, no account",
+     "qualityNotes": "The JSON records include qcflag_id and qcmetadata fields (null in the sample). Values are given in mm (value_metric) and inches (value_us). Station list: https://climate.rutgers.edu/export/mesous-stations.csv; element list: https://climate.rutgers.edu/export/njwxnet-elements.csv",
+     "verification": "download tested",
+     "testNote": "Requested the viewer's backend https://climate.rutgers.edu/inc/tojson.php with station_id[]=29 (South Harrison, NJ), element_id[]=1039 (Daily Precipitation), 2026-10-01 to 2026-10-05. It returned JSON daily precip_daily records, e.g. 2026-10-03: 3.556 mm (0.14 in). The page's own Export CSV button was not tested.",
+     "citations": [
+      "https://climate.rutgers.edu/data",
+      "https://climate.rutgers.edu/export/njwxnet-elements.csv",
+      "https://climate.rutgers.edu/njwxnet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nj-njdep-rainfall",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "NJDEP Rainfall (MPE) Data",
+   "fullName": "New Jersey Department of Environmental Protection Rainfall data tool (CCMP beach and watershed rainfall stations)",
+   "host": "New Jersey Department of Environmental Protection, Water Monitoring & Standards",
+   "location": "Trenton, NJ",
+   "discipline": "Hourly radar-gauge rainfall estimates at fixed points",
+   "topics": [
+    "radar",
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NJDEP serves hourly rainfall estimates at about 175 named beach (RABCH) and watershed (RA) points in every part of the state. The values come from the National Weather Service's Multisensor Precipitation Estimator, which combines rain gauges and radar on a 2.5-mile grid. NJDEP's water monitoring program and the Cooperative Coastal Monitoring Program use the data for beach management and stormwater studies.",
+   "holdings": [
+    "Hourly NWS MPE rainfall at about 175 points (1-pixel and 9-pixel averages), with CSV/text download by station and date range and a whole-dataset zip"
+   ],
+   "formats": [
+    "CSV",
+    "TXT",
+    "ZIP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NJDEP Rainfall data download",
+     "url": "https://njdep.rutgers.edu/rainfall/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NJDEP Rainfall page",
+     "url": "https://njdep.rutgers.edu/rainfall/"
+    },
+    {
+     "label": "Provisional data note",
+     "url": "https://njdep.rutgers.edu/rainfall/provisional_data_note.php"
+    }
+   ],
+   "state": "New Jersey",
+   "stateCodes": [
+    "NJ"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "NJDEP Rainfall data download",
+     "landingUrl": "https://njdep.rutgers.edu/rainfall/",
+     "accessUrl": "https://njdep.rutgers.edu/rainfall/",
+     "formats": [
+      "CSV",
+      "TXT",
+      "ZIP"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "hourly",
+     "periodOfRecord": "Data were returned for 2005 onward; the date picker offers 2000-2027. Start date not documented.",
+     "coverage": "statewide",
+     "originalCollector": "NOAA National Weather Service (Multisensor Precipitation Estimator)",
+     "access": "Free, no account",
+     "qualityNotes": "Marked 'Provisional Data Subject to Revision'. MPE values are estimates and may change during an event. Columns are Value (1 pixel) and 9pixAvg (9-pixel, 7.5 x 7.5 mi). Units are not documented; the values look like inches.",
+     "verification": "download tested",
+     "testNote": "Requested https://njdep.rutgers.edu/rainfall/action_prepare_file.php with station 22 (26thSt RABCH010, Atlantic County), 10/02/2026-10/04/2026. It returned CSV with Date, Hour, StID, Value and 9pixAvg, e.g. 10/02/26 22:00 0.04. A 06/01/2005 request also returned rows. The whole-dataset zip (datasets/rainfall_dataset.zip) answered a HEAD request but was not downloaded.",
+     "citations": [
+      "https://njdep.rutgers.edu/rainfall/",
+      "https://njdep.rutgers.edu/rainfall/provisional_data_note.php"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nm-climate-center-ziamet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "NM Climate Center ZiaMet",
+   "fullName": "New Mexico Climate Center, ZiaMet Weather Station Network",
+   "host": "New Mexico State University, Department of Plant and Environmental Sciences",
+   "location": "Las Cruces, NM",
+   "discipline": "Statewide mesonet weather and precipitation data",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The NM Climate Center at New Mexico State University, home of the state climatologist, runs ZiaMet. This statewide mesonet has operated since 1985 and measures surface weather and soil conditions. Each station page has a public form that returns daily data, including rain, as a CSV file or table. NMSU collects the observations itself.",
+   "holdings": [
+    "ZiaMet station daily data (air temperature, humidity, wind, rain, solar radiation) by date range, as CSV, table or plots"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "ZiaMet station data request",
+     "url": "https://weather.nmsu.edu/ziamet/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NMSU Weather Data Portal About page",
+     "url": "https://weather.nmsu.edu/about/"
+    },
+    {
+     "label": "AASC state climatologist listing",
+     "url": "https://stateclimate.org/state/new-mexico"
+    },
+    {
+     "label": "Example station data request page (Alcalde ASC)",
+     "url": "https://weather.nmsu.edu/ziamet/station/sfwx/dly/raaasc/"
+    }
+   ],
+   "state": "New Mexico",
+   "stateCodes": [
+    "NM"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "ZiaMet station data request",
+     "landingUrl": "https://weather.nmsu.edu/ziamet/",
+     "accessUrl": "https://weather.nmsu.edu/ziamet/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Network began in 1985; the period of record for each station is not documented",
+     "coverage": "statewide",
+     "originalCollector": "NM Climate Center, New Mexico State University (ZiaMet)",
+     "access": "Free, no account",
+     "qualityNotes": "The About page says ZiaMet data should be considered provisional and that the web tools are for informational purposes. Rain is reported in inches (English units) or in metric units. The station selector lists about 194 stations, which may include inactive sites.",
+     "verification": "download tested",
+     "testNote": "Posted the form on the Alcalde ASC daily page (station raaasc) for 2026-10-01 to 2026-10-05 with output=csv and English units. The server returned text/csv (data.csv) with a units row and five daily rows, including a Rain column in inches (for example 0.01 on 2026-10-04). Requests for 1990, 2000 and 2010 dates returned HTTP 500, so the archive depth was not confirmed.",
+     "citations": [
+      "https://weather.nmsu.edu/ziamet/station/sfwx/dly/raaasc/",
+      "https://weather.nmsu.edu/about/",
+      "https://weather.nmsu.edu/ziamet/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ny-hrecos",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "HRECOS (NYSDEC and NEIWPCC)",
+   "fullName": "Hudson River Environmental Conditions Observing System",
+   "host": "New York State Department of Environmental Conservation, in partnership with NEIWPCC",
+   "location": "Not documented",
+   "discipline": "Hudson and Mohawk river station weather and water quality",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "HRECOS stations along the Hudson River estuary and the Mohawk (11 stations in the request form, from Pier 25 in Manhattan to Ilion Lock 8) record water quality and weather every 15 minutes, including precipitation at the weather-equipped stations. It covers the Hudson Valley and lower Mohawk Valley, not the whole state. Data from 1 January 2026 on are served through a free CSV API and an instant-download request form; earlier data are on a USGS site.",
+   "holdings": [
+    "15-minute precipitation and total precipitation at HRECOS weather stations",
+    "Water quality (temperature, salinity, dissolved oxygen, turbidity, chlorophyll) at the same stations"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "HRECOS Data Export API",
+     "url": "https://nysm.hrecos.org/api/data/dynserv/hrecos/docs"
+    },
+    {
+     "name": "HRECOS Data Request Form",
+     "url": "https://nysm.hrecos.org/data-request/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "HRECOS Recent Data page",
+     "url": "https://hrecos.org/?p=88"
+    },
+    {
+     "label": "hudsonriver.org HRECOS article",
+     "url": "https://hudsonriver.org/article/hrecos/"
+    }
+   ],
+   "state": "New York",
+   "stateCodes": [
+    "NY"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "HRECOS Data Export API",
+     "landingUrl": "https://hrecos.org/?p=88",
+     "accessUrl": "https://nysm.hrecos.org/api/data/dynserv/hrecos/docs",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute",
+     "periodOfRecord": "2026-01-01 to present in this API (60-day maximum per request); earlier data on the USGS HRECOS site",
+     "coverage": "regional: Hudson River estuary and lower Mohawk River",
+     "originalCollector": "HRECOS station partners (NYSDEC and NEIWPCC partnership)",
+     "access": "Free, no account or key",
+     "qualityNotes": "Precipitation columns precip [mm] and precip_tot [mm]; blank where a station has no weather sensor. QC status Not documented in the API docs.",
+     "verification": "download tested",
+     "testNote": "Requested all sites for 2026-11-01 00:00-00:30 EST; CSV returned with precip [mm] and precip_tot [mm] columns, e.g. HPMNT (Piermont) precip 0.",
+     "citations": [
+      "https://nysm.hrecos.org/api/data/dynserv/hrecos/docs",
+      "https://nysm.hrecos.org/data-request/",
+      "https://hrecos.org/?p=88"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ny-monroe-county-rain-gauges",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Monroe County DES Rain Gauges",
+   "fullName": "Monroe County Department of Environmental Services rain gauge network",
+   "host": "Monroe County, New York",
+   "location": "Rochester, NY",
+   "discipline": "County stormwater rain gauge readings",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Monroe County's Department of Environmental Services runs 21 rain gauges around the county (Rochester area) to monitor storms and document storm events. A public ArcGIS layer serves each gauge's latest rain amount, rain rate and reading date, queryable as JSON. Only current readings are exposed; no historical archive was found.",
+   "holdings": [
+    "Latest daily rain amount and rain rate at 21 county rain gauges"
+   ],
+   "formats": [
+    "JSON",
+    "ArcGIS REST"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "RainGaugesPublic MapServer layer 2 (Rain Gauges)",
+     "url": "https://maps.monroecounty.gov/server/rest/services/Stormwater/RainGaugesPublic/MapServer/2"
+    }
+   ],
+   "sources": [
+    {
+     "label": "RainGaugesPublic MapServer layers",
+     "url": "https://maps.monroecounty.gov/server/rest/services/Stormwater/RainGaugesPublic/MapServer/layers"
+    }
+   ],
+   "state": "New York",
+   "stateCodes": [
+    "NY"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "RainGaugesPublic MapServer layer 2 (Rain Gauges)",
+     "landingUrl": "https://maps.monroecounty.gov/server/rest/services/Stormwater/RainGaugesPublic/MapServer/layers",
+     "accessUrl": "https://maps.monroecounty.gov/server/rest/services/Stormwater/RainGaugesPublic/MapServer/2",
+     "formats": [
+      "JSON",
+      "ArcGIS REST"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (latest day's amount, updated in near real time)",
+     "periodOfRecord": "Current readings only; no history exposed",
+     "coverage": "regional: Monroe County",
+     "originalCollector": "Monroe County Department of Environmental Services (owner field MC-DES)",
+     "access": "Free, no account",
+     "qualityNotes": "Fields RAINAMOUNT, RAINRATE, RAINDATE, RAINLASTUPDATED, RAINCOMMSTATUS; units Not documented (values look like inches). QC Not documented.",
+     "verification": "download tested",
+     "testNote": "Queried 4 features with outFields NAME, RAINAMOUNT, RAINDATE: returned e.g. Culver Goodman 0.04, Southwest 0.05 for RAINDATE 2026-11-04; count query returned 21 gauges.",
+     "citations": [
+      "https://maps.monroecounty.gov/server/rest/services/Stormwater/RainGaugesPublic/MapServer/layers",
+      "https://maps.monroecounty.gov/server/rest/services/Stormwater/RainGaugesPublic/MapServer/2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ny-nys-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "New York State Mesonet (UAlbany)",
+   "fullName": "New York State Mesonet",
+   "host": "University at Albany, State University of New York",
+   "location": "Albany, NY",
+   "discipline": "Statewide 5-minute weather station network",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "A statewide network run by the University at Albany with 127 standard sites, plus NYC and Thruway micronets and other specialty networks. Archived observations, including precipitation increments, daily totals and 1-hour accumulations, are requested through an online form and delivered as CSV or netCDF. Data are free for personal use; other users may be charged a cost-recovery fee or need a license.",
+   "holdings": [
+    "Archived 5-minute, hourly and daily station data by request (precipitation, temperature, wind, snow depth, soil)",
+    "Climatology pages (calendar, graphs, maps) based on about 10 years of data"
+   ],
+   "formats": [
+    "CSV",
+    "netCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NYS Mesonet Request Data form",
+     "url": "https://nysmesonet.org/weather/requestdata"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Data information page",
+     "url": "https://nysmesonet.org/about/data"
+    },
+    {
+     "label": "Climatology",
+     "url": "https://nysmesonet.org/climatology"
+    },
+    {
+     "label": "Governor's office release on state funding",
+     "url": "https://governor.ny.gov/news/governor-hochul-announces-launch-state-university-new-york-albanys-mesonet-climatology-portal"
+    }
+   ],
+   "state": "New York",
+   "stateCodes": [
+    "NY"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "NYS Mesonet Request Data form",
+     "landingUrl": "https://nysmesonet.org/about/data",
+     "accessUrl": "https://nysmesonet.org/weather/requestdata",
+     "formats": [
+      "CSV",
+      "netCDF"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; hourly; daily statistics",
+     "periodOfRecord": "About 10 years (climatology page says approximately 10 years of Mesonet data, varies by station install date)",
+     "coverage": "statewide",
+     "originalCollector": "New York State Mesonet, University at Albany",
+     "access": "Request form (name, email, organization, planned use) and agreement to the data policy; free for personal use, cost-recovery fee or license may apply to others",
+     "qualityNotes": "Precipitation options: incremental totals, total since midnight, maximum 1-minute intensity, rolling 1-hour accumulation; English or metric units. Redistribution not allowed except by agreement. QC details Not documented on pages opened.",
+     "verification": "download documented",
+     "testNote": "Not tested: the form requires personal details and agreement to a data policy. The form page documents CSV or netCDF delivery, one file per day or per station.",
+     "citations": [
+      "https://nysmesonet.org/weather/requestdata",
+      "https://nysmesonet.org/about/data",
+      "https://nysmesonet.org/climatology"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nc-state-climate-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "North Carolina State Climate Office (ECONet)",
+   "fullName": "North Carolina State Climate Office - Environment and Climate Observing Network (ECONet), Cardinal Data Retrieval System and CLOUDS API",
+   "host": "NC State University",
+   "location": "Raleigh, NC",
+   "discipline": "Statewide mesonet and multi-network station precipitation records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The NC State Climate Office at NC State University runs ECONet, a network of 46 research-grade weather stations that measure precipitation along with temperature, wind, soil and solar data. Its Cardinal request system and CLOUDS API serve hourly and minute ECONet data plus other networks it gathers (ASOS, NCDOT AWOS, CoCoRaHS, RAWS, USGS, TVA, USACE and others, collected by those agencies). Both need a free NCSCO ID account.",
+   "holdings": [
+    "ECONet: 46 active stations, hourly observations generally since 1996 and one-minute since the mid-2000s, including precipitation",
+    "Cardinal Data Retrieval System: step-by-step request builder for hourly, daily and monthly data from NCSCO databases",
+    "CLOUDS API: query API for station data from ECONet and other networks, with CSV, JSON, GeoJSON and XLS output"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "GeoJSON",
+    "XLS"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Cardinal Data Retrieval System",
+     "url": "https://products.climate.ncsu.edu/cardinal/"
+    },
+    {
+     "name": "CLOUDS API",
+     "url": "https://api.climate.ncsu.edu/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "SCO Data Access page",
+     "url": "https://climate.ncsu.edu/products/data/"
+    },
+    {
+     "label": "About ECONet",
+     "url": "https://econet.climate.ncsu.edu/about/"
+    },
+    {
+     "label": "CLOUDS API networks",
+     "url": "https://api.climate.ncsu.edu/networks"
+    },
+    {
+     "label": "AASC North Carolina listing",
+     "url": "https://stateclimate.org/state/north-carolina"
+    }
+   ],
+   "state": "North Carolina",
+   "stateCodes": [
+    "NC"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Cardinal Data Retrieval System",
+     "landingUrl": "https://products.climate.ncsu.edu/cardinal/",
+     "accessUrl": "https://products.climate.ncsu.edu/cardinal/",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "hourly; daily; monthly (per FAQ examples)",
+     "periodOfRecord": "Not documented (ECONet hourly generally since 1996)",
+     "coverage": "statewide",
+     "originalCollector": "NC State Climate Office (ECONet) and other networks it gathers",
+     "access": "Free NCSCO ID account required; monthly data-usage limits",
+     "qualityNotes": "Accumulated values are valid for the interval ending at the timestamp (FAQ). Output file format not documented on the pages opened.",
+     "verification": "download documented",
+     "testNote": "Not tested: the request builder needs an NCSCO ID login, and accounts were not created. The FAQ describes hourly and monthly precipitation requests and gives a data citation.",
+     "citations": [
+      "https://products.climate.ncsu.edu/cardinal/",
+      "https://products.climate.ncsu.edu/cardinal/faqs/"
+     ]
+    },
+    {
+     "name": "CLOUDS API",
+     "landingUrl": "https://api.climate.ncsu.edu/",
+     "accessUrl": "https://api.climate.ncsu.edu/",
+     "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON",
+      "XLS",
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "minute; hourly; daily (obtype O, H, D), with hour/day/week/month/year aggregation",
+     "periodOfRecord": "ECONet hourly generally since 1996, one-minute since the mid-2000s; other networks vary (AWOS since 2001)",
+     "coverage": "statewide",
+     "originalCollector": "NC State Climate Office (ECONet, ECOExt); NWS/FAA (ASOS), NCDOT Aviation/FAA (AWOS), CoCoRaHS, USGS, TVA, USACE, RAWS and others",
+     "access": "Free NCSCO ID account and user hash required; public tier 300,000 data points per month",
+     "qualityNotes": "Default codes: MV for missing, QCF for values failing QC. ECOExt stations do not have ECONet's QC. COOP and ThreadEx data in CLOUDS come from ACIS (listed in nonQualifying). Units not documented on the pages opened.",
+     "verification": "download documented",
+     "testNote": "A request for station LAKE, variable precip1m, 2026-11-01 to 2026-11-02, CSV output returned HTTP 400 with the message that no valid hash was given. The help page documents the variables, the csv/json/geojson/xls output options and the aggregation arguments.",
+     "citations": [
+      "https://api.climate.ncsu.edu/",
+      "https://api.climate.ncsu.edu/help",
+      "https://api.climate.ncsu.edu/networks",
+      "https://api.climate.ncsu.edu/usage"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nc-town-of-cary-rain-gauges",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Town of Cary Rain Gauges",
+   "fullName": "Town of Cary, NC Open Data Portal - Rain Gauges (Internet-of-Things rain gauges)",
+   "host": "Town of Cary",
+   "location": "Cary, NC",
+   "discipline": "Municipal IoT rain-gauge readings (rolling 60 days)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Town of Cary (Wake County) publishes readings from its own Internet-of-Things rain gauges on its open data portal, covering the town area. The dataset keeps a rolling 60 days of records, with rain amount and hourly intensity per gauge, and is used by the town's Stormwater Monitoring Dashboard.",
+   "holdings": [
+    "Rain Gauges: rolling 60-day IoT gauge readings (rain amount, rain intensity per hour, location) with CSV, JSON, GeoJSON and SHP exports and an API"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "GeoJSON",
+    "SHP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Town of Cary Rain Gauges",
+     "url": "https://data.townofcary.org/api/v2/catalog/datasets/rain-gages/exports/csv"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Dataset page",
+     "url": "https://data.townofcary.org/explore/dataset/rain-gages/"
+    },
+    {
+     "label": "data.gov record",
+     "url": "https://catalog.data.gov/dataset/rain-gauges"
+    }
+   ],
+   "state": "North Carolina",
+   "stateCodes": [
+    "NC"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Town of Cary Rain Gauges",
+     "landingUrl": "https://data.townofcary.org/explore/dataset/rain-gages/",
+     "accessUrl": "https://data.townofcary.org/api/v2/catalog/datasets/rain-gages/exports/csv",
+     "formats": [
+      "CSV",
+      "JSON",
+      "GeoJSON",
+      "SHP"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented (readings time-stamped by device report)",
+     "periodOfRecord": "Rolling 60 days",
+     "coverage": "regional: Town of Cary",
+     "originalCollector": "Town of Cary",
+     "access": "Free, no account (CC0 1.0 license)",
+     "qualityNotes": "Units not documented (fields rainamount and rainintensityhr). Semicolon-delimited CSV. No QC notes.",
+     "verification": "download tested",
+     "testNote": "Requested the first 4 rows from https://data.townofcary.org/api/explore/v2.1/catalog/datasets/rain-gages/exports/csv?limit=4; got rows for gauges such as 'SC: Symphony Lake Rain' timestamped 2026-11-05T09:57 with rainamount 0.0 and rainintensityhr 0.0. Metadata reported 78,025 records, modified 2026-11-05.",
+     "citations": [
+      "https://data.townofcary.org/api/v2/catalog/datasets/rain-gages",
+      "https://catalog.data.gov/dataset/rain-gauges"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nd-ndawn",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "NDAWN / North Dakota State Climate Office (NDSU)",
+   "fullName": "North Dakota Agricultural Weather Network (NDAWN), North Dakota State University",
+   "host": "North Dakota State University, School of Natural Resource Sciences",
+   "location": "Fargo, ND",
+   "discipline": "Automated agricultural weather station network (rainfall, temperature, soil, wind)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NDAWN is a network of automated weather stations, established in 1989, that NDSU runs across North Dakota and border areas of Minnesota and Montana. It serves hourly, daily, weekly, monthly and yearly station tables, including rainfall, with a CSV export. No account is needed. The network is directed by the North Dakota State Climatologist. Its tipping-bucket gauges measure rain only (April-October); winter values are flagged missing.",
+   "holdings": [
+    "Station rainfall and weather tables (hourly to yearly) with CSV export, about 280 stations listed (ND, MN, MT; one defunct SD station)"
+   ],
+   "formats": [
+    "CSV",
+    "HTML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NDAWN weather data tables",
+     "url": "https://ndawn.ndsu.nodak.edu/weather-data-daily.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NDAWN home",
+     "url": "https://ndawn.ndsu.nodak.edu/"
+    },
+    {
+     "label": "NDAWN overview",
+     "url": "https://ndawn.ndsu.nodak.edu/help-overview.html"
+    },
+    {
+     "label": "NDAWN data information",
+     "url": "https://ndawn.ndsu.nodak.edu/help-data.html"
+    },
+    {
+     "label": "AASC North Dakota page",
+     "url": "https://stateclimate.org/state/north-dakota"
+    },
+    {
+     "label": "NDSU names Ritchison state climatologist",
+     "url": "https://www.ag.ndsu.edu/news/newsreleases/2024/june/ndsu-names-ritchison-state-climatologist"
+    }
+   ],
+   "state": "North Dakota",
+   "stateCodes": [
+    "ND",
+    "MN",
+    "MT"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "NDAWN weather data tables",
+     "landingUrl": "https://ndawn.ndsu.nodak.edu/",
+     "accessUrl": "https://ndawn.ndsu.nodak.edu/weather-data-daily.html",
+     "formats": [
+      "CSV",
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "hourly; daily; weekly; monthly; yearly (10-minute rainfall totals are recorded per the data page)",
+     "periodOfRecord": "1989-present (varies by station; station list shows start years, e.g. Ada, MN 1N 2007-)",
+     "coverage": "regional: North Dakota plus border areas of Minnesota (about 80 stations) and Montana (6 stations); one defunct South Dakota station (Britton, 1998-2014)",
+     "originalCollector": "NDAWN (North Dakota State University)",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall from 6-inch tipping-bucket gauges in 0.01-inch increments, reported in inches or mm. Rain is measured April-October only. Snowfall is not measured, and November-March values are flagged M. Daily snow water equivalent may later be estimated from nearby NWS Cooperative stations. Automated QC estimates missing or erroneous values from nearby stations (flag E), and staff review them on weekdays. Estimates may change from day to day.",
+     "verification": "download tested",
+     "testNote": "Requested table.csv?station=78&variable=ddr&ttype=daily&begin_date=2026-06-01&end_date=2026-06-05 (Ada, MN 1N). The response was CSV with header lines and columns Station Name, Latitude, Longitude, Elevation, Year, Month, Day, Rainfall (inch), Rainfall Flag. Values included 0.075 on 2026-06-01 and 0.614 on 2026-06-03.",
+     "citations": [
+      "https://ndawn.ndsu.nodak.edu/weather-data-daily.html",
+      "https://ndawn.ndsu.nodak.edu/help-data.html",
+      "https://ndawn.ndsu.nodak.edu/help-overview.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-nd-dwr",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "North Dakota Department of Water Resources",
+   "fullName": "North Dakota Department of Water Resources (Atmospheric Resource Board program and PRESENS)",
+   "host": "North Dakota Department of Water Resources",
+   "location": "Bismarck, ND",
+   "discipline": "Statewide volunteer daily precipitation records and remote-sensor precipitation",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "DWR serves two statewide precipitation datasets. ARBCON is its Atmospheric Resources Cooperative Observer Network of nearly 400 volunteer observers. They have reported daily rainfall and hail from April through September since 1977, and snowfall year-round since October 2010. PRESENS (Pushing REmote SENSors) are DWR-built sensor units, about 600 deployed, some with tipping-bucket rain gauges. Per-site PRESENS records include individual precipitation readings. Both download free from DWR's Maps/GIS & Data pages.",
+   "holdings": [
+    "ARBCON daily volunteer precipitation, snow and hail database (1977-present)",
+    "PRESENS per-site precipitation, air temperature and barometric pressure records (sub-daily tips)"
+   ],
+   "formats": [
+    "TXT",
+    "CSV",
+    "ZIP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "ARBCON precipitation data download",
+     "url": "https://www.dwr.nd.gov/info_edu/map_data_resources/precipitation/"
+    },
+    {
+     "name": "PRESENS precipitation site data",
+     "url": "https://www.dwr.nd.gov/info_edu/map_data_resources/waterresourcesites/index.html#precip"
+    }
+   ],
+   "sources": [
+    {
+     "label": "ARBCON page",
+     "url": "https://www.dwr.nd.gov/arb/ndarbcon/"
+    },
+    {
+     "label": "DWR Maps/GIS & Data",
+     "url": "https://www.dwr.nd.gov/info_edu/map_data_resources/"
+    },
+    {
+     "label": "PRESENS page",
+     "url": "https://www.dwr.nd.gov/info_edu/map_data_resources/presens.html"
+    },
+    {
+     "label": "PRESENS fact sheet (Dec 2024)",
+     "url": "https://www.dwr.nd.gov/pdfs/presens_fact_sheet.pdf"
+    }
+   ],
+   "state": "North Dakota",
+   "stateCodes": [
+    "ND"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "ARBCON precipitation data download",
+     "landingUrl": "https://www.dwr.nd.gov/arb/ndarbcon/",
+     "accessUrl": "https://www.dwr.nd.gov/info_edu/map_data_resources/precipitation/",
+     "formats": [
+      "TXT",
+      "ZIP"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "1977-present (rain and hail April-September; snowfall year-round since October 2010)",
+     "coverage": "statewide",
+     "originalCollector": "ARBCON volunteer observers (North Dakota Department of Water Resources, Atmospheric Resource Board program)",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented. The site table lists 3,619 active and inactive sites, with locations as legal land codes. The query form filters by county, location or site ID and dates, with precipitation, snow and hail checkboxes.",
+     "verification": "download tested",
+     "testNote": "A POST to downloadold.php for one site and 10 days returned precip.zip. The filters did not apply without the page's session, so the archive held the full database (about 22 MB zipped). It was read in memory only and not saved. precip.txt is tab-separated with columns Site ID, Location, Latitude, Longitude, Date, Value. First rows: site 1, 1977-04-17 0 ... 1977-04-19 0.15.",
+     "citations": [
+      "https://www.dwr.nd.gov/arb/ndarbcon/",
+      "https://www.dwr.nd.gov/info_edu/map_data_resources/precipitation/"
+     ]
+    },
+    {
+     "name": "PRESENS precipitation site data",
+     "landingUrl": "https://www.dwr.nd.gov/info_edu/map_data_resources/presens.html",
+     "accessUrl": "https://www.dwr.nd.gov/info_edu/map_data_resources/waterresourcesites/index.html#precip",
+     "formats": [
+      "CSV",
+      "ZIP"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "sub-daily (individual tipping-bucket readings with timestamps)",
+     "periodOfRecord": "Not documented (example site 132760: 2024-07-31 to 2026-11-05)",
+     "coverage": "statewide",
+     "originalCollector": "North Dakota Department of Water Resources (PRESENS units)",
+     "access": "Free, no account",
+     "qualityNotes": "The site page says all precipitation data are raw and unreviewed. Times are CST, and gauges are unheated Texas Instruments TR-525I tipping buckets. Chart bars are marked when the daily mean temperature at tip times is below 36 F, suggesting frozen precipitation. DWR calls the data provisional. Units are inches. The site query with the precipitation filter returned 90 sites.",
+     "verification": "download tested",
+     "testNote": "A POST to waterresourcesites/download_site.php (siteid=132760, table=precip, 2025-06-01 to 2025-06-10) returned a ZIP with site_header.csv and precip.csv. Columns include Observation_Date, Observation_Time, Precipitation (in), Air_Temperature and Sensor_Type TR-525I. Rows had 0.01-0.03 in values on 2025-06-02 to 2025-06-07, with Data_Source 'SWC PRESENS'.",
+     "citations": [
+      "https://www.dwr.nd.gov/info_edu/map_data_resources/waterresourcesites/single.php?id=15006222DAAA",
+      "https://www.dwr.nd.gov/pdfs/presens_fact_sheet.pdf",
+      "https://www.dwr.nd.gov/info_edu/map_data_resources/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-oh-miami-conservancy-district",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Miami Conservancy District",
+   "fullName": "The Miami Conservancy District - Water Data Portal",
+   "host": "The Miami Conservancy District",
+   "location": "Dayton, OH",
+   "discipline": "Great Miami River watershed rain gauges",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Miami Conservancy District covers the Great Miami River watershed in southwest Ohio. It keeps a network of 47 daily precipitation observers (several with 80+ years of record; electronic records from 1982) and 18 tipping-bucket gauges at its automated stream gages, and also displays 10 gauges maintained by Ohio EMA. Its AQUARIUS Water Data Portal serves latest, daily, monthly and yearly precipitation totals.",
+   "holdings": [
+    "Water Data Portal: precipitation by day, month and year at district gauges, plus stream stage, discharge, temperature and groundwater levels"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "MCD Water Data Portal (precipitation)",
+     "url": "https://waterdata.mcdwater.org/Data/Map/Parameter/Precip%20Increm/Location/Type/Interval/Latest"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Hydrologic Monitoring",
+     "url": "https://www.mcdwater.org/flood-protection/hydrologicmonitoring"
+    },
+    {
+     "label": "Water Data Portal page",
+     "url": "https://www.mcdwater.org/water-data-portal"
+    },
+    {
+     "label": "Precipitation page",
+     "url": "https://mcdwater.org/precipitation"
+    }
+   ],
+   "state": "Ohio",
+   "stateCodes": [
+    "OH"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "MCD Water Data Portal (precipitation)",
+     "landingUrl": "https://www.mcdwater.org/water-data-portal",
+     "accessUrl": "https://waterdata.mcdwater.org/Data/Map/Parameter/Precip%20Increm/Location/Type/Interval/Latest",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "Latest 24-hour/7-day/30-day totals; daily; monthly; yearly",
+     "periodOfRecord": "Electronic records 1982-present; some stations have 75+ years of record (Urbana 141 years)",
+     "coverage": "regional: Great Miami River watershed, southwest Ohio",
+     "originalCollector": "Miami Conservancy District (daily observers and automated gauges); also Ohio EMA gauges",
+     "access": "Free, no account (a disclaimer must be accepted)",
+     "qualityNotes": "Precipitation in inches. MCD's disclaimer says it does not warrant accuracy or completeness. Other QC details Not documented.",
+     "verification": "not verified",
+     "testNote": "The portal (Aquatic Informatics AQUARIUS WebPortal) shows a disclaimer with Accept/Reject before location pages; the disclaimer was not accepted, so no data was requested. MCD's monitoring page says daily precipitation records are available electronically on the portal; export format Not documented.",
+     "citations": [
+      "https://www.mcdwater.org/flood-protection/hydrologicmonitoring",
+      "https://www.mcdwater.org/water-data-portal",
+      "https://mcdwater.org/precipitation"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-oh-neorsd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Northeast Ohio Regional Sewer District",
+   "fullName": "Northeast Ohio Regional Sewer District - Rainfall Dashboard",
+   "host": "Northeast Ohio Regional Sewer District",
+   "location": "Cleveland, OH",
+   "discipline": "Sewer-district rain gauges",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Northeast Ohio Regional Sewer District's rainfall dashboard reports rain-gauge results from its service area in the Cleveland region. Users pick a site and year to view daily, monthly, five-day, year-to-date and time-of-day totals, which the page lets users copy or print.",
+   "holdings": [
+    "Rainfall dashboard: daily, monthly, 5-day and year-to-date gauge totals by site"
+   ],
+   "formats": [
+    "JSON",
+    "HTML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NEORSD Rainfall Dashboard",
+     "url": "https://www.neorsd.org/stormwater-2/rainfall-dashboard/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Rainfall Dashboard",
+     "url": "https://www.neorsd.org/stormwater-2/rainfall-dashboard/"
+    }
+   ],
+   "state": "Ohio",
+   "stateCodes": [
+    "OH"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "NEORSD Rainfall Dashboard",
+     "landingUrl": "https://www.neorsd.org/stormwater-2/rainfall-dashboard/",
+     "accessUrl": "https://www.neorsd.org/stormwater-2/rainfall-dashboard/",
+     "formats": [
+      "JSON",
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; monthly; time-of-day detail",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: NEORSD service area, Cleveland region",
+     "originalCollector": "Northeast Ohio Regional Sewer District",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented. Null rain values are shown as blank. Units not stated (values look like inches).",
+     "verification": "download tested",
+     "testNote": "The dashboard's table service (dataTableServerSide.php?siteList) returned three sites (Maple Heights, Oakwood, Richfield) for every year offset tried; a rainfallDaily request for Richfield, October 2026, returned JSON daily rain_total values (e.g. 0.78 on day 19). The page offers copy and print buttons, not a file download.",
+     "citations": [
+      "https://www.neorsd.org/stormwater-2/rainfall-dashboard/",
+      "https://www.neorsd.org/Rainfall%20Dashboard/rainfallDashboardFunctions.js?ver=1.0.2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-oh-cfaes-weather-system",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "OSU CFAES Weather System",
+   "fullName": "CFAES Weather System, College of Food, Agricultural, and Environmental Sciences, The Ohio State University",
+   "host": "The Ohio State University, CFAES",
+   "location": "Wooster, OH",
+   "discipline": "Agricultural research-station weather records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Ohio State's College of Food, Agricultural, and Environmental Sciences runs weather stations at its research stations and several USDA sites around Ohio, with data since 1982 at most stations. Each station page offers daily and hourly queries that download as CSV, including daily precipitation; older records back to the 1940s exist only as scanned PDFs.",
+   "holdings": [
+    "Daily and hourly station weather data (precipitation, temperature, soil, wind, solar), CSV download per station",
+    "Scanned PDF weather archive back to 1948 (Wooster)"
+   ],
+   "formats": [
+    "CSV",
+    "HTML",
+    "PDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "CFAES Weather System station data (daily and hourly)",
+     "url": "https://weather.cfaes.osu.edu/stationinfo.asp?id=1"
+    }
+   ],
+   "sources": [
+    {
+     "label": "CFAES Weather System",
+     "url": "https://weather.cfaes.osu.edu/"
+    },
+    {
+     "label": "FAQ",
+     "url": "https://weather.cfaes.osu.edu/faq.asp"
+    }
+   ],
+   "state": "Ohio",
+   "stateCodes": [
+    "OH"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "CFAES Weather System station data (daily and hourly)",
+     "landingUrl": "https://weather.cfaes.osu.edu/",
+     "accessUrl": "https://weather.cfaes.osu.edu/stationinfo.asp?id=1",
+     "formats": [
+      "CSV",
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly",
+     "periodOfRecord": "1982-present at most stations (Wooster since 1/1/1982; archived stations cover shorter periods); scanned PDFs back to 1948",
+     "coverage": "station-specific",
+     "originalCollector": "The Ohio State University CFAES (CFAES and USDA station sites)",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall totaled midnight to midnight. Daily data converted to English units (metric spreadsheet also offered); hourly data reported as received. Known-bad values are deleted rather than altered.",
+     "verification": "download tested",
+     "testNote": "Posted the station page's daily form for Wooster (location=1), 2026-10-01 to 2026-10-03; the results page's 'Download Spreadsheet' link (results_csv.asp) returned weatherdata.csv with a Date,Precip,... header and daily rows (e.g. 10/2/2026 precip 0.4).",
+     "citations": [
+      "https://weather.cfaes.osu.edu/stationinfo.asp?id=1",
+      "https://weather.cfaes.osu.edu/faq.asp",
+      "https://weather.cfaes.osu.edu/weatherarchive"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-oh-state-climate-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "State Climate Office of Ohio (Ohio Mesonet)",
+   "fullName": "Office of the State Climatologist of Ohio, The Ohio State University - Ohio Mesonet",
+   "host": "The Ohio State University",
+   "location": "Columbus, OH",
+   "discipline": "Statewide mesonet station observations",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The State Climate Office of Ohio at Ohio State supports the Ohio Mesonet, a nine-station network of weather and soil sensors deployed by the end of 2025. Its download page serves 5-minute station records, including precipitation and running totals, as CSV for one or all stations. The office's other precipitation links point to federal and regional sources.",
+   "holdings": [
+    "Ohio Mesonet station observations (5-minute precipitation and accumulations), CSV download and API"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Ohio Mesonet Download",
+     "url": "https://www.ohmesonet.org/download"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AASC state climate office listing",
+     "url": "https://stateclimate.org/state/ohio"
+    },
+    {
+     "label": "State Climate Office of Ohio",
+     "url": "https://climate.osu.edu/"
+    },
+    {
+     "label": "Ohio Mesonet project support",
+     "url": "https://www.ohmesonet.org/projectSupport"
+    }
+   ],
+   "state": "Ohio",
+   "stateCodes": [
+    "OH"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Ohio Mesonet Download",
+     "landingUrl": "https://www.ohmesonet.org/",
+     "accessUrl": "https://www.ohmesonet.org/download",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute",
+     "periodOfRecord": "2026-01-01 to present (date range reported by the site's data-domain service)",
+     "coverage": "statewide",
+     "originalCollector": "Ohio Mesonet, The Ohio State University (supported by the State Climate Office of Ohio)",
+     "access": "Free, no account",
+     "qualityNotes": "Variables include p_tot (5-minute precipitation), p_day, p_1h through p_365d accumulations and a qc_maint_flag column; units selectable (imperial or SI). The site calls the download page the source of official, full-precision data. Other QC details Not documented.",
+     "verification": "download tested",
+     "testNote": "The download page calls https://api.dev.ohmesonet.org/v2/obs/history. A request for station ASHT on 2026-10-01 with vars p_tot and p_day (format=csv, units=imperial) returned CSV rows every 5 minutes with columns 'Precipitation (in)' and 'Precip Since Midnight (in)'. /api/dataBackend/dataDomains listed stations and the 2026-01-01 to 2026-11-05 range.",
+     "citations": [
+      "https://www.ohmesonet.org/download",
+      "https://www.ohmesonet.org/api/dataBackend/dataDomains",
+      "https://www.ohmesonet.org/projectSupport"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ok-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Oklahoma Mesonet / Oklahoma Climatological Survey",
+   "fullName": "Oklahoma Mesonet, operated by the Oklahoma Climatological Survey (University of Oklahoma) with Oklahoma State University",
+   "host": "University of Oklahoma and Oklahoma State University",
+   "location": "Norman, OK",
+   "discipline": "Statewide 5-minute station precipitation and weather observations",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Oklahoma Mesonet is a network of about 120 automated stations, with at least one in each of Oklahoma's 77 counties, commissioned January 1, 1994. OU and OSU run it jointly, and the Oklahoma Climatological Survey (the state climatology office) quality-checks and distributes the data. Its site serves free 5-minute station files with rainfall, exportable as CSV, and station monthly summaries with daily rainfall totals. Tailored data requests are subject to fees, which are waived for Oklahoma public, research and non-profit users.",
+   "holdings": [
+    "Mesonet Data Files: 5-minute MTS (one station, one UTC day) and MDF (all stations, one time) files with RAIN, CSV/HTML export",
+    "Station Monthly Summaries: daily and monthly rainfall and other variables per station (JSON/PDF)"
+   ],
+   "formats": [
+    "MTS",
+    "MDF",
+    "CSV",
+    "HTML",
+    "JSON",
+    "PDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Mesonet Data Files (MTS/MDF)",
+     "url": "https://www.mesonet.org/past-data/mesonet-resources/mesonet-data-files"
+    },
+    {
+     "name": "Station Monthly Summaries",
+     "url": "https://www.mesonet.org/past-data/mesonet-resources/station-monthly-summaries"
+    }
+   ],
+   "sources": [
+    {
+     "label": "About the Mesonet",
+     "url": "https://www.mesonet.org/about/about-the-mesonet"
+    },
+    {
+     "label": "MDF/MTS file description",
+     "url": "https://www.mesonet.org/about/data-descriptions/mdf-mts-files"
+    },
+    {
+     "label": "Data Access and Pricing",
+     "url": "https://www.mesonet.org/about/data-access-and-pricing"
+    },
+    {
+     "label": "Oklahoma Climatological Survey",
+     "url": "https://www.ou.edu/ocs"
+    },
+    {
+     "label": "AASC Oklahoma page",
+     "url": "https://stateclimate.org/state/oklahoma"
+    }
+   ],
+   "state": "Oklahoma",
+   "stateCodes": [
+    "OK"
+   ],
+   "orgType": "state-designated network (university-operated)",
+   "datasetDetails": [
+    {
+     "name": "Mesonet Data Files (MTS/MDF)",
+     "landingUrl": "https://www.mesonet.org/past-data/mesonet-resources/mesonet-data-files",
+     "accessUrl": "https://www.mesonet.org/past-data/mesonet-resources/mesonet-data-files",
+     "formats": [
+      "MTS",
+      "MDF",
+      "CSV",
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute",
+     "periodOfRecord": "1994-present (the file list API returned stations for 1994-01-01 and no files for 1993-12-01; varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "Oklahoma Mesonet (OU/OSU, operated by the Oklahoma Climatological Survey)",
+     "access": "Free, no account (redistribution restricted; data are copyrighted)",
+     "qualityNotes": "RAIN is liquid precipitation in millimeters accumulated since 0000 UTC. The 0000 UTC observation stores the previous day's total. Frozen precipitation is recorded only when it melts. Missing codes: -999 flagged bad by QA, -998 sensor not installed, -997 missing calibration, -996 station did not report, -995 not reported this interval, -994 value too wide. QA flags may change in the months after a request.",
+     "verification": "download tested",
+     "testNote": "Requested https://api.mesonet.org/index.php/export/mesonet_data_files?date=2024-05-01&stid=NRMN&type=mts&format=csv. It returned a CSV header including RAIN, then 5-minute rows for Norman (RAIN 0.00 mm at 00:00-00:15 UTC). A 2010-06-01 request returned RAIN 14.99 at 00:00. A 1994-01-01 ACME request returned a row with RAIN -998 (sensor not installed). URL pattern taken from the page's mesonetdatafiles controller script.",
+     "citations": [
+      "https://www.mesonet.org/past-data/mesonet-resources/mesonet-data-files",
+      "https://www.mesonet.org/about/data-descriptions/mdf-mts-files",
+      "https://www.mesonet.org/about/data-access-and-pricing"
+     ]
+    },
+    {
+     "name": "Station Monthly Summaries",
+     "landingUrl": "https://www.mesonet.org/past-data/mesonet-resources/station-monthly-summaries",
+     "accessUrl": "https://www.mesonet.org/past-data/mesonet-resources/station-monthly-summaries",
+     "formats": [
+      "JSON",
+      "PDF"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; monthly",
+     "periodOfRecord": "Not documented",
+     "coverage": "station-specific",
+     "originalCollector": "Oklahoma Mesonet (OU/OSU, operated by the Oklahoma Climatological Survey)",
+     "access": "Free, no account (the 2011 fee table also lists subscription fees for station monthly summaries)",
+     "qualityNotes": "Each value carries an 'incomplete' flag. Units are not stated in the JSON. The May 2024 Norman monthly rain value was 3.74, consistent with inches, but this is not confirmed on a description page. Data reflect midnight-to-midnight CST.",
+     "verification": "download tested",
+     "testNote": "Requested https://common.mesonet.org/common/db/library/functions/mcd/mcd.php?ver=2&year=2024&month=5&format=json&stid=NRMN (pattern from the page's controller script). The JSON had monthly rain=3.74, rainmax=0.68 and rain-day counts, plus a 'daily' object keyed by date.",
+     "citations": [
+      "https://www.mesonet.org/past-data/mesonet-resources/station-monthly-summaries",
+      "https://www.mesonet.org/about/data-descriptions"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-or-prism",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "PRISM Group, Oregon State University",
+   "fullName": "PRISM Group at Oregon State University",
+   "host": "Northwest Alliance for Computational Science & Engineering (NACSE), Oregon State University",
+   "location": "Oregon State University, OR",
+   "discipline": "Gridded precipitation for the conterminous US",
+   "topics": [
+    "models"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "PRISM gathers weather observations from many monitoring networks, applies quality control and mapping methods, and publishes gridded precipitation for the conterminous US at 4 km and 800 m. Daily grids start in 1981 and monthly and annual grids in 1895, free of charge, with bulk downloads and a point time-series explorer.",
+   "holdings": [
+    "Daily (1981-present), monthly (1895-present) and annual (1895-present) gridded precipitation at 4 km and 800 m",
+    "1991-2020 30-year normals grids",
+    "Data Explorer for point time series, up to 500 points in bulk"
+   ],
+   "formats": [
+    "COG (Cloud Optimized GeoTIFF)",
+    "BIL",
+    "netCDF",
+    "ZIP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "PRISM time series grids (HTTP data directory, FTP and web services)",
+     "url": "https://data.prism.oregonstate.edu"
+    },
+    {
+     "name": "PRISM Data Explorer (point time series)",
+     "url": "https://prism.oregonstate.edu/explorer"
+    }
+   ],
+   "sources": [
+    {
+     "label": "PRISM home",
+     "url": "https://prism.oregonstate.edu/"
+    },
+    {
+     "label": "Time series data",
+     "url": "https://prism.oregonstate.edu/recent/"
+    },
+    {
+     "label": "Bulk data download information",
+     "url": "https://prism.oregonstate.edu/downloads"
+    },
+    {
+     "label": "Data formats",
+     "url": "https://prism.oregonstate.edu/formats"
+    },
+    {
+     "label": "Terms of use",
+     "url": "https://prism.oregonstate.edu/terms"
+    },
+    {
+     "label": "FTP server README",
+     "url": "https://data.prism.oregonstate.edu/readme.txt"
+    }
+   ],
+   "state": "Oregon",
+   "stateCodes": [
+    "OR"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "PRISM time series grids (HTTP data directory, FTP and web services)",
+     "landingUrl": "https://prism.oregonstate.edu/recent/",
+     "accessUrl": "https://data.prism.oregonstate.edu",
+     "formats": [
+      "COG (Cloud Optimized GeoTIFF)",
+      "BIL",
+      "ZIP"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily; monthly; annual",
+     "periodOfRecord": "Daily 1981-present; monthly and annual 1895-present",
+     "coverage": "regional: conterminous US (Alaska and Hawaii directories being added)",
+     "originalCollector": "PRISM Group model output from observations of many station networks",
+     "access": "Free, no account (FTP needs no username or password)",
+     "qualityNotes": "Grids are re-modeled up to 8 times (daily) or 7 times (monthly) within a rolling 6-month window and are considered stable after 6 months. Individual grids contain inhomogeneities from station changes and observation times; PRISM does not recommend them for very long-term trends. Newer COG files use names like prism_ppt_us_25m_YYYYMMDD.zip; older BIL files (4 km only) carry stability in the name. Units not documented on the pages opened.",
+     "verification": "download tested",
+     "testNote": "Listed /time_series/us/an/4km/ppt/daily/2025/ (files prism_ppt_us_25m_20250101.zip onward). A HEAD request for prism_ppt_us_25m_20250101.zip returned 200, application/zip, 1,358,743 bytes, and a 200-byte range request returned a zip header naming prism_ppt_us_25m_20250101.info.txt.",
+     "citations": [
+      "https://prism.oregonstate.edu/recent/",
+      "https://prism.oregonstate.edu/downloads",
+      "https://prism.oregonstate.edu/formats",
+      "https://data.prism.oregonstate.edu/readme.txt",
+      "https://prism.oregonstate.edu/terms"
+     ]
+    },
+    {
+     "name": "PRISM Data Explorer (point time series)",
+     "landingUrl": "https://prism.oregonstate.edu/",
+     "accessUrl": "https://prism.oregonstate.edu/explorer",
+     "formats": [],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily; monthly; annual",
+     "periodOfRecord": "Same as the time series grids (daily 1981-present; monthly and annual 1895-present)",
+     "coverage": "regional: conterminous US",
+     "originalCollector": "PRISM Group model output from observations of many station networks",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "The home page says the Data Explorer retrieves and downloads 4 km and 800 m time series for point locations, with a bulk option of up to 500 points. The explorer page is built by JavaScript, so no export was tested.",
+     "citations": [
+      "https://prism.oregonstate.edu/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-or-portland-bes-hydra",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Portland BES HYDRA Rain Gauge Network",
+   "fullName": "City of Portland Bureau of Environmental Services HYDRA Rainfall Network (Environmental Data Portal)",
+   "host": "City of Portland Bureau of Environmental Services",
+   "location": "Portland, OR",
+   "discipline": "City rain-gauge records for Portland",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The City of Portland Bureau of Environmental Services runs a network of tipping-bucket rain gauges across Portland and nearby areas and collects the data itself. Since 2025 it serves the records from its own Environmental Data Portal, with 5-minute, 15-minute and hourly series, daily totals for the last 20 years and CSV exports.",
+   "holdings": [
+    "Latest rainfall table and map for all active gauges",
+    "5-minute, 15-minute and 1-hour incremental rainfall series per gauge",
+    "Daily total rainfall reports by region of the city for the previous 20 years"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "BES Environmental Data Portal (AQUARIUS WebPortal)",
+     "url": "https://aquarius.portlandoregon.gov/Data/Dashboard/8"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Rainfall data for Portland",
+     "url": "https://www.portland.gov/bes/rainfall-data-portland"
+    },
+    {
+     "label": "Getting Started Guide",
+     "url": "https://aquarius.portlandoregon.gov/Data/GetFile/GettingStartedGuide"
+    },
+    {
+     "label": "USGS mirror (being retired)",
+     "url": "https://or.water.usgs.gov/precip/"
+    }
+   ],
+   "state": "Oregon",
+   "stateCodes": [
+    "OR"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "BES Environmental Data Portal (AQUARIUS WebPortal)",
+     "landingUrl": "https://www.portland.gov/bes/rainfall-data-portland",
+     "accessUrl": "https://aquarius.portlandoregon.gov/Data/Dashboard/8",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; 15-minute; hourly; daily",
+     "periodOfRecord": "Exports from 1999 (per the guide); daily reports cover the previous 20 years",
+     "coverage": "station-specific",
+     "originalCollector": "City of Portland Bureau of Environmental Services",
+     "access": "Free, no account",
+     "qualityNotes": "Each tip is 0.01 inch. Data are provisional, subject to review, intended mainly for operational use, and may have gaps from maintenance, equipment failure or connectivity. The Precip Increm.Forecast series is NOAA predicted rainfall, not observations.",
+     "verification": "download documented",
+     "testNote": "The portal's pages load their tables by JavaScript, so curl returned only the page shell. The Getting Started Guide documents CSV export of Precip Increm.Primary (5-minute), .15Minute and .1Hour series and downloadable daily-total CSV reports.",
+     "citations": [
+      "https://www.portland.gov/bes/rainfall-data-portland",
+      "https://aquarius.portlandoregon.gov/Data/GetFile/GettingStartedGuide"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-pa-3rww",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "3 Rivers Wet Weather rainfall data",
+   "fullName": "3 Rivers Wet Weather, Inc.",
+   "host": "Created by ALCOSAN (Allegheny County Sanitary Authority) and the Allegheny County Health Department",
+   "location": "Pittsburgh, PA",
+   "discipline": "Allegheny County rain-gauge and calibrated radar rainfall",
+   "topics": [
+    "gauges",
+    "radar"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "3 Rivers Wet Weather, created by ALCOSAN and the Allegheny County Health Department to help the 83 ALCOSAN municipalities address sewer overflows, covers Allegheny County in southwestern Pennsylvania. It operates 33 rain gauges and publishes 15-minute gauge rainfall (QA/QC by ALCOSAN) and gauge-adjusted NEXRAD radar rainfall for each square kilometer (calibrated with Vieux Associates). Data come as monthly CSV and zip files and through an API.",
+   "holdings": [
+    "Monthly rainfall data downloads: 15-minute rain-gauge CSVs and pixel/basin calibrated radar zips (2019-2021 listed)",
+    "Rainways API: rain-gauge and calibrated radar pixel rainfall, 2000 onward"
+   ],
+   "formats": [
+    "CSV",
+    "ZIP",
+    "JSON",
+    "GeoJSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "3RWW Rainfall Data Downloads",
+     "url": "https://3riverswetweather.org/node/230"
+    },
+    {
+     "name": "3RWW Rainways API",
+     "url": "https://3rww.github.io/api-docs"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Rainfall data overview",
+     "url": "https://3riverswetweather.org/node/158"
+    },
+    {
+     "label": "About 3 Rivers Wet Weather",
+     "url": "https://3riverswetweather.org/node/6"
+    },
+    {
+     "label": "Calibrated radar rainfall tool notice",
+     "url": "https://www.3riverswetweather.org/calibrated-radar-rainfall-tool-notice"
+    }
+   ],
+   "state": "Pennsylvania",
+   "stateCodes": [
+    "PA"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "3RWW Rainfall Data Downloads",
+     "landingUrl": "https://3riverswetweather.org/node/230",
+     "accessUrl": "https://3riverswetweather.org/node/230",
+     "formats": [
+      "CSV",
+      "ZIP",
+      "PDF"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute (gauges); 15-minute and 5-minute (calibrated radar pixel/basin zips)",
+     "periodOfRecord": "Monthly files January 2019 - March 2021 listed (gauge CSVs from March 2019)",
+     "coverage": "regional: Allegheny County",
+     "originalCollector": "3 Rivers Wet Weather rain gauges (QA/QC by ALCOSAN); calibrated radar QA/QC by Vieux Associates from NWS NEXRAD",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall in inches per 15-minute interval (values such as 0.01). Gauge tables QA/QC'd by ALCOSAN; radar by Vieux Associates. Older archive (April 2000 - February 2019) available on request.",
+     "verification": "download tested",
+     "testNote": "Range request for 'March 2021 15-min data.csv' on mds.3riverswetweather.org: header lists gauges (Perry North, ALCOSAN, Shaler, ...) and rows such as '3/1/2021 0:15,0.01,0,0.05,...'.",
+     "citations": [
+      "https://3riverswetweather.org/node/230",
+      "https://3riverswetweather.org/node/158"
+     ]
+    },
+    {
+     "name": "3RWW Rainways API",
+     "landingUrl": "https://3rww.github.io/api-docs",
+     "accessUrl": "https://3rww.github.io/api-docs",
+     "formats": [
+      "JSON",
+      "GeoJSON",
+      "CSV"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "5-minute, 15-minute, hourly, daily",
+     "periodOfRecord": "Calibrated radar from 2000; gauge start date not documented",
+     "coverage": "regional: Allegheny County",
+     "originalCollector": "3 Rivers Wet Weather rain gauges; gauge-adjusted NWS NEXRAD radar (Vieux Associates)",
+     "access": "Free; no authentication documented for rainfall endpoints (API described as beta)",
+     "qualityNotes": "Pixel records carry a source code (R calibrated radar; G-1/G-2/G-3 gauge interpolation; G-0 and N/D no data).",
+     "verification": "not verified",
+     "testNote": "Requests to the documented v1 and v2 rain-gauge endpoints on 3rww-api.civicmapper.com timed out (HTTPS) or returned a CloudFront 301 redirect (HTTP) with no data.",
+     "citations": [
+      "https://3rww.github.io/api-docs",
+      "https://www.3riverswetweather.org/calibrated-radar-rainfall-tool-notice"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-pa-keystone-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Keystone Mesonet",
+   "fullName": "Keystone Mesonet",
+   "host": "Penn State Department of Meteorology and Atmospheric Science",
+   "location": "University Park, PA",
+   "discipline": "Real-time statewide multi-network weather station data",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Keystone Mesonet, hosted by Penn State's Department of Meteorology, gathers many Pennsylvania weather networks in one place: PEMN, PennDOT and PA Turnpike road-weather stations, FAA airport stations, PA DEP air-monitoring sites and DCNR stations. Its download page serves the most recent or last-24-hour observations, including 1-, 3-, 6- and 24-hour precipitation, as CSV, JSON or KML.",
+   "holdings": [
+    "Data download: current or last-24-hour observations by network as CSV, JSON or KML"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "KML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Keystone Mesonet Data Download",
+     "url": "https://keystone-mesonet.org/datadown.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Keystone Mesonet",
+     "url": "https://keystone-mesonet.org/"
+    },
+    {
+     "label": "Penn State Meteorology weather data page",
+     "url": "https://www.met.psu.edu/weather/weather-data"
+    }
+   ],
+   "state": "Pennsylvania",
+   "stateCodes": [
+    "PA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Keystone Mesonet Data Download",
+     "landingUrl": "https://keystone-mesonet.org/datadown.html",
+     "accessUrl": "https://keystone-mesonet.org/datadown.html",
+     "formats": [
+      "CSV",
+      "JSON",
+      "KML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "Latest observation per station, or last 24 hours; precipitation as 1-, 3-, 6- and 24-hour totals",
+     "periodOfRecord": "Most recent observation or last 24 hours only",
+     "coverage": "statewide",
+     "originalCollector": "Penn State (PEMN); PennDOT (RWIS); Pennsylvania Turnpike Commission (RWIS); FAA/NWS (ASOS/AWOS); PA DEP (COPAMS); PA DCNR",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented. Units not stated on the download page.",
+     "verification": "download tested",
+     "testNote": "Requested the page's WFS URL for the PennDOT RWIS layer in CSV (met-kmnfront.met.psu.edu geoserver, typeName=kmn:rwis): returned station rows with columns pr1h, pr3h, pr6h, pr24h timestamped 2026-11-05T23:45:00.",
+     "citations": [
+      "https://keystone-mesonet.org/datadown.html",
+      "https://keystone-mesonet.org/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-pa-state-climatologist",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Pennsylvania State Climatologist",
+   "fullName": "Pennsylvania State Climate Office (Pennsylvania State Climatologist)",
+   "host": "Penn State University, College of Earth and Mineral Sciences",
+   "location": "University Park, PA",
+   "discipline": "Statewide station precipitation records and PEMN mesonet data",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Pennsylvania State Climatologist at Penn State serves station records through its IDA data archive, covering NWS COOP, FAA airport, CWOP volunteer, PA DEP air-monitoring and PEMN stations, with daily or sub-hourly rainfall exported as web tables or CSV. Its PEMN Data Viewer serves recent 1-minute data, including rainfall, from the Penn State-run Pennsylvania Environmental Monitoring Network.",
+   "holdings": [
+    "IDA data archive: station rainfall and snowfall from COOP, FAA (raw, hourly, daily), CWOP, DEP and PEMN networks",
+    "PEMN Data Viewer: recent 1-minute PEMN observations including rainfall, with CSV download"
+   ],
+   "formats": [
+    "CSV",
+    "HTML",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "PASC IDA Data Archive",
+     "url": "https://climate.met.psu.edu/data/ida/"
+    },
+    {
+     "name": "PEMN Data Viewer",
+     "url": "https://climate.met.psu.edu/data/pemn/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Pennsylvania Climate Data page",
+     "url": "https://climate.met.psu.edu/data"
+    },
+    {
+     "label": "Data network descriptions",
+     "url": "https://climate.met.psu.edu/data/networkdescription.php"
+    },
+    {
+     "label": "About the State Climatologist",
+     "url": "https://climate.met.psu.edu/about_us"
+    },
+    {
+     "label": "AASC Pennsylvania listing",
+     "url": "https://stateclimate.org/state/pennsylvania"
+    },
+    {
+     "label": "Penn State news: PEMN launch",
+     "url": "https://psu.edu/news/impact/story/penn-state-launches-statewide-environmental-monitoring-network"
+    }
+   ],
+   "state": "Pennsylvania",
+   "stateCodes": [
+    "PA"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "PASC IDA Data Archive",
+     "landingUrl": "https://climate.met.psu.edu/data/ida/",
+     "accessUrl": "https://climate.met.psu.edu/data/ida/",
+     "formats": [
+      "CSV",
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "Varies by network: daily (COOP, FAA Daily), hourly (FAA Hourly, CWOP Hourly), raw/sub-hourly (FAA Raw, CWOP Raw, PEMN 1-minute)",
+     "periodOfRecord": "Varies by station (e.g. COOP Acmetonia Lock 3 from 1905-03-01; FAA Daily Allentown from 1948-02-01; DEP sites from 2001-06-27; PEMN from 2019-11-08) to present",
+     "coverage": "statewide",
+     "originalCollector": "NWS Cooperative Observers (COOP, via SHEF feed); FAA/NWS ASOS and AWOS airport stations; CWOP citizen volunteers; PA DEP Bureau of Air Quality (COPAMS); Penn State (PEMN)",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall in inches; PEMN values converted from millimetres in the query (rain_tot * 0.0394). Station start/end dates shown in site metadata. QC not documented.",
+     "verification": "download tested",
+     "testNote": "Posted the site's submit.php form for COOP site ACMP1 (Acmetonia Lock 3), 1950-01-01 to 1950-01-05, Date + Rainfall, CSV: returned daily rows such as '1950-01-02,0.220'. Also PEMN site ADMS01 for 2026-10-01: returned 1-minute rows of Rainfall (in).",
+     "citations": [
+      "https://climate.met.psu.edu/data/ida/",
+      "https://climate.met.psu.edu/data/ida/index.php?t=3&x=pemn&id=ADMS01",
+      "https://climate.met.psu.edu/data/networkdescription.php"
+     ]
+    },
+    {
+     "name": "PEMN Data Viewer",
+     "landingUrl": "https://climate.met.psu.edu/data/pemn/",
+     "accessUrl": "https://climate.met.psu.edu/data/pemn/",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "1-minute",
+     "periodOfRecord": "Recent observations (selectable number of observations); station start dates from 2019 (per station metadata)",
+     "coverage": "statewide",
+     "originalCollector": "Penn State (Pennsylvania Environmental Monitoring Network)",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall in inches. QC not documented. Historical PEMN data are linked to the IDA archive.",
+     "verification": "download tested",
+     "testNote": "Requested the viewer's data feed fetch_obs.php?site=ADMS01&numObs=3: returned JSON 1-minute records with a 'rain' field (e.g. \"rain\":\"0.00\"). The page's 'Download this data (csv file)' button builds the CSV in the browser and was not run.",
+     "citations": [
+      "https://climate.met.psu.edu/data/pemn/",
+      "https://psu.edu/news/impact/story/penn-state-launches-statewide-environmental-monitoring-network"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ri-wrb-drought-dashboard",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "RI Water Resources Board Drought Dashboard",
+   "fullName": "Rhode Island Water Resources Board Drought Monitoring Dashboard",
+   "host": "Rhode Island Water Resources Board, Division of Statewide Planning, Department of Administration",
+   "location": "Providence, RI",
+   "discipline": "Monthly drought-region precipitation for drought monitoring",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Water Resources Board's drought dashboard rates Rhode Island's drought regions each month on precipitation, Palmer index, streamflow and groundwater. It offers an xlsx download of all its precipitation data. The precipitation data come from the NWS Boston/Norton office, which averages long-term, COOP and CoCoRaHS stations within each drought region and compares them with 1991-2020 normals.",
+   "holdings": [
+    "Monthly precipitation and percent of normal by drought region (xlsx download)"
+   ],
+   "formats": [
+    "XLSX"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "RIWRB Drought Dashboard precipitation download",
+     "url": "https://riwrb.shinyapps.io/RIWRB_Drought_Dashboard/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "RI WRB drought program page",
+     "url": "https://wrb.ri.gov/work_programs_drought.html"
+    },
+    {
+     "label": "Dashboard About tab (data sources)",
+     "url": "https://riwrb.shinyapps.io/RIWRB_Drought_Dashboard/"
+    }
+   ],
+   "state": "Rhode Island",
+   "stateCodes": [
+    "RI"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "RIWRB Drought Dashboard precipitation download",
+     "landingUrl": "https://wrb.ri.gov/work_programs_drought.html",
+     "accessUrl": "https://riwrb.shinyapps.io/RIWRB_Drought_Dashboard/",
+     "formats": [
+      "XLSX"
+     ],
+     "dataType": "other",
+     "temporalResolution": "monthly",
+     "periodOfRecord": "Not documented",
+     "coverage": "statewide",
+     "originalCollector": "NWS Boston/Norton, compiled from long-term weather stations, COOP stations and CoCoRaHS observers",
+     "access": "Free, no account",
+     "qualityNotes": "Regional precipitation averages and percent of normal based on 1991-2020 normals for select stations. Updated monthly. Units not documented.",
+     "verification": "download documented",
+     "testNote": "The dashboard HTML has a 'Download All Precipitation Data (xlsx)' button (id precip-dl_all). It is a Shiny download link that only works inside a live interactive session, so no file was requested with curl.",
+     "citations": [
+      "https://riwrb.shinyapps.io/RIWRB_Drought_Dashboard/",
+      "https://wrb.ri.gov/work_programs_drought.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-sc-clemson-extension-weather-network",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Clemson Extension Weather Network",
+   "fullName": "Clemson Extension Weather Network (Clemson Weather)",
+   "host": "Clemson University Cooperative Extension Service",
+   "location": "Clemson, SC",
+   "discipline": "Agricultural weather station rainfall across South Carolina",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Clemson Cooperative Extension runs 51 WeatherFlow (Tempest) weather stations across South Carolina, most of them near farms. It started the network in 2020. The Clemson Weather site has a rainfall calculator that returns daily rainfall for a chosen station and date range from data the site stores. Results come as an on-page table and chart; there is no file export.",
+   "holdings": [
+    "Daily rainfall by station via the Clemson Weather rainfall calculator"
+   ],
+   "formats": [
+    "HTML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Clemson Weather Rainfall Calculator",
+     "url": "https://clemson-weather.app.clemson.edu/calc/rainfall.php"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Clemson SC Crops blog: Clemson Weather Station Network (May 12, 2025)",
+     "url": "https://blogs.clemson.edu/sccrops/clemson-weather-station-network/"
+    },
+    {
+     "label": "Clemson Weather About page",
+     "url": "https://clemson-weather.app.clemson.edu/about.php"
+    }
+   ],
+   "state": "South Carolina",
+   "stateCodes": [
+    "SC"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Clemson Weather Rainfall Calculator",
+     "landingUrl": "https://clemson-weather.app.clemson.edu/index.php",
+     "accessUrl": "https://clemson-weather.app.clemson.edu/calc/rainfall.php",
+     "formats": [
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Not documented (network conceived in 2020)",
+     "coverage": "statewide",
+     "originalCollector": "Clemson Cooperative Extension (WeatherFlow Tempest stations)",
+     "access": "Free, no account",
+     "qualityNotes": "Rainfall in inches (chart axis). QC not documented. Results are shown on the page as a table and chart; no CSV export found.",
+     "verification": "download tested",
+     "testNote": "GET query for station 72403 (Aiken Station #1), 10/1/2026-10/5/2026 returned daily rainfall of 0, 0, 0.0006, 0.128 and 0.009 inches in the page's chart data. The same station returned no values for January 2021 and January 2023.",
+     "citations": [
+      "https://blogs.clemson.edu/sccrops/clemson-weather-station-network/",
+      "https://clemson-weather.app.clemson.edu/about.php",
+      "https://clemson-weather.app.clemson.edu/calc/rainfall.php"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-sd-sdsu-mesonet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "SD Mesonet / South Dakota State Climate Office (SDSU)",
+   "fullName": "South Dakota Mesonet (Mesonet at SDState), South Dakota State University",
+   "host": "South Dakota State University, South Dakota Agricultural Experiment Station",
+   "location": "Brookings, SD",
+   "discipline": "Automated weather station network (precipitation, temperature, soil, wind)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The SD Mesonet is SDSU's statewide network of automated weather stations (150+ stations per its site), hosted on the State Climate Office website. A request form returns archived daily station data, including total precipitation, as CSV files from 2015 to the present. Data from 1983 to January 2015, hourly or sub-hourly data and quality-controlled data are available as custom requests. Automated data are provisional, and redistribution and commercial use are not allowed.",
+   "holdings": [
+    "Daily station data request (precipitation total and other variables) as CSV, 2015-present",
+    "Custom data services for 1983-2015 records, hourly/5-minute data and QC'd data"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "SD Mesonet Daily Data Request",
+     "url": "https://climate.sdstate.edu/request/daily/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AASC South Dakota page",
+     "url": "https://stateclimate.org/state/south-dakota"
+    },
+    {
+     "label": "SD Mesonet home",
+     "url": "https://climate.sdstate.edu/weather"
+    },
+    {
+     "label": "Mesonet at SDState (Agricultural Experiment Station)",
+     "url": "https://www.sdstate.edu/south-dakota-agricultural-experiment-station/mesonet-sdstate"
+    },
+    {
+     "label": "Custom Data Request",
+     "url": "https://climate.sdstate.edu/request/custom/"
+    },
+    {
+     "label": "Archive (local data graphs)",
+     "url": "https://climate.sdstate.edu/archive/"
+    }
+   ],
+   "state": "South Dakota",
+   "stateCodes": [
+    "SD"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "SD Mesonet Daily Data Request",
+     "landingUrl": "https://climate.sdstate.edu/weather",
+     "accessUrl": "https://climate.sdstate.edu/request/daily/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily (hourly and 5-minute data by custom request)",
+     "periodOfRecord": "2015-present via the form (varies by station, e.g. Sioux Falls 1/2021 to 11/2026 in the form list); 1983-Jan 2015 by custom request (1983-2002 availability and quality limited)",
+     "coverage": "statewide",
+     "originalCollector": "SD Mesonet (South Dakota State University)",
+     "access": "Free; form requires name, email, station, year and agreement to terms of use (no account)",
+     "qualityNotes": "Precipitation total in inches. Data from the automated request system are provisional and not quality-controlled; the page says they should not be used for legal or research purposes until expert review. Redistribution and commercial use are not allowed; citation required.",
+     "verification": "download documented",
+     "testNote": "Not tested: the form requires submitting a name and email address, which was not done. curl to climate.sdstate.edu was redirected to an error page; the form page was read with WebFetch and lists precipitation total as a variable and CSV output.",
+     "citations": [
+      "https://climate.sdstate.edu/request/daily/",
+      "https://climate.sdstate.edu/request/custom/",
+      "https://climate.sdstate.edu/archive/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-sd-danr",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "South Dakota DANR",
+   "fullName": "South Dakota Department of Agriculture and Natural Resources",
+   "host": "South Dakota Department of Agriculture and Natural Resources",
+   "location": "Pierre, SD",
+   "discipline": "Long-term daily station precipitation and temperature files for feedlot modeling",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "DANR's feedlot permit program serves daily weather text files for 35 South Dakota NWS stations with 100 or more years of daily precipitation and temperature records, for use with the SPAW model. The files hold daily maximum and minimum temperature and precipitation (for example Huron, July 1881 to April 2016). The observations were collected by NWS stations and compiled by the South Dakota NRCS.",
+   "holdings": [
+    "Daily tmax/tmin/precipitation text files for 35 NWS stations with 100+ year records (SPAW weather data)"
+   ],
+   "formats": [
+    "TXT (tab-delimited)"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "DANR Feedlot SPAW Weather Data",
+     "url": "https://danr.sd.gov/Agriculture/Livestock/FeedlotPermit/Location/WeatherData.aspx"
+    }
+   ],
+   "sources": [
+    {
+     "label": "DANR Weather Data page",
+     "url": "https://danr.sd.gov/Agriculture/Livestock/FeedlotPermit/Location/WeatherData.aspx"
+    },
+    {
+     "label": "100yr+ NWS Weather Stations map (PDF)",
+     "url": "https://danr.sd.gov/Agriculture/Livestock/FeedlotPermit/Location/weather/SPAWMap.pdf"
+    }
+   ],
+   "state": "South Dakota",
+   "stateCodes": [
+    "SD"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "DANR Feedlot SPAW Weather Data",
+     "landingUrl": "https://danr.sd.gov/Agriculture/Livestock/FeedlotPermit/Location/WeatherData.aspx",
+     "accessUrl": "https://danr.sd.gov/Agriculture/Livestock/FeedlotPermit/Location/WeatherData.aspx",
+     "formats": [
+      "TXT (tab-delimited)"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "100+ years per station; Huron file runs 7/1/1881 to 4/20/2016 (file last modified December 2016)",
+     "coverage": "statewide",
+     "originalCollector": "National Weather Service stations (compiled by South Dakota NRCS)",
+     "access": "Free, no account",
+     "qualityNotes": "Columns date, tmax, tmin, prcp and Notes; units not documented. Files include notes on missing data; missing Pierre (SD025) data are filled from Highmore 1 W (SD3832). Static archive, not updated since about 2016.",
+     "verification": "download tested",
+     "testNote": "Requested weather/Huron.txt with curl; it returned tab-delimited lines with header 'SD 936-date tmax tmin prcp Notes' and daily rows from 7/1/1881 (e.g. 7/6/1881 71 64 0.09). The last row is 4/20/2016. The whole 1.1 MB file was fetched to read its end; nothing was saved.",
+     "citations": [
+      "https://danr.sd.gov/Agriculture/Livestock/FeedlotPermit/Location/WeatherData.aspx",
+      "https://danr.sd.gov/Agriculture/Livestock/FeedlotPermit/Location/weather/SPAWMap.pdf"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-tx-eaa",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Edwards Aquifer Authority Rain Gauges",
+   "fullName": "Edwards Aquifer Authority",
+   "host": "Edwards Aquifer Authority",
+   "location": "San Antonio, TX",
+   "discipline": "South Central Texas aquifer-region rain gauges",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Edwards Aquifer Authority, created by the Texas Legislature in 1993 to regulate the Edwards Aquifer, runs continuous rain gauges in South Central Texas (Bandera, Bexar, Blanco, Comal, Edwards, Hays, Kendall, Kinney, Medina, Real and Uvalde counties). Its data portal serves per-gauge CSV files of 1-minute, 6-minute, hourly and daily rainfall. Data are provisional unless stated otherwise.",
+   "holdings": [
+    "Rain Gauges: per-gauge CSV downloads of 1-minute, 6-minute, hourly and daily rainfall, active and historic sites"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "EAA Rain Gauges",
+     "url": "https://data.edwardsaquifer.org/RainGauges"
+    }
+   ],
+   "sources": [
+    {
+     "label": "EAA history",
+     "url": "https://www.edwardsaquifer.org/about/history/"
+    },
+    {
+     "label": "Example gauge page (Bexar 130)",
+     "url": "https://data.edwardsaquifer.org/RainGauges/Details/25"
+    }
+   ],
+   "state": "Texas",
+   "stateCodes": [
+    "TX"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "EAA Rain Gauges",
+     "landingUrl": "https://data.edwardsaquifer.org/RainGauges",
+     "accessUrl": "https://data.edwardsaquifer.org/RainGauges",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "1-minute; 6-minute; hourly; daily",
+     "periodOfRecord": "Varies by gauge (Bexar 130 daily: 2009-05-15 to 2020-03-26)",
+     "coverage": "regional: Edwards Aquifer region, South Central Texas",
+     "originalCollector": "Edwards Aquifer Authority",
+     "access": "Free, no account",
+     "qualityNotes": "Inches. 'ALL DATA ARE PROVISIONAL UNLESS OTHERWISE STATED.' MeasStatus codes: A approved, P provisional, Q questionable, S sampling event, E estimated, C calculated, DG data gap. Site updated daily by 6:00 AM Central.",
+     "verification": "download tested",
+     "testNote": "GET https://data.edwardsaquifer.org/RainGauges/DownloadRainGaugesCsv?siteId=BEX130RG&sensorName=DLRAIN returned CSV with header 'Site_Id,dt_CST,DLRAIN,MeasStatus,LastUpdate' and row 'BEX130RG,2020-03-26,0.00,P,2025-07-18'.",
+     "citations": [
+      "https://data.edwardsaquifer.org/RainGauges/Details/25",
+      "https://data.edwardsaquifer.org/RainGauges"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-tx-hcfcd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Harris County Flood Control District Flood Warning System",
+   "fullName": "Harris County Flood Control District, Harris County Flood Warning System",
+   "host": "Harris County Flood Control District",
+   "location": "Houston, TX",
+   "discipline": "Harris County 5-minute rain gauge records",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Harris County Flood Control District operates the Harris County Flood Warning System, more than 350 gage stations including partner-agency gages. Its Document Library offers bulk historical rainfall in 5-minute increments as one Excel workbook per year from 1986 to 2026, plus monthly QA/QC rainfall reports from 1987-2022. Gage pages also export rainfall to Excel.",
+   "holdings": [
+    "Historical Rainfall Data: yearly 5-minute rainfall workbooks (xlsx), 1986-2026",
+    "Monthly Rainfall Report QAQC archive: PDF/TXT/XLSX reports, 1987-2022"
+   ],
+   "formats": [
+    "XLSX",
+    "TXT",
+    "PDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Document Library: Historical Rainfall Data",
+     "url": "https://www.harriscountyfws.org/Document_Library"
+    }
+   ],
+   "sources": [
+    {
+     "label": "HCFWS FAQs",
+     "url": "https://www.harriscountyfws.org/FAQs"
+    },
+    {
+     "label": "HCFWS Help (Export to Excel)",
+     "url": "https://harriscountyfws.org/Help"
+    }
+   ],
+   "state": "Texas",
+   "stateCodes": [
+    "TX"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Document Library: Historical Rainfall Data",
+     "landingUrl": "https://www.harriscountyfws.org/Document_Library",
+     "accessUrl": "https://www.harriscountyfws.org/Document_Library",
+     "formats": [
+      "XLSX"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute",
+     "periodOfRecord": "1986-2026 (one file per year); per gage from installation to present",
+     "coverage": "regional: Harris County",
+     "originalCollector": "Harris County Flood Control District and partner agencies",
+     "access": "Free, no account",
+     "qualityNotes": "Not documented for the bulk files; gage pages label data as not verified.",
+     "verification": "download documented",
+     "testNote": "The library's file tree (https://www.harriscountyfws.org/api/files/tree) lists '1986 5 min.xlsx' to '2026 5 Min.xlsx'. A HEAD request on the 2026 file returned HTTP 200, 58,346,356 bytes, last modified 2026-11-05; not downloaded because of size and xlsx format.",
+     "citations": [
+      "https://www.harriscountyfws.org/FAQs",
+      "https://www.harriscountyfws.org/Document_Library"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-tx-lcra-hydromet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "LCRA Hydromet",
+   "fullName": "Lower Colorado River Authority Hydrologic/Meteorologic Data System (Hydromet)",
+   "host": "Lower Colorado River Authority",
+   "location": "Austin, TX",
+   "discipline": "Lower Colorado River basin and City of Austin rain gauges",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "LCRA Hydromet is a system of more than 280 automated river and weather gauges in the lower Colorado River basin of Texas, from near Abilene to Matagorda Bay. Its Historical Data pages export rainfall by gauge (15-minute, hourly or daily) for ranges under 180 days, and a separate page serves rainfall from gauges maintained by the City of Austin. Data are automatically retrieved and subject to revision.",
+   "holdings": [
+    "Historical Data by Gauge: LCRA rain gauge records, 15-minute/hourly/daily, Excel export",
+    "City of Austin Historical Data: City of Austin rain gauges served through Hydromet"
+   ],
+   "formats": [
+    "Excel",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Historical Data by Gauge",
+     "url": "https://hydromet.lcra.org/HistoricalData"
+    },
+    {
+     "name": "City of Austin Historical Data",
+     "url": "https://hydromet.lcra.org/HistoricalData/Coa"
+    }
+   ],
+   "sources": [
+    {
+     "label": "LCRA Hydromet home",
+     "url": "https://hydromet.lcra.org/"
+    },
+    {
+     "label": "Rainfall reports",
+     "url": "https://hydromet.lcra.org/Reports/Rainfall"
+    }
+   ],
+   "state": "Texas",
+   "stateCodes": [
+    "TX"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "Historical Data by Gauge",
+     "landingUrl": "https://hydromet.lcra.org/HistoricalData",
+     "accessUrl": "https://hydromet.lcra.org/HistoricalData",
+     "formats": [
+      "Excel",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute; hourly; daily",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: lower Colorado River basin",
+     "originalCollector": "Lower Colorado River Authority",
+     "access": "Free, no account",
+     "qualityNotes": "Rain in inches. 'Data is automatically retrieved and subject to revision.' Requests limited to under 180 days.",
+     "verification": "download tested",
+     "testNote": "GET https://hydromet.lcra.org/api/HistoricData/GetDataBySite/1090/rain/10-01-2026/10-05-2026 (pattern from the page's JavaScript) returned JSON for Millersview 7 WSW with 15-minute records (value1 = gauge count, value2 = rain in inches, 0.00).",
+     "citations": [
+      "https://hydromet.lcra.org/",
+      "https://hydromet.lcra.org/api/GetSitesBySensorType/rain"
+     ]
+    },
+    {
+     "name": "City of Austin Historical Data",
+     "landingUrl": "https://hydromet.lcra.org/HistoricalData/Coa",
+     "accessUrl": "https://hydromet.lcra.org/HistoricalData/Coa",
+     "formats": [
+      "Excel",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute; hourly; daily",
+     "periodOfRecord": "Not documented",
+     "coverage": "regional: City of Austin",
+     "originalCollector": "City of Austin",
+     "access": "Free, no account",
+     "qualityNotes": "Subject to revision; Not documented beyond that.",
+     "verification": "download tested",
+     "testNote": "GET https://hydromet.lcra.org/api/CoaHistoricalData/GetDataBySite/121/rain/10-01-2026/10-03-2026 returned JSON for Waller Creek at E 45 Street with 15-minute rain records.",
+     "citations": [
+      "https://hydromet.lcra.org/",
+      "https://hydromet.lcra.org/api/Coa/GetSitesBySensorType/rain"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-tx-twdb",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Texas Water Development Board (Water Data for Texas, TexMesonet)",
+   "fullName": "Texas Water Development Board",
+   "host": "Texas Water Development Board",
+   "location": "Austin, TX",
+   "discipline": "Statewide quadrangle precipitation and mesonet station rainfall",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "TWDB publishes monthly precipitation and lake evaporation for one-degree quadrangles covering Texas, computed from NOAA-NWS gauge data (accessed through NCEI) by Thiessen-polygon area weighting, with records from 1940. It also runs TexMesonet, whose Custom Downloads tool and public API serve daily, monthly and 5-minute precipitation from TWDB-owned weather stations (online since 2016). A separate reservoir evaporation tool built with DRI reports daily rainfall for 188 major reservoirs from 1980.",
+   "holdings": [
+    "Lake Evaporation and Precipitation: monthly precipitation (inches) per 1-degree quadrangle, 1940-present, CSV via the site API",
+    "TexMesonet Custom Downloads: daily or monthly precipitation by station, county or bounding box from TWDB stations",
+    "TexMesonet API: 5-minute precipitation time series by station (JSON)",
+    "Reservoir-specific Daily Evaporation Data: daily rainfall and evaporation for 188 reservoirs, 1980-present (DRI-built Earth Engine app)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Lake Evaporation and Precipitation (quadrangle precipitation)",
+     "url": "https://waterdatafortexas.org/lake-evaporation-rainfall"
+    },
+    {
+     "name": "TexMesonet Custom Downloads",
+     "url": "https://texmesonet.org/DataProducts/CustomDownloads"
+    },
+    {
+     "name": "TexMesonet API",
+     "url": "https://www.texmesonet.org/Apis"
+    },
+    {
+     "name": "Reservoir-specific Daily Evaporation Data",
+     "url": "https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Lake evaporation and precipitation methodology",
+     "url": "https://waterdatafortexas.org/lake-evaporation-rainfall/about"
+    },
+    {
+     "label": "Lake evaporation resources (daily data)",
+     "url": "https://waterdatafortexas.org/lake-evaporation-rainfall/resources"
+    },
+    {
+     "label": "TexMesonet home",
+     "url": "https://www.texmesonet.org/"
+    },
+    {
+     "label": "TexMesonet FAQ",
+     "url": "https://texmesonet.org/FAQ"
+    }
+   ],
+   "state": "Texas",
+   "stateCodes": [
+    "TX"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "Lake Evaporation and Precipitation (quadrangle precipitation)",
+     "landingUrl": "https://waterdatafortexas.org/lake-evaporation-rainfall",
+     "accessUrl": "https://waterdatafortexas.org/lake-evaporation-rainfall",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "monthly; annual",
+     "periodOfRecord": "1940-01 to present (quad 412 CSV ran 1940-01 to 2025-12)",
+     "coverage": "statewide",
+     "originalCollector": "NOAA National Weather Service gauge network (via NCEI); processed by TWDB",
+     "access": "Free, no account",
+     "qualityNotes": "Values in inches. TWDB says data are subject to revision as more data become available. Quadrangle values are Thiessen-polygon area-weighted averages of monthly gauge totals.",
+     "verification": "download tested",
+     "testNote": "Requested https://waterdatafortexas.org/lake-evaporation-rainfall/api/quads/412/precipitation?data_format=csv (URL pattern from the page's JavaScript); got CSV with '#All parameters measured in inches', header 'period,precipitation', first row '1940-01,1.25'.",
+     "citations": [
+      "https://waterdatafortexas.org/lake-evaporation-rainfall/about",
+      "https://waterdatafortexas.org/lake-evaporation-rainfall/api/quad-list"
+     ]
+    },
+    {
+     "name": "TexMesonet Custom Downloads",
+     "landingUrl": "https://texmesonet.org/DataProducts/CustomDownloads",
+     "accessUrl": "https://texmesonet.org/DataProducts/CustomDownloads",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "daily; monthly; timeseries (all data)",
+     "periodOfRecord": "2016-present (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "Texas Water Development Board (TWDB-owned stations only; other networks on the map are not included)",
+     "access": "Free, no account documented",
+     "qualityNotes": "Request limits by product (for example daily precipitation up to 1 year per station, monthly up to 20 years per station). US/customary or metric units. File format and QC not documented.",
+     "verification": "download documented",
+     "testNote": "Interactive form; not scripted. Limits and options read from the page.",
+     "citations": [
+      "https://texmesonet.org/DataProducts/CustomDownloads",
+      "https://texmesonet.org/FAQ"
+     ]
+    },
+    {
+     "name": "TexMesonet API",
+     "landingUrl": "https://www.texmesonet.org/Apis",
+     "accessUrl": "https://www.texmesonet.org/Apis",
+     "formats": [
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute",
+     "periodOfRecord": "Look-back window set by PriorMinutes; full archive depth Not documented",
+     "coverage": "statewide",
+     "originalCollector": "Texas Water Development Board",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation returned in inches per the response. QC flags Not documented.",
+     "verification": "download tested",
+     "testNote": "GET https://www.texmesonet.org/api/Stations returned station JSON; GET https://www.texmesonet.org/api/PrecipById/2/1440 returned JSON for station 2 (Altwein Rd) with fieldName 'Precip', units 'Inches' and 5-minute values.",
+     "citations": [
+      "https://www.texmesonet.org/Apis"
+     ]
+    },
+    {
+     "name": "Reservoir-specific Daily Evaporation Data",
+     "landingUrl": "https://waterdatafortexas.org/lake-evaporation-rainfall/resources",
+     "accessUrl": "https://dri-apps.projects.earthengine.app/view/twdb-reservoir-evaporation",
+     "formats": [],
+     "dataType": "other",
+     "temporalResolution": "daily; monthly and annual aggregates",
+     "periodOfRecord": "1980-present, 3-day latency",
+     "coverage": "statewide",
+     "originalCollector": "Not documented (Daily Lake Evaporation Model app built by DRI for TWDB)",
+     "access": "Free web app; the companion API (https://twdb.dri.edu/docs) requires a requested key",
+     "qualityNotes": "Not documented",
+     "verification": "not verified",
+     "testNote": "Earth Engine app not opened; description from the TWDB resources page.",
+     "citations": [
+      "https://waterdatafortexas.org/lake-evaporation-rainfall/resources"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-ut-utah-climate-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Utah Climate Center (USU)",
+   "fullName": "Utah Climate Center, Utah State University",
+   "host": "Utah State University",
+   "location": "Logan, UT",
+   "discipline": "Statewide station precipitation records and the center's mesonets",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Utah's state climate office at Utah State University runs its own weather station networks (UCRN, AgWx, UAGRIMET, USCAN, FGNET, USUwx). Its Surface Weather & Climate Observations tool returns reports for these and for stations it stores from other collectors (NOAA GHCN, GSOD and ISD-Lite, FAA AWOS, NRCS SCAN, MesoWest). Reports are ZIP files of CSV at daily, hourly or minute frequency, with precipitation in inches.",
+   "holdings": [
+    "Surface Weather & Climate Observations station query and CSV report download (UCC mesonets plus GHCN, GSOD, ISD-Lite, AWOS, SCAN, MesoWest stations)"
+   ],
+   "formats": [
+    "CSV",
+    "ZIP"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Surface Weather & Climate Observations (SWCO)",
+     "url": "https://climate.usu.edu/swco/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AASC Utah state climate office listing",
+     "url": "https://stateclimate.org/state/utah"
+    },
+    {
+     "label": "About the Utah Climate Center",
+     "url": "https://climate.usu.edu/about.php"
+    },
+    {
+     "label": "UCRN network overview",
+     "url": "https://climate.usu.edu/mchd/dashboard/overview/UCRN.php"
+    },
+    {
+     "label": "Utah AgWeather network overview",
+     "url": "https://climate.usu.edu/mchd/dashboard/overview/AGWX.php"
+    },
+    {
+     "label": "UAGRIMET network overview",
+     "url": "https://climate.usu.edu/mchd/dashboard/overview/UAGRIMET.php"
+    },
+    {
+     "label": "Policy & Uses",
+     "url": "https://climate.usu.edu/policy.php"
+    }
+   ],
+   "state": "Utah",
+   "stateCodes": [
+    "UT"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Surface Weather & Climate Observations (SWCO)",
+     "landingUrl": "https://climate.usu.edu/swco/",
+     "accessUrl": "https://climate.usu.edu/swco/",
+     "formats": [
+      "CSV",
+      "ZIP"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly; minute (5-minute precipitation for UCRN)",
+     "periodOfRecord": "Varies by station (for example, UCRN stations from 2015-10-26 to present)",
+     "coverage": "statewide",
+     "originalCollector": "Utah Climate Center networks (UCRN, AgWx, UAGRIMET with the Bureau of Reclamation AgriMet program, USCAN, FGNET, USUwx), plus redistributed NOAA GHCN, GSOD and ISD-Lite, FAA AWOS, NRCS SCAN and MesoWest stations",
+     "access": "Free, no account. Large requests are emailed as a download link.",
+     "qualityNotes": "Units are inches in English units. The user sets the missing and trace codes (default M and T). Times are local standard time. The center says the data are not legal documents and does not guarantee the accuracy of data from other agencies. A QAQC page exists but was not reviewed.",
+     "verification": "download tested",
+     "testNote": "Station metadata came from mapServices.php query_id=3 for UCRN station 1262317. A POST to mapServices.php?query_id=7 for daily 'precip' at UCRN Beaver - Big Flat NFS (primary_id 1191), 2026-10-01 to 2026-10-05, returned a ZIP. Its dly-report.csv had date_time,precip rows (0 for each day). The metadata file defines precip as 'daily precipitation' in inches.",
+     "citations": [
+      "https://climate.usu.edu/swco/",
+      "https://climate.usu.edu/mchd/dashboard/overview/UCRN.php",
+      "https://climate.usu.edu/policy.php"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-vt-femc",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Forest Ecosystem Monitoring Cooperative (FEMC) data archive",
+   "fullName": "Forest Ecosystem Monitoring Cooperative (formerly the Vermont Monitoring Cooperative) Data Archive",
+   "host": "University of Vermont, with the USDA Forest Service and northeastern state agencies (Vermont ANR and Forests, Parks and Recreation)",
+   "location": "South Burlington, VT",
+   "discipline": "Forest-site and mountain station meteorology, including precipitation",
+   "topics": [
+    "gauges",
+    "snow"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "FEMC's data archive serves station data collected at Vermont monitoring sites, including daily precipitation from the National Weather Service Cooperative station on the Mount Mansfield summit (1954-present) and a 15-minute NOAH IV rain gauge at UVM's Proctor Maple Research Center in Underhill (2013-present). It also hosts Vermont ANR acid precipitation program data and copies of NCEI-derived Vermont annual climate summaries. Data can be downloaded anonymously under a CC BY-NC-SA 4.0 license.",
+   "holdings": [
+    "Mount Mansfield Summit Daily Meteorological Data: daily precipitation, temperature, new snow and snow depth from the NWS co-op station, 1954-present",
+    "Raw Proctor Maple Research Center NOAH IV Rain Gauge data: 15-minute precipitation, 2013-present (real-time, unreviewed)",
+    "Raw Proctor Maple Research Center Meteorological Data including precipitation, 1992-present (no QC applied)",
+    "Vermont Acid Precipitation Monitoring Program (Vermont ANR): 1994 event precipitation amounts and chemistry at 5 sites",
+    "Annual Summaries of Climate Trends in Vermont: annual temperature and precipitation from 1895, copied from NCEI"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "FEMC Data Archive",
+     "url": "https://www.uvm.edu/femc/data"
+    }
+   ],
+   "sources": [
+    {
+     "label": "About FEMC",
+     "url": "https://www.uvm.edu/femc/about"
+    },
+    {
+     "label": "FEMC contact",
+     "url": "https://www.uvm.edu/femc/about/contact"
+    },
+    {
+     "label": "Mount Mansfield summit dataset",
+     "url": "https://www.uvm.edu/femc/data/archive/project/mount-mansfield-summit-meteorology/dataset/mount-mansfield-summit-daily-meteorological-data/overview"
+    },
+    {
+     "label": "Proctor Maple rain gauge dataset",
+     "url": "https://www.uvm.edu/femc/data/archive/project/proctor-maple-research-center-meteorological-monitoring/dataset/noaa-rain-gauge-data/overview"
+    },
+    {
+     "label": "Proctor Maple project datasets",
+     "url": "https://www.uvm.edu/femc/data/archive/project/proctor-maple-research-center-meteorological-monitoring/dataset"
+    },
+    {
+     "label": "Vermont Acid Precipitation Monitoring Program datasets",
+     "url": "https://www.uvm.edu/femc/data/archive/project/vermont-acid-precipitation-monitoring-program/dataset"
+    },
+    {
+     "label": "FEMC 2018 Vermont long-term update acknowledgments",
+     "url": "https://www.uvm.edu/femc/CI4/products/long_term_update/2018/vermont/acknowledgments"
+    }
+   ],
+   "state": "Vermont",
+   "stateCodes": [
+    "VT"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "FEMC Data Archive",
+     "landingUrl": "https://www.uvm.edu/femc/data",
+     "accessUrl": "https://www.uvm.edu/femc/data",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "daily (Mount Mansfield summit); 15-minute (Proctor Maple rain gauge); varies by dataset",
+     "periodOfRecord": "1954-11-01-present (Mount Mansfield summit); 2013-06-19-present (Proctor Maple rain gauge); varies by dataset",
+     "coverage": "station-specific",
+     "originalCollector": "National Weather Service Cooperative station (Mount Mansfield summit); UVM/FEMC (Proctor Maple Research Center); Vermont ANR (acid precipitation program)",
+     "access": "Free, no account (anonymous download; optional user details; CC BY-NC-SA 4.0)",
+     "qualityNotes": "Precipitation in inches (0.01 precision) for both datasets. Proctor Maple rain gauge data are real-time and unreviewed; erroneous values set to null. Mount Mansfield early records include nulls. Download file format Not documented.",
+     "verification": "download tested",
+     "testNote": "Fetched each dataset's data page with curl; the embedded data preview returned Mount Mansfield daily rows (e.g. 1954-11-18 Precipitation 0.20) and Proctor Maple 15-minute rows (e.g. 2026-11-03 18:45 ReportPCP 0.01). The full download is built by a form POST with a CSRF token and was not run.",
+     "citations": [
+      "https://www.uvm.edu/femc/data/archive/project/mount-mansfield-summit-meteorology/dataset/mount-mansfield-summit-daily-meteorological-data/overview",
+      "https://www.uvm.edu/femc/data/archive/project/mount-mansfield-summit-meteorology/dataset/mount-mansfield-summit-daily-meteorological-data/metadata",
+      "https://www.uvm.edu/femc/data/archive/project/proctor-maple-research-center-meteorological-monitoring/dataset/noaa-rain-gauge-data/overview",
+      "https://www.uvm.edu/femc/data/archive/project/proctor-maple-research-center-meteorological-monitoring/dataset/noaa-rain-gauge-data/metadata",
+      "https://www.uvm.edu/femc/data/archive/project/proctor-maple-research-center-meteorological-monitoring/dataset/noaa-rain-gauge-data/data"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-va-norfolk-open-data-weather",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "City of Norfolk Open Data: Weather Daily Summaries",
+   "fullName": "City of Norfolk Open Data Portal, Weather Daily Summaries",
+   "host": "City of Norfolk",
+   "location": "Norfolk, VA",
+   "discipline": "Daily weather summaries for Norfolk International Airport",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The City of Norfolk's open data portal republishes daily weather summaries for Norfolk International Airport, including daily precipitation and snowfall. The observations were collected by NOAA and come from its Global Historical Climatology Network - Daily (GHCN-Daily). It is one station and is updated daily.",
+   "holdings": [
+    "Weather Daily Summaries (daily precipitation, snow, temperature, wind) for Norfolk International Airport"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Weather Daily Summaries",
+     "url": "https://data.norfolk.gov/d/vdfi-mi5m"
+    }
+   ],
+   "sources": [
+    {
+     "label": "data.virginia.gov catalog record",
+     "url": "https://data.virginia.gov/api/3/action/package_show?id=weather-daily-summaries"
+    },
+    {
+     "label": "Norfolk open data dataset",
+     "url": "https://data.norfolk.gov/d/vdfi-mi5m"
+    }
+   ],
+   "state": "Virginia",
+   "stateCodes": [
+    "VA"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "Weather Daily Summaries",
+     "landingUrl": "https://data.norfolk.gov/d/vdfi-mi5m",
+     "accessUrl": "https://data.norfolk.gov/d/vdfi-mi5m",
+     "formats": [
+      "CSV",
+      "JSON",
+      "XML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "1946-01-01 to present (earliest and latest records seen in test queries)",
+     "coverage": "station-specific",
+     "originalCollector": "NOAA (GHCN-Daily, Norfolk International Airport)",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation and snow in inches; temperature in Fahrenheit. The dataset is a city copy of NOAA GHCN-Daily records; QC flags are not included. Average temperature is often blank.",
+     "verification": "download tested",
+     "testNote": "Queried the Socrata endpoint data.norfolk.gov/resource/vdfi-mi5m.csv with $limit=4 ordered by date. Got rows for 2026-10-28 to 2026-10-31 with precipitation 0.0; the earliest rows are 1946-01-01 and 1946-01-02.",
+     "citations": [
+      "https://data.virginia.gov/api/3/action/package_show?id=weather-daily-summaries",
+      "https://data.norfolk.gov/api/views/vdfi-mi5m.json"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-va-vt-arec-weatherstem",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Virginia Tech AREC WeatherSTEM stations",
+   "fullName": "Virginia Tech Agricultural Research and Extension Centers (AREC) WeatherSTEM Portal",
+   "host": "Virginia Tech (stations); WeatherSTEM (data platform)",
+   "location": "Virginia (multiple AREC sites)",
+   "discipline": "Weather stations at Virginia Tech agricultural research centers",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Weather stations at Virginia Tech's Agricultural Research and Extension Centers and related sites (for example Kentland Farms, Tidewater, Eastern Shore, Southern Piedmont, Shenandoah Valley) shown on a WeatherSTEM portal. The portal's free Data Mining tool exports sensor data, including rain gauge and rain rate readings, by station and date range. The data are collected by the Virginia Tech stations and hosted by the WeatherSTEM company.",
+   "holdings": [
+    "WeatherSTEM Data Mining export of AREC station sensors (rain gauge, rain rate and other weather variables)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "XML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "VT AREC WeatherSTEM Data Mining",
+     "url": "https://vt-arec.weatherstem.com/data?refer=/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "VA Tech AREC WeatherSTEM portal",
+     "url": "https://vt-arec.weatherstem.com/"
+    },
+    {
+     "label": "Data Mining tool",
+     "url": "https://vt-arec.weatherstem.com/data?refer=/"
+    }
+   ],
+   "state": "Virginia",
+   "stateCodes": [
+    "VA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "VT AREC WeatherSTEM Data Mining",
+     "landingUrl": "https://vt-arec.weatherstem.com/",
+     "accessUrl": "https://vt-arec.weatherstem.com/data?refer=/",
+     "formats": [
+      "CSV",
+      "JSON",
+      "XML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "minute, hour, day or month aggregation",
+     "periodOfRecord": "Not documented (the tool shows each sensor's oldest record)",
+     "coverage": "station-specific",
+     "originalCollector": "Virginia Tech AREC weather stations (WeatherSTEM hardware and platform)",
+     "access": "Free, no account (a banner says Data Mining is open without restriction; login is needed only for timelapses)",
+     "qualityNotes": "Rain gauge in inches, rain rate in inches per hour. QC is not documented.",
+     "verification": "download documented",
+     "testNote": "Opened the Data Mining page; its embedded station configuration lists Rain Gauge (inches) and Rain Rate (in/hr) sensors. The export runs through a JavaScript RPC backend, so no sample was requested.",
+     "citations": [
+      "https://vt-arec.weatherstem.com/data?refer=/",
+      "https://vt-arec.weatherstem.com/arec88"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-va-wm-keck-lab-weather",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "William & Mary Keck Lab weather station",
+   "fullName": "Keck Environmental Field Laboratory Weather Station, William & Mary",
+   "host": "William & Mary, Keck Environmental Field Laboratory",
+   "location": "William & Mary campus, VA",
+   "discipline": "Single campus weather station with 10-minute rainfall",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "A Davis weather station at William & Mary's Keck Environmental Field Laboratory records rain and other weather variables every 10 minutes. The lab posts one zip file per year from April 2003 onward, plus a daily averages spreadsheet. It covers one station only.",
+   "holdings": [
+    "Yearly zip files of 10-minute weather observations including rain, April 2003 to present"
+   ],
+   "formats": [
+    "ZIP (tab-delimited text)",
+    "XLSX"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Keck Lab weather data files",
+     "url": "https://media.wm.edu/content/as/kecklab/Weather/KeckWeather.htm"
+    }
+   ],
+   "sources": [
+    {
+     "label": "W&M Environment live data page",
+     "url": "https://www.wm.edu/as/environment/research/livedata/index.php"
+    },
+    {
+     "label": "Keck Weather page",
+     "url": "https://media.wm.edu/content/as/kecklab/Weather/KeckWeather.htm"
+    }
+   ],
+   "state": "Virginia",
+   "stateCodes": [
+    "VA"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Keck Lab weather data files",
+     "landingUrl": "https://www.wm.edu/as/environment/research/livedata/index.php",
+     "accessUrl": "https://media.wm.edu/content/as/kecklab/Weather/KeckWeather.htm",
+     "formats": [
+      "ZIP (tab-delimited text)",
+      "XLSX"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "10-minute",
+     "periodOfRecord": "April 2003-present",
+     "coverage": "station-specific",
+     "originalCollector": "William & Mary Keck Environmental Field Laboratory",
+     "access": "Free, no account",
+     "qualityNotes": "The page says rainfall totals are unofficial and not checked for accuracy. Known problems: data from April 10 to May 21, 2007 may be inaccurate, and the gauge malfunctioned on March 3-4, 2023 (subtract 82.91 inches from the March and 2023 totals).",
+     "verification": "download documented",
+     "testNote": "A HEAD request for Weather_2026.zip returned 200, application/zip, 2.5 MB, last modified 2026-11-04. The sandbox blocked the GET request, so the file contents were not read.",
+     "citations": [
+      "https://media.wm.edu/content/as/kecklab/Weather/KeckWeather.htm"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wa-king-county-hic",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "King County Hydrologic Information Center",
+   "fullName": "King County Hydrologic Information Center (HIC)",
+   "host": "King County, Washington",
+   "location": "King County, WA",
+   "discipline": "County rain gauge and stream gauge records",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "King County's Hydrologic Information Center publishes rainfall, streamflow and other data from county gauge sites across King County watersheds (Cedar River-Lake Washington, Green River, Sammamish, Snoqualmie-Skykomish, White River and others). King County collects the data. Its download page exports continuous data for a selected site at monthly, daily, hourly or 15-minute intervals.",
+   "holdings": [
+    "Continuous data download by site (rain gauges included) at monthly, daily, hourly or 15-minute intervals",
+    "Daily rainfall totals and 15-minute rainfall"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "King County HIC continuous data download",
+     "url": "https://green2.kingcounty.gov/hydrology/DataDownload.aspx"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Hydrologic Information Center home",
+     "url": "https://green2.kingcounty.gov/hydrology/"
+    },
+    {
+     "label": "Data download hub",
+     "url": "https://green2.kingcounty.gov/hydrology/Data.aspx"
+    },
+    {
+     "label": "Gauge list (Precipitation parameter filter)",
+     "url": "https://green2.kingcounty.gov/hydrology/GaugeListSearch.aspx"
+    }
+   ],
+   "state": "Washington",
+   "stateCodes": [
+    "WA"
+   ],
+   "orgType": "county or city agency",
+   "datasetDetails": [
+    {
+     "name": "King County HIC continuous data download",
+     "landingUrl": "https://green2.kingcounty.gov/hydrology/",
+     "accessUrl": "https://green2.kingcounty.gov/hydrology/DataDownload.aspx",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute; hourly; daily; monthly",
+     "periodOfRecord": "Not documented (varies by site)",
+     "coverage": "regional: King County",
+     "originalCollector": "King County",
+     "access": "Free, no account (no login on the form)",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "Opened the download form. Its site list has about 1,270 sites, including rain gauges such as AUB_RAIN, BC_Rain and BW_rain, and its interval list offers Monthly, Daily, Hourly and 15 Minute. The form is an ASP.NET postback, so no sample was submitted.",
+     "citations": [
+      "https://green2.kingcounty.gov/hydrology/",
+      "https://green2.kingcounty.gov/hydrology/DataDownload.aspx",
+      "https://green2.kingcounty.gov/hydrology/GaugeListSearch.aspx"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wa-wsdot-weather-api",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "WSDOT Weather Information API",
+   "fullName": "Washington State Department of Transportation Traveler Information API: Weather Information service",
+   "host": "Washington State Department of Transportation",
+   "location": "Washington State Department of Transportation, WA",
+   "discipline": "Road weather station observations",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "WSDOT's Traveler Information API includes a Weather Information service for weather stations that WSDOT maintains along state highways. It returns current readings for all stations or for one station, and readings over a chosen time range, including a precipitation field in inches. WSDOT collects the data, and the API needs a free access code sent by email.",
+   "holdings": [
+    "Current and time-range weather observations (including PrecipitationInInches) for WSDOT-maintained stations, in JSON or XML"
+   ],
+   "formats": [
+    "JSON",
+    "XML"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "WSDOT Weather Information REST service",
+     "url": "https://wsdot.wa.gov/traffic/api/WeatherInformation/WeatherInformationREST.svc/Help"
+    }
+   ],
+   "sources": [
+    {
+     "label": "WSDOT Traveler Information API",
+     "url": "https://wsdot.wa.gov/traffic/api/"
+    },
+    {
+     "label": "SearchWeatherInformationAsJson help",
+     "url": "https://wsdot.wa.gov/traffic/api/WeatherInformation/WeatherInformationREST.svc/Help/operations/SearchWeatherInformationAsJson"
+    }
+   ],
+   "state": "Washington",
+   "stateCodes": [
+    "WA"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "WSDOT Weather Information REST service",
+     "landingUrl": "https://wsdot.wa.gov/traffic/api/",
+     "accessUrl": "https://wsdot.wa.gov/traffic/api/WeatherInformation/WeatherInformationREST.svc/Help",
+     "formats": [
+      "JSON",
+      "XML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "Not documented",
+     "periodOfRecord": "Not documented (SearchWeatherInformation takes SearchStartTime and SearchEndTime; how far back it goes is not stated)",
+     "coverage": "statewide",
+     "originalCollector": "Washington State Department of Transportation",
+     "access": "Free access code required (sent by email)",
+     "qualityNotes": "Precipitation field PrecipitationInInches (decimal, nullable). No QC notes found.",
+     "verification": "download documented",
+     "testNote": "Read the REST help pages. The operations include GetCurrentWeatherInformationAsJson and SearchWeatherInformationAsJson (AccessCode, StationID, SearchStartTime, SearchEndTime), and the response schema includes PrecipitationInInches. Not tested because it needs an access code.",
+     "citations": [
+      "https://wsdot.wa.gov/traffic/api/",
+      "https://wsdot.wa.gov/traffic/api/WeatherInformation/WeatherInformationREST.svc/Help",
+      "https://wsdot.wa.gov/traffic/api/WeatherInformation/WeatherInformationREST.svc/Help/operations/SearchWeatherInformationAsJson"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wa-agweathernet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "WSU AgWeatherNet",
+   "fullName": "AgWeatherNet, Washington's Agricultural Weather Network (Washington State University)",
+   "host": "Washington State University",
+   "location": "Washington State University, WA",
+   "discipline": "Statewide agricultural weather station network",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "AgWeatherNet is Washington State University's statewide network of more than 360 automated weather stations. The stations collect data every 15 minutes, including rainfall, for farmers and the public. WSU collects the data, and the site offers a Data Access page for requesting and downloading it. WSU has also published a monthly summary for the Anatone station on the state open-data portal.",
+   "holdings": [
+    "Data Access page on weather.wsu.edu for requesting and downloading station weather data",
+    "Monthly station summary on data.wa.gov (Anatone, Asotin County, 2008-2021) including total precipitation"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "AgWeatherNet Data Access",
+     "url": "https://weather.wsu.edu/dataaccess"
+    },
+    {
+     "name": "Annual Anatone Weather Station Measurements, 2008- (data.wa.gov)",
+     "url": "https://data.wa.gov/resource/hm92-6wrv.csv"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AgWeatherNet home",
+     "url": "https://weather.wsu.edu/"
+    },
+    {
+     "label": "WSU News: weather station upgrade funded by WSDA (2025)",
+     "url": "https://news.wsu.edu/news/2025/03/07/weather-station-upgrade-will-empower-growers-educate-students-on-climate/"
+    },
+    {
+     "label": "WSU News: new AgWeatherNet app (2026)",
+     "url": "https://news.wsu.edu/news/2026/05/20/new-wsu-app-provides-free-local-weather-data-to-ag-industry-general-public/"
+    },
+    {
+     "label": "WSU CSANR AgWeatherNet overview",
+     "url": "https://csanr.wsu.edu/agweathernet-washingtons-agricultural-weather-network/"
+    },
+    {
+     "label": "data.wa.gov Anatone dataset",
+     "url": "https://data.wa.gov/d/hm92-6wrv"
+    }
+   ],
+   "state": "Washington",
+   "stateCodes": [
+    "WA"
+   ],
+   "orgType": "state-funded program (university- or contractor-built)",
+   "datasetDetails": [
+    {
+     "name": "AgWeatherNet Data Access",
+     "landingUrl": "https://weather.wsu.edu/",
+     "accessUrl": "https://weather.wsu.edu/dataaccess",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute (collection interval); download intervals Not documented",
+     "periodOfRecord": "Not documented (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "Washington State University AgWeatherNet",
+     "access": "Not documented. The data.wa.gov station description tells users to register at the AgWeatherNet website and log in for historical reports.",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "weather.wsu.edu is a JavaScript single-page app. Its site index lists a 'Data Access' page described as 'Request and download weather data' (keywords csv, export, json, api). The data pages and undocumented API were not probed, so formats were not confirmed.",
+     "citations": [
+      "https://weather.wsu.edu/",
+      "https://news.wsu.edu/news/2025/03/07/weather-station-upgrade-will-empower-growers-educate-students-on-climate/",
+      "https://data.wa.gov/d/hm92-6wrv"
+     ]
+    },
+    {
+     "name": "Annual Anatone Weather Station Measurements, 2008- (data.wa.gov)",
+     "landingUrl": "https://data.wa.gov/d/hm92-6wrv",
+     "accessUrl": "https://data.wa.gov/resource/hm92-6wrv.csv",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "monthly",
+     "periodOfRecord": "2008-02-13 to 2021-04-30 (one station)",
+     "coverage": "station-specific",
+     "originalCollector": "Washington State University AgWeatherNet",
+     "access": "Free, no account",
+     "qualityNotes": "Precipitation column TotPrec-in (inches). Missing values are shown as NA. The description says sensors were last maintained by the AgWeatherNet team on April 27, 2021.",
+     "verification": "download tested",
+     "testNote": "Requested https://data.wa.gov/resource/hm92-6wrv.csv?$limit=4. It returned monthly rows for 2008-03 to 2008-06 with totprec_in values 0.27, 0.99, 1.47 and 1.42.",
+     "citations": [
+      "https://data.wa.gov/d/hm92-6wrv"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wa-ecology-freshwater-datastream",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Washington Ecology Freshwater DataStream",
+   "fullName": "Washington State Department of Ecology, Freshwater DataStream (continuous river and stream monitoring)",
+   "host": "Washington State Department of Ecology",
+   "location": "Washington State Department of Ecology, WA",
+   "discipline": "Continuous river, stream and rainfall monitoring",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Ecology's Freshwater DataStream holds current and historical continuous data from its statewide river and stream monitoring stations. Its data types are streamflow, water quality and rainfall: some stations record rainfall for early warning in landslide-prone areas. Ecology collects the data with automatic gauges that log every 15 or 30 minutes.",
+   "holdings": [
+    "Continuous streamflow, water quality and rainfall data by station, selected by WRIA (Water Resource Inventory Area)"
+   ],
+   "formats": [],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Freshwater DataStream station details",
+     "url": "https://apps.ecology.wa.gov/continuousflowandwq/StationDetails"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Freshwater DataStream data map",
+     "url": "https://apps.ecology.wa.gov/continuousflowandwq"
+    },
+    {
+     "label": "Ecology flow monitoring",
+     "url": "https://ecology.wa.gov/Research-Data/Monitoring-assessment/River-stream-monitoring/Flow-monitoring"
+    }
+   ],
+   "state": "Washington",
+   "stateCodes": [
+    "WA"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "Freshwater DataStream station details",
+     "landingUrl": "https://apps.ecology.wa.gov/continuousflowandwq",
+     "accessUrl": "https://apps.ecology.wa.gov/continuousflowandwq/StationDetails",
+     "formats": [],
+     "dataType": "station observations",
+     "temporalResolution": "15-minute or 30-minute, depending on station",
+     "periodOfRecord": "Not documented (current and historical; active and historical stations)",
+     "coverage": "statewide",
+     "originalCollector": "Washington State Department of Ecology",
+     "access": "Not documented (no login mentioned)",
+     "qualityNotes": "Not documented",
+     "verification": "download documented",
+     "testNote": "Ecology's flow monitoring page says 'All of our data are available to download' and points to Freshwater DataStream for continuous data. The station page lets users choose a WRIA and station and load a time series. Download formats are not described, and curl requests to the station page returned HTTP 403, so no sample was tested.",
+     "citations": [
+      "https://apps.ecology.wa.gov/continuousflowandwq",
+      "https://apps.ecology.wa.gov/continuousflowandwq/StationDetails",
+      "https://ecology.wa.gov/Research-Data/Monitoring-assessment/River-stream-monitoring/Flow-monitoring"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wv-emd-iflows",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "WV Emergency Management Division IFLOWS",
+   "fullName": "West Virginia Emergency Management Division Integrated Flood Observing and Warning System (IFLOWS)",
+   "host": "West Virginia Emergency Management Division",
+   "location": "Charleston, WV",
+   "discipline": "Statewide flood-warning rain gauge network",
+   "topics": [
+    "gauges",
+    "hydrology"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "WVEMD's IFLOWS flood-warning network has 3 base stations and 256 monitored meteorological gauges, all with rain sensors, plus stream-stage sites. Its public AEM Elements 360 site lists about 250 Rain Increment sensors statewide and lets guests download each sensor's readings as CSV, tab-delimited or spreadsheet files, raw or as daily totals.",
+   "holdings": [
+    "IFLOWS rain increment and accumulation readings per gauge, with raw and daily-rollup CSV export"
+   ],
+   "formats": [
+    "CSV",
+    "TSV",
+    "XLS"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "IFLOWS Elements 360 sensor data export",
+     "url": "https://wvdhsem.onerain.com/list/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "WVEMD IFLOWS page",
+     "url": "https://emd.wv.gov/iflows"
+    },
+    {
+     "label": "IFLOWS public data site",
+     "url": "https://wvdhsem.onerain.com/"
+    }
+   ],
+   "state": "West Virginia",
+   "stateCodes": [
+    "WV"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "IFLOWS Elements 360 sensor data export",
+     "landingUrl": "https://wvdhsem.onerain.com/list/",
+     "accessUrl": "https://wvdhsem.onerain.com/list/",
+     "formats": [
+      "CSV",
+      "TSV",
+      "XLS"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "Hourly increments at the gauge tested; daily rollup export also offered",
+     "periodOfRecord": "Not documented (default view shows the last 7 days; a date-range picker is offered)",
+     "coverage": "statewide",
+     "originalCollector": "West Virginia Emergency Management Division (IFLOWS gauges)",
+     "access": "Free, guest access, no account",
+     "qualityNotes": "Values in inches with a Data Quality column (A seen) and raw counts; provisional real-time data, QC not documented",
+     "verification": "download tested",
+     "testNote": "Opened the Edray Rain (6948) Rain Increment sensor page as guest and downloaded its comma-delimited export: header Reading,Receive,Value,Unit,Data Quality,Raw Value with hourly 0.00 in rows for 2026-11-05; the daily rollup export returned Reading,Value,Unit rows from 2026-10-29. Export links carry a page-issued session token; a hand-built request for 2015 without the token returned 401, so long-range history was not tested.",
+     "citations": [
+      "https://emd.wv.gov/iflows",
+      "https://wvdhsem.onerain.com/list/?view=fb358463-0d34-42b9-b86e-32aee53d3fd2&sensor_class=10"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wv-dep-precip-tool",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "WVDEP TAGIS Precip Tool",
+   "fullName": "West Virginia Department of Environmental Protection TAGIS Precipitation Tool",
+   "host": "West Virginia Department of Environmental Protection (TAGIS)",
+   "location": "Charleston, WV",
+   "discipline": "Daily radar-estimated precipitation totals for West Virginia",
+   "topics": [
+    "radar"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "WVDEP downloads NWS NEXRAD 24-hour precipitation totals daily and keeps them in its own database, served through a map tool that gives range totals and daily totals for about 5,290 estimate points across the state. The original estimates come from the National Weather Service; the date picker starts in 2022.",
+   "holdings": [
+    "Daily NEXRAD 24-hour precipitation totals at grid points, queryable by date range (JSON)"
+   ],
+   "formats": [
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "WVDEP Precip Tool",
+     "url": "https://tagis.dep.wv.gov/precip/precip.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "WVDEP Mining Mapping Applications",
+     "url": "https://tagis.dep.wv.gov/mining"
+    },
+    {
+     "label": "Precip Tool",
+     "url": "https://tagis.dep.wv.gov/precip/precip.html"
+    }
+   ],
+   "state": "West Virginia",
+   "stateCodes": [
+    "WV"
+   ],
+   "orgType": "state agency",
+   "datasetDetails": [
+    {
+     "name": "WVDEP Precip Tool",
+     "landingUrl": "https://tagis.dep.wv.gov/precip/precip.html",
+     "accessUrl": "https://tagis.dep.wv.gov/precip/precip.html",
+     "formats": [
+      "JSON"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily",
+     "periodOfRecord": "2022-present (date picker minimum 2022-01-01)",
+     "coverage": "statewide",
+     "originalCollector": "National Weather Service (NEXRAD 24-hour precipitation totals)",
+     "access": "Free, no account",
+     "qualityNotes": "Values in inches; days with no precipitation appear to be omitted from point results; QC not documented",
+     "verification": "download tested",
+     "testNote": "The page's backend get_precip.php returned 5,290 point locations (req=getpoints), daily values for point 2600 for 2025-10-01 to 2025-10-10 ([20251008,1.21],[20251009,0.08]) and range totals per point (req=getrange2). No file download button; data come as JSON from the tool's own query.",
+     "citations": [
+      "https://tagis.dep.wv.gov/mining",
+      "https://tagis.dep.wv.gov/precip/precip.html"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wi-mmsd",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Milwaukee Metropolitan Sewerage District rain gauges",
+   "fullName": "Milwaukee Metropolitan Sewerage District (MMSD)",
+   "host": "Milwaukee Metropolitan Sewerage District",
+   "location": "Milwaukee, WI",
+   "discipline": "Urban rain-gauge network, Milwaukee metropolitan area",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "MMSD owns 20 rain gauges in the Milwaukee metropolitan area of southeastern Wisconsin (including Cedarburg, Wauwatosa and its Jones Island and South Shore treatment plants). Its Rain Gauge Data page offers a CSV export of 5-minute cumulative readings for the last four days; older data is available only as custom rainfall maps.",
+   "holdings": [
+    "Rain Gauge Data CSV export: 20 gauges, 5-minute readings, last four days"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "MMSD rain gauge data export",
+     "url": "https://www.mmsd.com/about-us/milwaukee-rain-facility-information/rain_gauge_data/export"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Rain Gauge Data page",
+     "url": "https://www.mmsd.com/about-us/milwaukee-rain-facility-information/rain_gauge_data"
+    },
+    {
+     "label": "Rain gauge locations",
+     "url": "https://www.mmsd.com/about-us/milwaukee-rain-facility-information/rain-gauge-locations"
+    },
+    {
+     "label": "Custom rain gauge maps news item",
+     "url": "https://www.mmsd.com/about-us/news/create-custom-rain-gauge-maps-on-mmsdcom"
+    }
+   ],
+   "state": "Wisconsin",
+   "stateCodes": [
+    "WI"
+   ],
+   "orgType": "public regional agency",
+   "datasetDetails": [
+    {
+     "name": "MMSD rain gauge data export",
+     "landingUrl": "https://www.mmsd.com/about-us/milwaukee-rain-facility-information/rain_gauge_data",
+     "accessUrl": "https://www.mmsd.com/about-us/milwaukee-rain-facility-information/rain_gauge_data/export",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute",
+     "periodOfRecord": "Rolling last four days only",
+     "coverage": "regional: Milwaukee metropolitan area",
+     "originalCollector": "Milwaukee Metropolitan Sewerage District",
+     "access": "Free, no account",
+     "qualityNotes": "Raw, unverified; MMSD typically completes QA/QC within one to three days of a rainfall event. Units not stated on the page (values appear to be inches). No historical archive download documented.",
+     "verification": "download tested",
+     "testNote": "Fetched the export; first lines were a header 'timestamp,WS1201/,...,WS1230/' (20 gauges) and rows such as 'Nov 5, 2026, 6:05 PM',0.02,0.04,...",
+     "citations": [
+      "https://www.mmsd.com/about-us/milwaukee-rain-facility-information/rain_gauge_data",
+      "https://www.mmsd.com/about-us/milwaukee-rain-facility-information/rain-gauge-locations",
+      "https://www.mmsd.com/about-us/news/create-custom-rain-gauge-maps-on-mmsdcom"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wi-nadp",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "National Atmospheric Deposition Program (NADP)",
+   "fullName": "National Atmospheric Deposition Program",
+   "host": "University of Wisconsin-Madison, Wisconsin State Laboratory of Hygiene",
+   "location": "Madison, WI",
+   "discipline": "National precipitation chemistry and precipitation amounts",
+   "topics": [
+    "gauges",
+    "other"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "NADP has monitored precipitation chemistry across the United States since 1978. Its National Trends Network data export gives weekly, monthly, seasonal or annual records per site, including rain-gauge precipitation amount (mm) along with ion concentrations and deposition. The program's analytical laboratory and website are at the Wisconsin State Laboratory of Hygiene, UW-Madison; samples are collected by site operators nationwide.",
+   "holdings": [
+    "National Trends Network (NTN) data export: weekly to annual precipitation chemistry and precipitation amount, 1978-present",
+    "Other networks (MDN mercury, AMoN ammonia, AMNet, MLN) use the same export tool"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "NTN Data Export",
+     "url": "https://nadp.slh.wisc.edu/networks/national-trends-network/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "NADP home page",
+     "url": "https://nadp.slh.wisc.edu/"
+    },
+    {
+     "label": "NTN weekly metadata",
+     "url": "https://nadp.slh.wisc.edu/filelib/networks/ntn/NTN_Weekly_Metadata_v2_2.pdf"
+    }
+   ],
+   "state": "Wisconsin",
+   "stateCodes": [
+    "WI"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "NTN Data Export",
+     "landingUrl": "https://nadp.slh.wisc.edu/networks/national-trends-network/",
+     "accessUrl": "https://nadp.slh.wisc.edu/networks/national-trends-network/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "weekly; monthly; seasonal; annual (calendar or water year)",
+     "periodOfRecord": "1978-present (varies by site)",
+     "coverage": "regional: United States (national network; includes Wisconsin sites)",
+     "originalCollector": "NADP site operators; analyses by the NADP Analytical Laboratory at the Wisconsin State Laboratory of Hygiene",
+     "access": "Free, no account (web form)",
+     "qualityNotes": "Weekly metadata defines ppt (recording rain gauge amount, mm) and subppt (amount used for NADP totals, mm), with sample-type flags (e.g. d dry, b bulk, e extended period, p precipitation unknown). Export can include or exclude invalid samples and incomplete data. National coverage, not only Wisconsin.",
+     "verification": "download documented",
+     "testNote": "Export form (weekly/monthly/seasonal/annual, site, dates, units) and CSV output documented on the NTN page; its script posts to an SLH API that requires a password embedded in the page, so no scripted request was made.",
+     "citations": [
+      "https://nadp.slh.wisc.edu/networks/national-trends-network/",
+      "https://nadp.slh.wisc.edu/filelib/networks/ntn/NTN_Weekly_Metadata_v2_2.pdf",
+      "https://nadp.slh.wisc.edu/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wi-uw-agweather",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "UW Extension AgWeather",
+   "fullName": "UW-Madison Agricultural Weather Service (AgWeather)",
+   "host": "University of Wisconsin-Madison, Department of Entomology (Vegetable Entomology lab)",
+   "location": "Madison, WI",
+   "discipline": "Gridded daily precipitation for the Upper Midwest",
+   "topics": [
+    "gauges",
+    "models"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "AgWeather serves daily total precipitation for the Upper Midwest (lat 38-50, lon -98 to -82) aggregated to a 0.1-degree grid, through point and grid API queries and per-date CSV grid downloads. The underlying grids are NOAA gridded daily precipitation products; UW-Madison redistributes them for agricultural tools.",
+   "holdings": [
+    "Precipitation API: point time series and gridded daily totals, 2021-10-29 to present",
+    "Precipitation page with CSV download of the full grid for a date"
+   ],
+   "formats": [
+    "JSON",
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "AgWeather precipitation API",
+     "url": "https://agweather.cals.wisc.edu/api/precips/info"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AgWeather home",
+     "url": "https://agweather.cals.wisc.edu/"
+    },
+    {
+     "label": "Precipitation page",
+     "url": "https://agweather.cals.wisc.edu/weather/precip"
+    },
+    {
+     "label": "API documentation (OpenAPI)",
+     "url": "https://agweather.cals.wisc.edu/api/docs/agweather.yaml"
+    }
+   ],
+   "state": "Wisconsin",
+   "stateCodes": [
+    "WI"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "AgWeather precipitation API",
+     "landingUrl": "https://agweather.cals.wisc.edu/weather/precip",
+     "accessUrl": "https://agweather.cals.wisc.edu/api/precips/info",
+     "formats": [
+      "JSON",
+      "CSV"
+     ],
+     "dataType": "gridded estimates",
+     "temporalResolution": "daily",
+     "periodOfRecord": "2021-10-29 to present (per /api/precips/info)",
+     "coverage": "regional: Upper Midwest (lat 38-50, lon -98 to -82), including all of Wisconsin",
+     "originalCollector": "NOAA (gridded daily total precipitation; specific product not named)",
+     "access": "Free, no account",
+     "qualityNotes": "Aggregated to 0.1 decimal degree; units mm (default) or in. Endpoints: /precips (point series), /precips/grid (grid for a date or summed range), /precips/map. Info endpoint reported no missing days.",
+     "verification": "download tested",
+     "testNote": "GET /api/precips?lat=43.07&lng=-89.40&start_date=2026-10-01&end_date=2026-10-04 returned JSON daily values (1.70583, 0.0, 0.02972, 0.0). /api/precips/info returned date range 2021-10-29 to 2026-11-04.",
+     "citations": [
+      "https://agweather.cals.wisc.edu/api/docs/agweather.yaml",
+      "https://agweather.cals.wisc.edu/api/precips/info",
+      "https://agweather.cals.wisc.edu/weather/precip"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wi-wisconet",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Wisconet (Wisconsin Environmental Mesonet)",
+   "fullName": "Wisconsin Environmental Mesonet (Wisconet)",
+   "host": "University of Wisconsin-Madison",
+   "location": "Madison, WI",
+   "discipline": "Statewide mesonet weather and soil observations",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Wisconet is a UW-Madison network of weather and soil stations across Wisconsin (81 stations in its API list), reporting every 5 minutes. Its public API serves 5-minute, hourly and daily rain totals per station, and its Archive page offers CSV downloads. Funded by the USDA Rural Partnerships Institute and the Wisconsin Alumni Research Foundation.",
+   "holdings": [
+    "Wisconet API v1: station metadata and measures including 5-minute, 60-minute and daily rain totals",
+    "Data archive page with per-station CSV downloads"
+   ],
+   "formats": [
+    "JSON",
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Wisconet API v1",
+     "url": "https://wisconet.wisc.edu/api/v1/stations/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Wisconet home",
+     "url": "https://wisconet.wisc.edu/"
+    },
+    {
+     "label": "Wisconet API page",
+     "url": "https://wisconet.wisc.edu/data/api"
+    },
+    {
+     "label": "Wisconet archive page",
+     "url": "https://wisconet.wisc.edu/data/archive"
+    },
+    {
+     "label": "UW news on Wisconet funding",
+     "url": "https://news.wisc.edu/?p=94512"
+    }
+   ],
+   "state": "Wisconsin",
+   "stateCodes": [
+    "WI"
+   ],
+   "orgType": "university (no verified state role)",
+   "datasetDetails": [
+    {
+     "name": "Wisconet API v1",
+     "landingUrl": "https://wisconet.wisc.edu/data/api",
+     "accessUrl": "https://wisconet.wisc.edu/api/v1/stations/",
+     "formats": [
+      "JSON",
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "5-minute; 60-minute; daily",
+     "periodOfRecord": "2023-present (earliest_api_date per station ranges from 2023-02-02 to 2026-04-21)",
+     "coverage": "statewide",
+     "originalCollector": "Wisconet (UW-Madison)",
+     "access": "Free, no account",
+     "qualityNotes": "Rain fields (e.g. daily_rain_in_tot, 60min_rain_in_tot, 5min_rain_in_tot) are converted from millimeters to inches. Site text says QA/QC follows AASC Mesonet Recognition Program standards. Bulk data provided on request.",
+     "verification": "download tested",
+     "testNote": "GET /api/v1/stations/ returned 81 stations; GET /api/v1/stations/ALTN/measures?start_time=1761969600&end_time=1762228800&fields=daily_rain_in_tot returned JSON daily rain values 0.02, 0.01, 0.0 in. (Station slug 'arlington' returned 'Station not found'; use station_id.)",
+     "citations": [
+      "https://wisconet.wisc.edu/api/v1/stations/",
+      "https://wisconet.wisc.edu/api/v1/fields/",
+      "https://pypi.org/project/wiscopy/",
+      "https://wisconet.wisc.edu/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wy-wrds-state-climate-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Wyoming State Climate Office / WRDS",
+   "fullName": "Wyoming State Climate Office and Water Resources Data System",
+   "host": "University of Wyoming",
+   "location": "Laramie, WY",
+   "discipline": "Statewide climate and water data clearinghouse; agricultural climate station records",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "The Water Resources Data System at the University of Wyoming, which is also the Wyoming State Climate Office, serves daily and hourly CSV files for the Wyoming Agricultural Climate Network (WACNet). WACNet's stations sit in agricultural areas across the state and are maintained by the Wyoming State Engineer's Office. The files include precipitation totals in millimetres.",
+   "holdings": [
+    "WACNet station daily and hourly CSV files (Campbell Scientific TOA5 format) with Rain_mm_Tot, served by WRDS"
+   ],
+   "formats": [
+    "CSV"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "WACNet station data (daily and hourly CSV)",
+     "url": "https://www.wrds.uwyo.edu/WACNet/Stations.html"
+    }
+   ],
+   "sources": [
+    {
+     "label": "WRDS / State Climate Office home",
+     "url": "https://www.wrds.uwyo.edu/"
+    },
+    {
+     "label": "AASC state page",
+     "url": "https://stateclimate.org/state/wyoming"
+    },
+    {
+     "label": "WACNet home",
+     "url": "https://www.wrds.uwyo.edu/WACNet/WACNet.html"
+    },
+    {
+     "label": "Wyoming State Water Plan WRDS pamphlet",
+     "url": "https://waterplan.state.wy.us/BAG/general/wrds-pamplet.html"
+    }
+   ],
+   "state": "Wyoming",
+   "stateCodes": [
+    "WY"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "WACNet station data (daily and hourly CSV)",
+     "landingUrl": "https://www.wrds.uwyo.edu/WACNet/WACNet.html",
+     "accessUrl": "https://www.wrds.uwyo.edu/WACNet/Stations.html",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; hourly",
+     "periodOfRecord": "Varies by station (Lingle 2W daily file 2008-05-30 to 2026-10-28; Baggs 2E daily file from 2016-11-10)",
+     "coverage": "statewide",
+     "originalCollector": "Wyoming State Engineer's Office (WACNet)",
+     "access": "Free, no account",
+     "qualityNotes": "Raw Campbell Scientific TOA5 logger files. Precipitation is the Rain_mm_Tot column, in mm. Missing values appear as empty fields or NAN. No QC notes are documented.",
+     "verification": "download tested",
+     "testNote": "Requested the first lines of https://www.wrds.uwyo.edu/WACNet/Baggs_2E_Daily.csv (linked from Baggs_2E_Week.html). It returned a TOA5 header with Rain_mm_Tot in mm, plus daily rows from 2016-11-10 (3.048 mm). The hourly file Baggs_2E_Hourly.csv has the same column. A range request on the end of Lingle_2W_Daily.csv returned a 2026-10-28 row. Not every station page links CSV files (for example, the Powell page has none).",
+     "citations": [
+      "https://www.wrds.uwyo.edu/WACNet/WACNet.html",
+      "https://www.wrds.uwyo.edu/WACNet/Stations.html",
+      "https://www.wrds.uwyo.edu/WACNet/Baggs_2E_Week.html",
+      "https://www.wrds.uwyo.edu/WACNet/Baggs_2E_Daily.csv",
+      "https://www.usbr.gov/gp/agrimet/additional_resources.html"
+     ]
     }
    ]
   }

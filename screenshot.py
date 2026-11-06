@@ -22,7 +22,7 @@ with sync_playwright() as p:
         page = browser.new_page(viewport={"width": width, "height": height}, color_scheme=scheme, accept_downloads=True)
         page.on("pageerror", lambda e: errors.append(f"{width}px {scheme}: {e}"))
         page.goto(PAGE, wait_until="domcontentloaded")
-        page.get_by_text("Showing 87 of 87 sources").wait_for()
+        page.get_by_text("Showing 83 of 83 sources").wait_for()
         return page
 
     page = open_page(1400, 900)
@@ -73,13 +73,9 @@ with sync_playwright() as p:
 
     page.get_by_role("button", name="Research projects").click()
 
-    # The roster added two groups; filter to Other US and open PRISM.
+    # Other US (PRISM, Colorado Climate Center and the two Iowa sources moved to State agencies).
     page.get_by_role("button", name="Other US").click()
-    page.get_by_role("button", name="Show all 2 data access endpoints for PRISM").click()
-    page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
-    page.screenshot(path=OUT / "4b-prism-panel.png")
     print("Other US rows:", page.locator("#result-count").inner_text())
-    page.get_by_role("button", name="Hide all 2 data access endpoints for PRISM").click()
     page.get_by_role("button", name="Show all 5 data access endpoints for USGS").click()
     page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
     page.screenshot(path=OUT / "4e-usgs-panel.png")
@@ -105,6 +101,28 @@ with sync_playwright() as p:
     page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
     page.screenshot(path=OUT / "4d-gpcc-panel.png")
 
+    # State agencies tab: same panel, state and local sources, with a State filter.
+    page.get_by_role("tab", name="State agencies").click()
+    page.get_by_text("Showing 126 of 126 sources").wait_for()
+    page.evaluate("window.scrollTo(0, 0)")
+    page.screenshot(path=OUT / "8-states.png")
+    print("state stats:", page.locator("#stats").inner_text().replace("\n", " | "))
+    page.locator("#state-filter").select_option("FL")
+    print("Florida rows:", page.locator("#result-count").inner_text())
+    page.get_by_role("button", name=re.compile(r"Show all \d+ data access endpoints for FAWN")).click()
+    page.get_by_role("heading", name="Datasets", exact=True).scroll_into_view_if_needed()
+    page.screenshot(path=OUT / "8b-fawn-panel.png")
+    page.get_by_role("button", name="Save filtered as").click()
+    with page.expect_download() as dl:
+        page.locator("#save-filtered-options").get_by_role("menuitem", name="JSON").click()
+    path = OUT / dl.value.suggested_filename
+    dl.value.save_as(path)
+    fl = json.loads(path.read_text())
+    print("Florida JSON:", path.name, fl["title"], {a: len(v) for a, v in fl["sources"].items()}, "filters:", fl["filters"])
+    page.locator("#state-filter").select_option("")
+    page.get_by_role("tab", name="Dashboard").click()
+    page.get_by_text("Showing 83 of 83 sources").wait_for()
+
     page.get_by_role("tab", name="Possible removals").click()
     page.screenshot(path=OUT / "5-removals.png", full_page=True)
 
@@ -119,6 +137,12 @@ with sync_playwright() as p:
     phone.get_by_role("heading", name="Sources", exact=True).scroll_into_view_if_needed()
     overflow = max(overflow, phone.evaluate("document.documentElement.scrollWidth - window.innerWidth"))
     phone.screenshot(path=OUT / "7b-phone-rwrc.png")
+    # The State agencies panel has the widest table (four dataset columns).
+    phone.get_by_role("tab", name="State agencies").click()
+    phone.get_by_role("button", name=re.compile(r"Show all \d+ data access endpoints for FAWN")).click()
+    phone.get_by_role("heading", name="Datasets", exact=True).scroll_into_view_if_needed()
+    overflow = max(overflow, phone.evaluate("document.documentElement.scrollWidth - window.innerWidth"))
+    phone.screenshot(path=OUT / "7c-phone-states.png")
 
     print("page errors:", errors or "none")
     print("phone horizontal overflow px:", overflow)

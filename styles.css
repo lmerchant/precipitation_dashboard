@@ -18,6 +18,7 @@
   --extra: #6b7280;
   --other-us: #2e7d32;
   --international: #b0306a;
+  --state-agencies: #9a5b00;
 
   --primary: #1d7a4a;
   --primary-soft: #e0f2e8;
@@ -35,7 +36,7 @@
     --bg: #0e141d; --surface: #161e2a; --surface-2: #1e2836; --fg: #e4e9f1; --muted: #98a3b4;
     --line: #2a3546; --accent: #6ea2f5; --accent-fg: #0b1220; --accent-soft: #1c2c47;
     --nasa: #8ea6f0; --noaa: #4fc2cc; --nsf: #b897e6; --nws: #ee9a72; --extra: #a3aab6;
-    --other-us: #82cf88; --international: #f08fbf;
+    --other-us: #82cf88; --international: #f08fbf; --state-agencies: #f0b45a;
     --primary: #6fd19c; --primary-soft: #173527; --secondary: #e0c16a; --secondary-soft: #3a3016;
     --removal: #f08a83; --removal-soft: #3f1f1d;
     color-scheme: dark;
@@ -45,7 +46,7 @@
   --bg: #0e141d; --surface: #161e2a; --surface-2: #1e2836; --fg: #e4e9f1; --muted: #98a3b4;
   --line: #2a3546; --accent: #6ea2f5; --accent-fg: #0b1220; --accent-soft: #1c2c47;
   --nasa: #8ea6f0; --noaa: #4fc2cc; --nsf: #b897e6; --nws: #ee9a72; --extra: #a3aab6;
-  --other-us: #82cf88; --international: #f08fbf;
+  --other-us: #82cf88; --international: #f08fbf; --state-agencies: #f0b45a;
   --primary: #6fd19c; --primary-soft: #173527; --secondary: #e0c16a; --secondary-soft: #3a3016;
   --removal: #f08a83; --removal-soft: #3f1f1d;
   color-scheme: dark;
@@ -209,6 +210,8 @@ a:hover { text-decoration-thickness: 2px; }
 .agency-extra { background: var(--extra); }
 .agency-other-us { background: var(--other-us); }
 .agency-international { background: var(--international); }
+.agency-state-agencies { background: var(--state-agencies); }
+.state-name { font-weight: 600; white-space: nowrap; }
 
 .pill { display: inline-block; font-size: 0.74rem; font-weight: 600; padding: 1px 8px; border-radius: 999px; white-space: nowrap; }
 .pill-primary { background: var(--primary-soft); color: var(--primary); }
@@ -271,8 +274,9 @@ a:hover { text-decoration-thickness: 2px; }
 
 @media (max-width: 640px) {
   .brand h1 { font-size: 1rem; }
-  .tabs { order: 3; width: 100%; }
-  .tab { flex: 1; }
+  /* Four tabs don't fit one row on a phone, so they sit two by two. */
+  .tabs { order: 3; width: 100%; flex-wrap: wrap; border-radius: 18px; }
+  .tab { flex: 1 1 40%; }
   .filter-label { width: 100%; }
   .data-table .col-hide-sm { display: none; }
 }

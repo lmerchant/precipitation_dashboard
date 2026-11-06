@@ -4,7 +4,8 @@ Reads the JSON directories in ../data_sources/data_sources_json, drops the
 sources removed from the dashboard (SEDAC, CDDIS), and tags every remaining
 entry with its precipitation relevance and topics. Sources from the invitee
 roster are added next: new entries, plus extra endpoints for existing ones.
-The USGS entry (Other US) is added last, from its own file.
+The USGS entry (Other US) is added next, from its own file. State agency
+sources come last; entries they replace (marked alreadyOnDashboard) leave Other US.
 
 Run:  python3 build_data.py
 """
@@ -24,6 +25,8 @@ PROJECTS_FILE = "us-government-meteorology-research-projects_and_non_digital.jso
 ROSTER_FILE = "invitee-roster-sources.json"
 ROSTER_GROUPS = ["Other US", "International"]
 USGS_FILE = "usgs-sources.json"
+STATES_FILE = "state-agencies-sources.json"
+STATES_GROUP = "State agencies"
 
 # Removed from the dashboard entirely.
 REMOVED = {
@@ -245,12 +248,28 @@ def add_usgs(entries, meta):
     meta["Other US"] = {**other, "notes": other["notes"] + doc["notes"]}
 
 
+def add_states(entries, meta):
+    """Adds the state agency sources and drops the Other US entries they replace."""
+    doc = json.loads((SRC / STATES_FILE).read_text())
+    moved = {c["alreadyOnDashboard"] for c in doc["dataCenters"] if c["alreadyOnDashboard"]}
+    unknown = moved - {e["id"] for e in entries}
+    assert not unknown, f"Unknown ids in alreadyOnDashboard: {sorted(unknown)}"
+    entries[:] = [e for e in entries if e["id"] not in moved]
+    for c in doc["dataCenters"]:
+        e = data_center_entry(c)
+        e.update(state=c["state"], stateCodes=c["stateCodes"], orgType=c["orgType"],
+                 datasetDetails=c["datasetDetails"])
+        entries.append(e)
+    meta[STATES_GROUP] = {"title": doc["title"], "notes": doc["notes"], "file": STATES_FILE}
+
+
 def main():
     entries, meta = agency_entries()
     projects, meta["Extra"] = project_entries()
     entries += projects
     not_added = add_roster(entries, meta)
     add_usgs(entries, meta)
+    add_states(entries, meta)
     # Sources with no data endpoint at all are tagged Non-digital.
     for e in entries:
         if not e["endpoints"]:

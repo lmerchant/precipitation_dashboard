@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>US Precipitation Data Sources</title>
-<meta name="description" content="Searchable directory of precipitation data sources for the US: NASA, NOAA, NSF, NWS, other US and international sources, and historical research projects." />
+<meta name="description" content="Searchable directory of precipitation data sources for the US: NASA, NOAA, NSF, NWS, other US, state and local, and international sources, and historical research projects." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -18,11 +18,12 @@
       <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c3.6 4.6 6.5 8.4 6.5 12a6.5 6.5 0 0 1-13 0c0-3.6 2.9-7.4 6.5-12z" fill="var(--accent)"/></svg>
       <div>
         <h1>US Precipitation Data Sources</h1>
-        <p class="brand-sub">NASA · NOAA · NSF · NWS · other US · research projects · international</p>
+        <p class="brand-sub">NASA · NOAA · NSF · NWS · other US · research projects · state agencies · international</p>
       </div>
     </div>
     <nav class="tabs" role="tablist" aria-label="Pages">
       <button class="tab" role="tab" id="tab-dashboard" aria-controls="view-dashboard" data-view="dashboard" type="button">Dashboard</button>
+      <button class="tab" role="tab" id="tab-states" aria-controls="view-dashboard" data-view="states" type="button">State agencies</button>
       <button class="tab" role="tab" id="tab-international" aria-controls="view-dashboard" data-view="international" type="button">International</button>
       <button class="tab" role="tab" id="tab-removals" aria-controls="view-removals" data-view="removals" type="button">Possible removals <span class="tab-count" id="removal-count"></span></button>
     </nav>
@@ -79,9 +80,12 @@
       <div class="controls-row">
         <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
         <div class="selects">
+          <label class="select-label" for="state-filter" id="state-filter-label" hidden>State
+            <select id="state-filter" class="select"></select>
+          </label>
           <label class="select-label" for="sort">Sort by
             <select id="sort" class="select">
-              <option value="agency">Agency</option>
+              <option value="agency" id="sort-agency">Agency</option>
               <option value="name">Name</option>
               <option value="volume">Archive volume</option>
               <option value="datasets">Datasets</option>
@@ -97,7 +101,7 @@
         <thead>
           <tr>
             <th scope="col">Data Agency</th>
-            <th scope="col">Agency</th>
+            <th scope="col" id="col-agency">Agency</th>
             <th scope="col" class="col-wide">Focus</th>
             <th scope="col">Topic</th>
             <th scope="col" class="col-wide">Holdings</th>
