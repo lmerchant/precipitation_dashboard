@@ -110,7 +110,7 @@ with sync_playwright() as p:
     page.locator("#state-filter").select_option("FL")
     print("Florida rows:", page.locator("#result-count").inner_text())
     page.get_by_role("button", name=re.compile(r"Show all \d+ data access endpoints for FAWN")).click()
-    page.get_by_role("heading", name="Datasets", exact=True).scroll_into_view_if_needed()
+    page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
     page.screenshot(path=OUT / "8b-fawn-panel.png")
     page.get_by_role("button", name="Save filtered as").click()
     with page.expect_download() as dl:
@@ -119,6 +119,11 @@ with sync_playwright() as p:
     dl.value.save_as(path)
     fl = json.loads(path.read_text())
     print("Florida JSON:", path.name, fl["title"], {a: len(v) for a, v in fl["sources"].items()}, "filters:", fl["filters"])
+    # A source with several datasets lists each one's time step and period of record as a bullet in About.
+    page.locator("#state-filter").select_option("AZ")
+    page.get_by_role("button", name=re.compile(r"Show all \d+ data access endpoints for Flood Control District of Maricopa")).click()
+    page.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
+    page.screenshot(path=OUT / "8c-multi-dataset-panel.png")
     page.locator("#state-filter").select_option("")
     page.get_by_role("tab", name="Dashboard").click()
     page.get_by_text("Showing 64 of 64 sources").wait_for()
@@ -134,10 +139,10 @@ with sync_playwright() as p:
     phone.get_by_role("heading", name="Sources", exact=True).scroll_into_view_if_needed()
     overflow = max(overflow, phone.evaluate("document.documentElement.scrollWidth - window.innerWidth"))
     phone.screenshot(path=OUT / "7b-phone-rwrc.png")
-    # The State agencies panel has the widest table (four dataset columns).
+    # The State agencies panel has the widest table (three endpoint columns).
     phone.get_by_role("tab", name="State agencies").click()
     phone.get_by_role("button", name=re.compile(r"Show all \d+ data access endpoints for FAWN")).click()
-    phone.get_by_role("heading", name="Datasets", exact=True).scroll_into_view_if_needed()
+    phone.get_by_role("heading", name="Data access endpoints").scroll_into_view_if_needed()
     overflow = max(overflow, phone.evaluate("document.documentElement.scrollWidth - window.innerWidth"))
     phone.screenshot(path=OUT / "7c-phone-states.png")
 

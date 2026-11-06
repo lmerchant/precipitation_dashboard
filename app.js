@@ -292,24 +292,31 @@
       items.map(function (i) { return '<li>' + i + '</li>'; }).join('') + '</ul></div>';
   }
 
+  function sameUrl(a, b) { return a.replace(/\/$/, '') === b.replace(/\/$/, ''); }
+
+  // State entries add a (temporary) Download status column, taken from the dataset with the same link.
   function endpointsTable(e) {
     if (!e.endpoints.length) return '';
+    var status = e.datasetDetails ? function (x) {
+      var d = e.datasetDetails.filter(function (d) { return sameUrl(d.accessUrl, x.url); })[0];
+      return '<td>' + (d ? esc(d.verification) : '<span class="dim">not listed</span>') + '</td>';
+    } : function () { return ''; };
     return '<div class="detail-col detail-col-endpoints"><h4>Data access endpoints</h4>' +
-      '<table class="ep-table"><thead><tr><th scope="col">Name</th><th scope="col">Link address</th></tr></thead><tbody>' +
+      '<table class="ep-table' + (e.datasetDetails ? ' ep-table-status' : '') + '"><thead><tr><th scope="col">Name</th><th scope="col">Link address</th>' +
+      (e.datasetDetails ? '<th scope="col">Download status</th>' : '') + '</tr></thead><tbody>' +
       e.endpoints.map(function (x) {
-        return '<tr><td>' + esc(x.name) + '</td><td class="mono">' + link(x.url, host(x.url)) + '</td></tr>';
+        return '<tr><td>' + esc(x.name) + '</td><td class="mono">' + link(x.url, host(x.url)) + '</td>' + status(x) + '</tr>';
       }).join('') + '</tbody></table></div>';
   }
 
-  // State entries list each dataset with its time step, period of record and whether a download was tested.
-  function datasetsTable(e) {
-    return '<div class="detail-col detail-col-endpoints"><h4>Datasets</h4>' +
-      '<table class="ep-table"><thead><tr><th scope="col">Dataset</th><th scope="col">Time step</th>' +
-      '<th scope="col">Period of record</th><th scope="col">Download</th></tr></thead><tbody>' +
-      e.datasetDetails.map(function (d) {
-        return '<tr><td>' + link(d.accessUrl, d.name) + '</td><td>' + esc(d.temporalResolution) + '</td><td>' +
-          esc(d.periodOfRecord) + '</td><td>' + esc(d.verification) + '</td></tr>';
-      }).join('') + '</tbody></table></div>';
+  // Time step and period of record for state entries: plain lines for one dataset, one bullet per dataset otherwise.
+  function datasetFacts(details) {
+    if (details.length === 1) {
+      return ['Time step: ' + esc(details[0].temporalResolution), 'Period of record: ' + esc(details[0].periodOfRecord)];
+    }
+    return ['Time step and period of record:<ul class="sub-list">' + details.map(function (d) {
+      return '<li>' + esc(d.name) + ': ' + esc(d.temporalResolution) + '; ' + esc(d.periodOfRecord) + '</li>';
+    }).join('') + '</ul>'];
   }
 
   function metricsLine(e) {
@@ -332,12 +339,13 @@
     if (e.location) facts.push('Location: ' + esc(e.location));
     if (e.years) facts.push('Years: ' + esc(e.years) + (e.ongoing ? ' (ongoing)' : ''));
     if (e.formats.length) facts.push('Formats: <span class="mono">' + esc(e.formats.join(', ')) + '</span>');
+    if (e.datasetDetails) facts = facts.concat(datasetFacts(e.datasetDetails));
     var cited = e.sources.map(function (s) { return link(s.url, s.label); });
     var cols = [
       list('About', facts),
       list('Holdings', e.holdings.map(esc)),
       isProject ? '' : list('Sources', cited),
-      e.datasetDetails ? datasetsTable(e) : endpointsTable(e),
+      endpointsTable(e),
       isProject ? list('References', cited, 'detail-col-refs') : '',
     ].join('');
     return (e.datasetDetails ? '' : metricsLine(e)) + '<p class="detail-blurb">' + esc(e.blurb) + '</p><div class="detail">' + cols + '</div>';
