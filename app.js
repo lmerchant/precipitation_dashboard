@@ -376,9 +376,6 @@
       return '<li><strong>' + esc(r.id.split('-').slice(1).join('-').toUpperCase()) + '</strong> (' +
         esc(r.id.split('-')[0].toUpperCase()) + '): ' + esc(r.reason) + '</li>';
     }).join('');
-    $('not-added-list').innerHTML = DATA.notAdded.map(function (r) {
-      return '<li><strong>' + link(r.url, r.name) + '</strong>: ' + esc(r.reason) + '</li>';
-    }).join('');
   }
 
   function removalRecords() {
