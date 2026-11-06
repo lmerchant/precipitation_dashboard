@@ -88,89 +88,7 @@ window.PRECIP_DATA = {
    "file": "state-agencies-sources.json"
   }
  },
- "removed": [
-  {
-   "id": "nasa-sedac",
-   "reason": "Socioeconomic and population data; no precipitation holdings."
-  },
-  {
-   "id": "nasa-cddis",
-   "reason": "Space geodesy (GNSS, laser ranging); no precipitation holdings."
-  }
- ],
  "entries": [
-  {
-   "id": "nasa-asf",
-   "agency": "NASA",
-   "kind": "data-center",
-   "name": "ASF DAAC",
-   "fullName": "Alaska Satellite Facility Distributed Active Archive Center",
-   "host": "University of Alaska Fairbanks, Geophysical Institute",
-   "location": "Fairbanks, AK",
-   "discipline": "Synthetic Aperture Radar (SAR)",
-   "topics": [
-    "satellite"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Synthetic aperture radar imagery of land and ice; no precipitation products.",
-   "blurb": "The U.S. home of synthetic aperture radar: ASF DAAC collects, processes, archives, and distributes satellite and airborne SAR data used for deformation, ice, and ecosystem science.",
-   "holdings": [
-    "Sentinel-1 (ESA)",
-    "NISAR (NASA–ISRO)",
-    "ALOS PALSAR (JAXA)",
-    "RADARSAT-1",
-    "Seasat",
-    "UAVSAR / AIRSAR (airborne)",
-    "SMAP radar",
-    "OPERA products (JPL)"
-   ],
-   "formats": [
-    "GeoTIFF / COG",
-    "HDF5",
-    "NetCDF",
-    "CEOS",
-    "XML"
-   ],
-   "volumeTB": 43735.5,
-   "filesM": 137.1,
-   "datasets": 167,
-   "endpoints": [
-    {
-     "name": "Vertex SAR search",
-     "url": "https://search.asf.alaska.edu"
-    },
-    {
-     "name": "ASF Search API (REST)",
-     "url": "https://api.daac.asf.alaska.edu/"
-    },
-    {
-     "name": "HyP3 cloud processing",
-     "url": "https://hyp3-docs.asf.alaska.edu"
-    },
-    {
-     "name": "asf_search Python SDK & docs",
-     "url": "https://docs.asf.alaska.edu"
-    },
-    {
-     "name": "Earthdata Search",
-     "url": "https://search.earthdata.nasa.gov"
-    },
-    {
-     "name": "Earthdata Access (508 search)",
-     "url": "https://access.earthdata.nasa.gov/collections"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Earthdata — ASF DAAC",
-     "url": "https://www.earthdata.nasa.gov/centers/asf-daac"
-    },
-    {
-     "label": "ASF tools",
-     "url": "https://www.earthdata.nasa.gov/centers/asf-daac/data-access-tools"
-    }
-   ]
-  },
   {
    "id": "nasa-laads",
    "agency": "NASA",
@@ -183,8 +101,6 @@ window.PRECIP_DATA = {
    "topics": [
     "satellite"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "LAADS serves Level-1 calibrated radiances and Level-2/3 atmosphere products from MODIS, VIIRS, and international imaging spectrometers — over 1.8 billion files.",
    "holdings": [
     "MODIS (Terra, Aqua)",
@@ -238,70 +154,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "nasa-lpdaac",
-   "agency": "NASA",
-   "kind": "data-center",
-   "name": "LP DAAC",
-   "fullName": "Land Processes Distributed Active Archive Center",
-   "host": "USGS Earth Resources Observation and Science (EROS) Center",
-   "location": "Sioux Falls, SD",
-   "discipline": "Land processes / land remote sensing",
-   "topics": [
-    "satellite"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Land surface remote sensing (land cover, elevation, vegetation).",
-   "blurb": "A NASA–USGS partnership archiving land remote sensing products for monitoring land dynamics — from ASTER and MODIS to ECOSTRESS, EMIT, and Harmonized Landsat Sentinel-2.",
-   "holdings": [
-    "ASTER (Terra)",
-    "MODIS (Terra, Aqua)",
-    "VIIRS",
-    "ECOSTRESS (ISS)",
-    "GEDI (ISS)",
-    "EMIT (ISS)",
-    "HLS (Landsat 8/9 + Sentinel-2)",
-    "SRTM / NASADEM"
-   ],
-   "formats": [
-    "HDF4 / HDF-EOS",
-    "HDF5",
-    "NetCDF-4",
-    "COG / GeoTIFF",
-    "ENVI"
-   ],
-   "volumeTB": 24844.8,
-   "filesM": 868.5,
-   "datasets": 1145,
-   "endpoints": [
-    {
-     "name": "LP DAAC website",
-     "url": "https://lpdaac.usgs.gov"
-    },
-    {
-     "name": "AppEEARS subsetting",
-     "url": "https://appeears.earthdatacloud.nasa.gov"
-    },
-    {
-     "name": "Earthdata Search",
-     "url": "https://search.earthdata.nasa.gov"
-    },
-    {
-     "name": "Earthdata Access (508 search)",
-     "url": "https://access.earthdata.nasa.gov/collections"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Earthdata — LP DAAC",
-     "url": "https://www.earthdata.nasa.gov/centers/lp-daac"
-    },
-    {
-     "label": "LP DAAC data",
-     "url": "https://lpdaac.usgs.gov/data/"
-    }
-   ]
-  },
-  {
    "id": "nasa-podaac",
    "agency": "NASA",
    "kind": "data-center",
@@ -314,8 +166,6 @@ window.PRECIP_DATA = {
     "satellite",
     "hydrology"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "Oceanographic and hydrologic data for understanding the physical processes of the global oceans and surface land waters — from sea surface topography to gravity and salinity.",
    "holdings": [
     "SWOT",
@@ -380,8 +230,6 @@ window.PRECIP_DATA = {
     "satellite",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Climate data services for atmospheric composition, dynamics, global precipitation, and solar irradiance — including the widely used MERRA-2 reanalysis and Giovanni analysis system.",
    "holdings": [
     "GPM & IMERG",
@@ -455,68 +303,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "nasa-asdc",
-   "agency": "NASA",
-   "kind": "data-center",
-   "name": "ASDC",
-   "fullName": "Atmospheric Science Data Center",
-   "host": "NASA Langley Research Center",
-   "location": "Hampton, VA",
-   "discipline": "Radiation, clouds & aerosols",
-   "topics": [
-    "satellite"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Radiation budget, clouds and aerosols; no precipitation products.",
-   "blurb": "Radiation budget, clouds, aerosols, and tropospheric composition data for climate research, from ERBE and CERES to TEMPO air quality observations.",
-   "holdings": [
-    "CERES (Terra, Aqua, NOAA-20)",
-    "CALIPSO",
-    "MISR (Terra)",
-    "MOPITT (Terra)",
-    "DSCOVR EPIC",
-    "SAGE III-ISS",
-    "TEMPO",
-    "PREFIRE"
-   ],
-   "formats": [
-    "HDF4 / HDF-EOS",
-    "NetCDF-4",
-    "HDF5"
-   ],
-   "volumeTB": 11572.8,
-   "filesM": 296.3,
-   "datasets": 1748,
-   "endpoints": [
-    {
-     "name": "ASDC website",
-     "url": "https://asdc.larc.nasa.gov"
-    },
-    {
-     "name": "CALIPSO / CERES / MISR tools",
-     "url": "https://www.earthdata.nasa.gov/centers/asdc-daac/data-access-tools"
-    },
-    {
-     "name": "Earthdata Search",
-     "url": "https://search.earthdata.nasa.gov"
-    },
-    {
-     "name": "Earthdata Access (508 search)",
-     "url": "https://access.earthdata.nasa.gov/collections"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Earthdata — ASDC",
-     "url": "https://www.earthdata.nasa.gov/centers/asdc"
-    },
-    {
-     "label": "ASDC home",
-     "url": "https://asdc.larc.nasa.gov"
-    }
-   ]
-  },
-  {
    "id": "nasa-nsidc",
    "agency": "NASA",
    "kind": "data-center",
@@ -529,8 +315,6 @@ window.PRECIP_DATA = {
     "satellite",
     "snow"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "Snow and ice data — interactions among snow, ice, atmosphere, and ocean — supporting global change detection and model validation.",
    "holdings": [
     "ICESat-2 (ATLAS)",
@@ -581,70 +365,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "nasa-obdaac",
-   "agency": "NASA",
-   "kind": "data-center",
-   "name": "OB.DAAC",
-   "fullName": "Ocean Biology Distributed Active Archive Center",
-   "host": "Ocean Biology Processing Group, NASA Goddard Space Flight Center",
-   "location": "Greenbelt, MD",
-   "discipline": "Ocean biology & ocean color",
-   "topics": [
-    "satellite"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Ocean biology and ocean color.",
-   "blurb": "Ocean color data — processing, calibration, and validation of global ocean biology, temperature, and salinity products from CZCS through PACE.",
-   "holdings": [
-    "PACE (OCI, HARP2, SPEXone)",
-    "MODIS (Aqua, Terra)",
-    "VIIRS",
-    "SeaWiFS",
-    "OLCI (Sentinel-3)",
-    "HICO (ISS)",
-    "MERIS / OCTS / CZCS (heritage)"
-   ],
-   "formats": [
-    "NetCDF-4",
-    "HDF4"
-   ],
-   "volumeTB": 8363.1,
-   "filesM": 95.2,
-   "datasets": 940,
-   "endpoints": [
-    {
-     "name": "Ocean Color Web",
-     "url": "https://oceandata.sci.gsfc.nasa.gov"
-    },
-    {
-     "name": "SeaDAS — processing software",
-     "url": "https://seadas.gsfc.nasa.gov"
-    },
-    {
-     "name": "SeaBASS — in-situ archive",
-     "url": "https://seabass.gsfc.nasa.gov"
-    },
-    {
-     "name": "Earthdata Search",
-     "url": "https://search.earthdata.nasa.gov"
-    },
-    {
-     "name": "Earthdata Access (508 search)",
-     "url": "https://access.earthdata.nasa.gov/collections"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Earthdata — OB.DAAC",
-     "url": "https://www.earthdata.nasa.gov/centers/ob-daac"
-    },
-    {
-     "label": "OB.DAAC tools",
-     "url": "https://www.earthdata.nasa.gov/centers/ob-daac/data-access-tools"
-    }
-   ]
-  },
-  {
    "id": "nasa-ornl",
    "agency": "NASA",
    "kind": "data-center",
@@ -657,8 +377,6 @@ window.PRECIP_DATA = {
     "gauges",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Biogeochemical and ecological data from field, airborne, and satellite observations — carbon cycling, vegetation dynamics, and environmental processes.",
    "holdings": [
     "GEDI (ISS lidar)",
@@ -723,8 +441,6 @@ window.PRECIP_DATA = {
     "radar",
     "field"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Hazardous weather data — lightning, tropical cyclones, precipitation, and storm-induced hazards — plus stewardship of field campaign data.",
    "holdings": [
     "LIS (ISS / TRMM OTD)",
@@ -784,8 +500,6 @@ window.PRECIP_DATA = {
     "radar",
     "satellite"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NOAA’s premier environmental archive — from the seafloor to the surface of the sun. Ingests ~229 TB/month from 130+ observing platforms; world’s largest archive of weather, climate, ocean, and paleoclimate data. Its Regional Weather Records Centers are listed separately as NCEI-RWRC.",
    "holdings": [
     "GHCN-Daily & Global Summary of the Day",
@@ -881,8 +595,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NCEI manages the Regional Climate Center (RCC) Program, now called the Regional Weather Records Center (RWRC) Program: six centers that provide climate services to six regions covering the United States. They provide sector-specific and value-added data products and services, build digital infrastructure for climate information, and combine non-NOAA climate data with NOAA data. All six share ACIS (the Applied Climate Information System), which serves daily station data such as precipitation, snowfall and temperature.",
    "holdings": [
     "Daily station data: precipitation, snowfall, snow depth, temperature",
@@ -980,8 +692,6 @@ window.PRECIP_DATA = {
     "satellite",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Public-private partnership putting NOAA’s biggest datasets on AWS, Google Cloud, and Azure as free object storage — over 24 PB served, supporting billions of requests and petabytes of daily access.",
    "holdings": [
     "GOES-R imagery (all satellites)",
@@ -1044,8 +754,6 @@ window.PRECIP_DATA = {
    "topics": [
     "satellite"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NOAA’s satellite environmental data archive, providing online access to the majority of JPSS and GOES data products; migrating into the unified NCEI archive and cloud (NODD).",
    "holdings": [
     "GOES-R series (GOES-16/17/18/19)",
@@ -1087,65 +795,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "noaa-coops",
-   "agency": "NOAA",
-   "kind": "data-center",
-   "name": "CO-OPS",
-   "fullName": "Center for Operational Oceanographic Products & Services",
-   "host": "NOS",
-   "location": "Silver Spring, MD · Chesapeake, VA",
-   "discipline": "Tides, currents & water levels",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Tides, currents and water levels.",
-   "blurb": "The authoritative source for U.S. tides, water levels, and coastal currents — running the National Water Level Observation Network, hurricane storm surge monitoring, and long-term sea level trends.",
-   "holdings": [
-    "National Water Level Observation Network",
-    "HF radar surface currents",
-    "Tsunami-ready water levels",
-    "Sea level trends & inundation stats"
-   ],
-   "formats": [
-    "CSV",
-    "JSON",
-    "XML",
-    "NetCDF"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Tides & Currents",
-     "url": "https://tidesandcurrents.noaa.gov/"
-    },
-    {
-     "name": "CO-OPS Data API",
-     "url": "https://api.tidesandcurrents.noaa.gov/api/prod/"
-    },
-    {
-     "name": "CO-OPS Metadata API",
-     "url": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/"
-    },
-    {
-     "name": "Derived Product API",
-     "url": "https://api.tidesandcurrents.noaa.gov/dpapi/prod/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "CO-OPS web services",
-     "url": "https://www.tidesandcurrents.noaa.gov/web_services_info.html"
-    },
-    {
-     "label": "CO-OPS API builder",
-     "url": "https://tidesandcurrents.noaa.gov/api-helper/url-generator.html"
-    }
-   ]
-  },
-  {
    "id": "noaa-ndbc",
    "agency": "NOAA",
    "kind": "data-center",
@@ -1157,8 +806,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "Operates the national moored buoy, C-MAN station, drifting buoy, and DART tsunami buoy networks — real-time marine weather and ocean observations from the world’s oceans and Great Lakes.",
    "holdings": [
     "Moored buoys & C-MAN stations",
@@ -1192,61 +839,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "noaa-coastwatch",
-   "agency": "NOAA",
-   "kind": "data-center",
-   "name": "CoastWatch",
-   "fullName": "NOAA CoastWatch / OceanWatch / PolarWatch",
-   "host": "NESDIS",
-   "location": "Central hub + regional nodes (West Coast: Pacific Grove, CA)",
-   "discipline": "Satellite ocean & coastal products",
-   "topics": [
-    "satellite"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Sea surface temperature, ocean color and altimetry.",
-   "blurb": "Satellite-derived ocean products for U.S. coastal and global waters — SST, ocean color, altimetry, sea ice, and surface currents — served through ERDDAP data servers and an all-in-one data portal.",
-   "holdings": [
-    "SST (OISST, VIIRS, blended)",
-    "Ocean color",
-    "Altimetry / SSH",
-    "PolarWatch sea ice",
-    "HF radar currents"
-   ],
-   "formats": [
-    "NetCDF",
-    "CSV",
-    "GeoTIFF"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": 800,
-   "endpoints": [
-    {
-     "name": "CoastWatch Data Portal",
-     "url": "https://coastwatch.noaa.gov/cwn/data-access-tools.html"
-    },
-    {
-     "name": "ERDDAP (West Coast)",
-     "url": "https://coastwatch.pfeg.noaa.gov/erddap/index.html"
-    },
-    {
-     "name": "ERDDAP (Central hub)",
-     "url": "https://coastwatch.noaa.gov/erddap/index.html"
-    }
-   ],
-   "sources": [
-    {
-     "label": "CoastWatch data tools",
-     "url": "https://coastwatch.noaa.gov/cwn/data-access-tools/erddap-noaa-coastwatch.html"
-    },
-    {
-     "label": "West Coast data catalog",
-     "url": "https://coastwatch.pfeg.noaa.gov/data.html"
-    }
-   ]
-  },
-  {
    "id": "noaa-gfdl",
    "agency": "NOAA",
    "kind": "data-center",
@@ -1258,8 +850,6 @@ window.PRECIP_DATA = {
    "topics": [
     "models"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "NOAA’s climate modeling lab. Public output from SPEAR large ensembles (1921–2100), CMIP6-era CM4/ESM4 simulations, and operational model archives is distributed via the GFDL Data Portal.",
    "holdings": [
     "SPEAR large ensembles",
@@ -1307,8 +897,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "Critical ocean observations for 50 years — the tropical Pacific TAO array, global CO2/ocean-acidification moorings, and Saildrone missions — shared through a public ERDDAP server (550+ datasets).",
    "holdings": [
     "TAO/TRITON tropical moorings",
@@ -1355,8 +943,6 @@ window.PRECIP_DATA = {
     "radar",
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "Hurricane Research Division field program data (aircraft radar, dropsondes), coral health monitoring, and near-real-time ocean observations for tropical cyclone analysis.",
    "holdings": [
     "Hurricane Research Division",
@@ -1390,244 +976,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "noaa-inport",
-   "agency": "NOAA",
-   "kind": "data-center",
-   "name": "InPort",
-   "fullName": "NMFS Enterprise Data Management Catalog",
-   "host": "NMFS",
-   "location": "Silver Spring, MD",
-   "discipline": "Fisheries & ecosystem metadata",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Fisheries and ecosystem metadata catalog.",
-   "blurb": "The authoritative metadata catalog for NOAA Fisheries and the National Ocean Service — the card catalog for fisheries statistics, stock assessments, surveys, and ecosystem data holdings.",
-   "holdings": [
-    "Fisheries statistics & economics",
-    "Stock assessment surveys",
-    "Marine ecosystems monitoring",
-    "Aquaculture science"
-   ],
-   "formats": [
-    "metadata catalog"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "InPort catalog",
-     "url": "https://www.fisheries.noaa.gov/inport/"
-    },
-    {
-     "name": "InPort about",
-     "url": "https://www.fisheries.noaa.gov/inport/about"
-    }
-   ],
-   "sources": [
-    {
-     "label": "EDM program",
-     "url": "https://www.fisheries.noaa.gov/resource/data/enterprise-data-management"
-    }
-   ]
-  },
-  {
-   "id": "noaa-digitalcoast",
-   "agency": "NOAA",
-   "kind": "data-center",
-   "name": "Digital Coast",
-   "fullName": "Office for Coastal Management",
-   "host": "NOS",
-   "location": "Charleston, SC",
-   "discipline": "Coastal management & geospatial",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Coastal mapping, lidar and land cover.",
-   "blurb": "Coastal geospatial data for management and planning — nearly 3,700 datasets of lidar topobathy, land cover, imagery, and coastal economics, downloadable through the Data Access Viewer.",
-   "holdings": [
-    "Lidar topographic-bathymetric",
-    "C-CAP land cover",
-    "Coastal imagery",
-    "ENOW economics",
-    "Hurricane tracks"
-   ],
-   "formats": [
-    "GeoTIFF",
-    "LAZ",
-    "Shapefile",
-    "GeoJSON"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": 3698,
-   "endpoints": [
-    {
-     "name": "Digital Coast",
-     "url": "https://coast.noaa.gov/digitalcoast/data/home.html"
-    },
-    {
-     "name": "Data Access Viewer",
-     "url": "https://coast.noaa.gov/dataviewer/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Digital Coast data",
-     "url": "https://coast.noaa.gov/digitalcoast/data/home.html"
-    }
-   ]
-  },
-  {
-   "id": "noaa-gml",
-   "agency": "NOAA",
-   "kind": "data-center",
-   "name": "GML",
-   "fullName": "Global Monitoring Laboratory",
-   "host": "OAR",
-   "location": "Boulder, CO",
-   "discipline": "Greenhouse gases & air chemistry",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Greenhouse gases and air chemistry.",
-   "blurb": "Home of the Mauna Loa CO2 record — the world’s longest continuous atmospheric CO2 measurement — and the Global Greenhouse Gas Reference Network, CarbonTracker, and global ozone monitoring.",
-   "holdings": [
-    "Mauna Loa CO2 record (since 1958)",
-    "Global Greenhouse Gas Reference Network",
-    "CarbonTracker",
-    "Ozonesondes & Halocarbons"
-   ],
-   "formats": [
-    "CSV",
-    "text",
-    "NetCDF"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "GML Data Finder",
-     "url": "https://gml.noaa.gov/data/"
-    },
-    {
-     "name": "Trends in CO2",
-     "url": "https://gml.noaa.gov/ccgg/trends/"
-    },
-    {
-     "name": "CCGG data downloads",
-     "url": "https://gml.noaa.gov/ccgg/data/getdata.php?gas=co2"
-    }
-   ],
-   "sources": [
-    {
-     "label": "GML data portal",
-     "url": "https://gml.noaa.gov/data/data.php"
-    }
-   ]
-  },
-  {
-   "id": "noaa-ngs",
-   "agency": "NOAA",
-   "kind": "data-center",
-   "name": "NGS",
-   "fullName": "National Geodetic Survey",
-   "host": "NOS",
-   "location": "Silver Spring, MD",
-   "discipline": "Geodesy: positioning & gravity",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Geodesy, positioning and gravity.",
-   "blurb": "Defines and maintains the national spatial reference system — the GNSS Continuously Operating Reference Stations network (data since 1994, on AWS via NODD), the GRAV-D gravity program, and OPUS positioning.",
-   "holdings": [
-    "CORS / GNSS network (since 1994)",
-    "GRAV-D airborne gravity",
-    "OPUS positioning service",
-    "Coastal aerial imagery"
-   ],
-   "formats": [
-    "RINEX",
-    "JSON",
-    "text"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "NCN CORS data",
-     "url": "https://geodesy.noaa.gov/CORS/data.shtml"
-    },
-    {
-     "name": "NGS web services",
-     "url": "https://geodesy.noaa.gov/web_services/"
-    },
-    {
-     "name": "NCN on AWS (NODD)",
-     "url": "https://noaa-cors-pds.s3.amazonaws.com/index.html"
-    }
-   ],
-   "sources": [
-    {
-     "label": "NGS CORS FAQs",
-     "url": "https://geodesy.noaa.gov/CORS/cors_faqs.shtml"
-    }
-   ]
-  },
-  {
-   "id": "nsf-designsafe",
-   "agency": "NSF",
-   "kind": "data-center",
-   "name": "DesignSafe",
-   "fullName": "NHERI DesignSafe Cyberinfrastructure",
-   "host": "NSF NHERI / TACC (UT Austin)",
-   "location": "Austin, TX",
-   "discipline": "Natural hazards engineering",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Natural hazards engineering; mostly wind, surge and earthquake data.",
-   "blurb": "The natural-hazards engineering community’s cyberinfrastructure — its Data Depot publishes 2,000+ curated datasets (510 TB, 55M+ files) on earthquakes, hurricanes, and floods, including post-event reconnaissance data.",
-   "holdings": [
-    "Hurricane wind & surge datasets",
-    "Earthquake & shake-table data",
-    "Recon Portal (post-event)",
-    "Cloud Jupyter/Matlab analysis"
-   ],
-   "formats": [
-    "CSV",
-    "NetCDF",
-    "HDF5"
-   ],
-   "volumeTB": 510,
-   "filesM": 55,
-   "datasets": 2000,
-   "endpoints": [
-    {
-     "name": "DesignSafe-ci home",
-     "url": "https://www.designsafe-ci.org/"
-    },
-    {
-     "name": "Data Depot Repository",
-     "url": "https://www.designsafe-ci.org/data/browser"
-    }
-   ],
-   "sources": [
-    {
-     "label": "DesignSafe — impact & statistics",
-     "url": "https://www.designsafe-ci.org/about/impact"
-    }
-   ]
-  },
-  {
    "id": "nsf-rda",
    "agency": "NSF",
    "kind": "data-center",
@@ -1641,8 +989,6 @@ window.PRECIP_DATA = {
     "satellite",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "One of the world’s largest collections of meteorological and atmospheric data — the go-to NSF facility for precipitation datasets such as NOAA CMORPH (ds502.0), plus reanalyses and analysis products served through THREDDS and the Open Science Data Federation.",
    "holdings": [
     "NOAA CMORPH precipitation (ds502.0)",
@@ -1707,8 +1053,6 @@ window.PRECIP_DATA = {
     "field",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Public archive of NSF/NCAR atmospheric research campaigns since 1967 — about 590 field campaigns and 14,000+ datasets from aircraft (HIAPER GV), radars, dropsondes and surface platforms, including precipitation-focused experiments such as WINTRE-MIX.",
    "holdings": [
     "WINTRE-MIX winter precipitation experiment",
@@ -1768,8 +1112,6 @@ window.PRECIP_DATA = {
     "radar",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NSF-funded program providing real-time atmospheric data to the research and education community — the Internet Data Distribution (IDD) network and THREDDS data servers deliver radar, satellite, and model output including precipitation fields.",
    "holdings": [
     "Internet Data Distribution (IDD)",
@@ -1813,8 +1155,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "A continental-scale observatory with 81 field sites producing 200+ standardized open data products — precipitation is measured at 58 sites (weighing gauges, tipping buckets, throughfall), alongside eddy-covariance flux towers and airborne remote sensing.",
    "holdings": [
     "Precipitation (DP1.00044/00045/00046)",
@@ -1863,8 +1203,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Environmental Data Initiative is the main repository for the NSF Long-Term Ecological Research (LTER) network — decades of standardized site data including meteorological and precipitation records from 28 LTER sites.",
    "holdings": [
     "28 LTER sites (Bonanza Creek, Hubbard Brook, etc.)",
@@ -1909,8 +1247,6 @@ window.PRECIP_DATA = {
     "hydrology",
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The hydrologic community’s data infrastructure — HydroClient searches 100+ observation networks with over 5 million time series (streamflow, met stations, precipitation), while HydroShare archives citable datasets, models, and code.",
    "holdings": [
     "HydroClient time-series search",
@@ -1960,8 +1296,6 @@ window.PRECIP_DATA = {
    "topics": [
     "snow"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "The primary repository for NSF Arctic research — data, software, and documents from across the Arctic program, curated and citable with DOIs and preserved long-term; funded through 2031.",
    "holdings": [
     "Arctic OPP research data",
@@ -2002,8 +1336,6 @@ window.PRECIP_DATA = {
     "snow",
     "gauges"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "The repository for data from US Antarctic research — from meteorology and glaciology to biology and oceanography, with citable DOIs for Antarctic datasets.",
    "holdings": [
     "Antarctic met & glaciological data",
@@ -2032,98 +1364,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "nsf-bcodmo",
-   "agency": "NSF",
-   "kind": "data-center",
-   "name": "BCO-DMO",
-   "fullName": "Biological & Chemical Oceanography Data Management Office",
-   "host": "NSF Division of Ocean Sciences",
-   "location": "Woods Hole, MA",
-   "discipline": "Ocean biogeochemistry & ecosystem data",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Ocean biogeochemistry and ecosystem data.",
-   "blurb": "NSF-funded domain repository for biological and chemical oceanography — 3,700+ curated datasets from GEOTRACES, BATS, and ocean time-series programs, served via ERDDAP and open APIs.",
-   "holdings": [
-    "GEOTRACES & BATS time series",
-    "Ocean biogeochemistry datasets",
-    "Synthesis products (SPOTS)",
-    "ERDDAP & API access"
-   ],
-   "formats": [
-    "CSV",
-    "NetCDF",
-    "ERDDAP"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": 3777,
-   "endpoints": [
-    {
-     "name": "BCO-DMO home",
-     "url": "https://www.bco-dmo.org/"
-    },
-    {
-     "name": "ERDDAP server",
-     "url": "https://erddap.bco-dmo.org/erddap/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "BCO-DMO — about",
-     "url": "https://www.bco-dmo.org/about"
-    }
-   ]
-  },
-  {
-   "id": "nsf-opentopo",
-   "agency": "NSF",
-   "kind": "data-center",
-   "name": "OpenTopography",
-   "fullName": "OpenTopography Facility",
-   "host": "NSF facility (SDSC, UC San Diego)",
-   "location": "San Diego, CA",
-   "discipline": "Lidar point clouds & topography",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Lidar point clouds and topography.",
-   "blurb": "NSF-funded facility for high-resolution topographic data — 505 hosted lidar point-cloud datasets covering earthquakes, wildfires, floods and polar valleys, with on-demand processing and citable DOIs.",
-   "holdings": [
-    "NCALM & EarthScope lidar",
-    "Post-wildfire & post-earthquake surveys",
-    "Antarctica Dry Valleys",
-    "Topobathy point clouds"
-   ],
-   "formats": [
-    "LAZ",
-    "GeoTIFF",
-    "PDAL"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": 505,
-   "endpoints": [
-    {
-     "name": "OpenTopography portal",
-     "url": "https://portal.opentopography.org/"
-    },
-    {
-     "name": "OpenTopography API",
-     "url": "https://portal.opentopography.org/apidocs/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "OpenTopography portal",
-     "url": "https://portal.opentopography.org/"
-    }
-   ]
-  },
-  {
    "id": "nsf-dataone",
    "agency": "NSF",
    "kind": "data-center",
@@ -2135,8 +1375,6 @@ window.PRECIP_DATA = {
    "topics": [
     "other"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "A federation of environmental data repositories — one search interface across member archives including the NSF Arctic Data Center, LTER/EDI and many university and government data centers.",
    "holdings": [
     "Federated repository search",
@@ -2180,8 +1418,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The NWS’s official public web service — free, no API key required — serving forecasts, active alerts, station observations, and text products as GeoJSON and JSON-LD, with a full OpenAPI specification.",
    "holdings": [
     "Gridpoint forecasts (hourly & 12h periods)",
@@ -2231,8 +1467,6 @@ window.PRECIP_DATA = {
    "topics": [
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The seamless gridded forecast database — forecasters’ digital expectations for weather elements over the next seven days, at hourly temporal and 2.5 km spatial resolution (full resolution since the April 2024 AWS migration). About ten years of NDFD is kept online.",
    "holdings": [
     "CONUS, Alaska, Hawaii, Guam & Puerto Rico grids",
@@ -2285,8 +1519,6 @@ window.PRECIP_DATA = {
     "radar",
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The national 3D radar mosaic — data from more than 180 radars blended with gauges, satellites, lightning and models into a seamless grid updated every two minutes, including the operational radar-only QPE precipitation analyses (1–72 hour accumulations at ~1 km).",
    "holdings": [
     "Radar-only QPE (Q3) precipitation",
@@ -2348,8 +1580,6 @@ window.PRECIP_DATA = {
    "topics": [
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The 160-site Doppler radar network — Level II base data (reflectivity, velocity, dual-pol) and 40+ Level III products. The complete Level II archive since June 1991 is on AWS and Google Cloud via the NOAA Open Data Dissemination program; real-time data moved to TGFTP in September 2026.",
    "holdings": [
     "Level II base data (160 radars)",
@@ -2404,8 +1634,6 @@ window.PRECIP_DATA = {
     "hydrology",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The NWS water portal (which replaced AHPS in March 2024) — official river forecasts and observations from the 13 River Forecast Centers, plus Stage IV multi-sensor precipitation mosaics (hourly-updated, ~4 km grid over CONUS, Alaska and Puerto Rico) and flood-crest history.",
    "holdings": [
     "Official streamflow forecasts & hydrographs",
@@ -2461,8 +1689,6 @@ window.PRECIP_DATA = {
     "models",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The hydrologic modeling framework simulating the full water cycle — streamflow guidance for 3.2 million river reaches (most ungauged), soil moisture, and coastal total water level, cycling hourly in short/medium/long-range configurations; NetCDF output on NOMADS with public BigQuery and parquet copies.",
    "holdings": [
     "3.2M stream reach forecasts",
@@ -2511,8 +1737,6 @@ window.PRECIP_DATA = {
    "topics": [
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NCEP’s real-time model dissemination portal — GFS (0.25° global), the hourly 3 km HRRR, NAM, and GEFS ensembles with a GRIB filter for downloading parameter subsets, OPeNDAP access, and a companion NCEI long-term archive server.",
    "holdings": [
     "GFS global model output",
@@ -2549,52 +1773,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "nws-nwws",
-   "agency": "NWS",
-   "kind": "data-center",
-   "name": "NWWS",
-   "fullName": "NOAA Weather Wire Service",
-   "host": "NWS Dissemination Systems",
-   "location": "Silver Spring, MD",
-   "discipline": "Alert & warning dissemination",
-   "topics": [
-    "other"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Alert and warning delivery feed, not a data archive.",
-   "blurb": "The fastest NWS product stream — text alerts, warnings and forecasts delivered within 10 seconds of issuance, via satellite (SBN/NOAAPORT Channel 201) and an internet XMPP “Open Interface”; combined ingest is rated above 98% availability.",
-   "holdings": [
-    "Sub-10-second warning delivery",
-    "XMPP open interface (NWWS-OI)",
-    "Satellite PID201 feed",
-    "CAP v1.2 alerts"
-   ],
-   "formats": [
-    "WMO text",
-    "XMPP/XML",
-    "CAP v1.2"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "NWWS overview",
-     "url": "https://www.weather.gov/nwws"
-    },
-    {
-     "name": "Dissemination systems hub",
-     "url": "https://www.weather.gov/dsb/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "NWWS product information",
-     "url": "https://www.weather.gov/nwws/productinfo"
-    }
-   ]
-  },
-  {
    "id": "nws-tgftp",
    "agency": "NWS",
    "kind": "data-center",
@@ -2606,8 +1784,6 @@ window.PRECIP_DATA = {
    "topics": [
     "other"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "The anonymous FTP/HTTPS server holding every NWS product as transmitted — 125 product types from forecast offices and national centers, parsed into English descriptive filenames, plus facsimile charts and an email retrieval service (FTPmail).",
    "holdings": [
     "All WFO text products (ZFP, AFD, etc.)",
@@ -2656,8 +1832,6 @@ window.PRECIP_DATA = {
    "topics": [
     "other"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "The nation’s severe weather center — Day 1–8 convective outlooks, tornado & severe thunderstorm watches, mesoscale discussions, and fire weather forecasts, with GIS-ready shapefiles and KMZ downloads.",
    "holdings": [
     "Day 1-8 convective outlooks",
@@ -2702,8 +1876,6 @@ window.PRECIP_DATA = {
    "topics": [
     "models"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "The tropical cyclone forecasting hub — advisories, track & intensity forecasts, wind speed probabilities and storm surge guidance for Atlantic and Eastern Pacific storms, distributed as GIS formats (KMZ, shapefiles, GRIB2) alongside text advisories.",
    "holdings": [
     "Tropical cyclone advisories & forecasts",
@@ -2749,8 +1921,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The local face of the NWS — 122 forecast offices producing zone forecasts, warnings, and discussions for their county warning areas, all viewable at weather.gov and archived on the Gateway; each office page links its current products and local observations.",
    "holdings": [
     "Zone forecasts (ZFP) & discussions (AFD)",
@@ -2795,8 +1965,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (1947) run by United States Army Signal Corps, General Electric, Office of Naval Research, United States Air Force.",
    "holdings": [
     "History of Project Cirrus (Havens, General Electric, 1952) (Freely available on the Internet Archive)",
@@ -2867,8 +2035,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (1962) run by United States Department of Defense, United States Army Signal Corps, Meteorology Research, Inc..",
    "holdings": [
     "DTIC (Defense Technical Information Center) (DOD technical reports from the BATON era; many are scanned PDFs)",
@@ -2968,8 +2134,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (1962–1983) run by National Oceanic and Atmospheric Administration.",
    "holdings": [
     "NOAA Institutional Repository — Stormfury reports (Technical reports and data analyses; full-text searchable)",
@@ -3031,8 +2195,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (1967–1972) run by United States Air Force.",
    "holdings": [
     "Benign Weather Modification thesis (DTIC ADA391296) (Public DTIC thesis documenting Project Popeye; cites its Final Report)",
@@ -3109,105 +2271,6 @@ window.PRECIP_DATA = {
    ]
   },
   {
-   "id": "extra-totable-tornado-observatory-toto",
-   "agency": "Extra",
-   "kind": "research-project",
-   "name": "TOtable Tornado Observatory (TOTO)",
-   "fullName": "TOtable Tornado Observatory (TOTO)",
-   "host": "National Oceanic and Atmospheric Administration; National Severe Storms Laboratory; Environmental Technology Laboratory; University of Oklahoma",
-   "location": "",
-   "discipline": "Research project, 1979–1985",
-   "topics": [
-    "field"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "In-situ tornado wind measurements; no precipitation records.",
-   "blurb": "US government meteorology research project (1979–1985) run by National Oceanic and Atmospheric Administration, National Severe Storms Laboratory, Environmental Technology Laboratory, University of Oklahoma.",
-   "holdings": [],
-   "formats": [],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Project overview",
-     "url": "https://en.wikipedia.org/wiki/TOtable_Tornado_Observatory"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Park, Seon K. (2004). \"In-Situ Observation of Tornado: TOTO vs. DOROTHY\". Atmosphere. 14 (2). Ewha Womans University via MDPI: 7– 10. ISSN 2288-3266.",
-     "url": "https://search.worldcat.org/issn/2288-3266"
-    }
-   ],
-   "years": "1979–1985",
-   "startYear": 1979,
-   "endYear": 1985,
-   "ongoing": false,
-   "organizations": [
-    "National Oceanic and Atmospheric Administration",
-    "National Severe Storms Laboratory",
-    "Environmental Technology Laboratory",
-    "University of Oklahoma"
-   ],
-   "archivalSources": []
-  },
-  {
-   "id": "extra-project-nimrod",
-   "agency": "Extra",
-   "kind": "research-project",
-   "name": "Project NIMROD",
-   "fullName": "Project NIMROD",
-   "host": "National Center for Atmospheric Research; University of Chicago; National Weather Service",
-   "location": "",
-   "discipline": "Research project, 1978",
-   "topics": [
-    "field"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Downburst (wind) study; no precipitation records listed.",
-   "blurb": "US government meteorology research project (1978) run by National Center for Atmospheric Research, University of Chicago, National Weather Service.",
-   "holdings": [
-    "NASA Technical Reports Server (NTRS 19780022828) (Fujita project documentation)"
-   ],
-   "formats": [],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Project overview",
-     "url": "https://en.wikipedia.org/wiki/Project_NIMROD"
-    },
-    {
-     "name": "NASA Technical Reports Server (NTRS 19780022828)",
-     "url": "https://ntrs.nasa.gov/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Fujita, Ted (May 1978). \"Manual of downburst identification for Project NIMROD\" (PDF). NASA. Retrieved 10 March 2025.",
-     "url": "https://ntrs.nasa.gov/api/citations/19780022828/downloads/19780022828.pdf"
-    }
-   ],
-   "years": "1978",
-   "startYear": 1978,
-   "endYear": 1978,
-   "ongoing": false,
-   "organizations": [
-    "National Center for Atmospheric Research",
-    "University of Chicago",
-    "National Weather Service"
-   ],
-   "archivalSources": [
-    {
-     "name": "NASA Technical Reports Server (NTRS 19780022828)",
-     "url": "https://ntrs.nasa.gov/",
-     "note": "Fujita project documentation"
-    }
-   ]
-  },
-  {
    "id": "extra-toga",
    "agency": "Extra",
    "kind": "research-project",
@@ -3219,8 +2282,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (1985–1994) run by World Climate Research Programme, World Meteorological Organization, United Nations, National Oceanic and Atmospheric Administration.",
    "holdings": [],
    "formats": [],
@@ -3263,8 +2324,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (1988–1989) run by Ocean Prediction Center.",
    "holdings": [],
    "formats": [],
@@ -3304,8 +2363,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (1990–Present) run by World Climate Research Programme, World Meteorological Organization, United Nations, National Oceanic and Atmospheric Administration.",
    "holdings": [],
    "formats": [],
@@ -3348,8 +2405,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (1994–1995) run by National Severe Storms Laboratory, National Weather Service, University of Oklahoma.",
    "holdings": [],
    "formats": [],
@@ -3391,8 +2446,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2001–Present) run by National Center for Meteorology, National Center for Atmospheric Research, University of the Witwatersrand, NASA, National Science Foundation (Funding only).",
    "holdings": [],
    "formats": [],
@@ -3436,8 +2489,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2003–Present) run by World Meteorological Organization, United Nations, National Oceanic and Atmospheric Administration.",
    "holdings": [],
    "formats": [],
@@ -3479,8 +2530,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2006) run by United States Department of Energy, Bureau of Meteorology, NASA, European Commission DG RTD-1.2, University of Utah.",
    "holdings": [],
    "formats": [],
@@ -3528,8 +2577,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2009–2010) run by National Severe Storms Laboratory, National Weather Service, Storm Prediction Center, University of Oklahoma, CIMMS, University of Illinois Urbana-Champaign, Center for Severe Weather Research, Bureau of Meteorology, Environment Canada, Office of Naval Research, University of Massachusetts Amherst, Texas Tech University, National Center for Atmospheric Research, National Science Foundation (Funding only).",
    "holdings": [],
    "formats": [],
@@ -3591,45 +2638,6 @@ window.PRECIP_DATA = {
    "archivalSources": []
   },
   {
-   "id": "extra-recovering-from-tornado-brain",
-   "agency": "Extra",
-   "kind": "research-project",
-   "name": "Recovering from Tornado Brain",
-   "fullName": "Recovering from Tornado Brain",
-   "host": "University of Tennessee; University of Missouri; United States Department of Health and Human Services (Funding only)",
-   "location": "",
-   "discipline": "Research project, 2013–2024",
-   "topics": [
-    "field",
-    "nondigital"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Mental-health study of tornado survivors; no weather data.",
-   "blurb": "US government meteorology research project (2013–2024) run by University of Tennessee, University of Missouri, United States Department of Health and Human Services (Funding only).",
-   "holdings": [],
-   "formats": [],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [],
-   "sources": [
-    {
-     "label": "First, Jennifer M.; Carnahan, Megan; Yu, Mansoo; Lee, Sangwon; Houston, J. Brian (19 February 2024). \" 'Recovering from Tornado Brain': A Qualitative Analysis of Long-Term Needs after One of the Deadliest Tornadoes in U.S. History\". Clinical Social Work Journal. The University of Tennessee and University of Missouri via Springer Science+Business Media: 1– 11. doi: 10.1007/s10615-024-00926-1. ISSN 1573-3343. Retrieved 5 April 2024.",
-     "url": "https://link.springer.com/article/10.1007/s10615-024-00926-1"
-    }
-   ],
-   "years": "2013–2024",
-   "startYear": 2013,
-   "endYear": 2024,
-   "ongoing": false,
-   "organizations": [
-    "University of Tennessee",
-    "University of Missouri",
-    "United States Department of Health and Human Services (Funding only)"
-   ],
-   "archivalSources": []
-  },
-  {
    "id": "extra-owles",
    "agency": "Extra",
    "kind": "research-project",
@@ -3641,8 +2649,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2013–2014) run by University of Illinois Urbana-Champaign, University of Wyoming, Millersville University, Hobart and William Smith Colleges, University of Alabama in Huntsville, Center for Severe Weather Research, University of Utah, State University of New York at Oswego, University at Albany, Pennsylvania State University, National Science Foundation (Funding only).",
    "holdings": [],
    "formats": [],
@@ -3692,8 +2698,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2015–2019) run by National Oceanic and Atmospheric Administration, National Severe Storms Laboratory, University of Oklahoma, University of Alabama in Huntsville, National Science Foundation.",
    "holdings": [],
    "formats": [],
@@ -3741,8 +2745,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2016–Present) run by National Severe Storms Laboratory, University of Oklahoma.",
    "holdings": [],
    "formats": [],
@@ -3784,8 +2786,6 @@ window.PRECIP_DATA = {
     "field",
     "nondigital"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2017) run by University of Wyoming, National Center for Atmospheric Research (NCAR), University of Colorado, University of Illinois Urbana-Champaign, Idaho Power Company, National Science Foundation (Funding only).",
    "holdings": [],
    "formats": [],
@@ -3822,74 +2822,6 @@ window.PRECIP_DATA = {
    "archivalSources": []
   },
   {
-   "id": "extra-torus-project",
-   "agency": "Extra",
-   "kind": "research-project",
-   "name": "TORUS Project",
-   "fullName": "TORUS Project",
-   "host": "National Severe Storms Laboratory; Office of Marine and Aviation Operations; University of Nebraska–Lincoln; University of Oklahoma; CIWRO; Texas Tech University; University of Colorado Boulder; National Science Foundation (Funding only)",
-   "location": "",
-   "discipline": "Research project, 2019–2022",
-   "topics": [
-    "field"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Supercell and tornado structure (radar and drones); wind focused.",
-   "blurb": "US government meteorology research project (2019–2022) run by National Severe Storms Laboratory, Office of Marine and Aviation Operations, University of Nebraska–Lincoln, University of Oklahoma, CIWRO, Texas Tech University, University of Colorado Boulder, National Science Foundation (Funding only).",
-   "holdings": [],
-   "formats": [],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Project overview",
-     "url": "https://en.wikipedia.org/wiki/TORUS_Project"
-    }
-   ],
-   "sources": [
-    {
-     "label": "National Severe Storms Laboratory. \"NSSL Projects: TORUS: Targeted Observation by Radars and UAS of Supercells\". National Weather Center, Norman, Oklahoma: National Oceanic and Atmospheric Administration.",
-     "url": "https://www.nssl.noaa.gov/projects/torus/"
-    },
-    {
-     "label": "Fearon, Robin (13 December 2019). \"Storm Research: Studying the Role of Extreme Weather in Our Planet's Climate\". Discovery Channel. Warner Bros. Discovery Networks. Retrieved 10 March 2025.",
-     "url": "https://www.discovery.com/science/Role-of-Extreme-Weather-Climate"
-    },
-    {
-     "label": "Pittenger, Todd. \" \"Hurricane Hunter\" Takes Aim at Midwest\". KSAL. Retrieved 10 March 2025.",
-     "url": "https://www.ksal.com/hurricane-hunter-takes-aim-at-midwest/"
-    },
-    {
-     "label": "Henson, Bob. \"Drones and a Hurricane Hunter Aircraft to Target Multiday Severe Weather Outbreak\". Weather Underground. The Weather Company.",
-     "url": "https://www.wunderground.com/cat6/Drones-and-Hurricane-Hunter-Aircraft-Target-Multiday-Severe-Weather-Outbreak"
-    },
-    {
-     "label": "\"CU Boulder Engineering Collaborates To Study Tornadoes With Drones\". CBS News. 2 May 2019.",
-     "url": "https://www.cbsnews.com/colorado/news/cu-boulder-to-study-tornadoes-with-drones/"
-    },
-    {
-     "label": "Freedman, Andrew (16 May 2019). \"Researchers deploy drones, hurricane hunter to uncover tornado formation secrets\". Axios. Retrieved 10 March 2025.",
-     "url": "https://www.axios.com/2019/05/16/drones-hurricane-hunter-uncover-secrets-tornado-formation"
-    }
-   ],
-   "years": "2019–2022",
-   "startYear": 2019,
-   "endYear": 2022,
-   "ongoing": false,
-   "organizations": [
-    "National Severe Storms Laboratory",
-    "Office of Marine and Aviation Operations",
-    "University of Nebraska–Lincoln",
-    "University of Oklahoma",
-    "CIWRO",
-    "Texas Tech University",
-    "University of Colorado Boulder",
-    "National Science Foundation (Funding only)"
-   ],
-   "archivalSources": []
-  },
-  {
    "id": "extra-perils-project",
    "agency": "Extra",
    "kind": "research-project",
@@ -3901,8 +2833,6 @@ window.PRECIP_DATA = {
    "topics": [
     "field"
    ],
-   "relevance": "secondary",
-   "removalReason": null,
    "blurb": "US government meteorology research project (2022–2023) run by National Severe Storms Laboratory, NOAA Physical Sciences Laboratory, NOAA Global Systems Laboratory, National Weather Service, University of Oklahoma, CIWRO, University of Alabama in Huntsville, University of Louisiana at Monroe, Purdue University, Texas Tech University, Pennsylvania State University, University of Illinois Urbana-Champaign, North Carolina State University, Stony Brook University, National Science Foundation (Funding only).",
    "holdings": [],
    "formats": [],
@@ -3957,52 +2887,6 @@ window.PRECIP_DATA = {
    "archivalSources": []
   },
   {
-   "id": "extra-lift-project",
-   "agency": "Extra",
-   "kind": "research-project",
-   "name": "LIFT Project",
-   "fullName": "LIFT Project",
-   "host": "National Severe Storms Laboratory; University of Oklahoma; CIWRO; Texas Tech University; Disaster Imaging Inc.; National Science Foundation (Funding only)",
-   "location": "",
-   "discipline": "Research project, 2024–Present",
-   "topics": [
-    "field",
-    "nondigital"
-   ],
-   "relevance": "suggested-removal",
-   "removalReason": "Low-level tornado flow; wind focused.",
-   "blurb": "US government meteorology research project (2024–Present) run by National Severe Storms Laboratory, University of Oklahoma, CIWRO, Texas Tech University, Disaster Imaging Inc., National Science Foundation (Funding only).",
-   "holdings": [],
-   "formats": [],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [],
-   "sources": [
-    {
-     "label": "\"LIFT: Low-level Internal Flow of Tornadoes\". www.eol.ucar.edu. National Center for Atmospheric Research. Retrieved 10 July 2026.",
-     "url": "https://www.eol.ucar.edu/field_projects/lift"
-    },
-    {
-     "label": "Weiss, Christopher; Steward, Ethan; Coniglio, Michael; Rasmussen, Erik (8 August 2025). \"The Low-level Internal Flow of Tornadoes (LIFT) Experiment: Observations from the 2024 and 2025 Campaigns\". Copernicus Meetings. Retrieved 10 July 2026.",
-     "url": "https://meetingorganizer.copernicus.org/ECSS2025/ECSS2025-67.html"
-    }
-   ],
-   "years": "2024–Present",
-   "startYear": 2024,
-   "endYear": null,
-   "ongoing": true,
-   "organizations": [
-    "National Severe Storms Laboratory",
-    "University of Oklahoma",
-    "CIWRO",
-    "Texas Tech University",
-    "Disaster Imaging Inc.",
-    "National Science Foundation (Funding only)"
-   ],
-   "archivalSources": []
-  },
-  {
    "id": "noaa-psl",
    "agency": "NOAA",
    "kind": "data-center",
@@ -4016,8 +2900,6 @@ window.PRECIP_DATA = {
     "satellite",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NOAA PSL redistributes widely used gridded climate datasets in NetCDF, with plotting and subsetting tools. Precipitation holdings include GPCP, GPCC, the CPC global and US unified gauge analyses, the NCEP/NCAR reanalyses and the 20th Century Reanalysis (back to 1836).",
    "holdings": [
     "GPCP monthly precipitation",
@@ -4099,8 +2981,6 @@ window.PRECIP_DATA = {
     "gauges",
     "satellite"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NOAA CPC produces daily gauge-based precipitation analyses for the US and the globe, the CMORPH satellite precipitation estimates, and regional rainfall climatologies such as ARC2 for Africa.",
    "holdings": [
     "CPC Unified Gauge-Based Precipitation (US & global)",
@@ -4149,8 +3029,6 @@ window.PRECIP_DATA = {
     "satellite",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Operational NOAA passive microwave retrievals from polar-orbiting satellites: the Microwave Integrated Retrieval System (MiRS) rain rate and hydrometeor products, and the Snowfall Rate (SFR) product from ATMS and AMSU/MHS, developed with UMD ESSIC/CISESS.",
    "holdings": [
     "MiRS rain rate & hydrometeor profiles",
@@ -4201,8 +3079,6 @@ window.PRECIP_DATA = {
     "satellite",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "PPS produces and distributes the GPM and TRMM precipitation products at all levels, including inter-calibrated Level 1C radiances, GPROF radiometer retrievals, DPR radar products, combined radar-radiometer products and IMERG. Its archive server needs a free PPS registration.",
    "holdings": [
     "GPM & TRMM Level 1C (X-CAL inter-calibrated)",
@@ -4252,8 +3128,6 @@ window.PRECIP_DATA = {
    "topics": [
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "GMAO runs the GEOS model and data assimilation system and produces the MERRA-2 reanalysis and the newer GEOS-R21C reanalysis, which include precipitation fields. MERRA-2 files are distributed by GES DISC.",
    "holdings": [
     "MERRA-2 reanalysis",
@@ -4293,8 +3167,6 @@ window.PRECIP_DATA = {
     "gauges",
     "field"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "DOE ARM runs long-term observatories and mobile facilities with precipitation radars, radar wind profilers, disdrometers and rain gauges. Its Data Center serves continuous records and value-added precipitation products.",
    "holdings": [
     "Scanning and profiling precipitation radars",
@@ -4342,8 +3214,6 @@ window.PRECIP_DATA = {
     "satellite",
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "FEWS NET monitors drought and rainfall for food security. The USGS early warning portal serves rainfall estimates and anomalies built on CHIRPS and the CPC ARC2 climatology.",
    "holdings": [
     "Rainfall estimates & anomalies",
@@ -4383,8 +3253,6 @@ window.PRECIP_DATA = {
     "satellite",
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "CHIRPS blends infrared satellite rainfall estimates with station data into a 0.05° quasi-global record from 1981 to near real time, widely used for drought monitoring. Version 3 is the newest release.",
    "holdings": [
     "CHIRPS v2.0 (daily, pentad, monthly)",
@@ -4431,8 +3299,6 @@ window.PRECIP_DATA = {
    "topics": [
     "satellite"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "UC Irvine CHRS produces the PERSIANN family of machine-learning satellite precipitation estimates, including PERSIANN-CDR (1983–present), PERSIANN-CCS and PDIR-Now near-real-time rainfall.",
    "holdings": [
     "PERSIANN-CDR",
@@ -4474,8 +3340,6 @@ window.PRECIP_DATA = {
     "radar",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The CloudSat Data Processing Center at CSU serves products from NASA's CloudSat cloud profiling radar (2006–2023), including precipitation-column, rain profile and snow profile products.",
    "holdings": [
     "2C-PRECIP-COLUMN",
@@ -4515,8 +3379,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "CoCoRaHS is a network of tens of thousands of volunteers across the US, Canada and other countries who report daily rain, hail and snow with standard gauges. Reports are open to download.",
    "holdings": [
     "Daily precipitation reports",
@@ -4560,8 +3422,6 @@ window.PRECIP_DATA = {
     "satellite",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Commercial company flying small microwave sounder and radar satellites for precipitation retrievals and nowcasting. Data is offered through a weather API that needs an account and key.",
    "holdings": [
     "Microwave sounder constellation",
@@ -4599,8 +3459,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "GPCC collects rain gauge data from more than 80,000 stations worldwide and produces gridded monthly and daily land precipitation analyses back to 1891. It supplies the gauge part of GPCP.",
    "holdings": [
     "Full Data Monthly & Daily",
@@ -4643,8 +3501,6 @@ window.PRECIP_DATA = {
    "topics": [
     "satellite"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "JAXA's hourly 0.1° multi-satellite precipitation product built from GPM-constellation microwave radiometers and geostationary infrared, in near-real-time and reanalysis versions.",
    "holdings": [
     "GSMaP_NRT & GSMaP_NOW",
@@ -4688,8 +3544,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "OceanRAIN records along-track precipitation from optical disdrometers on research vessels, giving a surface reference for satellite precipitation over the ocean (rain, snow and mixed phase).",
    "holdings": [
     "OceanRAIN-W (water-cycle parameters)",
@@ -4741,8 +3595,6 @@ window.PRECIP_DATA = {
     "satellite",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "ESA-JAXA satellite launched in 2024 with the first spaceborne Doppler cloud profiling radar, which observes light rain and snowfall along with clouds and aerosols.",
    "holdings": [
     "Cloud Profiling Radar (CPR, Doppler)",
@@ -4781,8 +3633,6 @@ window.PRECIP_DATA = {
    "topics": [
     "satellite"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "IPWG coordinates satellite precipitation research and validation. It publishes the SatRain machine-learning benchmark dataset of satellite observations paired with reference precipitation.",
    "holdings": [
     "SatRain benchmark dataset",
@@ -4824,8 +3674,6 @@ window.PRECIP_DATA = {
     "satellite",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "SM2RAIN estimates rainfall from changes in satellite soil moisture, giving global land rainfall records that complement radiometer products. The datasets are published on Zenodo.",
    "holdings": [
     "SM2RAIN-ASCAT global rainfall",
@@ -4879,8 +3727,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "USGS measures rainfall at many of its streamgages and other monitoring sites (parameter 00045), served through Water Data for the Nation and its API, and its science centers publish data releases. Searching USGS data releases and real-time data on 2026-11-05 found 401 items for precipitation, 140 for rainfall and 63 for rain (529 unique). 480 use one of those words in the title or description, and 79 were hand-picked as precipitation data: 23 real-time gauge pages, 37 station and field records and 19 gridded or derived products. Most come from the Water Resources mission area and its state Water Science Centers.",
    "holdings": [
     "Rain gauges at USGS monitoring sites (parameter 00045)",
@@ -4948,8 +3794,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Alabama Agricultural Experiment Station, run by Auburn University, collects weather data at its 15 outlying research units around the state. Current and historic records can be viewed and downloaded as CSV through the Weather Exchange, hosted by the contractor Medius Ag, which replaced the older AWIS site that had served AAES weather data since the late 1990s.",
    "holdings": [
     "Current and historic weather observations (including rainfall, per the platform's ~70 parameters; not verified) from 15 AAES outlying units"
@@ -5017,8 +3861,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Alabama A&M University runs ALMNet, about 20 weather and soil stations mostly on farms in north and central Alabama, some shared with the USDA NRCS SCAN network. Its site serves monthly tables of daily values, including precipitation in inches, for each station back to 2002.",
    "holdings": [
     "Monthly tables of daily station values (temperature, precipitation, humidity, soil moisture and temperature, solar radiation, wind) from about 20 ALMNet stations, 2002-present"
@@ -5086,8 +3928,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Since 2003 the Dauphin Island Sea Lab has run real-time coastal stations in and around Mobile Bay and along the Alabama coast (Mobile and Baldwin counties). It publishes yearly 1-minute meteorological files per station, including precipitation, as zipped CSV, collected by DISL with support from ADCNR, NOAA and RESTORE Act funding.",
    "holdings": [
     "Yearly 1-minute meteorological CSV files (precipitation, air temperature, wind, pressure, radiation, humidity) for about a dozen coastal stations"
@@ -5159,8 +3999,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The University of South Alabama has run the South Alabama Mesonet since 2004, about 26 stations in southern Alabama counties plus a few in Mississippi and Florida, measuring rainfall every minute with paired tipping-bucket gauges. Its archived-data page offers custom CSV or fixed-width downloads by station and date range; funding comes from NSF, NOAA grants and donations.",
    "holdings": [
     "1-minute station observations including precipitation over the last minute and since midnight (two gauges) from about 26 stations, 2004-present"
@@ -5234,8 +4072,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Alaska's state climate office at the University of Alaska Fairbanks offers a station data portal and precipitation time series that can be saved as CSV. The data come from ACIS, the Regional Climate Centers' system, mostly NWS stations.",
    "holdings": [
     "ACRC Data Portal (daily/monthly station data) (CSV)",
@@ -5330,8 +4166,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "DGGS operates weather stations, mostly at remote and high-elevation sites studied for landslide and other geologic hazards (e.g. Barry Arm in Prince William Sound, Southeast Alaska ridges). Each station page offers the complete record or the last 7 days as CSV, including 15-minute rain totals. DGGS collects the data; some stations were funded through cooperative agreements with USGS.",
    "holdings": [
     "Per-station 15-minute weather records including rain totals, 2015-present, published as DDS 25"
@@ -5399,8 +4233,6 @@ window.PRECIP_DATA = {
    "topics": [
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "SNAP, a UAF research program, serves gridded climate data through a public API. For precipitation it offers daily totals from a 4 km WRF dynamical downscaling of ERA5 reanalysis (1960-2023, central Alaska and neighboring Canada) and a 2 km historical baseline downscaled from CRU TS 4.0, plus model projections. The estimates are model products built by SNAP from ECMWF ERA5 and University of East Anglia CRU TS inputs, not gauge records.",
    "holdings": [
     "ERA5-WRF 4 km daily precipitation (rainnc_sum), 1960-2023, point queries with CSV or JSON output",
@@ -5471,8 +4303,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "AZMet runs automated weather stations at agricultural and urban sites in Arizona, mostly in the low deserts, and measures precipitation along with temperature, humidity, solar radiation and wind. It serves daily and hourly data through a free JSON API (2020 to present) and as raw comma-delimited text files per station and year (1987 to present). The University of Arizona collects the observations. Its overview page names ADWR as a partner and says it relies on private donations after state budget cuts, but no current state mandate or funding was verified.",
    "holdings": [
     "AZMet Web API: 15-minute (last 14 days), hourly and daily station observations as JSON, 2020 to present",
@@ -5576,8 +4406,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Flood Control District of Maricopa County runs about 378 automated ALERT precipitation gages across Maricopa County (the Phoenix metro area) and parts of surrounding counties. It serves real-time rainfall text reports, a historic report tool, water-year workbooks of daily totals at all gages, and per-gage Excel rainfall histories. The District collects the observations.",
    "holdings": [
     "Real-time rainfall text reports: daily, month-to-date and year-to-date totals, and 15-minute to 72-hour values at all gages",
@@ -5696,8 +4524,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "RainLog is a volunteer rain-gauge network started in 2005 by the University of Arizona's SAHRA center and Cooperative Extension. Over 1,000 volunteers report daily rainfall from backyard gauges, mostly in Arizona with some in neighboring states. The site serves a public JSON query service and a full-data ZIP export; volunteers collect the observations.",
    "holdings": [
     "Daily volunteer rainfall readings (with snow fields and quality labels), queryable by gauge and date and as a full-data ZIP export"
@@ -5771,8 +4597,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Santa Rita Experimental Range, south of Tucson in Pima County, has measured monthly precipitation at up to 75 rain gauges since 1922; UA sources give 24 to 28 gauges as still active. The University of Arizona serves the full record as one Excel file (the current file runs through October 2026). The database metadata credits funding from the USDA Forest Service Rocky Mountain Research Station and the University of Arizona; the original collector is the SRER monitoring program.",
    "holdings": [
     "Monthly precipitation at up to 75 SRER rain gauges, 1922 to present, with gauge coordinates and name history"
@@ -5839,8 +4663,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Yavapai County Flood Control District runs an ALERT network of about 107 rain gauges, plus stream and weather stations, across Yavapai County in central Arizona (Prescott, Verde Valley and surroundings). Its NovaStar data web service and Data Explorer return gauge time series as CSV or JSON. The District collects most observations; the network also receives some gauges owned by neighboring agencies such as the Maricopa and Mohave county districts.",
    "holdings": [
     "NovaStar data web service and Data Explorer: station catalog and precipitation time series (event-based and yearly) as CSV or JSON"
@@ -5910,8 +4732,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "A web app with daily and hourly weather exports, including precipitation, from Division of Agriculture research stations. It currently has one station, at the Milo J. Shult Agricultural Research & Extension Center in Fayetteville, with data from April 2022. A 20-station statewide network (13 research and extension centers and 7 Discovery Farms) is being added with a $425,000 USDA NIFA grant, not state funding. The Division of Agriculture collects the observations.",
    "holdings": [
     "Daily and hourly station weather (precipitation, air temperature, humidity, solar radiation, reference ET) with CSV export"
@@ -5988,8 +4808,6 @@ window.PRECIP_DATA = {
     "models",
     "other"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Cal-Adapt serves gridded daily precipitation for California through a public API, including Livneh historical observations (1950-2013, derived from NOAA Cooperative Observer stations) and LOCA downscaled climate projections. The California Energy Commission funds and oversees it; UC Berkeley and Eagle Rock Analytics built it.",
    "holdings": [
     "Livneh daily historical gridded precipitation 1950-2013 (API point/area queries)",
@@ -6062,8 +4880,6 @@ window.PRECIP_DATA = {
     "hydrology",
     "other"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "DWR runs the California Data Exchange Center (CDEC), which stores real-time and historical precipitation from DWR and many cooperating agencies, and the CIMIS agricultural weather network with hourly and daily rainfall. It also publishes a closed Northern Region annual-gauge record (1944-2024), tree-ring precipitation reconstructions and stochastic weather-generator data on the state open data portal. The California State Climatologist is a DWR position.",
    "holdings": [
     "CDEC station precipitation query (event, hourly, daily, monthly; CSV servlet)",
@@ -6255,8 +5071,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Orange County Public Works serves current and historic rainfall and stream-gauge records for Orange County through a Kisters Hydstra water data portal with a JSON web service. Records come from the county's ALERT gauges and older daily cooperative gauges, some going back to the 1950s. The county collects the data.",
    "holdings": [
     "Rainfall time series for county ALERT and daily gauges (Hydstra portal and JSON web service)"
@@ -6321,8 +5135,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "San Diego County Flood Control District runs the county's ALERT flood warning network and shows current and recent rain and stream readings on a OneRain website. Users can download up to 60 days of sensor data there; longer records are provided on request. The district collects the data.",
    "holdings": [
     "ALERT rainfall sensor data, San Diego County (OneRain site, up to 60 days per download)"
@@ -6383,8 +5195,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Valley Water covers all of Santa Clara County in the south San Francisco Bay Area. Its Surface Water Data Portal offers CSV or JSON downloads and a public API for 48 district precipitation gauges, plus stream and reservoir sensors. The district collects the data itself.",
    "holdings": [
     "ALERT precipitation gauge time series, Santa Clara County (CSV/JSON download and API)"
@@ -6455,8 +5265,6 @@ window.PRECIP_DATA = {
     "gauges",
     "other"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The UC Natural Reserve System runs about 35 weather stations at UC reserves from Mendocino to San Diego, measuring rainfall, temperature, soil moisture and more. The stations were originally installed and maintained by the Western Regional Climate Center; UC NRS now serves the feeds through Dendra, which has a public map interface and API.",
    "holdings": [
     "UC Nature reserve weather stations: 10-minute rainfall and other variables (Dendra API)"
@@ -6525,8 +5333,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "CW3E at Scripps runs a network of surface meteorology stations, mostly in California watersheds, measuring precipitation, temperature, pressure and soil moisture. It serves 2-minute, hourly and daily files for about 100 station folders in an open web directory; an archived subset is in the UC San Diego Library. CW3E collects the data.",
    "holdings": [
     "2-minute, hourly and water-year daily station files including precipitation (open directory)"
@@ -6595,8 +5401,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Ventura County Public Works runs a hydrologic data server for Ventura County's rain and stream gauges, with daily, hourly and monthly rainfall downloadable per station and water year. Data are collected by the county's Watershed Protection program from ALERT and other gauges, and are marked published or preliminary.",
    "holdings": [
     "Rainfall daily, hourly and monthly totals per station (HTML/CSV/JSON/XML)"
@@ -6668,8 +5472,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The official state climatology office runs CoAgMET, a network of about 130 agricultural weather stations (active and inactive) with 5-minute, hourly and daily precipitation since 1992. It also serves 5-minute and hourly archives, from 1996, for the Fort Collins weather station on the CSU main campus, whose daily record goes back to 1889. Its NOAA cooperative-station query tool draws on ACIS and is listed separately as non-qualifying.",
    "holdings": [
     "CoAgMET weather station data (5-minute, hourly, daily) via a URL-based API",
@@ -6804,8 +5606,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The state's water decision-support system serves daily and monthly precipitation for about 4,700 station records across Colorado through a web tool and a free REST API. The observations come from NOAA cooperative and first-order stations, CoCoRaHS volunteers, NRCS SNOTEL, CoAgMET and Northern Water (NCWCD); CDSS redistributes them.",
    "holdings": [
     "Climate station daily time series (precipitation, snow, temperature, evaporation)",
@@ -6880,8 +5680,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The state open data portal hosts static tables published by the Colorado Energy Office. One holds CoCoRaHS volunteer rain, hail and snow observations across Colorado from 1999 to 2015. Others hold weather station records with accumulated precipitation, such as NREL's Boulder station (1996-2015). The original collectors are CoCoRaHS, NREL and the other station operators named on each dataset; the tables are not updated.",
    "holdings": [
     "Rain Hail and Snow in Colorado 2015 (CoCoRaHS daily observations, 1999-2015)",
@@ -6953,8 +5751,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "CT DOT publishes event-based weather reports giving precipitation and snowfall totals measured at its locations around the state. The data.ct.gov catalog lists them (first published 2017, updated 2026), and they are served as an HTML index on dotdata.ct.gov. DOT collects the measurements itself. News outlets describe the totals as unofficial.",
    "holdings": [
     "Regional Weather Reports: per-storm precipitation and snowfall totals by DOT location"
@@ -7022,8 +5818,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The official state climate office at UConn hosts a single ZIP archive of daily station records for Connecticut: 159 station CSV files, 1893-2014, with daily and monthly normals. The daily records are NOAA NCDC GHCN-Daily extracts (mostly NWS Cooperative Observer stations) and include daily precipitation (PRCP). The archive is static, and newer data must be requested by form.",
    "holdings": [
     "Daily station data archive (GHCN-Daily extracts, 1893-2014) with 1981-2010 daily and monthly normals"
@@ -7101,8 +5895,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "DEOS is Delaware's statewide monitoring network of more than 100 stations, run by the University of Delaware's CEMA, which the State Climatologist directs, with day-to-day operations funded by the State. It serves 5-minute, hourly and daily precipitation per station as CSV, multi-station daily/monthly/yearly precipitation summaries through its Almanac service, and an API for registered users. Station pages also integrate partner networks (DelDOT, DNERR, NWS, USGS).",
    "holdings": [
     "Station Data Summary: per-station daily view with hourly or 5-minute precipitation, CSV download",
@@ -7226,8 +6018,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "UF/IFAS runs about 40 automated weather stations from the Panhandle to Homestead that record rainfall and other weather every 15 minutes. Yearly CSV files of 15-minute observations, hourly and daily summaries are posted for public download, along with a report generator and data feeds.",
    "holdings": [
     "Yearly CSV files of 15-minute observations and hourly/daily summaries (fawnpub)",
@@ -7298,8 +6088,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The state climatologist's office at FSU serves daily precipitation and temperature for about 100 long-term Florida stations as CSV files. The observations were collected by the National Weather Service (First Order and Cooperative stations) and the FAA; the center serves the files itself.",
    "holdings": [
     "Downloadable Data Tool: daily precipitation and temperature for ~100 long-term NWS and FAA stations"
@@ -7367,8 +6155,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Florida Forest Service publishes daily rainfall totals from its own observing sites, queried by forestry district, month and year. Results come back as web tables by county and site.",
    "holdings": [
     "District Rainfall by Month: daily rainfall at Florida Forest Service observing sites"
@@ -7435,8 +6221,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Lee County runs about two dozen telemetered rain gauges that record every 15 minutes, and serves verified totals through its own query page with CSV export. Coverage is Lee County in southwest Florida.",
    "holdings": [
     "Rain Gauge Data query: 15-minute, daily, monthly and yearly totals per gauge, 1990-present"
@@ -7502,8 +6286,6 @@ window.PRECIP_DATA = {
     "radar",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "DBHYDRO is the district's hydrologic and water quality database for its 16-county region of south Florida (Orlando area to the Keys), including rainfall by station and NEXRAD radar rainfall estimates. DBHYDRO Insights, which replaced the DBHYDRO Browser in 2025, offers table downloads; a programmatic API needs SFWMD-issued credentials.",
    "holdings": [
     "DBHYDRO Insights: rain-gauge time series with table downloads",
@@ -7570,8 +6352,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Its Environmental Data Portal is the district's official database of water levels, flows, water quality and rainfall, with gauge data at 15-minute, hourly, daily and event scales for west-central Florida (Tampa Bay area to Charlotte and Highlands counties). The district also posts area-weighted monthly rainfall summaries by county, region and watershed back to 1915.",
    "holdings": [
     "Environmental Data Portal: rain-gauge time series",
@@ -7664,8 +6444,6 @@ window.PRECIP_DATA = {
     "radar",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Its Monitoring Data Portal (KISTERS WISKI Web) lets the public view, graph and download hourly and daily rainfall from the district's rain-gauge network in northeast and east-central Florida (the St. Johns River basin). The district also lists NEXRAD radar rainfall estimates.",
    "holdings": [
     "Monitoring Data Portal: rain-gauge time series (hourly totals, daily aggregates) with quality codes",
@@ -7758,8 +6536,6 @@ window.PRECIP_DATA = {
     "gauges",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Serves a full daily rainfall record for each of its rain gauges in the Suwannee River basin of north-central Florida (Alachua to Taylor counties, plus some Georgia sites). Most gauges are run by the district; some files include USGS data.",
    "holdings": [
     "Rainfall Stations interactive map: per-station daily rainfall XLSX files",
@@ -7830,8 +6606,6 @@ window.PRECIP_DATA = {
     "gauges",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The USF Water Institute runs county and regional Water Atlas sites (Orange, Hillsborough, Pinellas, Lee/CHNEP, Sarasota, Seminole and others) that collect rain-gauge records into a database for graphing and raw download. Gauges are run by others, for example Lee County Natural Resources; radar estimates come from the water management districts.",
    "holdings": [
     "Data Mapper: continuous rain-gauge data with raw download",
@@ -7896,8 +6670,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Georgia Forestry Commission runs about 22 active automated fire-weather stations across Georgia and collects the data itself. It posts monthly daily-summary text files for each station and year, back to 1998 at the longest-running sites. Each file has daily rain amount and rain duration alongside temperature, humidity, KBDI and wind. A separate retrieval tool returns hourly or 1300 observations, including rain.",
    "holdings": [
     "Summary of daily data: per-station yearly text files with daily rain (in) and rain duration, 1998-present",
@@ -7988,8 +6760,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The University of Georgia runs more than 80 automated weather stations across Georgia, mostly in farm areas, and collects the data itself. Its Historical Data page returns daily max/min temperature and rainfall for any station and date range back to 1996. A Rainfall Calculator gives totals and rainy-day counts for a chosen period.",
    "holdings": [
     "Historical Data query: daily Tmax, Tmin and rainfall per station, 1996-present",
@@ -8063,8 +6833,6 @@ window.PRECIP_DATA = {
     "gauges",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "HCDP serves statewide station rainfall tables and 250 m gridded rainfall maps for the main Hawaiian Islands, monthly and daily, from 1990 to the present. Its station data are compiled from many networks (NWS/NCEI, RAWS, SCAN, USGS, HaleNet, the Hawaii Mesonet and others). It also serves data from the Hawaii Mesonet, the statewide network of about 100 planned telemetered stations run by UH WRRC, through a live dashboard and a free token API.",
    "holdings": [
     "Daily and monthly station rainfall CSV files and gridded rainfall maps (GeoTIFF), 1990-present, via the data portal and public file store",
@@ -8178,8 +6946,6 @@ window.PRECIP_DATA = {
     "gauges",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Rainfall Atlas serves statewide gridded rainfall maps and the rain-gauge station tables behind them. Downloads include month-year rainfall maps for 1920-2012, island monthly rainfall index tables, and station monthly data through 2012, besides the 1978-2007 mean maps. It was built for the state Commission on Water Resource Management (with the US Army Corps of Engineers). Station records come from many networks (NWS COOP, USGS, plantations, private observers).",
    "holdings": [
     "Month-year rainfall rasters 1920-2012 and island monthly rainfall index (CSV/XLSX)",
@@ -8261,8 +7027,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "CropNet is a small UH network of farm weather stations (HOBO and Campbell loggers) on Oahu, Maui and Hawaii Island, plus Guam. It publishes a daily-updated spreadsheet of reference evapotranspiration and rainfall for all stations, and an API for individual measurements. The stations are run by UH Civil & Environmental Engineering.",
    "holdings": [
     "Daily rainfall and ET0 spreadsheet for all stations (updated daily)"
@@ -8326,8 +7090,6 @@ window.PRECIP_DATA = {
     "gauges",
     "other"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Idaho state climate office at the University of Idaho serves a legacy daily database of National Weather Service cooperative-station records for Idaho from 1892 to 2008, through the University Library. The data were collected by the National Weather Service, and the file is not updated.",
    "holdings": [
     "Daily Climatological Data for Idaho (Historical): NWS stations, July 1892 - May 2008, Access database"
@@ -8404,8 +7166,6 @@ window.PRECIP_DATA = {
     "models",
     "other"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The University of Idaho's Northwest Knowledge Network hosts gridMET, a daily 4-km gridded surface meteorology dataset (including precipitation) for the contiguous US from 1979 to yesterday, created by John Abatzoglou's Climatology Lab (now at UC Merced). Values are model-interpolated estimates built from station and reanalysis data, not gauge records; the last 60 days are preliminary.",
    "holdings": [
     "gridMET daily precipitation (precipitation_amount), CONUS, ~4 km, 1979-present, NetCDF via THREDDS/OPeNDAP and direct download"
@@ -8475,8 +7235,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Chicago Park District runs automated weather sensors at three Lake Michigan beaches (63rd Street, Foster and Oak Street) and publishes hourly readings, including rain intensity, interval rain and daily total rain, on the City of Chicago open data portal. Data run from May 2015 and are mainly collected during the summer season.",
    "holdings": [
     "Beach Weather Stations - Automated Sensors: hourly rain and weather at three Chicago beaches, 2015-present"
@@ -8544,8 +7302,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Illinois State Water Survey hosts the State Climatologist and runs the Illinois Climate Network, 19 automated stations across the state with daily records from about 1989. Daily ICN files (including total daily precipitation) are served from the WARM site after a free registration. The State Climatologist also posts daily Champaign-Urbana observation tables by year.",
    "holdings": [
     "Illinois Climate Network daily data files (archive about 1989 to last full year, plus current year)",
@@ -8649,8 +7405,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "MWRD, the wastewater and stormwater agency for most of Cook County, collects daily readings from its rain gauges (12 on its older display page) and reports basin averages for the North, Central and South basins. Its Rain Gauge Viewer shows daily gauge values by date and exports them to CSV.",
    "holdings": [
     "Rain Gauge Viewer: daily precipitation by MWRD gauge, with CSV export"
@@ -8719,8 +7473,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Indiana State Climate Office at Purdue runs the Purdue Mesonet (formerly PAAWS), a statewide network of automated weather stations that measure precipitation, temperature, soil moisture, wind and radiation. Its Data Hub serves per-station graphs and downloadable tables at 30-minute, hourly and daily steps, with free access to historical data.",
    "holdings": [
     "Purdue Mesonet Data Hub: per-station tabular downloads at 30-minute, hourly and daily steps (5-minute and monthly also listed), including precipitation"
@@ -8792,8 +7544,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Indiana's state GIS server (IndianaMap) serves layers compiled by the Indiana Geological and Water Survey from CoCoRaHS volunteer rain-gauge water-year summaries. They cover water years 2010-2018 (Oct-Sep): station points with total precipitation, days reported, snow totals and links to CoCoRaHS reports, plus interpolated annual precipitation rasters built from stations with 301 or more days of reports. The original observations were collected by CoCoRaHS volunteers.",
    "holdings": [
     "Precipitation_Stations_2010 to 2018: CoCoRaHS station points with water-year precipitation totals (651-752 stations per year)",
@@ -8866,8 +7616,6 @@ window.PRECIP_DATA = {
     "radar",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "IEM collects, archives and serves weather observations and gridded products. Its Iowa COOP daily records come from NWS cooperative observers, with quality-controlled updates from the Iowa State Climatologist (IDALS). It also serves national ASOS/AWOS airport observations (NWS/FAA), Iowa State's own Soil Moisture Network, the IEMRE daily grids, Stage IV rainfall grids, and an archive of NOAA MRMS precipitation grids.",
    "holdings": [
     "NWS COOP daily precipitation (Climodat), long-term station records",
@@ -9072,8 +7820,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Iowa Flood Center runs more than 50 hydrostations across Iowa, with a goal of one per county. They record rainfall, soil moisture and temperature, wind and shallow groundwater levels every 15 minutes. Data appear live in the Iowa Flood Information System, and historical data download as CSV or JSON from the HydroIowa data share.",
    "holdings": [
     "IFC hydrostation 15-minute rainfall (data share download and API)"
@@ -9147,8 +7893,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Kansas State University Weather Data Library houses the Kansas Office of the State Climatologist and runs the Kansas Mesonet. The Mesonet serves hourly and daily data, including precipitation, from about 122 stations, among them stations of the Big Bend and Equus Beds groundwater management districts. The climate office also publishes a county monthly precipitation file from 1895 to present.",
    "holdings": [
     "Kansas Mesonet hourly and daily station data (CSV/SHEF export and REST API)",
@@ -9257,8 +8001,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "StormWatch is the City of Overland Park's ALERT flood warning website. It serves rainfall, stream and weather data for the Kansas City metro area, with site lists for Johnson County, Overland Park, Olathe, Lenexa, Shawnee, Kansas City KS, Kansas City MO and other cities. Each rain sensor page offers CSV, tab and spreadsheet downloads of raw and hourly readings.",
    "holdings": [
     "StormWatch rain gauge sensor data (CSV/tab/XLS export, raw and hourly bins)"
@@ -9326,8 +8068,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Kentucky Mesonet is a statewide network (84 sites in 78 counties per a 2025 legislative presentation) that measures precipitation and other weather variables every 5 minutes. It is operated by the Kentucky Climate Center at WKU, the state climate office, which serves monthly station summaries, live tables and an archive request system; the state GIS hub also redistributes a current-observation feed.",
    "holdings": [
     "Monthly climatological summaries by station, with CSV export",
@@ -9491,8 +8231,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The UK Ag Weather Center serves Kentucky rainfall as text files: monthly statewide and climate-division rainfall back to 1895, rolling rainfall summaries for Mesonet and NWS sites, and a daily climate database for Kentucky and nearby NWS and Ag Weather stations from 1971. The pages do not name the original collector of the long-term statewide series.",
    "holdings": [
     "Monthly statewide and climate-division rainfall text files (1895-present)",
@@ -9608,8 +8346,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The LSU AgCenter runs automated weather stations at its research stations across Louisiana and serves their data through a report builder with CSV and Excel export. Reports include daily (midnight), hourly and minute summaries with rainfall in inches. The report builder lists 10 stations, while the home page says 7. The current system starts in May 2019; an older portal shows 2001-2019 data as HTML only.",
    "holdings": [
     "Daily, hourly and minute weather reports with rainfall from 10 stations (BenHur, Chase, Crowley, DeanLee, Iberia, R&D Research, Hammond, Red River, Houma, StGabUSDACR6), 2019-05-26 to present",
@@ -9680,8 +8416,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "LDEQ posts yearly Excel files of meteorological data from its ambient air-monitoring sites, collected by LDEQ. The 2024 file has an hourly precipitation sheet (inches) for the Baton Rouge Capitol site, alongside wind, temperature, humidity, solar radiation and pressure. It also has wind data for Dutchtown. Files are posted for 2020-2024; only the 2024 file was checked for rainfall.",
    "holdings": [
     "Yearly Met Excel files 2020-2024; the 2024 file has hourly precipitation for Baton Rouge Capitol"
@@ -9745,8 +8479,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Louisiana's state climate office at LSU offers two tools that save station precipitation totals for a chosen period as CSV or Excel: a station dashboard and the Climate Explorer. The values are period totals, not daily data, and come from ACIS.",
    "holdings": [
     "LOSC Louisiana Weather Stations dashboard (CSV, XLSX)",
@@ -9842,8 +8574,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Maine Climate Office, overseen by State Climatologist Sean Birkel, hosts data from the new Maine Mesonet, a University of Maine-led network of research-grade stations planned to reach 26 sites in all 16 counties. Per-station monthly CSV files give 5-minute, hourly and daily values including total precipitation, snow depth, temperature, wind and soil moisture. UMaine Cooperative Extension installs the stations and the New York State Mesonet team at UAlbany collects, processes and quality-controls the data.",
    "holdings": [
     "Maine Mesonet station data: 5-minute, hourly and daily CSV files per station and month, including total_precip [mm]",
@@ -9945,8 +8675,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "An MDE ArcGIS layer of monthly rainfall for 49 shellfish growing areas around the Chesapeake Bay and the Atlantic coastal bays. Each area has one row per month (Jan-Dec), plus a running total and average. When checked, the layer held only 2026 values (January-September). The layer does not say who collected the underlying observations.",
    "holdings": [
     "Monthly rainfall by shellfish growing area (ArcGIS feature layer, queryable)"
@@ -10012,8 +8740,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "A statewide network of closely spaced weather stations (about 10 miles apart) built and run by UMD's Department of Atmospheric and Oceanic Science with the Maryland Department of Emergency Management. Stations measure rainfall intensity and amount, snow depth, and other weather and soil variables, sampled every 3 seconds and processed every minute. Downloads need a login on the Mesonet site. Hourly summaries and minute data can also be requested through a form.",
    "holdings": [
     "Station data download (login required)",
@@ -10092,8 +8818,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "A network of weather stations on the University of Maryland College Park campus, run through UMD Weather (UMD Atmospheric and Oceanic Science students). The download form serves rain rate, 1-minute rainfall and total daily rain, along with other weather variables, for 9 listed campus stations, as CSV or XLSX. It covers only the College Park campus.",
    "holdings": [
     "Micronet station data download (rain rate, 1-minute rainfall, total daily rain)"
@@ -10164,8 +8888,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "BWSC runs solar-powered rain gauges on public buildings across the City of Boston. The gauges report every five minutes. Its rainfall web interface shows five-minute, daily, five-day, monthly and yearly totals for each gauge and exports CSV. The interface currently lists 10 gauges and years 2010-2026, although the city open data page says records go back to 1999.",
    "holdings": [
     "Rainfall interface: 5-minute daily detail, daily, five-day, monthly and yearly totals per gauge, CSV export"
@@ -10240,8 +8962,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Buzzards Bay NEP, a planning unit of the state Office of Coastal Zone Management, hosts Excel files of rainfall measured at the UMass Cranberry Experiment Station in East Wareham. They hold daily totals for 1988-1998 and monthly totals for 1988-2007. The station data were provided by the Cranberry Station and compiled by NEP staff. They cover the Buzzards Bay watershed in southeastern Massachusetts.",
    "holdings": [
     "Daily rainfall, UMass Cranberry Experiment Station, East Wareham, 1988-1998 (XLS)",
@@ -10319,8 +9039,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Harvard Forest posts current-month 15-minute and daily tables for its Fisher Meteorological Station, including precipitation, and updates them every 15 minutes. The archive dataset HF001 holds the full record since 2001 as CSV files. Harvard Forest collects the data, with a heated rain gauge. It covers one site in central Massachusetts.",
    "holdings": [
     "Real-time Fisher station 15-minute and daily tables (current month, CSV)",
@@ -10394,8 +9112,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "DCR's Office of Water Resources keeps a database of monthly precipitation totals by station, with snow and ice melted to inches of water. It draws on observers across the state and on cooperative agencies, and DCR says it runs about 60 precipitation stations. The public Excel file lists 188 stations by year from 1838 to 2019. The same page posts monthly regional precipitation composites and SPI tables (2014-2020) for the seven drought regions.",
    "holdings": [
     "Precipitation Database Data 2019: monthly station totals, 1838-2019, Excel",
@@ -10470,8 +9186,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The City of Ann Arbor runs five tipping-bucket rain gauges (Barton Dam, South Industrial Hwy, Jackson Ave/Parklake Ave, UM North Campus area and City Hall) and publishes their rainfall as one CSV on its open data portal. The gauges record every 5 minutes; the file gives 15-minute increments from 2013.",
    "holdings": [
     "Rainfall at City-Operated Rain Gauges CSV (15-minute, 2013-present)"
@@ -10534,8 +9248,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "MSU's Enviroweather network of automated weather stations across Michigan, formerly known as MAWN. Its Custom Reports (Data-on-Demand) tool returns daily, hourly and five-minute precipitation and other variables for any station as ASCII or CSV. The stations are run by MSU with support from Project GREEEN, the Michigan Agricultural Experiment Station and MSU Extension.",
    "holdings": [
     "Daily, hourly and five-minute station data, including precipitation, through Custom Reports (Data-on-Demand)"
@@ -10613,8 +9325,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Macomb County Public Works maintains a rain gauge network across Macomb County (26 gauges in the page text; its gauge map is labelled 36) recording precipitation every 5 minutes. An interactive map, hosted by the vendor Aquasight, shows near real-time rainfall and offers historical data for download.",
    "holdings": [
     "Interactive rain gauge map with near real-time and historical data downloads"
@@ -10673,8 +9383,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The official state climate office at MSU hosts an archive of Southeast Michigan Council of Governments (SEMCOG) precipitation gauge data as monthly text files of daily and hourly totals, 1988-2005, plus station coordinates. Coverage is southeast Michigan (station groups such as Ann Arbor, Pinckney, Chelsea and Ypsilanti). The gauges belong to the SEMCOG network; the office redistributes the summaries.",
    "holdings": [
     "SEMCOG daily and hourly precipitation summaries (monthly text files), 1988-2005"
@@ -10747,8 +9455,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Metropolitan Council, the regional agency for the Twin Cities seven-county metro area, serves precipitation from its Environmental Services rain gauges (for example heated tipping buckets at wastewater plants) through its EIMS database. Some gauges carry copied records from other operators, such as the NWS gauge at MSP Airport through 2011.",
    "holdings": [
     "Rain-gauge precipitation (continuous and daily aggregate time series) for MCES gauges in the Twin Cities seven-county metro"
@@ -10828,8 +9534,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The DNR State Climatology Office archives precipitation from MNgage/HIDEN, a network of more than 1,000 volunteer observers that also takes in NWS COOP, SWCD and CoCoRaHS reports. It serves the data through station retrieval tools and a 10-km gridded monthly precipitation database. The DNR/MPCA Cooperative Stream Gaging network also offers daily precipitation downloads for gauging sites that record it.",
    "holdings": [
     "MNgage/HIDEN station precipitation retrieval (daily and monthly, by target location, multi-day totals, county annual reports)",
@@ -10990,8 +9694,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "MDEQ's Air Division posts AERMOD-ready meteorological files for 18 airport stations in and near Mississippi, covering 2021-2025. The hourly surface (.sfc) files include a precipitation code and hourly precipitation amount. The original observations are NWS/FAA airport (ASOS/AWOS) data taken from NCEI's GHCNh archive, processed by MDEQ with AERMET v26135.",
    "holdings": [
     "AERMET surface and profile files, 2021-2025, 18 stations (one zip per station)"
@@ -11062,8 +9764,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "MSU's Delta Agricultural Weather Center runs automated weather stations, mostly on farms and experiment stations in the Mississippi Delta and elsewhere in the state, that record precipitation, temperature, humidity, wind, solar radiation and soil temperature. Each station page offers 30-day daily and 7-day hourly tables, and a customizable report returns daily or hourly fields (including precipitation in inches) for a chosen period. The center collects the data itself.",
    "holdings": [
     "Per-station 30-day daily and 7-day hourly tables with precipitation",
@@ -11141,8 +9841,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Missouri Climate Center, the official state climatology office at the University of Missouri, maintains the Missouri Mesonet, a statewide network of automated weather stations started in 1992 by MU Extension's Commercial Agriculture Program. Its Missouri Historical Agricultural Weather Database query returns daily or hourly precipitation and other variables for about 40 listed stations, in English or metric units.",
    "holdings": [
     "Missouri Historical Agricultural Weather Database: daily and hourly station queries (precipitation, temperature, humidity, wind, solar radiation, soil temperature)"
@@ -11224,8 +9922,6 @@ window.PRECIP_DATA = {
     "gauges",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The official state climate office runs the Montana Mesonet, more than 215 weather and soil-moisture stations installed since 2016, and serves their hourly and daily precipitation through a free API. It also publishes current precipitation accumulation, departure and percentile GeoTIFFs for its drought dashboard, computed from gridMET (University of Idaho Climatology Lab).",
    "holdings": [
     "Montana Mesonet API: hourly and daily station precipitation (CSV, JSON), 2016-present",
@@ -11341,8 +10037,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NeRAIN is a statewide network of volunteer observers who read rain gauges each morning and report daily precipitation, snow and hail. The Nebraska Department of Water, Energy, and Environment hosts it in cooperation with the Natural Resources Districts and CoCoRaHS. The site serves daily station tables, statewide and NRD summaries, multi-day totals, and snow and hail reports, with years from 2004 onward. No account is needed.",
    "holdings": [
     "NeRAIN daily precipitation, snow and hail reports by station, county, NRD or statewide"
@@ -11416,8 +10110,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Nebraska Mesonet is a statewide network of automated weather and soil stations run by the Nebraska State Climate Office at UNL. Its stations measure precipitation every minute, with tipping-bucket gauges and, at new stations, weighing gauges, plus snow depth. Users get 1-minute, 5-minute, hourly or daily data by submitting the Data Access request form.",
    "holdings": [
     "Nebraska Mesonet station data (precipitation and other variables) by data request form"
@@ -11490,8 +10182,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Upper Republican NRD covers Perkins, Chase and Dundy counties in southwest Nebraska. It runs a District Rainfall Monitoring Network of 13 precipitation sites. The data are published on the Nebraska DWEE Real Time Water (AQUARIUS WebPortal) site.",
    "holdings": [
     "District Rainfall Monitoring Network, 13 precipitation sites, on the DWEE Real Time Water portal"
@@ -11555,8 +10245,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Regional Flood Control District runs the Flood Threat Recognition System rain gauges in Clark County (the Las Vegas Valley area). It collects the data itself. It serves yearly ZIP files of daily gauge totals from 1988 and a per-station tool that exports interval data as CSV.",
    "holdings": [
     "Historical rainfall: yearly ZIP/CSV files of daily totals per gauge",
@@ -11656,8 +10344,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "CEMP is a network of 30 monitoring stations (24 in Nevada, others in Utah and California) in communities around and downwind of the Nevada National Security Site. DRI manages the program and NNSA's Nevada Field Office provides funding and equipment. Each station has a rain gauge. DRI's site serves 10-minute and summary data, including total precipitation, through public tables and a JSON API.",
    "holdings": [
     "CEMP data tables and public API: daily summary (10-minute detail), daily time series and monthly summary, with precipitation"
@@ -11728,8 +10414,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NDWR reads a network of high-altitude storage precipitation gauges across Nevada. The sites were chosen from a 1960s USGS/Soil Conservation Service recharge program. Field crews weigh the catch once or twice a year. The readings (3,622 records from 69 sites, 38 still active) are served through an ArcGIS feature service and a station lookup tool.",
    "holdings": [
     "Precipitation Monitoring Sites and Measures feature service (annual and interim gauge catch, inches)",
@@ -11828,8 +10512,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NHDES's public Forecast System portal shows observed lake and river levels and meteorological data from monitoring stations throughout the state. Its API serves hourly and daily point precipitation series from NHDES lake and flood-control dam stations, plus series tagged HADS (the NWS Hydrometeorological Automated Data System). The portal was built and is hosted by RTI International under an NHDES contract.",
    "holdings": [
     "Point Precipitation Increment (hourly and daily) at NHDES and HADS stations, served through the portal's JSON API"
@@ -11899,8 +10581,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Plymouth State's Weather Center serves a query tool that returns daily maximum/minimum temperature, 24-hour precipitation and present weather for a station chosen by its 5-digit WMO number, worldwide, from 1 October 1977 to 31 December 1991. The data come from NCDC's 'Global Daily Summary - Temperature and Precipitation 1977-1991' CD-ROM; New Hampshire stations such as Concord (72605) are included.",
    "holdings": [
     "Global Daily Summary temperature and precipitation by station, 1977-1991 (NCDC CD-ROM)"
@@ -11968,8 +10648,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "A rooftop weather station on Morse Hall at UNH in Durham, collected by UNH, with an archive starting 25 February 2000. The site serves one raw data file per day with 1-minute samples, including rainfall in inches.",
    "holdings": [
     "Daily raw files of 1-minute samples (wind, temperature, PAR, rain, RH), 2000-present"
@@ -12039,8 +10717,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The state climate office at Rutgers runs the NJ Weather Network. It combines its own mesonet of about 70 stations, polled every 5 minutes, with stations from ASOS (NWS), RWIS (NJDOT), RAWS and USGS, and some stations in nearby states. Its Tabular Data viewer exports 5-minute, hourly, daily and monthly precipitation by station.",
    "holdings": [
     "NJ Weather Network Tabular Data viewer: 5-minute, hourly, daily and monthly station data, including precipitation, with CSV export",
@@ -12150,8 +10826,6 @@ window.PRECIP_DATA = {
     "radar",
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NJDEP serves hourly rainfall estimates at about 175 named beach (RABCH) and watershed (RA) points in every part of the state. The values come from the National Weather Service's Multisensor Precipitation Estimator, which combines rain gauges and radar on a 2.5-mile grid. NJDEP's water monitoring program and the Cooperative Coastal Monitoring Program use the data for beach management and stormwater studies.",
    "holdings": [
     "Hourly NWS MPE rainfall at about 175 points (1-pixel and 9-pixel averages), with CSV/text download by station and date range and a whole-dataset zip"
@@ -12223,8 +10897,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The NM Climate Center at New Mexico State University, home of the state climatologist, runs ZiaMet. This statewide mesonet has operated since 1985 and measures surface weather and soil conditions. Each station page has a public form that returns daily data, including rain, as a CSV file or table. NMSU collects the observations itself.",
    "holdings": [
     "ZiaMet station daily data (air temperature, humidity, wind, rain, solar radiation) by date range, as CSV, table or plots",
@@ -12324,8 +10996,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "HRECOS stations along the Hudson River estuary and the Mohawk (11 stations in the request form, from Pier 25 in Manhattan to Ilion Lock 8) record water quality and weather every 15 minutes, including precipitation at the weather-equipped stations. It covers the Hudson Valley and lower Mohawk Valley, not the whole state. Data from 1 January 2026 on are served through a free CSV API and an instant-download request form; earlier data are on a USGS site.",
    "holdings": [
     "15-minute precipitation and total precipitation at HRECOS weather stations",
@@ -12399,8 +11069,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Monroe County's Department of Environmental Services runs 21 rain gauges around the county (Rochester area) to monitor storms and document storm events. A public ArcGIS layer serves each gauge's latest rain amount, rain rate and reading date, queryable as JSON. Only current readings are exposed; no historical archive was found.",
    "holdings": [
     "Latest daily rain amount and rain rate at 21 county rain gauges"
@@ -12467,8 +11135,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "A statewide network run by the University at Albany with 127 standard sites, plus NYC and Thruway micronets and other specialty networks. Archived observations, including precipitation increments, daily totals and 1-hour accumulations, are requested through an online form and delivered as CSV or netCDF. Data are free for personal use; other users may be charged a cost-recovery fee or need a license.",
    "holdings": [
     "Archived 5-minute, hourly and daily station data by request (precipitation, temperature, wind, snow depth, soil)",
@@ -12544,8 +11210,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The NC State Climate Office at NC State University runs ECONet, a network of 46 research-grade weather stations that measure precipitation along with temperature, wind, soil and solar data. Its Cardinal request system and CLOUDS API serve hourly and minute ECONet data plus other networks it gathers (ASOS, NCDOT AWOS, CoCoRaHS, RAWS, USGS, TVA, USACE and others, collected by those agencies). Both need a free NCSCO ID account.",
    "holdings": [
     "ECONet: 46 active stations, hourly observations generally since 1996 and one-minute since the mid-2000s, including precipitation",
@@ -12655,8 +11319,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Town of Cary (Wake County) publishes readings from its own Internet-of-Things rain gauges on its open data portal, covering the town area. The dataset keeps a rolling 60 days of records, with rain amount and hourly intensity per gauge, and is used by the town's Stormwater Monitoring Dashboard.",
    "holdings": [
     "Rain Gauges: rolling 60-day IoT gauge readings (rain amount, rain intensity per hour, location) with CSV, JSON, GeoJSON and SHP exports and an API"
@@ -12730,8 +11392,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NDAWN is a network of automated weather stations, established in 1989, that NDSU runs across North Dakota and border areas of Minnesota and Montana. It serves hourly, daily, weekly, monthly and yearly station tables, including rainfall, with a CSV export. No account is needed. The network is directed by the North Dakota State Climatologist. Its tipping-bucket gauges measure rain only (April-October); winter values are flagged missing.",
    "holdings": [
     "Station rainfall and weather tables (hourly to yearly) with CSV export, about 280 stations listed (ND, MN, MT; one defunct SD station)"
@@ -12816,8 +11476,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "DWR serves two statewide precipitation datasets. ARBCON is its Atmospheric Resources Cooperative Observer Network of nearly 400 volunteer observers. They have reported daily rainfall and hail from April through September since 1977, and snowfall year-round since October 2010. PRESENS (Pushing REmote SENSors) are DWR-built sensor units, about 600 deployed, some with tipping-bucket rain gauges. Per-site PRESENS records include individual precipitation readings. Both download free from DWR's Maps/GIS & Data pages.",
    "holdings": [
     "ARBCON daily volunteer precipitation, snow and hail database (1977-present)",
@@ -12925,8 +11583,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Miami Conservancy District covers the Great Miami River watershed in southwest Ohio. It keeps a network of 47 daily precipitation observers (several with 80+ years of record; electronic records from 1982) and 18 tipping-bucket gauges at its automated stream gages, and also displays 10 gauges maintained by Ohio EMA. Its AQUARIUS Water Data Portal serves latest, daily, monthly and yearly precipitation totals.",
    "holdings": [
     "Water Data Portal: precipitation by day, month and year at district gauges, plus stream stage, discharge, temperature and groundwater levels"
@@ -12995,8 +11651,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Northeast Ohio Regional Sewer District's rainfall dashboard reports rain-gauge results from its service area in the Cleveland region. Users pick a site and year to view daily, monthly, five-day, year-to-date and time-of-day totals, which the page lets users copy or print.",
    "holdings": [
     "Rainfall dashboard: daily, monthly, 5-day and year-to-date gauge totals by site"
@@ -13062,8 +11716,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Ohio State's College of Food, Agricultural, and Environmental Sciences runs weather stations at its research stations and several USDA sites around Ohio, with data since 1982 at most stations. Each station page offers daily and hourly queries that download as CSV, including daily precipitation; older records back to the 1940s exist only as scanned PDFs.",
    "holdings": [
     "Daily and hourly station weather data (precipitation, temperature, soil, wind, solar), CSV download per station",
@@ -13136,8 +11788,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The State Climate Office of Ohio at Ohio State supports the Ohio Mesonet, a nine-station network of weather and soil sensors deployed by the end of 2025. Its download page serves 5-minute station records, including precipitation and running totals, as CSV for one or all stations. The office's other precipitation links point to federal and regional sources.",
    "holdings": [
     "Ohio Mesonet station observations (5-minute precipitation and accumulations), CSV download and API"
@@ -13210,8 +11860,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Oklahoma Mesonet is a network of about 120 automated stations, with at least one in each of Oklahoma's 77 counties, commissioned January 1, 1994. OU and OSU run it jointly, and the Oklahoma Climatological Survey (the state climatology office) quality-checks and distributes the data. Its site serves free 5-minute station files with rainfall, exportable as CSV, and station monthly summaries with daily rainfall totals. Tailored data requests are subject to fees, which are waived for Oklahoma public, research and non-profit users.",
    "holdings": [
     "Mesonet Data Files: 5-minute MTS (one station, one UTC day) and MDF (all stations, one time) files with RAIN, CSV/HTML export",
@@ -13327,8 +11975,6 @@ window.PRECIP_DATA = {
    "topics": [
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "PRISM gathers weather observations from many monitoring networks, applies quality control and mapping methods, and publishes gridded precipitation for the conterminous US at 4 km and 800 m. Daily grids start in 1981 and monthly and annual grids in 1895, free of charge, with bulk downloads and a point time-series explorer.",
    "holdings": [
     "Daily (1981-present), monthly (1895-present) and annual (1895-present) gridded precipitation at 4 km and 800 m",
@@ -13444,8 +12090,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The City of Portland Bureau of Environmental Services runs a network of tipping-bucket rain gauges across Portland and nearby areas and collects the data itself. Since 2025 it serves the records from its own Environmental Data Portal, with 5-minute, 15-minute and hourly series, daily totals for the last 20 years and CSV exports.",
    "holdings": [
     "Latest rainfall table and map for all active gauges",
@@ -13520,8 +12164,6 @@ window.PRECIP_DATA = {
     "gauges",
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "3 Rivers Wet Weather, created by ALCOSAN and the Allegheny County Health Department to help the 83 ALCOSAN municipalities address sewer overflows, covers Allegheny County in southwestern Pennsylvania. It operates 33 rain gauges and publishes 15-minute gauge rainfall (QA/QC by ALCOSAN) and gauge-adjusted NEXRAD radar rainfall for each square kilometer (calibrated with Vieux Associates). Data come as monthly CSV and zip files and through an API.",
    "holdings": [
     "Monthly rainfall data downloads: 15-minute rain-gauge CSVs and pixel/basin calibrated radar zips (2019-2021 listed)",
@@ -13626,8 +12268,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Keystone Mesonet, hosted by Penn State's Department of Meteorology, gathers many Pennsylvania weather networks in one place: PEMN, PennDOT and PA Turnpike road-weather stations, FAA airport stations, PA DEP air-monitoring sites and DCNR stations. Its download page serves the most recent or last-24-hour observations, including 1-, 3-, 6- and 24-hour precipitation, as CSV, JSON or KML.",
    "holdings": [
     "Data download: current or last-24-hour observations by network as CSV, JSON or KML"
@@ -13699,8 +12339,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Pennsylvania State Climatologist at Penn State serves station records through its IDA data archive, covering NWS COOP, FAA airport, CWOP volunteer, PA DEP air-monitoring and PEMN stations, with daily or sub-hourly rainfall exported as web tables or CSV. Its PEMN Data Viewer serves recent 1-minute data, including rainfall, from the Penn State-run Pennsylvania Environmental Monitoring Network.",
    "holdings": [
     "IDA data archive: station rainfall and snowfall from COOP, FAA (raw, hourly, daily), CWOP, DEP and PEMN networks",
@@ -13812,8 +12450,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Water Resources Board's drought dashboard rates Rhode Island's drought regions each month on precipitation, Palmer index, streamflow and groundwater. It offers an xlsx download of all its precipitation data. The precipitation data come from the NWS Boston/Norton office, which averages long-term, COOP and CoCoRaHS stations within each drought region and compares them with 1991-2020 normals.",
    "holdings": [
     "Monthly precipitation and percent of normal by drought region (xlsx download)"
@@ -13881,8 +12517,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Clemson Cooperative Extension runs 51 WeatherFlow (Tempest) weather stations across South Carolina, most of them near farms. It started the network in 2020. The Clemson Weather site has a rainfall calculator that returns daily rainfall for a chosen station and date range from data the site stores. Results come as an on-page table and chart; there is no file export.",
    "holdings": [
     "Daily rainfall by station via the Clemson Weather rainfall calculator"
@@ -13951,8 +12585,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The SD Mesonet is SDSU's statewide network of automated weather stations (150+ stations per its site), hosted on the State Climate Office website. A request form returns archived daily station data, including total precipitation, as CSV files from 2015 to the present. Data from 1983 to January 2015, hourly or sub-hourly data and quality-controlled data are available as custom requests. Automated data are provisional, and redistribution and commercial use are not allowed.",
    "holdings": [
     "Daily station data request (precipitation total and other variables) as CSV, 2015-present",
@@ -14034,8 +12666,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "DANR's feedlot permit program serves daily weather text files for 35 South Dakota NWS stations with 100 or more years of daily precipitation and temperature records, for use with the SPAW model. The files hold daily maximum and minimum temperature and precipitation (for example Huron, July 1881 to April 2016). The observations were collected by NWS stations and compiled by the South Dakota NRCS.",
    "holdings": [
     "Daily tmax/tmin/precipitation text files for 35 NWS stations with 100+ year records (SPAW weather data)"
@@ -14104,8 +12734,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Edwards Aquifer Authority, created by the Texas Legislature in 1993 to regulate the Edwards Aquifer, runs continuous rain gauges in South Central Texas (Bandera, Bexar, Blanco, Comal, Edwards, Hays, Kendall, Kinney, Medina, Real and Uvalde counties). Its data portal serves per-gauge CSV files of 1-minute, 6-minute, hourly and daily rainfall. Data are provisional unless stated otherwise.",
    "holdings": [
     "Rain Gauges: per-gauge CSV downloads of 1-minute, 6-minute, hourly and daily rainfall, active and historic sites"
@@ -14174,8 +12802,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Harris County Flood Control District operates the Harris County Flood Warning System, more than 350 gage stations including partner-agency gages. Its Document Library offers bulk historical rainfall in 5-minute increments as one Excel workbook per year from 1986 to 2026, plus monthly QA/QC rainfall reports from 1987-2022. Gage pages also export rainfall to Excel.",
    "holdings": [
     "Historical Rainfall Data: yearly 5-minute rainfall workbooks (xlsx), 1986-2026",
@@ -14247,8 +12873,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "LCRA Hydromet is a system of more than 280 automated river and weather gauges in the lower Colorado River basin of Texas, from near Abilene to Matagorda Bay. Its Historical Data pages export rainfall by gauge (15-minute, hourly or daily) for ranges under 180 days, and a separate page serves rainfall from gauges maintained by the City of Austin. Data are automatically retrieved and subject to revision.",
    "holdings": [
     "Historical Data by Gauge: LCRA rain gauge records, 15-minute/hourly/daily, Excel export",
@@ -14346,8 +12970,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "TWDB publishes monthly precipitation and lake evaporation for one-degree quadrangles covering Texas, computed from NOAA-NWS gauge data (accessed through NCEI) by Thiessen-polygon area weighting, with records from 1940. It also runs TexMesonet, whose Custom Downloads tool and public API serve daily, monthly and 5-minute precipitation from TWDB-owned weather stations (online since 2016). A separate reservoir evaporation tool built with DRI reports daily rainfall for 188 major reservoirs from 1980.",
    "holdings": [
     "Lake Evaporation and Precipitation: monthly precipitation (inches) per 1-degree quadrangle, 1940-present, CSV via the site API",
@@ -14496,8 +13118,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Utah's state climate office at Utah State University runs its own weather station networks (UCRN, AgWx, UAGRIMET, USCAN, FGNET, USUwx). Its Surface Weather & Climate Observations tool returns reports for these and for stations it stores from other collectors (NOAA GHCN, GSOD and ISD-Lite, FAA AWOS, NRCS SCAN, MesoWest). Reports are ZIP files of CSV at daily, hourly or minute frequency, with precipitation in inches.",
    "holdings": [
     "Surface Weather & Climate Observations station query and CSV report download (UCC mesonets plus GHCN, GSOD, ISD-Lite, AWOS, SCAN, MesoWest stations)"
@@ -14585,8 +13205,6 @@ window.PRECIP_DATA = {
     "gauges",
     "snow"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "FEMC's data archive serves station data collected at Vermont monitoring sites, including daily precipitation from the National Weather Service Cooperative station on the Mount Mansfield summit (1954-present) and a 15-minute NOAH IV rain gauge at UVM's Proctor Maple Research Center in Underhill (2013-present). It also hosts Vermont ANR acid precipitation program data and copies of NCEI-derived Vermont annual climate summaries. Data can be downloaded anonymously under a CC BY-NC-SA 4.0 license.",
    "holdings": [
     "Mount Mansfield Summit Daily Meteorological Data: daily precipitation, temperature, new snow and snow depth from the NWS co-op station, 1954-present",
@@ -14677,8 +13295,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The City of Norfolk's open data portal republishes daily weather summaries for Norfolk International Airport, including daily precipitation and snowfall. The observations were collected by NOAA and come from its Global Historical Climatology Network - Daily (GHCN-Daily). It is one station and is updated daily.",
    "holdings": [
     "Weather Daily Summaries (daily precipitation, snow, temperature, wind) for Norfolk International Airport"
@@ -14750,8 +13366,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Weather stations at Virginia Tech's Agricultural Research and Extension Centers and related sites (for example Kentland Farms, Tidewater, Eastern Shore, Southern Piedmont, Shenandoah Valley) shown on a WeatherSTEM portal. The portal's free Data Mining tool exports sensor data, including rain gauge and rain rate readings, by station and date range. The data are collected by the Virginia Tech stations and hosted by the WeatherSTEM company.",
    "holdings": [
     "WeatherSTEM Data Mining export of AREC station sensors (rain gauge, rain rate and other weather variables)"
@@ -14823,8 +13437,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "A Davis weather station at William & Mary's Keck Environmental Field Laboratory records rain and other weather variables every 10 minutes. The lab posts one zip file per year from April 2003 onward, plus a daily averages spreadsheet. It covers one station only.",
    "holdings": [
     "Yearly zip files of 10-minute weather observations including rain, April 2003 to present"
@@ -14894,8 +13506,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "King County's Hydrologic Information Center publishes rainfall, streamflow and other data from county gauge sites across King County watersheds (Cedar River-Lake Washington, Green River, Sammamish, Snoqualmie-Skykomish, White River and others). King County collects the data. Its download page exports continuous data for a selected site at monthly, daily, hourly or 15-minute intervals.",
    "holdings": [
     "Continuous data download by site (rain gauges included) at monthly, daily, hourly or 15-minute intervals",
@@ -14965,8 +13575,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "WSDOT's Traveler Information API includes a Weather Information service for weather stations that WSDOT maintains along state highways. It returns current readings for all stations or for one station, and readings over a chosen time range, including a precipitation field in inches. WSDOT collects the data, and the API needs a free access code sent by email.",
    "holdings": [
     "Current and time-range weather observations (including PrecipitationInInches) for WSDOT-maintained stations, in JSON or XML"
@@ -15037,8 +13645,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "AgWeatherNet is Washington State University's statewide network of more than 360 automated weather stations. The stations collect data every 15 minutes, including rainfall, for farmers and the public. WSU collects the data, and the site offers a Data Access page for requesting and downloading it. WSU has also published a monthly summary for the Anatone station on the state open-data portal.",
    "holdings": [
     "Data Access page on weather.wsu.edu for requesting and downloading station weather data",
@@ -15143,8 +13749,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Ecology's Freshwater DataStream holds current and historical continuous data from its statewide river and stream monitoring stations. Its data types are streamflow, water quality and rainfall: some stations record rainfall for early warning in landslide-prone areas. Ecology collects the data with automatic gauges that log every 15 or 30 minutes.",
    "holdings": [
     "Continuous streamflow, water quality and rainfall data by station, selected by WRIA (Water Resource Inventory Area)"
@@ -15210,8 +13814,6 @@ window.PRECIP_DATA = {
     "gauges",
     "hydrology"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "WVEMD's IFLOWS flood-warning network has 3 base stations and 256 monitored meteorological gauges, all with rain sensors, plus stream-stage sites. Its public AEM Elements 360 site lists about 250 Rain Increment sensors statewide and lets guests download each sensor's readings as CSV, tab-delimited or spreadsheet files, raw or as daily totals.",
    "holdings": [
     "IFLOWS rain increment and accumulation readings per gauge, with raw and daily-rollup CSV export"
@@ -15283,8 +13885,6 @@ window.PRECIP_DATA = {
    "topics": [
     "radar"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "WVDEP downloads NWS NEXRAD 24-hour precipitation totals daily and keeps them in its own database, served through a map tool that gives range totals and daily totals for about 5,290 estimate points across the state. The original estimates come from the National Weather Service; the date picker starts in 2022.",
    "holdings": [
     "Daily NEXRAD 24-hour precipitation totals at grid points, queryable by date range (JSON)"
@@ -15352,8 +13952,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "MMSD owns 20 rain gauges in the Milwaukee metropolitan area of southeastern Wisconsin (including Cedarburg, Wauwatosa and its Jones Island and South Shore treatment plants). Its Rain Gauge Data page offers a CSV export of 5-minute cumulative readings for the last four days; older data is available only as custom rainfall maps.",
    "holdings": [
     "Rain Gauge Data CSV export: 20 gauges, 5-minute readings, last four days"
@@ -15427,8 +14025,6 @@ window.PRECIP_DATA = {
     "gauges",
     "other"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "NADP has monitored precipitation chemistry across the United States since 1978. Its National Trends Network data export gives weekly, monthly, seasonal or annual records per site, including rain-gauge precipitation amount (mm) along with ion concentrations and deposition. The program's analytical laboratory and website are at the Wisconsin State Laboratory of Hygiene, UW-Madison; samples are collected by site operators nationwide.",
    "holdings": [
     "National Trends Network (NTN) data export: weekly to annual precipitation chemistry and precipitation amount, 1978-present",
@@ -15499,8 +14095,6 @@ window.PRECIP_DATA = {
     "gauges",
     "models"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "AgWeather serves daily total precipitation for the Upper Midwest (lat 38-50, lon -98 to -82) aggregated to a 0.1-degree grid, through point and grid API queries and per-date CSV grid downloads. The underlying grids are NOAA gridded daily precipitation products; UW-Madison redistributes them for agricultural tools.",
    "holdings": [
     "Precipitation API: point time series and gridded daily totals, 2021-10-29 to present",
@@ -15576,8 +14170,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Wisconet is a UW-Madison network of weather and soil stations across Wisconsin (81 stations in its API list), reporting every 5 minutes. Its public API serves 5-minute, hourly and daily rain totals per station, and its Archive page offers CSV downloads. Funded by the USDA Rural Partnerships Institute and the Wisconsin Alumni Research Foundation.",
    "holdings": [
     "Wisconet API v1: station metadata and measures including 5-minute, 60-minute and daily rain totals",
@@ -15658,8 +14250,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "Wisconsin's state climatology office at UW-Madison loads each station's full daily record (temperature, precipitation, snow) into a table that can be saved as CSV, Excel or PDF. The data come from ACIS.",
    "holdings": [
     "Daily Climate Data by Location (CSV, Excel, PDF)"
@@ -15730,8 +14320,6 @@ window.PRECIP_DATA = {
    "topics": [
     "gauges"
    ],
-   "relevance": "primary",
-   "removalReason": null,
    "blurb": "The Water Resources Data System at the University of Wyoming, which is also the Wyoming State Climate Office, serves daily and hourly CSV files for the Wyoming Agricultural Climate Network (WACNet). WACNet's stations sit in agricultural areas across the state and are maintained by the Wyoming State Engineer's Office. The files include precipitation totals in millimetres.",
    "holdings": [
     "WACNet station daily and hourly CSV files (Campbell Scientific TOA5 format) with Rain_mm_Tot, served by WRDS"

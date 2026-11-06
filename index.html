@@ -25,7 +25,6 @@
       <button class="tab" role="tab" id="tab-dashboard" aria-controls="view-dashboard" data-view="dashboard" type="button">Dashboard</button>
       <button class="tab" role="tab" id="tab-states" aria-controls="view-dashboard" data-view="states" type="button">State agencies</button>
       <button class="tab" role="tab" id="tab-international" aria-controls="view-dashboard" data-view="international" type="button">International</button>
-      <button class="tab" role="tab" id="tab-removals" aria-controls="view-removals" data-view="removals" type="button">Possible removals <span class="tab-count" id="removal-count"></span></button>
     </nav>
     <button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" type="button">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -120,37 +119,6 @@
     <section class="notes" id="notes" aria-label="Notes on the source data"></section>
   </section>
 
-  <!-- ── Possible removals ────────────────────────────────── -->
-  <section id="view-removals" role="tabpanel" aria-labelledby="tab-removals" hidden>
-    <div class="removal-head">
-      <div>
-        <h2>Sources that could be removed</h2>
-        <p class="lede">These sources hold little or no precipitation data. They are still on the dashboard until you decide to drop them.</p>
-      </div>
-      <div class="btn-group">
-        <button class="btn btn-primary" id="save-csv" type="button">Save as CSV</button>
-        <button class="btn" id="save-json" type="button">Save as JSON</button>
-      </div>
-    </div>
-    <p class="export-note" id="removal-note" role="status" aria-live="polite"></p>
-    <div class="table-wrap">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th scope="col">Source</th>
-            <th scope="col">Agency</th>
-            <th scope="col" class="col-wide">Focus</th>
-            <th scope="col" class="col-wide">Why remove it</th>
-          </tr>
-        </thead>
-        <tbody id="removal-body"></tbody>
-      </table>
-    </div>
-    <section class="already-removed">
-      <h3>Already removed from the dashboard</h3>
-      <ul id="removed-list"></ul>
-    </section>
-  </section>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>

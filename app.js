@@ -73,10 +73,6 @@
     return AGENCIES.filter(function (a) { return present[a]; });
   }
 
-  function suggestedRemovals() {
-    return ENTRIES.filter(function (e) { return e.relevance === 'suggested-removal'; });
-  }
-
   /* ── theme ──────────────────────────────────────────── */
 
   function initTheme() {
@@ -95,13 +91,11 @@
   /* ── tabs ───────────────────────────────────────────── */
 
   function showView(view) {
-    state.view = view === 'removals' || SCOPE_GROUPS[view] ? view : 'dashboard';
+    state.view = SCOPE_GROUPS[view] ? view : 'dashboard';
     document.querySelectorAll('.tab').forEach(function (t) {
       t.setAttribute('aria-selected', String(t.dataset.view === state.view));
     });
-    $('view-dashboard').hidden = state.view === 'removals';
-    $('view-removals').hidden = state.view !== 'removals';
-    if (state.view !== 'removals' && state.view !== state.scope) {
+    if (state.view !== state.scope) {
       state.scope = state.view;
       $('view-dashboard').setAttribute('aria-labelledby', 'tab-' + state.view);
       // Filters from the other tab may name agencies this one doesn't have, so start clean.
@@ -362,43 +356,6 @@
     }).join('');
   }
 
-  /* ── removals page ──────────────────────────────────── */
-
-  function renderRemovals() {
-    $('removal-body').innerHTML = suggestedRemovals().map(function (e) {
-      return '<tr><td><span class="src-name">' + esc(e.name) + '</span>' +
-        (e.fullName !== e.name ? '<span class="src-full">' + esc(e.fullName) + '</span>' : '') + '</td>' +
-        '<td>' + badge(e.agency) + '</td>' +
-        '<td class="col-wide">' + esc(e.discipline) + '</td>' +
-        '<td class="col-wide">' + esc(e.removalReason) + '</td></tr>';
-    }).join('');
-    $('removed-list').innerHTML = DATA.removed.map(function (r) {
-      return '<li><strong>' + esc(r.id.split('-').slice(1).join('-').toUpperCase()) + '</strong> (' +
-        esc(r.id.split('-')[0].toUpperCase()) + '): ' + esc(r.reason) + '</li>';
-    }).join('');
-  }
-
-  function removalRecords() {
-    return suggestedRemovals().map(function (e) {
-      return {
-        id: e.id, agency: e.agency, name: e.name, fullName: e.fullName, focus: e.discipline,
-        reason: e.removalReason, url: e.endpoints.length ? e.endpoints[0].url : '',
-      };
-    });
-  }
-
-  function csvCell(v) {
-    var s = String(v == null ? '' : v);
-    return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
-  }
-
-  function toCsv(records) {
-    var cols = Object.keys(records[0]);
-    return [cols.join(',')].concat(records.map(function (r) {
-      return cols.map(function (c) { return csvCell(r[c]); }).join(',');
-    })).join('\r\n') + '\r\n';
-  }
-
   function saveBlob(text, filename, type) {
     var blob = new Blob([text], { type: type });
     var a = document.createElement('a');
@@ -506,13 +463,8 @@
   }
 
   function exportJson(list, filtered) {
-    var sources = byAgency(list, function (e) {
-      var copy = Object.assign({}, e);
-      delete copy.relevance;
-      delete copy.removalReason;
-      return copy;
-    });
-    var doc = { title: SCOPE_TITLES[state.scope], topics: DATA.topics, removed: DATA.removed };
+    var sources = byAgency(list, function (e) { return e; });
+    var doc = { title: SCOPE_TITLES[state.scope], topics: DATA.topics };
     if (filtered) {
       doc.filters = {
         search: state.query,
@@ -594,19 +546,9 @@
       renderTable();
     });
     bindSaveMenus();
-    $('save-csv').addEventListener('click', function () {
-      saveBlob(toCsv(removalRecords()), 'possible-removals.csv', 'text/csv;charset=utf-8');
-      note('removal-note', 'Saved possible-removals.csv (' + suggestedRemovals().length + ' sources).');
-    });
-    $('save-json').addEventListener('click', function () {
-      saveBlob(JSON.stringify(removalRecords(), null, 2) + '\n', 'possible-removals.json', 'application/json');
-      note('removal-note', 'Saved possible-removals.json (' + suggestedRemovals().length + ' sources).');
-    });
   }
 
   initTheme();
-  $('removal-count').textContent = suggestedRemovals().length;
-  renderRemovals();
   bind();
   initTabs();
 })();
