@@ -22,7 +22,7 @@ with sync_playwright() as p:
         page = browser.new_page(viewport={"width": width, "height": height}, color_scheme=scheme, accept_downloads=True)
         page.on("pageerror", lambda e: errors.append(f"{width}px {scheme}: {e}"))
         page.goto(PAGE, wait_until="domcontentloaded")
-        page.get_by_text("Showing 64 of 64 sources").wait_for()
+        page.get_by_text("Showing 63 of 63 sources").wait_for()
         return page
 
     page = open_page(1400, 900)
@@ -126,7 +126,7 @@ with sync_playwright() as p:
     page.screenshot(path=OUT / "8c-multi-dataset-panel.png")
     page.locator("#state-filter").select_option("")
     page.get_by_role("tab", name="Dashboard").click()
-    page.get_by_text("Showing 64 of 64 sources").wait_for()
+    page.get_by_text("Showing 63 of 63 sources").wait_for()
 
     dark = open_page(1400, 900, "dark")
     dark.screenshot(path=OUT / "6-dark.png")

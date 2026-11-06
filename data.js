@@ -839,6 +839,62 @@ window.PRECIP_DATA = {
    ]
   },
   {
+   "id": "noaa-ioos",
+   "agency": "NOAA",
+   "kind": "data-center",
+   "name": "IOOS",
+   "fullName": "U.S. Integrated Ocean Observing System",
+   "host": "NOS",
+   "location": "Silver Spring, MD",
+   "discipline": "Coastal, ocean & Great Lakes observing",
+   "topics": [
+    "gauges"
+   ],
+   "blurb": "NOAA's national network of coastal, ocean and Great Lakes observations, run with 11 Regional Associations. Its national sensor data server (ERDDAP, behind the Environmental Sensor Map) has 5,035 station records with precipitation, mostly hourly totals with QARTOD quality flags (Nov 2026). About 90% are copies of other networks gathered in one place: RAWS, SNOTEL, NCEI, USGS NWIS, SCAN, USCRN and HADS. About 300 come from IOOS partners, such as UAF's Water and Environmental Research Center, Alaska DOT road-weather stations, Florida Atlantic University, Everglades National Park and Florida DEP.",
+   "holdings": [
+    "Environmental Sensor Map",
+    "Station precipitation from RAWS, SNOTEL, NCEI, USGS NWIS, SCAN, USCRN and HADS",
+    "Partner stations: UAF WERC, Alaska DOT, FAU, Everglades NP, Florida DEP",
+    "11 Regional Associations (AOOS, SECOORA, CeNCOOS and others)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON",
+    "NetCDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "IOOS sensor ERDDAP",
+     "url": "https://erddap.sensors.ioos.us/erddap/"
+    },
+    {
+     "name": "ERDDAP search: precipitation stations",
+     "url": "https://erddap.sensors.ioos.us/erddap/search/advanced.html?searchFor=&standard_name=lwe_thickness_of_precipitation_amount"
+    },
+    {
+     "name": "Environmental Sensor Map",
+     "url": "https://sensors.ioos.us/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "Access IOOS data",
+     "url": "https://ioos.noaa.gov/data/access-ioos-data/"
+    },
+    {
+     "label": "IOOS regions at a glance",
+     "url": "https://ioos.noaa.gov/regions/regions-at-a-glance/"
+    },
+    {
+     "label": "re3data: IOOS",
+     "url": "https://www.re3data.org/repository/r3d100011788"
+    }
+   ]
+  },
+  {
    "id": "noaa-gfdl",
    "agency": "NOAA",
    "kind": "data-center",
@@ -1769,98 +1825,6 @@ window.PRECIP_DATA = {
     {
      "label": "NOMADS information page",
      "url": "https://nomads.ncep.noaa.gov/info.php"
-    }
-   ]
-  },
-  {
-   "id": "nws-tgftp",
-   "agency": "NWS",
-   "kind": "data-center",
-   "name": "NWS Gateway (tgftp)",
-   "fullName": "NWS Telecommunication Gateway file services",
-   "host": "NWS Telecommunication Operations Center",
-   "location": "Silver Spring, MD",
-   "discipline": "Text & coded product file server",
-   "topics": [
-    "other"
-   ],
-   "blurb": "The anonymous FTP/HTTPS server holding every NWS product as transmitted — 125 product types from forecast offices and national centers, parsed into English descriptive filenames, plus facsimile charts and an email retrieval service (FTPmail).",
-   "holdings": [
-    "All WFO text products (ZFP, AFD, etc.)",
-    "Coded observations & bulletins",
-    "Fax charts (TIFF/GIF)",
-    "FTPmail email retrieval"
-   ],
-   "formats": [
-    "WMO text",
-    "ASCII",
-    "TIFF/GIF"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Gateway data files",
-     "url": "https://tgftp.nws.noaa.gov/data/"
-    },
-    {
-     "name": "NDFD GRIB2 directories",
-     "url": "https://tgftp.nws.noaa.gov/SL.us008001/ST.opnl/DF.gr2/DC.ndfd/"
-    },
-    {
-     "name": "Gateway file services docs",
-     "url": "https://www.weather.gov/tg/dataprod"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Gateway text product server",
-     "url": "https://www.weather.gov/tg/txtfiles"
-    }
-   ]
-  },
-  {
-   "id": "nws-spc",
-   "agency": "NWS",
-   "kind": "data-center",
-   "name": "SPC",
-   "fullName": "Storm Prediction Center",
-   "host": "NWS National Centers",
-   "location": "Norman, OK",
-   "discipline": "Convective & severe weather outlooks",
-   "topics": [
-    "other"
-   ],
-   "blurb": "The nation’s severe weather center — Day 1–8 convective outlooks, tornado & severe thunderstorm watches, mesoscale discussions, and fire weather forecasts, with GIS-ready shapefiles and KMZ downloads.",
-   "holdings": [
-    "Day 1-8 convective outlooks",
-    "Severe thunderstorm & tornado watches",
-    "Mesoscale discussions",
-    "Fire weather outlooks"
-   ],
-   "formats": [
-    "GIS Shapefile",
-    "KMZ",
-    "Text bulletins"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "SPC home",
-     "url": "https://www.spc.noaa.gov/"
-    },
-    {
-     "name": "SPC products page",
-     "url": "https://www.spc.noaa.gov/products/"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Storm Prediction Center",
-     "url": "https://www.spc.noaa.gov/"
     }
    ]
   },

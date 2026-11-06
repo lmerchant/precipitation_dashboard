@@ -47,6 +47,8 @@ REMOVED = {
     "nsf-bcodmo": "Ocean biogeochemistry and ecosystem data.",
     "nsf-designsafe": "Natural hazards engineering; mostly wind, surge and earthquake data.",
     "nws-nwws": "Alert and warning delivery feed, not a data archive.",
+    "nws-tgftp": "File server for NWS text and coded products as transmitted; not a precipitation dataset.",
+    "nws-spc": "Severe weather outlooks, watches and mesoscale discussions; no precipitation data.",
     "extra-recovering-from-tornado-brain": "Mental-health study of tornado survivors; no weather data.",
     "extra-totable-tornado-observatory-toto": "In-situ tornado wind measurements; no precipitation records.",
     "extra-project-nimrod": "Downburst (wind) study; no precipitation records listed.",
@@ -73,7 +75,8 @@ ENTRY_TOPICS = {
     "nasa-ornl": ["gauges", "models"], "nasa-ghrc": ["satellite", "radar", "field"],
     "noaa-ncei": ["gauges", "radar", "satellite"], "noaa-rwrc": ["gauges"],
     "noaa-nodd": ["radar", "satellite", "models"], "noaa-class": ["satellite"],
-    "noaa-ndbc": ["gauges"], "noaa-gfdl": ["models"], "noaa-pmel": ["gauges"],
+    "noaa-ndbc": ["gauges"], "noaa-ioos": ["gauges"], "noaa-gfdl": ["models"],
+    "noaa-pmel": ["gauges"],
     "noaa-aoml": ["radar", "field"],
     "nsf-rda": ["models", "satellite", "radar"],
     "nsf-eol": ["field", "radar"], "nsf-unidata": ["radar", "models"],
@@ -82,7 +85,6 @@ ENTRY_TOPICS = {
     "nws-api": ["gauges"], "nws-ndfd": ["models"], "nws-mrms": ["radar", "gauges"],
     "nws-nexrad": ["radar"], "nws-nwps": ["hydrology", "radar"],
     "nws-nwm": ["hydrology", "models", "snow"], "nws-nomads": ["models"],
-    "nws-tgftp": ["other"], "nws-spc": ["other"],
     "nws-nhc": ["models"], "nws-wfo": ["gauges"],
 }
 
