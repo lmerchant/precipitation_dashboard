@@ -103,7 +103,7 @@ with sync_playwright() as p:
 
     # State agencies tab: same panel, state and local sources, with a State filter.
     page.get_by_role("tab", name="State agencies").click()
-    page.get_by_text("Showing 129 of 129 sources").wait_for()
+    page.get_by_text("Showing 126 of 126 sources").wait_for()
     page.evaluate("window.scrollTo(0, 0)")
     page.screenshot(path=OUT / "8-states.png")
     print("state stats:", page.locator("#stats").inner_text().replace("\n", " | "))

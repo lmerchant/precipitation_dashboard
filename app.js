@@ -150,15 +150,13 @@
   }
 
   function renderStateStats() {
-    var entries = scopeEntries(), codes = {}, datasets = 0, tested = 0;
+    var entries = scopeEntries(), codes = {}, datasets = 0;
     entries.forEach(function (e) {
       e.stateCodes.forEach(function (c) { codes[c] = true; });
       datasets += e.datasetDetails.length;
-      tested += e.datasetDetails.filter(function (d) { return d.verification === 'download tested'; }).length;
     });
     $('stats').innerHTML = stat(entries.length, 'State and local sources') +
-      stat(Object.keys(codes).length, 'States with a source') +
-      stat(datasets, 'Datasets') + stat(tested, 'Downloads tested');
+      stat(Object.keys(codes).length, 'States with a source') + stat(datasets, 'Datasets');
     $('stats').classList.remove('is-single');
   }
 
@@ -292,20 +290,12 @@
       items.map(function (i) { return '<li>' + i + '</li>'; }).join('') + '</ul></div>';
   }
 
-  function sameUrl(a, b) { return a.replace(/\/$/, '') === b.replace(/\/$/, ''); }
-
-  // State entries add a (temporary) Download status column, taken from the dataset with the same link.
   function endpointsTable(e) {
     if (!e.endpoints.length) return '';
-    var status = e.datasetDetails ? function (x) {
-      var d = e.datasetDetails.filter(function (d) { return sameUrl(d.accessUrl, x.url); })[0];
-      return '<td>' + (d ? esc(d.verification) : '<span class="dim">not listed</span>') + '</td>';
-    } : function () { return ''; };
     return '<div class="detail-col detail-col-endpoints"><h4>Data access endpoints</h4>' +
-      '<table class="ep-table' + (e.datasetDetails ? ' ep-table-status' : '') + '"><thead><tr><th scope="col">Name</th><th scope="col">Link address</th>' +
-      (e.datasetDetails ? '<th scope="col">Download status</th>' : '') + '</tr></thead><tbody>' +
+      '<table class="ep-table"><thead><tr><th scope="col">Name</th><th scope="col">Link address</th></tr></thead><tbody>' +
       e.endpoints.map(function (x) {
-        return '<tr><td>' + esc(x.name) + '</td><td class="mono">' + link(x.url, host(x.url)) + '</td>' + status(x) + '</tr>';
+        return '<tr><td>' + esc(x.name) + '</td><td class="mono">' + link(x.url, host(x.url)) + '</td></tr>';
       }).join('') + '</tbody></table></div>';
   }
 

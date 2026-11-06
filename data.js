@@ -81,7 +81,7 @@ window.PRECIP_DATA = {
   "State agencies": {
    "title": "State-agency precipitation data",
    "notes": [
-    "50 of 50 states researched on 2026-11-05, one research run per state; 129 sources and 178 datasets, 118 of them download-tested.",
+    "50 of 50 states researched on 2026-11-05, one research run per state; 126 sources and 169 datasets, 0 of them download-tested.",
     "Includes state agencies, state climate offices, mesonets, regional water agencies, county and city agencies and university networks hosted in the state. Pages that only link to federal tools, ACIS-based tools without a file download, static normals maps and the six regional climate centers (see NCEI-RWRC) are left out.",
     "States with no qualifying source: Tennessee."
    ],
@@ -3840,7 +3840,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Alabama Agricultural Experiment Station (data collected by Medius Ag under contract)",
      "access": "Free account required",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Not tested: wx.medius.re returns only a login page and requires creating an account (choose 'Medius Wx - Auburn'). CSV download and parameter list come from the AAES announcement; whether precipitation is an exported field was not verified.",
      "citations": [
       "https://agriculture.auburn.edu/?p=66258",
@@ -3907,7 +3907,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Alabama A&M University (some stations shared with USDA NRCS SCAN)",
      "access": "Free, no account",
      "qualityNotes": "Precipitation in inches (English pages) or metric pages. The AAMU Campus table for October 2026 showed zeros for temperature, suggesting sensor problems at that station; QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://wx.aamu.edu/monthdat.php?2053+2010+06 (AAMU Campus, June 2010): HTML table of daily values with a monthly precipitation total of 2.24 in and a note 'precipitation in inches'. No CSV export found; data are HTML tables.",
      "citations": [
       "https://wx.aamu.edu/Station.php?2053",
@@ -3978,7 +3978,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Dauphin Island Sea Lab",
      "access": "Free, no account",
      "qualityNotes": "Timestamps in UTC. Each value has a quality flag (-9 missing, 0 not evaluated, 1 bad, 2 questionable, 3 good). The parameters table gives precipitation (precip1) in inches, while the range check is stated as 0-3 mm/min; units not verified.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched https://api.disl.edu/arcos/pregen/bsp_met_min.2024.csv.zip (Battleship Park 2024, ~9.7 MB; server ignored the range request) into memory and printed the first lines: header ts,precip1,precip1flag,airtemp1,... and 1-minute rows from 2024-01-01 00:00 UTC with precip1=0, flag 3.",
      "citations": [
       "https://disl.edu/arcos",
@@ -4012,8 +4012,8 @@ window.PRECIP_DATA = {
    "datasets": null,
    "endpoints": [
     {
-     "name": "South Alabama Mesonet archived meteorological data",
-     "url": "http://chiliweb.southalabama.edu/archived_data.php"
+     "name": "no data endpoint found",
+     "url": ""
     }
    ],
    "sources": [
@@ -4039,7 +4039,7 @@ window.PRECIP_DATA = {
     {
      "name": "South Alabama Mesonet archived meteorological data",
      "landingUrl": "http://chiliweb.southalabama.edu/",
-     "accessUrl": "http://chiliweb.southalabama.edu/archived_data.php",
+     "accessUrl": "",
      "formats": [
       "CSV",
       "fixed-width text"
@@ -4051,7 +4051,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of South Alabama Mesonet",
      "access": "Free, no account",
      "qualityNotes": "Two precipitation sensors (TB3 and TX tipping buckets), each with last-minute and since-midnight totals; monthly QC graphs published. Units not documented on the form.",
-     "verification": "download documented",
+     "verification": "no endpoint",
      "testNote": "Live site chiliweb.southalabama.edu failed the TLS handshake on 2026-11-05 (HTTP redirects to HTTPS); the newer mesonet.southalabama.edu has no download. A July 2026 Wayback capture shows the form (begin/end date, station, CSV or Fixed format, posting to archived_download.php) with precipitation fields.",
      "citations": [
       "http://web.archive.org/web/2026/http://chiliweb.southalabama.edu/archived_data.php",
@@ -4124,7 +4124,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: the table's 'Download CSV' button is in the page script acis_browser.js, which queries data.rcc-acis.org/StnData; not clicked in a browser.",
      "citations": [
       "https://akclimate.org/data/data-portal/"
@@ -4145,7 +4145,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: 'Download CSV' buttons are in timeseries.js; the source file https://akclimate.org/acrc-data/summary_station_precip_data.json was fetched and holds precipitation by station.",
      "citations": [
       "https://akclimate.org/data/time-series-data/",
@@ -4212,7 +4212,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Alaska Division of Geological & Geophysical Surveys",
      "access": "Free, no account",
      "qualityNotes": "Raw instrument output, not quality controlled; sensors vary by station; gaps where stations stopped transmitting. Rain in mm (rain_mm_tot, 15-minute total); timestamps in Alaska local time.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://dggs.alaska.gov/weatherstations/csv/8?days=7 (Barry Arm East) on 2026-11-05 and printed the first lines: header includes rain_mm_tot and cumu_rain_mm, rows at 15-minute steps from 10/29/26 14:00 with rain_mm_tot 0.",
      "citations": [
       "https://dggs.alaska.gov/weatherstations/",
@@ -4282,7 +4282,7 @@ window.PRECIP_DATA = {
      "originalCollector": "SNAP (UAF) model output, from ECMWF ERA5 reanalysis and CRU TS 4.0 (University of East Anglia)",
      "access": "Free, no account",
      "qualityNotes": "Model-derived estimates, not observations. ERA5-WRF rainnc_sum is daily accumulated precipitation in mm; WRF v4.3.3 run in 2-day segments with 6-hour spin-up and spectral nudging.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://earthmaps.io/era5wrf/point/65.0628/-146.1627?vars=rainnc_sum&format=csv; it returned a commented header and date,rainnc_sum rows starting 1960-01-01,3.0. A taspr point query for Fairbanks returned JSON with CRU_historical pr statistics for 1950-2009.",
      "citations": [
       "https://earthmaps.io/era5wrf",
@@ -4318,7 +4318,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "AZMet Web API (observations)",
-     "url": "https://api.azmet.arizona.edu/v1/observations/daily/az01/2020-01-01T00:00/P0D"
+     "url": "https://api.azmet.arizona.edu/"
     },
     {
      "name": "AZMet legacy raw data archive",
@@ -4352,7 +4352,7 @@ window.PRECIP_DATA = {
     {
      "name": "AZMet Web API (observations)",
      "landingUrl": "https://extension.arizona.edu/publication/programmatic-access-azmet-data-web-api",
-     "accessUrl": "https://api.azmet.arizona.edu/v1/observations/daily/az01/2020-01-01T00:00/P0D",
+     "accessUrl": "https://api.azmet.arizona.edu/",
      "formats": [
       "JSON"
      ],
@@ -4363,7 +4363,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Arizona AZMet",
      "access": "Free, no account",
      "qualityNotes": "Daily fields include precip_total_mm and precip_total_in, plus a meta_needs_review flag. AZMet says hourly and daily data get automated and manual QC. Its site notes false non-zero precipitation at some urban turf sites (Desert Ridge, Phoenix Encanto, Phoenix Greenway) caused by irrigation.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://api.azmet.arizona.edu/v1/observations/daily/az01/2024-07-01T00:00/P2D. Got JSON daily records for Tucson (az01) with precip_total_mm 0.0 and precip_total_in 0.00 for 2024-07-01.",
      "citations": [
       "https://extension.arizona.edu/publication/programmatic-access-azmet-data-web-api",
@@ -4384,7 +4384,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Arizona AZMet",
      "access": "Free, no account",
      "qualityNotes": "Precipitation is in mm (format pages give a 0.03937 conversion to inches). Column layout changed in 2003 (see raw1987.htm and raw2003.htm). Files have no header row.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched the first lines of https://azmet.arizona.edu/azmet/data/0195rd.txt (Tucson daily, 1995). Got comma-delimited daily records. The raw2003 format page lists precipitation (mm) as a daily column.",
      "citations": [
       "https://azmet.arizona.edu/azmet/az-data.htm",
@@ -4423,10 +4423,6 @@ window.PRECIP_DATA = {
    "datasets": null,
    "endpoints": [
     {
-     "name": "FCDMC real-time rainfall text reports",
-     "url": "https://alert.fcd.maricopa.gov/alert/Rain/htmlprec.txt"
-    },
-    {
      "name": "FCDMC daily totals and per-gage rainfall history workbooks",
      "url": "https://www.maricopa.gov/625/Rainfall-Data"
     },
@@ -4452,26 +4448,6 @@ window.PRECIP_DATA = {
    "orgType": "county or city agency",
    "datasetDetails": [
     {
-     "name": "FCDMC real-time rainfall text reports",
-     "landingUrl": "https://www.maricopa.gov/625/Rainfall-Data",
-     "accessUrl": "https://alert.fcd.maricopa.gov/alert/Rain/htmlprec.txt",
-     "formats": [
-      "TXT"
-     ],
-     "dataType": "station observations",
-     "temporalResolution": "15-minute, 1-, 3-, 6-, 24- and 72-hour values (prpt.txt); 6- and 24-hour totals (ev_rain.txt); daily, month-to-date and calendar-year-to-date totals (htmlprec.txt)",
-     "periodOfRecord": "Current conditions only (rolling)",
-     "coverage": "regional: Maricopa County and parts of neighboring counties",
-     "originalCollector": "Flood Control District of Maricopa County",
-     "access": "Free, no account",
-     "qualityNotes": "Report header says data are preliminary and unedited; '----' marks missing data. Values in inches. Other report files: https://alert.fcd.maricopa.gov/alert/Rain/prpt.txt and https://alert.fcd.maricopa.gov/alert/Rain/ev_rain.txt.",
-     "verification": "download tested",
-     "testNote": "Fetched the first lines of htmlprec.txt. Got the Daily Precipitation Report for the 24 hours ending 11/05/26 at 0500, with gage name, ID, 24-hour, month-to-date and calendar-year totals in inches (e.g. ASU South 0.94 in).",
-     "citations": [
-      "https://www.maricopa.gov/625/Rainfall-Data"
-     ]
-    },
-    {
      "name": "FCDMC daily totals and per-gage rainfall history workbooks",
      "landingUrl": "https://www.maricopa.gov/625/Rainfall-Data",
      "accessUrl": "https://www.maricopa.gov/625/Rainfall-Data",
@@ -4486,7 +4462,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Flood Control District of Maricopa County",
      "access": "Free, no account",
      "qualityNotes": "Water-year files are named like https://alert.fcd.maricopa.gov/alert/Rain/pcp_WY_2026.xlsx; per-gage files like https://alert.fcd.maricopa.gov/alert/Rain/FOPR/11000_FOPR.xlsx; the full set is https://alert.fcd.maricopa.gov/alert/Rain/FOPR/Master_Rain_xlsx_2025.zip (about 90 MB, 361 files). Severe-event table: https://alert.fcd.maricopa.gov/alert/Rain/stormsdb.xlsx.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The Rainfall Data page links the water-year and per-gage .xlsx files and the ZIP, and a HEAD request for the ZIP returned 200 application/zip. A sample per-gage workbook could not be fetched because the sandbox proxy then refused alert.fcd.maricopa.gov twice, so its contents were not opened.",
      "citations": [
       "https://www.maricopa.gov/625/Rainfall-Data"
@@ -4504,7 +4480,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Flood Control District of Maricopa County",
      "access": "Free, no account",
      "qualityNotes": "Not documented",
-     "verification": "not verified",
+     "verification": "data endpoint",
      "testNote": "Opened the form page, which asks for an end date/time and notes that stored data go back to gage installation. A report was not generated, so the output format was not checked.",
      "citations": [
       "https://alert.fcd.maricopa.gov/prpt_hist.html"
@@ -4576,7 +4552,7 @@ window.PRECIP_DATA = {
      "originalCollector": "RainLog volunteer observers",
      "access": "Free, no account",
      "qualityNotes": "Readings carry a quality label (e.g. 'Good') and remarks; rainAmount is in inches. Volunteer data; no further QC documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POSTed a date-range query (2025-09-18, limit 3) to https://rainlog.org/api/1.0/Reading/getFiltered, the endpoint the site's own app uses. Got JSON readings with rainAmount 0.04, 0.19 and 1.13 in. A HEAD request to https://rainlog.org/api/1.0/DataDump/globalData returned a ZIP attachment (rainlog_all_data-2026-11-05.zip), which was not downloaded. The API is not publicly documented.",
      "citations": [
       "https://rainlog.org/",
@@ -4643,7 +4619,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Santa Rita Experimental Range monitoring program (University of Arizona; funding credited to USDA Forest Service RMRS and UA)",
      "access": "Free, no account",
      "qualityNotes": "Values are in hundredths of an inch (125 = 1.25 in); -9999 means missing. Built from handwritten records and earlier digitized data. The landing page asks users to acknowledge the database.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Downloaded precip2026-10.xlsx (about 226 KB) and read the first rows: columns STATION, YEAR, JAN-DEC; the first row is gauge BOX, 1922, with -9999 for Jan-May and 30, 284, 272 for Jun-Aug.",
      "citations": [
       "https://santarita.arizona.edu/data-resources/data-download/precipitation"
@@ -4711,7 +4687,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Yavapai County Flood Control District (some gauges from neighboring agencies)",
      "access": "Free, no account",
      "qualityNotes": "Values in inches with a flag and score column. The service disclaimer says ALERT data are preliminary and subject to revision. The county page lists the Data Explorer under 'Data Request'.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://azyavapai.trilynx-novastar.systems/novastar/data/api/v1/ts?locId=54428&dataType=Precip&dataInterval=IrregSecond with periodStart 2025-09-18 and periodEnd 2025-09-19 and format=CSV. Got a CSV (dateTime,value,flag,score) for ADOT Rim Camp with 0.04 in reports on 2025-09-18.",
      "citations": [
       "https://www.yavapaiaz.gov/Resident-Services/Flood-Control/Rainfall-and-Weather-Data",
@@ -4745,7 +4721,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "UADA Weather App daily/hourly CSV export",
-     "url": "https://weatherstation.uada.edu/api/daily/csv?start_date=2026-10-01&end_date=2026-10-05&unit=imperial"
+     "url": "https://weatherstation.uada.edu/"
     }
    ],
    "sources": [
@@ -4775,7 +4751,7 @@ window.PRECIP_DATA = {
     {
      "name": "UADA Weather App daily/hourly CSV export",
      "landingUrl": "https://weatherstation.uada.edu/",
-     "accessUrl": "https://weatherstation.uada.edu/api/daily/csv?start_date=2026-10-01&end_date=2026-10-05&unit=imperial",
+     "accessUrl": "https://weatherstation.uada.edu/",
      "formats": [
       "CSV"
      ],
@@ -4786,7 +4762,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Arkansas System Division of Agriculture (Arkansas Agricultural Experiment Station)",
      "access": "Free, no account",
      "qualityNotes": "Precipitation in inches (imperial) or cm (metric, unit=metric). QC and provisional status not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET /api/daily/csv?start_date=2026-10-01&end_date=2026-10-03&unit=imperial (re-tested 2026-11-05) returned a CSV with a 'Precipitation (in)' column (2026-10-02 = 0.11, 2026-10-03 = 0.05). An earlier test of /api/hourly/csv for 2026-10-02 returned hourly rows. Requests for 2020-2021 returned only the header, and the earliest row is 2022-04-07.",
      "citations": [
       "https://weatherstation.uada.edu/",
@@ -4823,7 +4799,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Cal-Adapt API raster series",
-     "url": "https://api.cal-adapt.org/api/series/"
+     "url": "https://api.cal-adapt.org/api/datasets/"
     }
    ],
    "sources": [
@@ -4845,7 +4821,7 @@ window.PRECIP_DATA = {
     {
      "name": "Cal-Adapt API raster series",
      "landingUrl": "https://berkeley-gif.github.io/caladapt-docs/data-catalog.html",
-     "accessUrl": "https://api.cal-adapt.org/api/series/",
+     "accessUrl": "https://api.cal-adapt.org/api/datasets/",
      "formats": [
       "JSON",
       "GeoTIFF"
@@ -4857,7 +4833,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Livneh et al. (2015) from NOAA COOP stations; LOCA projections from Scripps Institution of Oceanography",
      "access": "Free, no account",
      "qualityNotes": "Units for pr_day_livneh not stated in the API response (values look like mm/day; not verified).",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested /api/series/pr_day_livneh/events/?g=POINT(-121.4687 38.5938)&start=2010-01-01&end=2010-01-05; got 5 daily values (2.36, 0.08, 0, 0, 0).",
      "citations": [
       "https://api.cal-adapt.org/api/series/pr_day_livneh/?format=json",
@@ -4908,10 +4884,6 @@ window.PRECIP_DATA = {
      "url": "https://et.water.ca.gov/Rest/Index"
     },
     {
-     "name": "Annual Precipitation Data for Northern California 1944-2024",
-     "url": "https://data.cnra.ca.gov/dataset/3147d563-3615-4683-a4be-75143361d948/resource/997e4289-31a5-471f-81a9-6203536ecfd6/download/lwu-precip-data-to-2024_basic_flatfile_withcoordinates.csv"
-    },
-    {
      "name": "Paleo Tree-Ring Hydroclimatic Reconstructions",
      "url": "https://data.ca.gov/dataset/paleo-dendrochronological-tree-ring-hydroclimatic-reconstructions-for-northern-and-southern-cal"
     },
@@ -4958,7 +4930,7 @@ window.PRECIP_DATA = {
      "originalCollector": "DWR and numerous cooperating agencies that report to CDEC (for example utilities such as PG&E for the PP1-PP5 groups)",
      "access": "Free, no account",
      "qualityNotes": "Values in inches; data flags defined at https://cdec.water.ca.gov/reportapp/javareports?name=FlagList. Real-time data are provisional; a quality-controlled summary is in the HYD report.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested CSVDataServlet?Stations=BLC&SensorNums=45&dur_code=D&Start=2025-01-01&End=2025-01-05; got 5 daily PPT INC rows (e.g. 0.90 in on 2025-01-03). Also 8SI monthly (sensor 2) returned 2.95, 7.72, 15.63 in for Oct-Dec 2025.",
      "citations": [
       "https://cdec.water.ca.gov/queryCSV.html",
@@ -4982,33 +4954,12 @@ window.PRECIP_DATA = {
      "originalCollector": "California DWR (CIMIS weather station network)",
      "access": "Free account and appKey required for weather data; station metadata open",
      "qualityNotes": "Data items day-precip and hly-precip (WSN stations only); English or metric units via unitOfMeasure. QC flag codes are documented by CIMIS; details not verified here. CSV is via the web report page (data.ca.gov listing), not the API.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Station endpoint https://et.water.ca.gov/api/station/2 returned Five Points station metadata (connected 1982-06-07). Precipitation data require an appKey and were not requested.",
      "citations": [
       "https://et.water.ca.gov/Rest/Index",
       "https://data.ca.gov/dataset/cimis-weather-station-data",
       "https://cimis.water.ca.gov/WSNReportCriteria.aspx"
-     ]
-    },
-    {
-     "name": "Annual Precipitation Data for Northern California 1944-2024",
-     "landingUrl": "https://data.ca.gov/dataset/annual-precipitation-data-for-northern-california-1944-2024",
-     "accessUrl": "https://data.cnra.ca.gov/dataset/3147d563-3615-4683-a4be-75143361d948/resource/997e4289-31a5-471f-81a9-6203536ecfd6/download/lwu-precip-data-to-2024_basic_flatfile_withcoordinates.csv",
-     "formats": [
-      "CSV",
-      "PDF"
-     ],
-     "dataType": "station observations",
-     "temporalResolution": "annual (water year; per gauge service interval)",
-     "periodOfRecord": "1944-2024 (varies by station); monitoring ended, dataset final",
-     "coverage": "regional: Northern California (DWR Northern Region, 33 stations)",
-     "originalCollector": "California DWR Northern Region Office",
-     "access": "Free, no account",
-     "qualityNotes": "Total precipitation in inches; notes_flagged_results column; methods in the accompanying PDF.",
-     "verification": "download tested",
-     "testNote": "Fetched first lines of the CSV: columns station_name, county, gage service dates, total_precipitation_inches, water_year, coordinates; e.g. Ball Mountain (Tehama) 39.51 in for WY1951.",
-     "citations": [
-      "https://data.ca.gov/dataset/annual-precipitation-data-for-northern-california-1944-2024"
      ]
     },
     {
@@ -5027,7 +4978,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Tree-ring reconstructions by Meko et al. (2014, 2017) for DWR",
      "access": "Free, no account",
      "qualityNotes": "Reconstructed precipitation in inches with 50% bounds; -999 marks missing values.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched header and first rows of the Northern and Southern California reconstruction CSVs; they contain columns such as KFL_Reconstruction_Precip_Inches and SanGab_Reconstruction_Precip_inches.",
      "citations": [
       "https://data.ca.gov/dataset/paleo-dendrochronological-tree-ring-hydroclimatic-reconstructions-for-northern-and-southern-cal"
@@ -5050,7 +5001,7 @@ window.PRECIP_DATA = {
      "originalCollector": "DWR weather generator built on Livneh and PRISM gridded observations",
      "access": "Free, no account (files on DWR Box)",
      "qualityNotes": "Synthetic/perturbed data for planning, not observations. Precipitation in mm; 1/16-degree grid and HUC8 watershed averages.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Box links (cadwr.box.com) returned a redirect to the Box viewer; files are large and were not downloaded.",
      "citations": [
       "https://data.ca.gov/dataset/gridded-weather-generator-perturbations-of-historical-detrended-and-stochastically-generated-te"
@@ -5084,7 +5035,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "OC Water Data Portal (Hydstra web service)",
-     "url": "http://hydstra.ocpublicworks.com/web.htm"
+     "url": "https://data-ocpw.opendata.arcgis.com/search?q=rain"
     }
    ],
    "sources": [
@@ -5102,7 +5053,7 @@ window.PRECIP_DATA = {
     {
      "name": "OC Water Data Portal (Hydstra web service)",
      "landingUrl": "https://pwer.oc.gov/service-areas/oc-environmental-resources/monitoring-and-data",
-     "accessUrl": "http://hydstra.ocpublicworks.com/web.htm",
+     "accessUrl": "https://data-ocpw.opendata.arcgis.com/search?q=rain",
      "formats": [
       "JSON"
      ],
@@ -5113,7 +5064,7 @@ window.PRECIP_DATA = {
      "originalCollector": "County of Orange (OC Public Works ALERT network and cooperative gauges)",
      "access": "Free, no account",
      "qualityNotes": "Rainfall in inches (variables 11.00, 11.01 daily, 11.50 ALERT transmitted); quality codes returned per value. Download options in the portal UI not reviewed.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "cgi/webservice.exe get_ts_traces for site COSTAMESA, variable 11.00, daily totals 2023-01-14 to 2023-01-17 returned 1.28, 0.58, 0.34, 0.00 in with quality code 1.",
      "citations": [
       "http://hydstra.ocpublicworks.com/web.htm",
@@ -5173,7 +5124,7 @@ window.PRECIP_DATA = {
      "originalCollector": "San Diego County Flood Control District",
      "access": "Free, no account; requests needed for more than 60 days",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "County page states that downloads of more than 60 days are not possible due to server limits. The OneRain site was not queried by script.",
      "citations": [
       "https://www.sandiegocounty.gov/content/sdc/sdcfcd/data.html",
@@ -5243,7 +5194,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Santa Clara Valley Water District",
      "access": "Free, no account",
      "qualityNotes": "Precipitation in inches. Gauge readings are described as preliminary; QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Sensor list (/Sensor/all) shows 48 Precipitation gauges; /SensorData/6001/range/2025-01-01/2025-01-03?format=csv (Alamitos) returned 15-minute rows with header 'Timestamp,Precipitation (in.)'.",
      "citations": [
       "https://alertdata.valleywater.org/download.html",
@@ -5278,7 +5229,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Dendra API (UC Nature stations)",
-     "url": "https://api.dendra.science/v2/"
+     "url": "https://ui.dendra.science/orgs/ucnrs"
     }
    ],
    "sources": [
@@ -5300,7 +5251,7 @@ window.PRECIP_DATA = {
     {
      "name": "Dendra API (UC Nature stations)",
      "landingUrl": "https://dendra.science/",
-     "accessUrl": "https://api.dendra.science/v2/",
+     "accessUrl": "https://ui.dendra.science/orgs/ucnrs",
      "formats": [
       "JSON"
      ],
@@ -5311,7 +5262,7 @@ window.PRECIP_DATA = {
      "originalCollector": "UC Natural Reserve System (stations originally installed by WRCC/DRI)",
      "access": "Free, no account (API)",
      "qualityNotes": "Rainfall datastreams in millimeters, tagged 'ReadytoUse' or raw; cumulative logger series also exist.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Organization 'UC Nature' lists 39 stations; datastream 'Rainfall' at Angelo South Meadow returned 10-minute values (0.254, 0.508 mm) for 2025-02-04.",
      "citations": [
       "https://ucnature.org/delivering-environmental-data-from-the-nrs/",
@@ -5379,7 +5330,7 @@ window.PRECIP_DATA = {
      "originalCollector": "CW3E, Scripps Institution of Oceanography",
      "access": "Free, no account",
      "qualityNotes": "Raw, unprocessed data per station README; precipitation in mm; -99.99 marks missing values; QC process under development.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "DLA/2025/Hourly/DLA_20251114.txt returned hourly comma-separated rows; column 8 (Precipitation, mm per DLA_HourlyData_README.txt) had 7.0, 4.0, 3.4 mm in the first hours.",
      "citations": [
       "https://cw3e-datashare.ucsd.edu/CW3E_SurfaceMetObs/00_CW3E_SurfaceMetObs_Guide.txt",
@@ -5451,7 +5402,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Ventura County Public Works / Watershed Protection District",
      "access": "Free, no account",
      "qualityNotes": "Rainfall in inches with code, quality code and publish flag (published vs preliminary) per row; FAQ explains caveats.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "rain-data/daily.php?site_id=301&wy=2005&format=csv returned a header block (Old Man Mountain, ALERT precipitation gage) and rows '24 Hour Total Ending At,Rainfall (in),Code,Quality Code,Publish'. The daily-rain station list links about 280 stations.",
      "citations": [
       "https://hydrology.venturacounty.gov/hydrodata/get-station/?siteid=301",
@@ -5541,7 +5492,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Colorado Climate Center (CoAgMET), including Northern Water stations integrated into the network",
      "access": "Free, no account",
      "qualityNotes": "Precipitation field 'precip', inches (US) or mm (metric). A QC (Raw) option exists; other QC details are not documented here.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested data/daily/fcl01.csv?from=2024-05-01&to=2024-05-05&fields=precip&header=yes. Got 5 daily 'Liquid Precip' values in inches for Fort Collins (0.02 on 5/1). The metadata.csv listing shows about 128 stations, the earliest from 1992.",
      "citations": [
       "https://coagmet.colostate.edu/data/doc.html",
@@ -5563,7 +5514,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Colorado Climate Center (CSU Fort Collins main campus weather station)",
      "access": "Free, no account",
      "qualityNotes": "Precipitation column 'Prec' in inches. A precipitation data disclaimer page exists (climate.colostate.edu/~autowx/prec_disclaimer.html); other QC is not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POST to fclwx_results.php with year 2024, month 5, day 1, table Hourly, format csv. Got hourly rows for 2024-05-01 with column Prec (in), values 0.00.",
      "citations": [
       "https://climate.colostate.edu/~autowx/fclwx_access.php",
@@ -5585,7 +5536,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: with Output set to CSV the page opens an ACIS StnData request with output=csv; a Fort Collins request for 2024-06-01 to 2024-06-05 returned text/csv with precipitation.",
      "citations": [
       "https://climate.colostate.edu/data_access_new.html"
@@ -5623,7 +5574,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "CDSS REST API climate station data",
-     "url": "https://dwr.state.co.us/Rest/GET/api/v2/climatedata/climatestationtsday/"
+     "url": "https://dwr.state.co.us/rest/get/help"
     }
    ],
    "sources": [
@@ -5645,7 +5596,7 @@ window.PRECIP_DATA = {
     {
      "name": "CDSS REST API climate station data",
      "landingUrl": "https://dwr.state.co.us/Tools/ClimateStations",
-     "accessUrl": "https://dwr.state.co.us/Rest/GET/api/v2/climatedata/climatestationtsday/",
+     "accessUrl": "https://dwr.state.co.us/rest/get/help",
      "formats": [
       "CSV",
       "JSON",
@@ -5658,7 +5609,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA (COOP/first-order), CoCoRaHS, NRCS, CoAgMET, Northern Colorado Water Conservancy District",
      "access": "Free, no account (anonymous limit 1,000 calls/day; optional free API key)",
      "qualityNotes": "Units in inches (measUnit field). Source flags flagA-flagD are passed through, e.g. T for trace. DWR recommends getting data directly from the original provider where possible.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested climatestationtsday?format=csv&siteId=USW00003017&measType=Precip for 2024-05-01 to 2024-05-06. Got 6 daily rows for Denver Intl AP with value 0.000 in, flag T on 5/1, dataSource NOAA.",
      "citations": [
       "https://dwr.state.co.us/Rest/GET/Help",
@@ -5729,7 +5680,7 @@ window.PRECIP_DATA = {
      "originalCollector": "CoCoRaHS volunteers; NREL and other station operators named per dataset",
      "access": "Free, no account",
      "qualityNotes": "Archived static copies, not updated. Field 'prcp' is inches (CoCoRaHS). Boulder 'precipitationaccumulated' units not documented on the portal.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested resource/mqid-8hv2.csv?$limit=3. Got CoCoRaHS rows from 2014-01-01 with prcp 0.11 and 0.00. resource/pfjr-vhp3.csv?$limit=3 returned 10-minute Boulder rows from 1996-09-24 with a precipitationaccumulated column.",
      "citations": [
       "https://data.colorado.gov/api/views/mqid-8hv2.json",
@@ -5797,7 +5748,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Connecticut Department of Transportation",
      "access": "Free, no account",
      "qualityNotes": "Not documented. The catalog says reports are produced for individual weather events. Media describe the DOT totals as unofficial.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "WebFetch and curl both returned 'Request Rejected' (bot block) from www.dotdata.ct.gov, and web.archive.org could not be fetched. The data.ct.gov and data.gov catalog records describe the precipitation and snowfall totals and list the HTML index as the only resource. Report format and date range not verified.",
      "citations": [
       "https://catalog.data.gov/dataset/regional-weather-reports-ct-department-of-transportation-weather-roundup",
@@ -5834,7 +5785,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Connecticut climate data archive (ZIP)",
-     "url": "https://cscc-nre.media.uconn.edu/wp-content/uploads/sites/3419/2021/12/CTClimateCenterData-3.zip"
+     "url": "https://cscc.nre.uconn.edu/climate-data/"
     }
    ],
    "sources": [
@@ -5860,7 +5811,7 @@ window.PRECIP_DATA = {
     {
      "name": "Connecticut climate data archive (ZIP)",
      "landingUrl": "https://cscc.nre.uconn.edu/climate-data/",
-     "accessUrl": "https://cscc-nre.media.uconn.edu/wp-content/uploads/sites/3419/2021/12/CTClimateCenterData-3.zip",
+     "accessUrl": "https://cscc.nre.uconn.edu/climate-data/",
      "formats": [
       "CSV",
       "ZIP",
@@ -5874,7 +5825,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA NCDC GHCN-Daily (mainly NWS Cooperative Observer and airport stations); file format and GHCND_documentation.pdf match NCDC Climate Data Online exports",
      "access": "Free, no account",
      "qualityNotes": "GHCN-Daily CSV layout with Measurement, Quality and Source flags and Time of Observation for each element. -9999 marks missing values. PRCP units not stated in the file header (CDO standard exports use hundredths of inches); see the included GHCND_documentation.pdf. Archive last modified June 2024 and ends in 2014.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "The ZIP is about 20 MB, so it was not downloaded in full. Ranged requests read its central directory: 324 entries (161 'Daily data by station name' CSVs, 81 daily-normal and 81 monthly-normal PDF/XLS files, and GHCND_documentation.pdf). A range read and decompression of 'ANSONIA 1 NE 1966-2014.csv' showed a header with STATION, DATE, PRCP, SNOW, SNWD, TMAX and TMIN, and rows such as 19660401 with PRCP -9999 (missing).",
      "citations": [
       "https://cscc.nre.uconn.edu/climate-data/",
@@ -5956,7 +5907,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Delaware CEMA (DEOS network); some stations from partner networks",
      "access": "Free, no account",
      "qualityNotes": "Page states data are preliminary and subject to further validation. Precip in inches (converted from mm); '--' marks missing values; blue shading marks multi-day totals where daily values may be invalid.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested daily_view.php?station=DAGF&date=2025-06-05&interval=hourly&download=csv; got CSV with 'Precip (in)' column (0.00 values). Same for 2006-06-05, confirming history back to at least 2006.",
      "citations": [
       "https://deos.udel.edu/data/monthly_summary/daily_view.php?station=DAGF&date=2025-06-05&interval=hourly",
@@ -5978,7 +5929,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Delaware CEMA (DEOS network)",
      "access": "Free, no account",
      "qualityNotes": "Returns per-station SUM, MEAN, MIN, MAX, STD_DEV and observation count in inches; maps are kriging-interpolated in the browser. QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Queried the Almanac's backend services.cema.udel.edu/almanac/almanac.php with start=2025-06-01, end=2025-06-30, data_type=Precipitation, method=total, mode=months; got JSON with per-station SUM (e.g. 2.37 in, OB_COUNT 30). Page offers 'download csv'.",
      "citations": [
       "https://deos.udel.edu/almanac/",
@@ -5997,7 +5948,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Delaware CEMA (DEOS network)",
      "access": "Free account required (registration form)",
      "qualityNotes": "Not documented on the landing page; redistribution requires prior CEMA permission.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Not tested: requires registration at services.cema.udel.edu/deos_services/register. Landing page describes real-time and historical data at 5-minute, hourly and daily resolution with a user guide.",
      "citations": [
       "https://deos.udel.edu/data/api/",
@@ -6067,7 +6018,7 @@ window.PRECIP_DATA = {
      "originalCollector": "UF/IFAS FAWN",
      "access": "Free, no account",
      "qualityNotes": "Rainfall in inches ('Rainfall Amount (in) Sum'). A separate set carries QC flags; a gap-free set covers 30 stations 2005-2020.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the first 1.5 KB of daily_summaries/BY_YEAR/2026_daily.csv; header includes 'Rainfall Amount (in) Sum' and station 110 shows 0.44 in on 2026-01-03.",
      "citations": [
       "https://fawn.ifas.ufl.edu/data/",
@@ -6134,7 +6085,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA National Weather Service (First Order and Cooperative stations) and FAA; source archive not documented",
      "access": "Free, no account",
      "qualityNotes": "Missing precipitation coded -99.99. Units not stated (values appear to be inches). QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POSTed the page's form (station 88758 Tallahassee Rgnl AP, 2020-01-01 to 2020-01-05, variable precipitation) to /php/climate_visualization/Climate_Data.php; got CSV with header COOPID, YEAR, MONTH, DAY, precipitation and values such as 0.04 and 0.25.",
      "citations": [
       "https://climatecenter.fsu.edu/climate-data-access-tools/downloadable-data",
@@ -6201,7 +6152,7 @@ window.PRECIP_DATA = {
      "originalCollector": "FDACS Florida Forest Service observing sites",
      "access": "Free, no account",
      "qualityNotes": "Inches; TR = trace (less than 1/10 inch, per the page). No file export; QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POSTed District=Jacksonville, month=9, year=2025 to fmis_rainfall.py; got daily rainfall tables by county and site (e.g. Southside 2.20). The same query for October 2026 (Tallahassee) returned an empty table.",
      "citations": [
       "https://fireweather.fdacs.gov/rainfall/"
@@ -6263,7 +6214,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Lee County Department of Natural Resources",
      "access": "Free, no account",
      "qualityNotes": "Page states data verified up to 2026-10-29; a flag column marks some values. Units not stated (values appear to be inches).",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POSTed the query form (Id=20 Lakes Park, daily, 10/01/2026-10/05/2026); page returned a table with Total Rainfall 0.44, 0, 0.1, 0, 0 and Copy/CSV export buttons.",
      "citations": [
       "https://naturalresources.leegov.com/Home/RainGauge",
@@ -6330,7 +6281,7 @@ window.PRECIP_DATA = {
      "originalCollector": "SFWMD and cooperating agencies",
      "access": "Free, no account for the web app; API requires SFWMD client credentials",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The app's public sites endpoint (insights.api.sfwmd.gov/v1/insights/sites) returned station JSON, but the time-series request was not identified in the app bundle and the data-service API needs credentials; rainfall download not tested.",
      "citations": [
       "https://www.sfwmd.gov/dbhydro",
@@ -6401,7 +6352,7 @@ window.PRECIP_DATA = {
      "originalCollector": "SWFWMD data collection sites",
      "access": "Free, guest access",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The sandbox proxy refused edp.swfwmd.state.fl.us twice; not tested. The district guide documents downloads through EDP.",
      "citations": [
       "https://www.swfwmd.state.fl.us/resources/data-maps/hydrologic-data",
@@ -6422,7 +6373,7 @@ window.PRECIP_DATA = {
      "originalCollector": "SWFWMD (area-weighted from rainfall records; inputs per the district's calculation PDF)",
      "access": "Free, no account",
      "qualityNotes": "Inches, area-weighted averages; method in Rainfall_Summary_Stat_Calculations.pdf.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "regn.xlsx redirects from www4 to www5.swfwmd.state.fl.us; the connection returned no data to curl and WebFetch rejected the certificate; not tested.",
      "citations": [
       "https://www.swfwmd.state.fl.us/resources/data-maps/rainfall-summary-data-region"
@@ -6495,7 +6446,7 @@ window.PRECIP_DATA = {
      "originalCollector": "SJRWMD rain-gauge network",
      "access": "Free, no account",
      "qualityNotes": "Each value carries a quality code, included in downloads (per portal FAQ). Export file format of the UI not documented. Units: Not verified.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Read the portal's public data store (data/internet/timeseries/00005/RN_00005/Rain/h_Total_Agg_P1D, blosc/lz4 Zarr) and decoded it: 751 daily values from 1991-05-15 to 1993-06-03 for station 00005, e.g. 0.004 on 1993-05-31. The UI export itself was not run.",
      "citations": [
       "https://mdp.sjrwmd.com/config/sjrwmd_external.json",
@@ -6514,7 +6465,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NWS NEXRAD radar, gauge-adjusted (processing not documented)",
      "access": "Free, no account",
      "qualityNotes": "Not documented. USF Water Atlas links a 'verified' NEXRAD FTP folder (ftp://secure.sjrwmd.com/nexrad/verified/).",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Page returned HTTP 403 from a web application firewall to curl; not tested.",
      "citations": [
       "https://www.sjrwmd.com/?p=4007",
@@ -6584,7 +6535,7 @@ window.PRECIP_DATA = {
      "originalCollector": "SRWMD; some files carry USGS data",
      "access": "Free, no account",
      "qualityNotes": "Inches. Quality codes: Missing, Reviewed, Estimated, Provisional. Disclaimer notes data may be provisional.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Downloaded the 245 KB file data/rain/229/229_Daily_Total.xlsx (Forest Grove, Alachua) to scratch and parsed it: site header, 'Rainfall totals are in inches', 9,628 rows ending 2026-11-04 with values such as 0.26, 0.16, 0.03.",
      "citations": [
       "http://www.mysuwanneeriver.org/portal/rainfall.xml",
@@ -6649,7 +6600,7 @@ window.PRECIP_DATA = {
      "originalCollector": "County agencies and water management districts (e.g. Lee County DNR); radar estimates from SWFWMD and SJRWMD",
      "access": "Free, no account",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Rainfall page says users can download raw data from the Data Mapper; /datamapper/ returned HTTP 401 to curl, so no download was tested.",
      "citations": [
       "https://orange.wateratlas.usf.edu/rainfall",
@@ -6721,7 +6672,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Georgia Forestry Commission",
      "access": "Free, no account",
      "qualityNotes": "Rain in inches, plus rain duration. The GFC data quality page (last updated 2001) says data are assumed good and staff meteorologists may correct sensor errors by hand. Monthly summaries are posted on the 5th of the following month.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched https://weather.gfc.state.ga.us/climate/coo.25 (Adel, 2025); the January 2025 table lists daily max/min temperature and daily rain (for example 0.90 in on Jan 13).",
      "citations": [
       "https://weather.gfc.state.ga.us/climate/climate.aspx",
@@ -6740,7 +6691,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Georgia Forestry Commission",
      "access": "Free, no account",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Opened the form: station picker, starting year, and variable checkboxes including rain (Rn01), with a choice of hourly or 1300 data. No query was submitted, and the output format was not checked.",
      "citations": [
       "https://weather.gfc.state.ga.us/Getwxdata/Getwxdata.aspx"
@@ -6811,7 +6762,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Georgia Automated Environmental Monitoring Network",
      "access": "Free, no account",
      "qualityNotes": "Rain in inches (US units). QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Sent a POST to ?variable=HI&site=GRIFFIN for Oct 1-3, 2026; the table returned daily Tmax/Tmin and Rain (in), for example 0.09 in on Oct 02. The URL pattern takes other station codes in site=.",
      "citations": [
       "http://www.georgiaweather.net/?variable=HI&site=GRIFFIN",
@@ -6899,7 +6850,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Multiple networks compiled by UH (NWS/NCEI COOP, RAWS, NRCS SCAN, USGS, HaleNet, Hawaii Mesonet and others); grids produced by HCDP",
      "access": "Free, no account (portal export and public file store)",
      "qualityNotes": "Station files list SKN station key, network, island, elevation, coordinates and one column per month/day; values in mm. Missing values are NA. 'Partial' station files are filled where gaps exist. Recent months may be provisional; not documented in detail on the pages read.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the first bytes of the public HCDP files rainfall_new_month_statewide_partial_station_data_2024.csv, 1990.csv and 2026.csv and rainfall_new_day_statewide_partial_station_data_2024_01.csv on ikeauth.its.hawaii.edu. All returned station metadata plus monthly/daily rainfall values (e.g. LOWER KAHUKU CS, RAWS, Jan 2024 = 161.29). The 1989 file does not exist. A byte-range request for the 2024-01 statewide monthly GeoTIFF also succeeded (HTTP 206).",
      "citations": [
       "https://www.hawaii.edu/climate-data-portal/data-portal/",
@@ -6923,7 +6874,7 @@ window.PRECIP_DATA = {
      "originalCollector": "UH Water Resources Research Center (Hawaii Mesonet stations, incl. former HaleNet stations); HCDP compiled station data from multiple networks",
      "access": "Free API token required (request form)",
      "qualityNotes": "API base https://api.hcdp.ikewai.org with Bearer token. Endpoints include /mesonet/db/measurements, /mesonet/db/stations, /stations, /raster, /raster/timeseries and /genzip. HCDP says the stored Mesonet data are quality-controlled; QC flags were not documented on the pages read.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Read the OpenAPI file (hcdp_api.yaml). An unauthenticated request to /mesonet/db/stations returned HTTP 401 asking for an API token, so no data was retrieved.",
      "citations": [
       "https://hcdp.github.io/hcdp_api_docs/hcdp_api.yaml",
@@ -7006,7 +6957,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Rain-gauge records from multiple networks (NWS COOP, USGS, sugar and pineapple plantations, others) compiled by UH Geography",
      "access": "Free, no account",
      "qualityNotes": "Station tables give values in inches and mm with standard deviations and counts. A gap-filled dataset and processed original data are provided separately. No updates since 2012 (current products are on HCDP).",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the first 700 bytes of Tabular/FinalStationData_Used_csv.csv from atlas.uhtapis.org. It returned a header with station SKN, name, coordinates and monthly mean rainfall columns (JanAvgIN ... AnnAvgMM). A byte-range request for Oa_MonthlyRainfallIndex_1920_2012.xlsx returned an XLSX (HTTP 206). Month-year rasters (.rar) were not downloaded.",
      "citations": [
       "https://rainfall.geography.hawaii.edu/downloads",
@@ -7040,7 +6991,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "CropNet ET0 and rainfall spreadsheet",
-     "url": "https://cropnet.eng.hawaii.edu/HOBO_CAMPBELL_ET0_Rain.xlsx"
+     "url": "https://cropnet.eng.hawaii.edu/"
     }
    ],
    "sources": [
@@ -7058,7 +7009,7 @@ window.PRECIP_DATA = {
     {
      "name": "CropNet ET0 and rainfall spreadsheet",
      "landingUrl": "https://cropnet.eng.hawaii.edu/",
-     "accessUrl": "https://cropnet.eng.hawaii.edu/HOBO_CAMPBELL_ET0_Rain.xlsx",
+     "accessUrl": "https://cropnet.eng.hawaii.edu/",
      "formats": [
       "XLSX"
      ],
@@ -7069,7 +7020,7 @@ window.PRECIP_DATA = {
      "originalCollector": "UH Manoa Civil & Environmental Engineering (CropNet)",
      "access": "Free, no account",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "A byte-range request returned an XLSX file (HTTP 206; full file about 2.8 MB). Fetching the whole file to read rows was blocked by the sandbox, so rainfall columns were not confirmed. The page also mentions a CropNet API, but its URL was not found.",
      "citations": [
       "https://cropnet.eng.hawaii.edu/"
@@ -7103,7 +7054,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Daily Climatological Data for Idaho (Historical)",
-     "url": "https://insideidaho.org/data/ago/ics/daily-climate-data.zip"
+     "url": "https://geocatalog-uidaho.hub.arcgis.com/documents/uidaho::daily-climatological-data-for-idaho-historical/about"
     }
    ],
    "sources": [
@@ -7133,7 +7084,7 @@ window.PRECIP_DATA = {
     {
      "name": "Daily Climatological Data for Idaho (Historical)",
      "landingUrl": "https://geocatalog-uidaho.hub.arcgis.com/documents/uidaho::daily-climatological-data-for-idaho-historical",
-     "accessUrl": "https://insideidaho.org/data/ago/ics/daily-climate-data.zip",
+     "accessUrl": "https://geocatalog-uidaho.hub.arcgis.com/documents/uidaho::daily-climatological-data-for-idaho-historical/about",
      "formats": [
       "Microsoft Access (MDB in ZIP)"
      ],
@@ -7144,7 +7095,7 @@ window.PRECIP_DATA = {
      "originalCollector": "National Weather Service cooperative observer stations",
      "access": "Free, no account",
      "qualityNotes": "Not documented. Contributed to INSIDE Idaho in 1999; static archive, not updated.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "HEAD request returned 200, application/zip, 40,304,155 bytes (last modified 2019-12-05); the first 300 bytes show a ZIP entry dailyClimateData/dailyClimateData_id_ics.mdb. Not downloaded in full (bulk file), so precipitation fields were not inspected; data.gov describes it as daily climatological data.",
      "citations": [
       "https://catalog.data.gov/dataset/daily-climatological-data-for-idaho-historical",
@@ -7214,7 +7165,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Idaho (gridMET); input datasets not verified",
      "access": "Free, no account",
      "qualityNotes": "Last 60 days preliminary. Stored as packed integers with scale factor and offset; precipitation in mm.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "OPeNDAP ASCII request to agg_met_pr_1979_CurrentYear_CONUS.nc for precipitation_amount, 3 days at one grid cell, returned values 0, 0, 0 with day coordinates 28854-28856.",
      "citations": [
       "https://www.climatologylab.org/gridmet.html",
@@ -7281,7 +7232,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Chicago Park District",
      "access": "Free, no account",
      "qualityNotes": "Rain intensity in mm/h, interval rain in mm since the last hourly reading, total rain in mm since midnight; precipitation type codes 0/40/60/70. Data may be missing outside the summer season.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the 4 latest rows from the Socrata CSV endpoint (resource/k7hf-8y75.csv); rows for Foster and Oak Street on 2026-11-05 came back with interval_rain values of 0.",
      "citations": [
       "https://data.cityofchicago.org/api/views/k7hf-8y75.json",
@@ -7362,7 +7313,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Illinois State Water Survey (Illinois Climate Network, WARM Program)",
      "access": "Free account required (WARM registration; 'Access will remain free of charge')",
      "qualityNotes": "Column 'precip' is total daily precipitation in inches, with error flag column 'pcer'. Daily values are totals of instruments polled every 10 seconds.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Requests for the daily file list (cdflist.asp?typ=a) and monthly tables (data/datalist.asp) returned the WARM login page; no account was created. The column-header page confirms the precip field.",
      "citations": [
       "https://warm.isws.illinois.edu/warm/datatype.asp",
@@ -7384,7 +7335,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Illinois State Climatologist Office, Illinois State Water Survey (Champaign-Urbana station; observer not documented)",
      "access": "Free, no account",
      "qualityNotes": "Precipitation and snowfall in inches; T marks a trace. Published as Excel workbooks saved as web pages, one sheet per month.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched the January 2025 sheet of urbana-monthly-2025.htm; it lists daily precipitation (for example 0.07 in on Jan 1, 0.18 in on Jan 6), snowfall and snow depth.",
      "citations": [
       "https://stateclimatologist.isws.illinois.edu/data/champaign-urbana/",
@@ -7451,7 +7402,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Metropolitan Water Reclamation District of Greater Chicago",
      "access": "Free, no account (web viewer)",
      "qualityNotes": "Precipitation field in the viewer's service; units shown as inches on the older display page. QC not documented.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The viewer's script queries the ArcGIS layer CSO/RainGauges_Precipitation (fields RainGaugeID, Name, Precipitation, Basin, DateRecorded). Direct queries returned 'Token Required' and the viewer proxy needs a browser session, so no sample was retrieved.",
      "citations": [
       "https://gispub.mwrd.org/raingaugeviewer/",
@@ -7523,7 +7474,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Indiana State Climate Office, Purdue Mesonet",
      "access": "Free, no account",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The Data Hub is an embedded Tableau view (tableau.itap.purdue.edu, view IndianaMesonetDashboard/MapView). The instructions page describes clicking a station and choosing 'Download tabular data' with a precipitation variable. curl to the Tableau host was blocked by the sandbox, and WebFetch rejected its certificate, so no sample was retrieved and the download file format is not verified.",
      "citations": [
       "https://ag.purdue.edu/indiana-state-climate/purdue-mesonet/data-hub-instructions/",
@@ -7593,7 +7544,7 @@ window.PRECIP_DATA = {
      "originalCollector": "CoCoRaHS volunteer observers; compiled by Indiana Geological and Water Survey",
      "access": "Free, no account",
      "qualityNotes": "Precipitation in inches. Totals come from CoCoRaHS Water Year Summary reports, with fields for days covered and multi-day reports. Rasters use only stations with 301 or more days reported. One service per water year (Precipitation_Stations_YYYY, Annual_Precipitation_YYYY).",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Queried Precipitation_Stations_2015/FeatureServer/0 for 2 records (f=json). Got IN-AL-1 Fort Wayne 4.1 NE with ptotsum 30.06 over 182 days covered, and IN-AL-5 Huntertown 2.6 ESE with ptotsum 39.12 over 365 days.",
      "citations": [
       "https://gisdata.in.gov/server/rest/services/Hosted/Precipitation_Stations_2015/FeatureServer/info/iteminfo",
@@ -7696,7 +7647,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NWS Cooperative Observer Program; QC updates from the Iowa State Climatologist (IDALS)",
      "access": "Free, no account",
      "qualityNotes": "IEM ingests COOP reports in real time. Older data come from NCEI archives and RCC ACIS web services, merged by IEM, and missing values may be estimated (a precip_est flag is provided). Units are inches. The dataset is IEM-built rather than an ACIS query, so it is kept here.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested /api/1/daily.json?station=IA0200&network=IACLIMATE&year=2025&month=6 and got daily precip values (for example 2025-06-03 0.38 in). coop.py returned rows for station IA0200 but an empty prcp column for that query.",
      "citations": [
       "https://mesonet.agron.iastate.edu/info/datasets/climodat.html",
@@ -7717,7 +7668,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NWS/FAA ASOS and AWOS (METAR reports); IEM archives networks for other states and countries",
      "access": "Free, no account",
      "qualityNotes": "p01i is the 1-hour precipitation in inches, and M means missing. Coverage is national/global, hosted in Iowa.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested asos.py?station=DSM&data=p01i for 2025-06-15 (report_type=3) and got hourly rows with p01i values (0.00 in).",
      "citations": [
       "https://mesonet.agron.iastate.edu/request/download.phtml"
@@ -7737,7 +7688,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Iowa State University Soil Moisture Network",
      "access": "Free, no account",
      "qualityNotes": "rain_in_tot is in inches. Hourly data are at agclimate/hist/hourly.php.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested isusm.py?mode=daily&station=AEEI4&vars=rain_in_tot for 2025-06-01 to 2025-06-20 and got daily rows with rainfall values.",
      "citations": [
       "https://mesonet.agron.iastate.edu/agclimate/"
@@ -7758,7 +7709,7 @@ window.PRECIP_DATA = {
      "originalCollector": "IEM analysis from NCEP Stage IV, MRMS and PRISM precipitation and quality-controlled Iowa COOP data",
      "access": "Free, no account",
      "qualityNotes": "Point JSON returns daily_precip_in, mrms_precip_in and prism_precip_in in inches. The grid extent beyond Iowa was not verified.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested /iemre/daily/2025-06-15/41.99/-93.62/json and got daily_precip_in 0.98, mrms_precip_in 0.95 and prism_precip_in 0.62.",
      "citations": [
       "https://mesonet.agron.iastate.edu/iemre/"
@@ -7779,7 +7730,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA NCEP Stage IV precipitation analysis",
      "access": "Free, no account",
      "qualityNotes": "Offers point requests by year and GIS shapefiles. The IEM notes that its GIS services are not widely tested.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The page loaded and shows the point-request and GIS shapefile options. No file was requested.",
      "citations": [
       "https://mesonet.agron.iastate.edu/rainfall/"
@@ -7799,7 +7750,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA NSSL/NCEP Multi-Radar Multi-Sensor (MRMS)",
      "access": "Free, no account",
      "qualityNotes": "Coverage is CONUS (national), archived by IEM at Iowa State. File-level documentation was not reviewed.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Listed the directory /2025/06/15/mrms/ncep/MultiSensor_QPE_24H_Pass2/ (HTTP index loaded). No GRIB file was downloaded.",
      "citations": [
       "https://mtarchive.geol.iastate.edu/"
@@ -7872,7 +7823,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Iowa Flood Center",
      "access": "Free, no account",
      "qualityNotes": "The API returns accum (interval accumulation; units not documented, likely inches), accumInterval in seconds and validTime in UTC. QC status is not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://hydroiowa.org/api/hydrostation/6003/data/20250601/20250602/?rain and got JSON 15-minute rain records (accum, accumInterval 900, validTime). /api/hydrostation/6003/info returned the station metadata.",
      "citations": [
       "https://hydroiowa.org/data-share/",
@@ -7909,11 +7860,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Kansas Mesonet station data",
-     "url": "https://mesonet.k-state.edu/rest/stationdata/?stn=Manhattan&int=day&t_start=20261001000000&t_end=20261004000000&vars=PRECIP"
-    },
-    {
-     "name": "Monthly Precipitation by County",
-     "url": "https://mesonet.k-state.edu/data/1895curr+Monthly+Precipitation+by+County.txt"
+     "url": "https://mesonet.k-state.edu/data/"
     }
    ],
    "sources": [
@@ -7943,7 +7890,7 @@ window.PRECIP_DATA = {
     {
      "name": "Kansas Mesonet station data",
      "landingUrl": "https://mesonet.k-state.edu/weather/historical/",
-     "accessUrl": "https://mesonet.k-state.edu/rest/stationdata/?stn=Manhattan&int=day&t_start=20261001000000&t_end=20261004000000&vars=PRECIP",
+     "accessUrl": "https://mesonet.k-state.edu/data/",
      "formats": [
       "CSV",
       "SHEF"
@@ -7955,35 +7902,13 @@ window.PRECIP_DATA = {
      "originalCollector": "Kansas Mesonet (K-State Research and Extension), including Big Bend GMD and Equus Beds GMD stations",
      "access": "Free, no account; the Historical Weather page limits hourly requests to 31 days and daily requests to 366 days; automated scraping or ingestion requires written consent",
      "qualityNotes": "All data are preliminary and may change after quality control. Precipitation is from tipping-bucket gauges (per the NCAR PECAN readme). Precipitation units are Not documented on the parameters page.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET /rest/stationdata/ for Manhattan, int=day, 2026-10-01 to 2026-10-04, vars=PRECIP returned CSV 'TIMESTAMP,STATION,PRECIP' with values 33.02, 81.28, 0.0, 0.0. /rest/stationnames/ returned a station list with county, latitude/longitude and network.",
      "citations": [
       "https://mesonet.k-state.edu/weather/historical/",
       "https://mesonet.k-state.edu/about/usage/",
       "https://soilwater.github.io/pynotes-agriscience/exercises/request_web_data.html",
       "https://mesonet.k-state.edu/rest/stationnames/"
-     ]
-    },
-    {
-     "name": "Monthly Precipitation by County",
-     "landingUrl": "https://mesonet.k-state.edu/climate/precip/county/",
-     "accessUrl": "https://mesonet.k-state.edu/data/1895curr+Monthly+Precipitation+by+County.txt",
-     "formats": [
-      "TXT",
-      "CSV"
-     ],
-     "dataType": "other",
-     "temporalResolution": "monthly; annual",
-     "periodOfRecord": "1895-present",
-     "coverage": "statewide",
-     "originalCollector": "Not documented (compiled by the K-State Weather Data Library; the county map page also cites NOAA Regional Climate Centers/ACIS monthly precipitation)",
-     "access": "Free, no account",
-     "qualityNotes": "Tab-delimited county-by-year table in inches, with a Normal row per county. The file was last modified 2026-10-29 and includes 2026 through September. Whether the values are computed from ACIS data is Not verified.",
-     "verification": "download tested",
-     "testNote": "Read the first lines of the file. It returned the header 'Average Precipitation by County' with Allen County rows for 1895 and 1896, plus 2024-2026 monthly values. The county map page also offers an Export CSV button (not tested).",
-     "citations": [
-      "https://mesonet.k-state.edu/climate/precip/county/",
-      "https://mesonet.k-state.edu/data/1895curr+Monthly+Precipitation+by+County.txt"
      ]
     }
    ]
@@ -8047,7 +7972,7 @@ window.PRECIP_DATA = {
      "originalCollector": "StormWatch ALERT network (City of Overland Park and partner cities). Per-gauge operator is Not documented.",
      "access": "Free, no account (session cookie needed; download links carry a page token)",
      "qualityNotes": "The site says the data have not been verified for accuracy. Exports include a Data Quality column (e.g. 'A'). Units are inches.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Opened the Rain Increment sensor page for site_id=10 and followed its CSV link (/api/file/, last 7 days). It returned 'Reading,Receive,Value,Unit,Data Quality' rows, e.g. '11/03/2026 05:26:19 PM,...,0.04,in,A'.",
      "citations": [
       "https://www.stormwatch.com/",
@@ -8147,7 +8072,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Kentucky Mesonet (Kentucky Climate Center, WKU)",
      "access": "Free, no account",
      "qualityNotes": "English or metric units selectable; summary computed in local time. Mesonet data are quality-controlled at WKU per the overview page.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Opened https://www.kymesonet.org/data/summary/FARM in a browser: Warren County South monthly summary for 11/2026 showed Total Precipitation 1.89 in. and days with precipitation thresholds, with an 'Export CSV' button. The page is built client-side, so the CSV was not fetched by script.",
      "citations": [
       "https://www.kymesonet.org/data",
@@ -8168,7 +8093,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Kentucky Mesonet (Kentucky Climate Center, WKU)",
      "access": "Free, no account",
      "qualityNotes": "Real-time data; precipitation reported as PRCP_SUM (inches in the English display).",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "curl https://www.kymesonet.org/api/data/current/FARM (the site's own current-observation call) returned JSON for timestamp 202611052300 with PRCP_SUM 0 alongside TAIR_AVG, RELH_AVG and other fields. The data page says tables can be viewed and downloaded for the last 24 hours.",
      "citations": [
       "https://www.kymesonet.org/data",
@@ -8187,7 +8112,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Kentucky Mesonet (Kentucky Climate Center, WKU)",
      "access": "Free for state government, education, research and personal use; cost-recovery fee may apply to commercial requests",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "dr.kymeso.net loads a request form ('Step-by-Step Data Request' or 'Quick Data Request'); its description lists temperature, precipitation and wind data. A request was not submitted.",
      "citations": [
       "https://dr.kymeso.net",
@@ -8210,7 +8135,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Kentucky Mesonet (Kentucky Climate Center, WKU); listed on the hub by Kentucky_DGI",
      "access": "Free, no account",
      "qualityNotes": "precipitation_today is a text field such as '0 in.'; no historical values.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Queried layer 0 with resultRecordCount=1: returned Adair County - CMBA observation at 2026-11-05 17:00 CST with precipitation_today '0 in.'.",
      "citations": [
       "https://opengisdata.ky.gov/api/search/v1/collections/all/items?q=precipitation&limit=20",
@@ -8284,7 +8209,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Not documented",
      "access": "Free, no account",
      "qualityNotes": "Statewide and climate-division (CD-1 to CD-4) averages; units not stated (values consistent with inches); incomplete years marked with *; last row 2021 is partial.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched all_ky_rain.txt: header 'Kentucky Monthly Statewide Precipitation (1895-2014)', normals row 1895-2010 (annual 47.90), and rows for 2021 (partial), 2020 (annual 58.07), 2019 (61.32). curl failed on a TLS certificate error, so it was read with WebFetch.",
      "citations": [
       "https://weather.uky.edu/kymesonet.html",
@@ -8305,7 +8230,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Kentucky Mesonet and NWS sites (per the UKAWC page)",
      "access": "Free, no account",
      "qualityNotes": "Marked 'Not for Legal purposes'; departures based on climate-division averages.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched kypmsites_30days_sum.txt: period 20261006-20261104, rows such as 'ALBANY 1N ... 1.84 -1.14 62' with precipitation total, departure and percent of normal.",
      "citations": [
       "https://weather.uky.edu/kymesonet.html",
@@ -8326,7 +8251,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NWS and Ag Weather stations (per the UKAWC page)",
      "access": "Free, no account",
      "qualityNotes": "Page says data should not be used for legal purposes; variables are not listed on the form.",
-     "verification": "not verified",
+     "verification": "data endpoint",
      "testNote": "Opened the query form (station list, date range 1971-2026, delimited output option); did not submit a query, so precipitation in the output was not confirmed.",
      "citations": [
       "https://weather.uky.edu/cgi-bin/ky_clim_data_www.pl"
@@ -8395,7 +8320,7 @@ window.PRECIP_DATA = {
      "originalCollector": "LSU AgCenter (LAIS weather stations)",
      "access": "Free, no account",
      "qualityNotes": "Rain in inches. The home page says dataloggers sample every 3 seconds and derive daily, hourly and minute values. QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POSTed to https://weather.lsuagcenter.com/Reports/LoadReport with report=R1 (Daily Summary), station=3 (Crowley) for 10/1/2026-10/3/2026. It returned a 3-row table with a Rain (in) column (0.88, 0.17, 0.08) plus Export to Excel and Export as CSV buttons; the CSV is generated in the browser from the table.",
      "citations": [
       "https://weather.lsuagcenter.com/",
@@ -8458,7 +8383,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Louisiana Department of Environmental Quality",
      "access": "Free, no account",
      "qualityNotes": "Sheet header: 'BATON ROUGE/CAPITOL - PRECIPITATION UNIT - Inches (rainfall)'. The page says 2024 and earlier files are historical and may not be ADA-compliant; older data is available by request. QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Downloaded https://www.deq.louisiana.gov/assets/Air_Data_Sets/MET_2024.xlsx (about 457 KB) to a scratch folder and read sheet BCPC24. It has a DATE column and hour columns 0-23; the January 2024 rows include hourly values such as 0.07, 0.22, 0.19 and 0.27 in.",
      "citations": [
       "https://deq.louisiana.gov/page/ambient-air-monitoring-data-reports",
@@ -8532,7 +8457,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: tables.html has 'Export to CSV' and 'Export to Excel' buttons; data come from data.rcc-acis.org/MultiStnData (precipitation sum, normal, maximum and wet days); not clicked in a browser.",
      "citations": [
       "https://lsu.edu/state-climate-office/climate-data/station-data.php",
@@ -8553,7 +8478,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: the station table's 'Download CSV' button saves losc_stations.csv (precipitation, normal and departure per station); the app passes requests to ACIS; not clicked in a browser.",
      "citations": [
       "https://lsu.edu/state-climate-office/climate_conditions/losc_climate_explorer.php"
@@ -8633,7 +8558,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Maine Maine Mesonet (UMaine Cooperative Extension stations; data processed by the New York State Mesonet at UAlbany)",
      "access": "Free, no account",
      "qualityNotes": "Precipitation column total_precip [mm]; missing values are blank fields. Data are quality-controlled by the NYS Mesonet team per UAlbany; provisional status not documented. Files follow csv/{5min|hly|dly}/{stn}/{stn}_{freq}_{YYYYMM}_primary.csv under the Mesonet page.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "curl of https://mco.umaine.edu/mesonet/csv/dly/orno/orno_dly_202610_primary.csv returned a header with total_precip [mm] and daily rows (e.g. 2026-10-02 total_precip 3.35); the hourly file orno_hly_202610_primary.csv also returned rows with total_precip. File paths were read from the page's mesonet_chart.min.js.",
      "citations": [
       "https://mco.umaine.edu/mesonet/",
@@ -8655,74 +8580,10 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "No header row; columns appear to be max temp, min temp, mean temp, precipitation, snowfall, snow depth (not documented). Same data as ACIS.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: the chart's 'Download CSV data' opens a ready-made file per station; https://mco.umaine.edu/climate/me_daily/csv_acis/USW00014605.csv (Augusta) returned daily rows 1948 to 2026-11-03.",
      "citations": [
       "https://mco.umaine.edu/climate/me_daily/"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "state-agencies-md-mde-shellfish-rainfall",
-   "agency": "State agencies",
-   "kind": "data-center",
-   "name": "MDE Shellfish Program Rainfall",
-   "fullName": "Maryland Department of the Environment, Shellfish Program monthly rainfall of harvesting waters",
-   "host": "Maryland Department of the Environment",
-   "location": "Not documented",
-   "discipline": "Monthly rainfall totals by shellfish growing area",
-   "topics": [
-    "gauges"
-   ],
-   "blurb": "An MDE ArcGIS layer of monthly rainfall for 49 shellfish growing areas around the Chesapeake Bay and the Atlantic coastal bays. Each area has one row per month (Jan-Dec), plus a running total and average. When checked, the layer held only 2026 values (January-September). The layer does not say who collected the underlying observations.",
-   "holdings": [
-    "Monthly rainfall by shellfish growing area (ArcGIS feature layer, queryable)"
-   ],
-   "formats": [
-    "JSON",
-    "ArcGIS REST"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Shellfish Harvesting Classifications: Rainfall layer",
-     "url": "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6/query?where=1%3D1&outFields=*&returnGeometry=false&f=json"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Layer description (ArcGIS REST)",
-     "url": "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6"
-    }
-   ],
-   "state": "Maryland",
-   "stateCodes": [
-    "MD"
-   ],
-   "orgType": "state agency",
-   "datasetDetails": [
-    {
-     "name": "Shellfish Harvesting Classifications: Rainfall layer",
-     "landingUrl": "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6",
-     "accessUrl": "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
-     "formats": [
-      "JSON",
-      "ArcGIS REST"
-     ],
-     "dataType": "other",
-     "temporalResolution": "monthly",
-     "periodOfRecord": "2026 only when checked (January-September 2026 filled)",
-     "coverage": "regional: Maryland shellfish growing areas (Chesapeake Bay, tidal rivers, Atlantic coastal bays)",
-     "originalCollector": "Not documented",
-     "access": "Free, no account",
-     "qualityNotes": "Fields: MDEname, Year, Jan-Dec, SS, Total_Of_R, AVG_. Units are not documented (values look like inches). Months not yet reported are null.",
-     "verification": "download tested",
-     "testNote": "Queried 3 records (outFields=*, no geometry). Got Baltimore Harbor 2026: Jan 3.24, Jul 8.77, Sep 4.25, Oct-Dec null. The count query returned 49 features, and the min/max Year statistic returned 2026/2026.",
-     "citations": [
-      "https://mde.geodata.md.gov/mdedata/rest/services/WSA_Shellfish_Harvesting_Classifications/Shellfish_Harvesting_Classifications/MapServer/6"
      ]
     }
    ]
@@ -8752,7 +8613,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Maryland Mesonet Data Download",
-     "url": "https://mesonet.umd.edu/data-download/"
+     "url": "https://mesonet.umd.edu/"
     }
    ],
    "sources": [
@@ -8786,7 +8647,7 @@ window.PRECIP_DATA = {
     {
      "name": "Maryland Mesonet Data Download",
      "landingUrl": "https://mesonet.umd.edu/about-the-data/",
-     "accessUrl": "https://mesonet.umd.edu/data-download/",
+     "accessUrl": "https://mesonet.umd.edu/",
      "formats": [],
      "dataType": "station observations",
      "temporalResolution": "1-minute processing; hourly summaries and minute data offered by request",
@@ -8795,7 +8656,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Maryland Department of Atmospheric and Oceanic Science (Maryland Mesonet)",
      "access": "Login account required for the Data Download page; data requests through an online form",
      "qualityNotes": "Website display units: rainfall and snowfall in inches. The About page says current data 'will be freely available via the Maryland Mesonet website in the near future'. No license is specified on the portal.",
-     "verification": "not verified",
+     "verification": "data endpoint",
      "testNote": "The Data Download page shows only a login form ('Please login to see this page'), so it was not tested. An older public download page on weather.umd.edu that queries 7 Mesonet stations returned a database access error to a 5-minute request.",
      "citations": [
       "https://mesonet.umd.edu/data-download/",
@@ -8868,7 +8729,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Maryland Department of Atmospheric and Oceanic Science (UMD Weather Micronet)",
      "access": "Free, no account",
      "qualityNotes": "Rain Rate in in/hr, 1-min Rainfall in inches, Total Daily Rain in inches. Times can be Unix, UTC or Eastern. QC is not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POSTed to the form's backend (wp-content/plugins/meso-fsct/functions/get-data.php) for the Van Munching Hall station (mesoterp1DB), archive table, columns dateTime and rain, for 2026-10-01 to 2026-10-03 UTC. Got JSON 1-minute records with rain values of 0 and 0.01.",
      "citations": [
       "https://weather.umd.edu/wordpress/micronet/data-request/"
@@ -8940,7 +8801,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Boston Water and Sewer Commission",
      "access": "Free, no account",
      "qualityNotes": "Values in inches. BWSC says the gauges are calibrated periodically but snow, hail, severe weather, tampering, debris or failed parts can cause lost data and under-reported totals. Not described as quality-controlled.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "The interface's JSON endpoints (found in its JavaScript) were queried. /ajax/rainfall/sites returned 10 gauges (e.g. 2238 Allston - Union Sq.). /ajax/rainfall/monthly/2238/2024 returned a total of 45.76 in with monthly values (January 7.38, February 0.80, ...). /ajax/rainfall/daily/details/2238/20261030 returned 5-minute values (0.00). /ajax/rainfall/daily/2238/2025/9 returned an empty day list. The CSV export button in the browser was not tried.",
      "citations": [
       "https://www.bwsc.org/environment-education/rainfall-garden",
@@ -9017,7 +8878,7 @@ window.PRECIP_DATA = {
      "originalCollector": "UMass Cranberry Experiment Station, East Wareham (data provided by Caroline DeMoranville; compiled by Buzzards Bay NEP)",
      "access": "Free, no account",
      "qualityNotes": "Rainfall in inches. The page notes 232 trace entries with no numeric value and gives inconsistent record lengths for its statistics. Static archive, no longer updated.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Downloaded wareham-rain-monthly.xls (24.6 KB). Sheet1 has 232 rows with columns Month/Year, Total, yr total. First rows: Oct 1988 3.92, Nov 1988 8.55, Dec 1988 1.40. Last row: Dec 2007 6.11, year total 45.9. The daily file (bbprain.xls, 115 KB) was not opened.",
      "citations": [
       "https://buzzardsbay.org/technical-data/climate/",
@@ -9090,7 +8951,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Harvard Forest, Harvard University",
      "access": "Free, no account; HF001 archive under CC0",
      "qualityNotes": "prec in mm (metric) or inches (English). Real-time values are not checked; out-of-range values are NA. Archive data are checked monthly with E/M/Q flags, and daily gaps are estimated from nearby stations. The Met One 385 heated gauge may undercatch in wind or cold.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the first 800 bytes of dfm.csv (current-month daily, metric): header includes prec, and rows for 2026-11-01 to 2026-11-04 showed prec 0.0. qfm.csv (15-minute) returned rows from 2026-11-01T00:00 with prec 0.0. The HF001 archive files were not downloaded.",
      "citations": [
       "https://harvardforest.fas.harvard.edu/data-archives/data-in-real-time/met-hydro-stations/",
@@ -9128,7 +8989,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Precipitation Database Data 2019 (XLS)",
-     "url": "https://www.mass.gov/doc/precipitation-database-data-2019/download"
+     "url": "https://www.mass.gov/info-details/precipitation-data"
     }
    ],
    "sources": [
@@ -9154,7 +9015,7 @@ window.PRECIP_DATA = {
     {
      "name": "Precipitation Database Data 2019 (XLS)",
      "landingUrl": "https://www.mass.gov/info-details/precipitation-data",
-     "accessUrl": "https://www.mass.gov/doc/precipitation-database-data-2019/download",
+     "accessUrl": "https://www.mass.gov/info-details/precipitation-data",
      "formats": [
       "XLS"
      ],
@@ -9165,7 +9026,7 @@ window.PRECIP_DATA = {
      "originalCollector": "DCR Office of Water Resources, from volunteer observers and cooperative agencies; DCR's Water Resources Commission staff also take data from the NWS NOWData tool",
      "access": "Free, no account. Older or other data by email request to climate.data@state.ma.us",
      "qualityNotes": "Monthly totals in inches, with snow and ice melted. Blank cells mark missing months. Columns: STATION, YEAR, JAN-DEC, CITY, Region Composite Station, Region, Basin Name. QC procedures not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "mass.gov returns HTTP 403 to scripts, so the Wayback copy of this URL (captured 2025-09-02) was downloaded (4.07 MB XLS). Sheet 'Selected Period of Record' has 13,002 rows and 188 stations, 1838-2019. First data row: AMH307 (Amherst) 2000, JAN 3.04, FEB 3.39, ... DEC 4.41. The April 2026 snapshot of the landing page still links this file. Whether the live page still offers it was not verified.",
      "citations": [
       "https://web.archive.org/web/20260418032412/https://www.mass.gov/info-details/precipitation-data",
@@ -9199,7 +9060,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Rainfall at City-Operated Rain Gauges",
-     "url": "https://ckan.a2gov.org/dataset/9c24a5f2-df1f-4174-9dde-b7c7eda3a84d/resource/505863f0-bd80-40fa-b7e7-7054b627d8ab/download/city_of_ann_arbor_rainfall.csv"
+     "url": "https://analytics.a2gov.org/superset/dashboard/rain-gauges/?native_filters_key=MVDT5Gc4l5So-_l2fTUcO_QCV88i1-ETu50Uy3HXswuCYcpq6TXrpXnzEEF07yoM"
     }
    ],
    "sources": [
@@ -9217,7 +9078,7 @@ window.PRECIP_DATA = {
     {
      "name": "Rainfall at City-Operated Rain Gauges",
      "landingUrl": "https://data.a2gov.org/city-of-ann-arbor/rainfall-at-city-operated-rain-gauges",
-     "accessUrl": "https://ckan.a2gov.org/dataset/9c24a5f2-df1f-4174-9dde-b7c7eda3a84d/resource/505863f0-bd80-40fa-b7e7-7054b627d8ab/download/city_of_ann_arbor_rainfall.csv",
+     "accessUrl": "https://analytics.a2gov.org/superset/dashboard/rain-gauges/?native_filters_key=MVDT5Gc4l5So-_l2fTUcO_QCV88i1-ETu50Uy3HXswuCYcpq6TXrpXnzEEF07yoM",
      "formats": [
       "CSV"
      ],
@@ -9228,7 +9089,7 @@ window.PRECIP_DATA = {
      "originalCollector": "City of Ann Arbor",
      "access": "Free, no account",
      "qualityNotes": "Gauges have intermittently gone offline or reported invalid totals; some invalid values removed but gaps remain. Each gauge gets a 0.00 record for 11:45pm-midnight unless rain fell, and a temporary 0.00 record marks each gauge's latest report.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Range request for the first 600 bytes returned header 'site,rainfall,period' and rows such as 'Jackson,0.01,2026-11-05 01:30:00'.",
      "citations": [
       "https://data.a2gov.org/city-of-ann-arbor/rainfall-at-city-operated-rain-gauges"
@@ -9304,7 +9165,7 @@ window.PRECIP_DATA = {
      "originalCollector": "MSU Enviroweather / Michigan Automated Weather Network (MAWN)",
      "access": "Free, no account",
      "qualityNotes": "Units selectable (US or metric); daily precipitation in inches. Report footer notes a change to date/time labels. QC status Not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POSTed the station form to https://mawn.geo.msu.edu/dod.asp for Elk Rapids (id=elk), daily precipitation, 2025-06-01 to 2025-06-05, CSV: returned 'date,pcpn' rows (e.g. 06/04/2025,0.55) with footer 'Data provided by the Michigan Automated Weather Network (MAWN) and Enviro-weather Program.'",
      "citations": [
       "https://mawn.geo.msu.edu/",
@@ -9363,82 +9224,10 @@ window.PRECIP_DATA = {
      "originalCollector": "Macomb County Public Works Office",
      "access": "Free, no account",
      "qualityNotes": "Map data are raw and reviewed monthly by Public Works staff for quality assurance. Map values are cumulative event totals (an event follows 24 hours without precipitation and accumulates 0.01 inch or more).",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The county page says the map offers historical data for download; the map is a JavaScript application (Aquasight) that curl cannot query, so no sample was retrieved and the download format was not confirmed.",
      "citations": [
       "https://www.macombgov.org/departments/public-works/public-works-resources/rainfall-reports"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "state-agencies-mi-state-climatologist",
-   "agency": "State agencies",
-   "kind": "data-center",
-   "name": "Michigan State Climatologist's Office",
-   "fullName": "Michigan State Climatologist's Office, Michigan State University",
-   "host": "Michigan State University, Department of Geography",
-   "location": "East Lansing, MI",
-   "discipline": "Archived southeast Michigan (SEMCOG) gauge precipitation",
-   "topics": [
-    "gauges"
-   ],
-   "blurb": "The official state climate office at MSU hosts an archive of Southeast Michigan Council of Governments (SEMCOG) precipitation gauge data as monthly text files of daily and hourly totals, 1988-2005, plus station coordinates. Coverage is southeast Michigan (station groups such as Ann Arbor, Pinckney, Chelsea and Ypsilanti). The gauges belong to the SEMCOG network; the office redistributes the summaries.",
-   "holdings": [
-    "SEMCOG daily and hourly precipitation summaries (monthly text files), 1988-2005"
-   ],
-   "formats": [
-    "TXT"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "SEMCOG Precipitation Summaries",
-     "url": "https://climate.geo.msu.edu/semcog/sem/semtable.html"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Main SEMCOG page",
-     "url": "https://climate.geo.msu.edu/semcog/sem/mainsem.html"
-    },
-    {
-     "label": "State Climatologist's Office home",
-     "url": "https://climate.geo.msu.edu/"
-    },
-    {
-     "label": "AASC Michigan entry",
-     "url": "https://stateclimate.org/state/michigan"
-    }
-   ],
-   "state": "Michigan",
-   "stateCodes": [
-    "MI"
-   ],
-   "orgType": "state climatology office (university-hosted)",
-   "datasetDetails": [
-    {
-     "name": "SEMCOG Precipitation Summaries",
-     "landingUrl": "https://climate.geo.msu.edu/semcog/sem/mainsem.html",
-     "accessUrl": "https://climate.geo.msu.edu/semcog/sem/semtable.html",
-     "formats": [
-      "TXT"
-     ],
-     "dataType": "station observations",
-     "temporalResolution": "daily; hourly",
-     "periodOfRecord": "1988-2005 (table runs January 1988 to June 2005)",
-     "coverage": "regional: southeast Michigan (SEMCOG region)",
-     "originalCollector": "Southeast Michigan Council of Governments (SEMCOG) gauge network",
-     "access": "Free, no account",
-     "qualityNotes": "Values in hundredths of an inch; '.' marks zero/no precipitation. Monthly maps provided from 1997. Other QC Not documented.",
-     "verification": "download tested",
-     "testNote": "Fetched the first 1.5 KB of https://climate.geo.msu.edu/semcog/sem/daily/2005/0506smry.txt (SEMCOG DAILY PRECIPITATION SUMMARY, June 2005, daily totals x 1/100 inch by station, e.g. A 1 monthly total 251) and of the matching hourly file 0506hrly.txt.",
-     "citations": [
-      "https://climate.geo.msu.edu/semcog/sem/semtable.html",
-      "https://climate.geo.msu.edu/semcog/sem/semlatlon.txt",
-      "https://climate.geo.msu.edu/semcog/sem/daily/2005/0506smry.txt"
      ]
     }
    ]
@@ -9471,7 +9260,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "EIMS rain gauge data download",
-     "url": "https://eims.metc.state.mn.us/Download"
+     "url": "https://eims.metc.state.mn.us/BasicSearch"
     }
    ],
    "sources": [
@@ -9497,7 +9286,7 @@ window.PRECIP_DATA = {
     {
      "name": "EIMS rain gauge data download",
      "landingUrl": "https://eims.metc.state.mn.us/Site/RG23",
-     "accessUrl": "https://eims.metc.state.mn.us/Download",
+     "accessUrl": "https://eims.metc.state.mn.us/BasicSearch",
      "formats": [
       "CSV",
       "TSV",
@@ -9511,7 +9300,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Metropolitan Council Environmental Services; MSP Airport gauge operated by the National Weather Service",
      "access": "Free, no account",
      "qualityNotes": "Precipitation in inches with a QUALIFIER column (e.g. 'Valid'). The file opens with a Minnesota Government Data Practices Act disclaimer. The FAQ says the database is updated daily.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "POST /api/Search/ValidateSiteIds returned a Download URL. GET https://eims.metc.state.mn.us/Download?startDate=01-01-2005&endDate=12-31-2010&siteIds=RG20&parameterIds=2260&format=csv returned CSV rows such as RG20, 03/30/2007, Precipitation, 1.02, inches, Valid. A June 2024 request for RG23 returned only the header row.",
      "citations": [
       "https://eims.metc.state.mn.us/Faq",
@@ -9560,7 +9349,7 @@ window.PRECIP_DATA = {
     },
     {
      "name": "Cooperative Stream Gaging data download",
-     "url": "https://webapps.dnr.state.mn.us/csg/api/v1/download"
+     "url": "https://www.dnr.state.mn.us/waters/csg/index.html"
     },
     {
      "name": "DNR Daily Data (NWS and CoCoRaHS stations)",
@@ -9605,7 +9394,7 @@ window.PRECIP_DATA = {
      "originalCollector": "MNgage/HIDEN volunteer observers (DNR, Soil and Water Conservation Districts, NWS COOP, CoCoRaHS and others), compiled by the DNR State Climatology Office",
      "access": "Free, no account",
      "qualityNotes": "Values in inches. The nearest-station tool lets the user set the number of missing days allowed. The multi-day tool lists UTM X/Y (NAD83) and totals in inches, which can be saved to a file. Not documented otherwise.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "On 2026-11-05 the forms loaded. POST queries to radius_new.asp (monthly, near Minneapolis, 2024), HIDENmapFile.asp (statewide, June 1-3, 2024) and HIDENannual/HIDENannual.asp (Anoka County, 2024) each returned HTTP 500, as did a GET of the single-day tool HIDENmapMisc.asp.",
      "citations": [
       "https://climateapps.dnr.state.mn.us/hidradius/radius_new.asp",
@@ -9629,7 +9418,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NWS cooperative observers and HIDEN/MNgage volunteer observers; grids computed by the DNR State Climatology Office",
      "access": "Free, no account",
      "qualityNotes": "Grid nodes spaced 10 km apart, interpolated from irregular station data. The page includes 1991-2020 normals. Update frequency not documented.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The page selects a target location on a map and builds a data table, with a button that saves the table as <county>_Gridded_datatable.csv (seen in the page script). A scripted POST with UTM and lat/lon values returned the intro page with no table, so no values were confirmed.",
      "citations": [
       "https://climateapps.dnr.state.mn.us/gridded_data/precip/monthly/monthly_gridded_precip.asp",
@@ -9640,7 +9429,7 @@ window.PRECIP_DATA = {
     {
      "name": "Cooperative Stream Gaging data download",
      "landingUrl": "https://www.dnr.state.mn.us/waters/csg/index.html",
-     "accessUrl": "https://webapps.dnr.state.mn.us/csg/api/v1/download",
+     "accessUrl": "https://www.dnr.state.mn.us/waters/csg/index.html",
      "formats": [
       "CSV"
      ],
@@ -9651,7 +9440,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Minnesota DNR and Minnesota Pollution Control Agency (site providers also include USGS and USACE)",
      "access": "Free, no account",
      "qualityNotes": "Precipitation in inches, with quality text (e.g. 'Good Archived Daily') and type (approved/provisional). The bundled metadata_readme.csv says recent data are provisional. Precipitation is variable 11; the sites API flags it for 450 of 1,247 sites.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET https://webapps.dnr.state.mn.us/csg/api/v1/download?ids=01009001&vars=11 returned a zip with csg_01009001_11_precipitation.csv (station,tstamp,value,quality,var_name,type; for example 2000-09-26, 0.01, Precipitation (in.), approved), a gagings CSV and metadata_readme.csv.",
      "citations": [
       "https://www.dnr.state.mn.us/waters/csg/index.html",
@@ -9674,7 +9463,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: the table has CSV and Excel buttons and the page text says to use them; it queries data.rcc-acis.org/StnData; not clicked in a browser.",
      "citations": [
       "https://www.dnr.state.mn.us/climate/historical/daily-data.html"
@@ -9742,7 +9531,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NWS/FAA airport stations (ASOS/AWOS) via NCEI GHCNh; upper air from NOAA IGRA",
      "access": "Free, no account",
      "qualityNotes": "Processed for dispersion modeling, not as a precipitation product. Documentation says NCEI-flagged suspect values and wind values disagreeing with METAR text are set to missing, with a QC log in each station dataset. Precipitation amount column in the .sfc file (units per AERMET format); missing-value codes per AERMET (e.g. -9, -999).",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Range request (first 64 KB) of KJAN21_25-1.zip (3.16 MB); inflated the first member KJAN2021.sfc and read hourly rows for 2021-01-01 with precipitation code 11 and amounts 0.50 and 3.30 in the precipitation column.",
      "citations": [
       "https://www.mdeq.ms.gov/air/nsr-air-quality-modeling-2/met-data",
@@ -9819,7 +9608,7 @@ window.PRECIP_DATA = {
      "originalCollector": "MSU Delta Agricultural Weather Center (MAFES and MSU Extension)",
      "access": "Free, no account",
      "qualityNotes": "Precipitation in inches (n.nn), daily total. Station count differs between pages (41 fixed per home page; 25 fixed and 20 seasonal per DREC page); some stations appear inactive (Belzoni last reading 2026-05-11). QC Not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET https://deltaweather.extension.msstate.edu/30-days-daily-table/DREC-2004 (Stoneville AWS) returned an HTML table of 32 daily rows starting 10/06/2026 with a precipitation column (0 on the first days). A POST to the customizable report form for Belzoni returned an empty-station error and later retries were blocked by the sandbox, so the custom report itself was not tested.",
      "citations": [
       "https://deltaweather.extension.msstate.edu/",
@@ -9899,7 +9688,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of Missouri Extension Commercial Agriculture Program / Missouri Mesonet",
      "access": "Free, no account",
      "qualityNotes": "Units selectable (English: inches; metric). QC and missing-data codes Not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET report.asp for station alb (Albany, Gentry County), daily, field 70 (Total Precipitation), 2025-06-01 to 2025-06-05 returned an HTML table of daily totals in inches (0.94 in on June 3). An hourly query (field 75) for 2025-06-03 returned hourly precipitation rows.",
      "citations": [
       "http://agebb.missouri.edu/weather/history/index.asp",
@@ -9992,7 +9781,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Montana Climate Office (Montana Mesonet stations, including the HydroMet sub-network)",
      "access": "Free, no account",
      "qualityNotes": "Range, step, persistence and shared-sensor QA/QC checks raise flags (precipitation valid range 0-500 mm, max step 25 mm); provisional status and API handling of flagged values not documented. Daily CSV reports Precipitation [in].",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://mesonet.climate.umt.edu/api/v2/observations/daily/?stations=aceabsar&start_time=2024-06-01&end_time=2024-06-04&elements=ppt&type=csv; got CSV with columns station, datetime, Precipitation [in] and daily values (0.0 for 2024-06-01 to 06-03). The stations endpoint returned station metadata CSV.",
      "citations": [
       "https://climate.umt.edu/mesonet/api/",
@@ -10014,7 +9803,7 @@ window.PRECIP_DATA = {
      "originalCollector": "gridMET (University of Idaho Climatology Lab), processed by the Montana Climate Office",
      "access": "Free, no account",
      "qualityNotes": "Derived from gridMET daily precipitation (about 4 km, mm/day); files include raw accumulation, departure from normal (mm), percent of normal and percentile. Units of raw files and provisional status not documented.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Directory listing shows files such as current_raw_30.tif and current_percent_of_normal_30.tif; a HEAD request for current_percent_of_normal_30.tif returned image/tiff, 549,705 bytes, last modified 2026-11-05. Raster values were not read (binary GeoTIFF).",
      "citations": [
       "https://data.climate.umt.edu/drought-indicators/precipitation/",
@@ -10087,7 +9876,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NeRAIN volunteer observers (with NRD and DWEE coordinators)",
      "access": "Free, no account",
      "qualityNotes": "Values are in inches; reports give rain gauge type (for example Standard, Other) and reading time. QC is not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "The Daily Precipitation Detail report for 2026-11-03 statewide returned an HTML table with station ID, address, gauge type, precipitation in inches, date and time read. For example, linc060 North Platte 2.4 WNW, Standard, 0.000, 2026-11-03 07:00. The 2026 statewide daily summary returned daily maximum values with entry counts. No CSV export was found.",
      "citations": [
       "https://dwee-data.nebraska.gov/nerain/Report/DailyPrecipitationDetail/Statewide/0/0/2026-11-03",
@@ -10160,7 +9949,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Nebraska State Climate Office (Nebraska Mesonet)",
      "access": "Free; request form requires name, contact and organization details, intended use, agreement to the terms of use, and a reCAPTCHA",
      "qualityNotes": "The terms of use say the data are not reviewed and should be considered preliminary. Tipping-bucket gauges are used at most stations; new stations get weighing gauges that also measure liquid-water equivalent. The form says fields marked with an asterisk have limited data before 2024, but Precipitation is not one of them.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Not tested. The form needs personal details and a reCAPTCHA. The Data Access page source lists the intervals (1 minute, 5 minutes, hourly, daily), a Precipitation field and 166 stations. The output format is not documented.",
      "citations": [
       "https://nemesonet.unl.edu/data-access",
@@ -10224,7 +10013,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Upper Republican Natural Resources District",
      "access": "Free; the portal requires accepting a disclaimer first",
      "qualityNotes": "The portal disclaimer says that data from entities other than DWEE are for general information and should be downloaded from the original source. Units and QC are not documented.",
-     "verification": "not verified",
+     "verification": "data endpoint",
      "testNote": "Not tested. Every portal URL redirects to a Disclaimer page with Accept/Reject buttons, and the disclaimer was not accepted. Whether these gauges can be exported was not confirmed.",
      "citations": [
       "https://www.urnrd.org/programs-regulations/rain-evapotranspiration-groundwater-levels-and-weather-data",
@@ -10261,10 +10050,6 @@ window.PRECIP_DATA = {
     {
      "name": "CCRFCD historical rainfall yearly files",
      "url": "https://gustfront.ccrfcd.org/gaugeinfo/Historical"
-    },
-    {
-     "name": "CCRFCD Gauge Info station data",
-     "url": "https://gustfront.ccrfcd.org/gaugeinfo/station/4274"
     }
    ],
    "sources": [
@@ -10302,32 +10087,11 @@ window.PRECIP_DATA = {
      "originalCollector": "Clark County Regional Flood Control District",
      "access": "Free, no account",
      "qualityNotes": "Provisional and subject to change. Values in inches. A NULL value means no data for that gauge that day. Not official data for Las Vegas. The Lakes DB (4359) includes sprinkler catch, and Town Wash DB (2594) can read high from condensation.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Range-requested the first 200 KB of https://gustfront.ccrfcd.org/data/rainfall_2024.zip (556 KB total). It holds rainfall_2024.csv with the header stn_id,date_and_time,value and rows such as 2,\"2024-04-05 00:00:00\",0.",
      "citations": [
       "https://gustfront.ccrfcd.org/gaugeinfo/Historical",
       "https://regionalflood.org/programs_and_services/rainfall_and_weather/flood_threat_recognition_system/historical_rainfall.php"
-     ]
-    },
-    {
-     "name": "CCRFCD Gauge Info station data",
-     "landingUrl": "https://gustfront.ccrfcd.org/gaugeinfo/Help",
-     "accessUrl": "https://gustfront.ccrfcd.org/gaugeinfo/station/4274",
-     "formats": [
-      "CSV"
-     ],
-     "dataType": "station observations",
-     "temporalResolution": "user-selected interval (subdaily)",
-     "periodOfRecord": "Not documented",
-     "coverage": "station-specific",
-     "originalCollector": "Clark County Regional Flood Control District",
-     "access": "Free, no account",
-     "qualityNotes": "Provisional. Live data refresh every minute.",
-     "verification": "download documented",
-     "testNote": "The station 4274 page shows end date, start date (or last hours) and interval selectors, a Download CSV button, and the heading 'Precipitation data for Gauge ID 4274'. The Help page documents the CSV download. The CSV itself was not requested.",
-     "citations": [
-      "https://gustfront.ccrfcd.org/gaugeinfo/Help",
-      "https://gustfront.ccrfcd.org/gaugeinfo/station/4274"
      ]
     }
    ]
@@ -10392,7 +10156,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Desert Research Institute CEMP, funded by DOE NNSA Nevada Field Office",
      "access": "Free, no account",
      "qualityNotes": "Data are provisional. The schema labels 'pre' as Total Precipitation in inches. CSV export endpoints appear in the site's API route list and page code but were not tested.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET https://cemp.dri.edu/wp-json/cemp-data/v1/public/stations returned 30 stations. GET .../public/daily-summary-table/data?station_id=tono&date=2025-02-15 returned 10-minute Tonopah records with pre=0.00. The schema endpoint lists pre as Total Precipitation in inches.",
      "citations": [
       "https://cemp.dri.edu/about/",
@@ -10471,7 +10235,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Nevada Division of Water Resources field crews",
      "access": "Free, no account (CC0 1.0 license per the service description)",
      "qualityNotes": "Precip_Catch is weighed and reported in inches. Measure_Type is Annual, Interim or New Installation. Southern Nevada Branch Office sites are read annually, Elko Branch Office sites in July and October. Ignore the Date Updated field. Sites with a null Reporting_End are active.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Queried layer 0 (Precipitation Monitoring Sites, 69 records, 38 with null Reporting_End) and table 1 (Precipitation Monitoring Measures, 3,622 records). The first records were SiteID 49 (Adams Ranch, Clark County) with annual Precip_Catch values of 18.6, 23.5 and 31.0. Min/max Measure_Date statistics gave 1947-07-31 and 2026-07-22.",
      "citations": [
       "https://arcgis.water.nv.gov/arcgis/rest/services/NDWR/Monitoring_Sites_Precipitation/FeatureServer",
@@ -10490,7 +10254,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Nevada Division of Water Resources",
      "access": "Free, no account",
      "qualityNotes": "Not documented",
-     "verification": "not verified",
+     "verification": "data endpoint",
      "testNote": "The page lets users pick a station by current name, historical name or county, then submit. Bash could not reach water.nv.gov, and WebFetch showed only the form (38 stations listed). No export format or result table was confirmed.",
      "citations": [
       "https://tools.water.nv.gov/Precipitation.aspx",
@@ -10560,7 +10324,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NHDES (34 series tagged NHDES); NWS HADS (20 series tagged HADS)",
      "access": "Free, no account",
      "qualityNotes": "Units inches (parameter PTPX, 'Point Precipitation Increment'). Described as near real-time; QC status Not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET https://nhdes.rtiamanzi.org/api/timeseries/?parameter__code=PTPX&format=json listed 54 hourly series. POST to https://nhdes.rtiamanzi.org/api/plotly/ (the call the portal makes) for Milton 3-Ponds, 2026-11-03 to 2026-11-05, returned 49 hourly values (0.0 in); the daily plot returned 11 daily values for 2020-06-30 to 2020-07-10. The portal's plot code includes a 'Download data as csv' button, not exercised.",
      "citations": [
       "https://nhdes.rtiamanzi.org/api/timeseries/?parameter__code=PTPX&format=json",
@@ -10627,7 +10391,7 @@ window.PRECIP_DATA = {
      "originalCollector": "National Climatic Data Center (Global Daily Summary CD-ROM)",
      "access": "Free, no account",
      "qualityNotes": "24-hour precipitation in 0.1 mm; missing is -999; precipitation flags give derivation and ending hour. UTC dates.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Queried https://vortex.plymouth.edu/wxp/cgi-bin/sfc/retrieve-clim.cgi?ident=72605 (Concord, NH); returned header '72605 ... 10/01/77 12/31/91 5393 ... CONCORD' and daily rows with PCPN values (e.g. 771002 PCPN 305).",
      "citations": [
       "https://vortex.plymouth.edu/~wxp/sfc/climo/",
@@ -10696,7 +10460,7 @@ window.PRECIP_DATA = {
      "originalCollector": "University of New Hampshire",
      "access": "Free, no account",
      "qualityNotes": "Rain in inches since last sample. Before July 2016 rows are comma-separated with a format code (121/124/126/131), Julian day and hhmm time; from July 2016 (CR1000 logger) a header row with Rain_in_Tot. Missing samples on some days; the home page reports daily completeness.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched the first lines of https://weather.sr.unh.edu/data/2026/309.txt (header Datetime,...,Rain_in_Tot,... with 1-minute rows for 2026-11-05) and https://weather.sr.unh.edu/data/2010/100.txt (format-126 rows with rain delta).",
      "citations": [
       "https://weather.sr.unh.edu/display.mp?FILE=about",
@@ -10733,10 +10497,6 @@ window.PRECIP_DATA = {
     {
      "name": "NJ Weather Network Tabular Data",
      "url": "https://climate.rutgers.edu/data"
-    },
-    {
-     "name": "Monthly Station Data (JSON files)",
-     "url": "https://climate.rutgers.edu/inc/data/monthlydata/manifest.json"
     }
    ],
    "sources": [
@@ -10782,33 +10542,12 @@ window.PRECIP_DATA = {
      "originalCollector": "NJ State Climate Office mesonet; NWS ASOS; NJDOT RWIS; RAWS; USGS; plus some stations in nearby states",
      "access": "Free, no account",
      "qualityNotes": "The JSON records include qcflag_id and qcmetadata fields (null in the sample). Values are given in mm (value_metric) and inches (value_us). Station list: https://climate.rutgers.edu/export/mesous-stations.csv; element list: https://climate.rutgers.edu/export/njwxnet-elements.csv",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the viewer's backend https://climate.rutgers.edu/inc/tojson.php with station_id[]=29 (South Harrison, NJ), element_id[]=1039 (Daily Precipitation), 2026-10-01 to 2026-10-05. It returned JSON daily precip_daily records, e.g. 2026-10-03: 3.556 mm (0.14 in). The page's own Export CSV button was not tested.",
      "citations": [
       "https://climate.rutgers.edu/data",
       "https://climate.rutgers.edu/export/njwxnet-elements.csv",
       "https://climate.rutgers.edu/njwxnet"
-     ]
-    },
-    {
-     "name": "Monthly Station Data (JSON files)",
-     "landingUrl": "https://climate.rutgers.edu/monthly-data",
-     "accessUrl": "https://climate.rutgers.edu/inc/data/monthlydata/manifest.json",
-     "formats": [
-      "JSON"
-     ],
-     "dataType": "station observations",
-     "temporalResolution": "monthly; seasonal; annual",
-     "periodOfRecord": "Varies by station (Caldwell monthly precipitation from 1999)",
-     "coverage": "statewide",
-     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
-     "access": "Free, no account",
-     "qualityNotes": "Files are ACIS StnData output saved by the NJ State Climate Office; names follow mly_summ_/sly_summ_/yly_summ_<element>_<station>.json.",
-     "verification": "download tested",
-     "testNote": "Download check 2026-11-05: the page has no download button, but its JSON files open directly; manifest.json lists 58 stations and https://climate.rutgers.edu/inc/data/monthlydata/mly_summ_pcpn_KCDW.json returned Caldwell monthly precipitation.",
-     "citations": [
-      "https://climate.rutgers.edu/monthly-data",
-      "https://climate.rutgers.edu/inc/data/monthlydata/manifest.json"
      ]
     }
    ]
@@ -10876,7 +10615,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA National Weather Service (Multisensor Precipitation Estimator)",
      "access": "Free, no account",
      "qualityNotes": "Marked 'Provisional Data Subject to Revision'. MPE values are estimates and may change during an event. Columns are Value (1 pixel) and 9pixAvg (9-pixel, 7.5 x 7.5 mi). Units are not documented; the values look like inches.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://njdep.rutgers.edu/rainfall/action_prepare_file.php with station 22 (26thSt RABCH010, Atlantic County), 10/02/2026-10/04/2026. It returned CSV with Date, Hour, StID, Value and 9pixAvg, e.g. 10/02/26 22:00 0.04. A 06/01/2005 request also returned rows. The whole-dataset zip (datasets/rainfall_dataset.zip) answered a HEAD request but was not downloaded.",
      "citations": [
       "https://njdep.rutgers.edu/rainfall/",
@@ -10952,7 +10691,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NM Climate Center, New Mexico State University (ZiaMet)",
      "access": "Free, no account",
      "qualityNotes": "The About page says ZiaMet data should be considered provisional and that the web tools are for informational purposes. Rain is reported in inches (English units) or in metric units. The station selector lists about 194 stations, which may include inactive sites.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Posted the form on the Alcalde ASC daily page (station raaasc) for 2026-10-01 to 2026-10-05 with output=csv and English units. The server returned text/csv (data.csv) with a units row and five daily rows, including a Rain column in inches (for example 0.01 on 2026-10-04). Requests for 1990, 2000 and 2010 dates returned HTTP 500, so the archive depth was not confirmed.",
      "citations": [
       "https://weather.nmsu.edu/ziamet/station/sfwx/dly/raaasc/",
@@ -10974,7 +10713,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: a request with output=csv for station 23050 1, 2026-10-01 to 2026-10-05, returned acis_data.csv with a Precipitation column.",
      "citations": [
       "https://weather.nmsu.edu/products/",
@@ -11047,7 +10786,7 @@ window.PRECIP_DATA = {
      "originalCollector": "HRECOS station partners (NYSDEC and NEIWPCC partnership)",
      "access": "Free, no account or key",
      "qualityNotes": "Precipitation columns precip [mm] and precip_tot [mm]; blank where a station has no weather sensor. QC status Not documented in the API docs.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested all sites for 2026-11-01 00:00-00:30 EST; CSV returned with precip [mm] and precip_tot [mm] columns, e.g. HPMNT (Piermont) precip 0.",
      "citations": [
       "https://nysm.hrecos.org/api/data/dynserv/hrecos/docs",
@@ -11113,7 +10852,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Monroe County Department of Environmental Services (owner field MC-DES)",
      "access": "Free, no account",
      "qualityNotes": "Fields RAINAMOUNT, RAINRATE, RAINDATE, RAINLASTUPDATED, RAINCOMMSTATUS; units Not documented (values look like inches). QC Not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Queried 4 features with outFields NAME, RAINAMOUNT, RAINDATE: returned e.g. Culver Goodman 0.04, Southwest 0.05 for RAINDATE 2026-11-04; count query returned 21 gauges.",
      "citations": [
       "https://maps.monroecounty.gov/server/rest/services/Stormwater/RainGaugesPublic/MapServer/layers",
@@ -11188,7 +10927,7 @@ window.PRECIP_DATA = {
      "originalCollector": "New York State Mesonet, University at Albany",
      "access": "Request form (name, email, organization, planned use) and agreement to the data policy; free for personal use, cost-recovery fee or license may apply to others",
      "qualityNotes": "Precipitation options: incremental totals, total since midnight, maximum 1-minute intensity, rolling 1-hour accumulation; English or metric units. Redistribution not allowed except by agreement. QC details Not documented on pages opened.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Not tested: the form requires personal details and agreement to a data policy. The form page documents CSV or netCDF delivery, one file per day or per station.",
      "citations": [
       "https://nysmesonet.org/weather/requestdata",
@@ -11271,7 +11010,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NC State Climate Office (ECONet) and other networks it gathers",
      "access": "Free NCSCO ID account required; monthly data-usage limits",
      "qualityNotes": "Accumulated values are valid for the interval ending at the timestamp (FAQ). Output file format not documented on the pages opened.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Not tested: the request builder needs an NCSCO ID login, and accounts were not created. The FAQ describes hourly and monthly precipitation requests and gives a data citation.",
      "citations": [
       "https://products.climate.ncsu.edu/cardinal/",
@@ -11296,86 +11035,13 @@ window.PRECIP_DATA = {
      "originalCollector": "NC State Climate Office (ECONet, ECOExt); NWS/FAA (ASOS), NCDOT Aviation/FAA (AWOS), CoCoRaHS, USGS, TVA, USACE, RAWS and others",
      "access": "Free NCSCO ID account and user hash required; public tier 300,000 data points per month",
      "qualityNotes": "Default codes: MV for missing, QCF for values failing QC. ECOExt stations do not have ECONet's QC. COOP and ThreadEx data in CLOUDS come from ACIS (listed in nonQualifying). Units not documented on the pages opened.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "A request for station LAKE, variable precip1m, 2026-11-01 to 2026-11-02, CSV output returned HTTP 400 with the message that no valid hash was given. The help page documents the variables, the csv/json/geojson/xls output options and the aggregation arguments.",
      "citations": [
       "https://api.climate.ncsu.edu/",
       "https://api.climate.ncsu.edu/help",
       "https://api.climate.ncsu.edu/networks",
       "https://api.climate.ncsu.edu/usage"
-     ]
-    }
-   ]
-  },
-  {
-   "id": "state-agencies-nc-town-of-cary-rain-gauges",
-   "agency": "State agencies",
-   "kind": "data-center",
-   "name": "Town of Cary Rain Gauges",
-   "fullName": "Town of Cary, NC Open Data Portal - Rain Gauges (Internet-of-Things rain gauges)",
-   "host": "Town of Cary",
-   "location": "Cary, NC",
-   "discipline": "Municipal IoT rain-gauge readings (rolling 60 days)",
-   "topics": [
-    "gauges"
-   ],
-   "blurb": "The Town of Cary (Wake County) publishes readings from its own Internet-of-Things rain gauges on its open data portal, covering the town area. The dataset keeps a rolling 60 days of records, with rain amount and hourly intensity per gauge, and is used by the town's Stormwater Monitoring Dashboard.",
-   "holdings": [
-    "Rain Gauges: rolling 60-day IoT gauge readings (rain amount, rain intensity per hour, location) with CSV, JSON, GeoJSON and SHP exports and an API"
-   ],
-   "formats": [
-    "CSV",
-    "JSON",
-    "GeoJSON",
-    "SHP"
-   ],
-   "volumeTB": null,
-   "filesM": null,
-   "datasets": null,
-   "endpoints": [
-    {
-     "name": "Town of Cary Rain Gauges",
-     "url": "https://data.townofcary.org/api/v2/catalog/datasets/rain-gages/exports/csv"
-    }
-   ],
-   "sources": [
-    {
-     "label": "Dataset page",
-     "url": "https://data.townofcary.org/explore/dataset/rain-gages/"
-    },
-    {
-     "label": "data.gov record",
-     "url": "https://catalog.data.gov/dataset/rain-gauges"
-    }
-   ],
-   "state": "North Carolina",
-   "stateCodes": [
-    "NC"
-   ],
-   "orgType": "county or city agency",
-   "datasetDetails": [
-    {
-     "name": "Town of Cary Rain Gauges",
-     "landingUrl": "https://data.townofcary.org/explore/dataset/rain-gages/",
-     "accessUrl": "https://data.townofcary.org/api/v2/catalog/datasets/rain-gages/exports/csv",
-     "formats": [
-      "CSV",
-      "JSON",
-      "GeoJSON",
-      "SHP"
-     ],
-     "dataType": "station observations",
-     "temporalResolution": "Not documented (readings time-stamped by device report)",
-     "periodOfRecord": "Rolling 60 days",
-     "coverage": "regional: Town of Cary",
-     "originalCollector": "Town of Cary",
-     "access": "Free, no account (CC0 1.0 license)",
-     "qualityNotes": "Units not documented (fields rainamount and rainintensityhr). Semicolon-delimited CSV. No QC notes.",
-     "verification": "download tested",
-     "testNote": "Requested the first 4 rows from https://data.townofcary.org/api/explore/v2.1/catalog/datasets/rain-gages/exports/csv?limit=4; got rows for gauges such as 'SC: Symphony Lake Rain' timestamped 2026-11-05T09:57 with rainamount 0.0 and rainintensityhr 0.0. Metadata reported 78,025 records, modified 2026-11-05.",
-     "citations": [
-      "https://data.townofcary.org/api/v2/catalog/datasets/rain-gages",
-      "https://catalog.data.gov/dataset/rain-gauges"
      ]
     }
    ]
@@ -11454,7 +11120,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NDAWN (North Dakota State University)",
      "access": "Free, no account",
      "qualityNotes": "Rainfall from 6-inch tipping-bucket gauges in 0.01-inch increments, reported in inches or mm. Rain is measured April-October only. Snowfall is not measured, and November-March values are flagged M. Daily snow water equivalent may later be estimated from nearby NWS Cooperative stations. Automated QC estimates missing or erroneous values from nearby stations (flag E), and staff review them on weekdays. Estimates may change from day to day.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested table.csv?station=78&variable=ddr&ttype=daily&begin_date=2026-06-01&end_date=2026-06-05 (Ada, MN 1N). The response was CSV with header lines and columns Station Name, Latitude, Longitude, Elevation, Year, Month, Day, Rainfall (inch), Rainfall Flag. Values included 0.075 on 2026-06-01 and 0.614 on 2026-06-03.",
      "citations": [
       "https://ndawn.ndsu.nodak.edu/weather-data-daily.html",
@@ -11538,7 +11204,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ARBCON volunteer observers (North Dakota Department of Water Resources, Atmospheric Resource Board program)",
      "access": "Free, no account",
      "qualityNotes": "Not documented. The site table lists 3,619 active and inactive sites, with locations as legal land codes. The query form filters by county, location or site ID and dates, with precipitation, snow and hail checkboxes.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "A POST to downloadold.php for one site and 10 days returned precip.zip. The filters did not apply without the page's session, so the archive held the full database (about 22 MB zipped). It was read in memory only and not saved. precip.txt is tab-separated with columns Site ID, Location, Latitude, Longitude, Date, Value. First rows: site 1, 1977-04-17 0 ... 1977-04-19 0.15.",
      "citations": [
       "https://www.dwr.nd.gov/arb/ndarbcon/",
@@ -11560,7 +11226,7 @@ window.PRECIP_DATA = {
      "originalCollector": "North Dakota Department of Water Resources (PRESENS units)",
      "access": "Free, no account",
      "qualityNotes": "The site page says all precipitation data are raw and unreviewed. Times are CST, and gauges are unheated Texas Instruments TR-525I tipping buckets. Chart bars are marked when the daily mean temperature at tip times is below 36 F, suggesting frozen precipitation. DWR calls the data provisional. Units are inches. The site query with the precipitation filter returned 90 sites.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "A POST to waterresourcesites/download_site.php (siteid=132760, table=precip, 2025-06-01 to 2025-06-10) returned a ZIP with site_header.csv and precip.csv. Columns include Observation_Date, Observation_Time, Precipitation (in), Air_Temperature and Sensor_Type TR-525I. Rows had 0.01-0.03 in values on 2025-06-02 to 2025-06-07, with Data_Source 'SWC PRESENS'.",
      "citations": [
       "https://www.dwr.nd.gov/info_edu/map_data_resources/waterresourcesites/single.php?id=15006222DAAA",
@@ -11629,7 +11295,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Miami Conservancy District (daily observers and automated gauges); also Ohio EMA gauges",
      "access": "Free, no account (a disclaimer must be accepted)",
      "qualityNotes": "Precipitation in inches. MCD's disclaimer says it does not warrant accuracy or completeness. Other QC details Not documented.",
-     "verification": "not verified",
+     "verification": "data endpoint",
      "testNote": "The portal (Aquatic Informatics AQUARIUS WebPortal) shows a disclaimer with Accept/Reject before location pages; the disclaimer was not accepted, so no data was requested. MCD's monitoring page says daily precipitation records are available electronically on the portal; export format Not documented.",
      "citations": [
       "https://www.mcdwater.org/flood-protection/hydrologicmonitoring",
@@ -11695,7 +11361,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Northeast Ohio Regional Sewer District",
      "access": "Free, no account",
      "qualityNotes": "Not documented. Null rain values are shown as blank. Units not stated (values look like inches).",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "The dashboard's table service (dataTableServerSide.php?siteList) returned three sites (Maple Heights, Oakwood, Richfield) for every year offset tried; a rainfallDaily request for Richfield, October 2026, returned JSON daily rain_total values (e.g. 0.78 on day 19). The page offers copy and print buttons, not a file download.",
      "citations": [
       "https://www.neorsd.org/stormwater-2/rainfall-dashboard/",
@@ -11766,7 +11432,7 @@ window.PRECIP_DATA = {
      "originalCollector": "The Ohio State University CFAES (CFAES and USDA station sites)",
      "access": "Free, no account",
      "qualityNotes": "Rainfall totaled midnight to midnight. Daily data converted to English units (metric spreadsheet also offered); hourly data reported as received. Known-bad values are deleted rather than altered.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Posted the station page's daily form for Wooster (location=1), 2026-10-01 to 2026-10-03; the results page's 'Download Spreadsheet' link (results_csv.asp) returned weatherdata.csv with a Date,Precip,... header and daily rows (e.g. 10/2/2026 precip 0.4).",
      "citations": [
       "https://weather.cfaes.osu.edu/stationinfo.asp?id=1",
@@ -11838,7 +11504,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Ohio Mesonet, The Ohio State University (supported by the State Climate Office of Ohio)",
      "access": "Free, no account",
      "qualityNotes": "Variables include p_tot (5-minute precipitation), p_day, p_1h through p_365d accumulations and a qc_maint_flag column; units selectable (imperial or SI). The site calls the download page the source of official, full-precision data. Other QC details Not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "The download page calls https://api.dev.ohmesonet.org/v2/obs/history. A request for station ASHT on 2026-10-01 with vars p_tot and p_day (format=csv, units=imperial) returned CSV rows every 5 minutes with columns 'Precipitation (in)' and 'Precip Since Midnight (in)'. /api/dataBackend/dataDomains listed stations and the 2026-01-01 to 2026-11-05 range.",
      "citations": [
       "https://www.ohmesonet.org/download",
@@ -11931,7 +11597,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Oklahoma Mesonet (OU/OSU, operated by the Oklahoma Climatological Survey)",
      "access": "Free, no account (redistribution restricted; data are copyrighted)",
      "qualityNotes": "RAIN is liquid precipitation in millimeters accumulated since 0000 UTC. The 0000 UTC observation stores the previous day's total. Frozen precipitation is recorded only when it melts. Missing codes: -999 flagged bad by QA, -998 sensor not installed, -997 missing calibration, -996 station did not report, -995 not reported this interval, -994 value too wide. QA flags may change in the months after a request.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://api.mesonet.org/index.php/export/mesonet_data_files?date=2024-05-01&stid=NRMN&type=mts&format=csv. It returned a CSV header including RAIN, then 5-minute rows for Norman (RAIN 0.00 mm at 00:00-00:15 UTC). A 2010-06-01 request returned RAIN 14.99 at 00:00. A 1994-01-01 ACME request returned a row with RAIN -998 (sensor not installed). URL pattern taken from the page's mesonetdatafiles controller script.",
      "citations": [
       "https://www.mesonet.org/past-data/mesonet-resources/mesonet-data-files",
@@ -11954,7 +11620,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Oklahoma Mesonet (OU/OSU, operated by the Oklahoma Climatological Survey)",
      "access": "Free, no account (the 2011 fee table also lists subscription fees for station monthly summaries)",
      "qualityNotes": "Each value carries an 'incomplete' flag. Units are not stated in the JSON. The May 2024 Norman monthly rain value was 3.74, consistent with inches, but this is not confirmed on a description page. Data reflect midnight-to-midnight CST.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://common.mesonet.org/common/db/library/functions/mcd/mcd.php?ver=2&year=2024&month=5&format=json&stid=NRMN (pattern from the page's controller script). The JSON had monthly rain=3.74, rainmax=0.68 and rain-day counts, plus a 'daily' object keyed by date.",
      "citations": [
       "https://www.mesonet.org/past-data/mesonet-resources/station-monthly-summaries",
@@ -12048,7 +11714,7 @@ window.PRECIP_DATA = {
      "originalCollector": "PRISM Group model output from observations of many station networks",
      "access": "Free, no account (FTP needs no username or password)",
      "qualityNotes": "Grids are re-modeled up to 8 times (daily) or 7 times (monthly) within a rolling 6-month window and are considered stable after 6 months. Individual grids contain inhomogeneities from station changes and observation times; PRISM does not recommend them for very long-term trends. Newer COG files use names like prism_ppt_us_25m_YYYYMMDD.zip; older BIL files (4 km only) carry stability in the name. Units not documented on the pages opened.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Listed /time_series/us/an/4km/ppt/daily/2025/ (files prism_ppt_us_25m_20250101.zip onward). A HEAD request for prism_ppt_us_25m_20250101.zip returned 200, application/zip, 1,358,743 bytes, and a 200-byte range request returned a zip header naming prism_ppt_us_25m_20250101.info.txt.",
      "citations": [
       "https://prism.oregonstate.edu/recent/",
@@ -12070,7 +11736,7 @@ window.PRECIP_DATA = {
      "originalCollector": "PRISM Group model output from observations of many station networks",
      "access": "Free, no account",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The home page says the Data Explorer retrieves and downloads 4 km and 800 m time series for point locations, with a bulk option of up to 500 points. The explorer page is built by JavaScript, so no export was tested.",
      "citations": [
       "https://prism.oregonstate.edu/"
@@ -12142,7 +11808,7 @@ window.PRECIP_DATA = {
      "originalCollector": "City of Portland Bureau of Environmental Services",
      "access": "Free, no account",
      "qualityNotes": "Each tip is 0.01 inch. Data are provisional, subject to review, intended mainly for operational use, and may have gaps from maintenance, equipment failure or connectivity. The Precip Increm.Forecast series is NOAA predicted rainfall, not observations.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The portal's pages load their tables by JavaScript, so curl returned only the page shell. The Getting Started Guide documents CSV export of Precip Increm.Primary (5-minute), .15Minute and .1Hour series and downloadable daily-total CSV reports.",
      "citations": [
       "https://www.portland.gov/bes/rainfall-data-portland",
@@ -12224,7 +11890,7 @@ window.PRECIP_DATA = {
      "originalCollector": "3 Rivers Wet Weather rain gauges (QA/QC by ALCOSAN); calibrated radar QA/QC by Vieux Associates from NWS NEXRAD",
      "access": "Free, no account",
      "qualityNotes": "Rainfall in inches per 15-minute interval (values such as 0.01). Gauge tables QA/QC'd by ALCOSAN; radar by Vieux Associates. Older archive (April 2000 - February 2019) available on request.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Range request for 'March 2021 15-min data.csv' on mds.3riverswetweather.org: header lists gauges (Perry North, ALCOSAN, Shaler, ...) and rows such as '3/1/2021 0:15,0.01,0,0.05,...'.",
      "citations": [
       "https://3riverswetweather.org/node/230",
@@ -12247,7 +11913,7 @@ window.PRECIP_DATA = {
      "originalCollector": "3 Rivers Wet Weather rain gauges; gauge-adjusted NWS NEXRAD radar (Vieux Associates)",
      "access": "Free; no authentication documented for rainfall endpoints (API described as beta)",
      "qualityNotes": "Pixel records carry a source code (R calibrated radar; G-1/G-2/G-3 gauge interpolation; G-0 and N/D no data).",
-     "verification": "not verified",
+     "verification": "data endpoint",
      "testNote": "Requests to the documented v1 and v2 rain-gauge endpoints on 3rww-api.civicmapper.com timed out (HTTPS) or returned a CloudFront 301 redirect (HTTP) with no data.",
      "citations": [
       "https://3rww.github.io/api-docs",
@@ -12283,7 +11949,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Keystone Mesonet Data Download",
-     "url": "https://keystone-mesonet.org/datadown.html"
+     "url": "https://keystone-mesonet.org/"
     }
    ],
    "sources": [
@@ -12305,7 +11971,7 @@ window.PRECIP_DATA = {
     {
      "name": "Keystone Mesonet Data Download",
      "landingUrl": "https://keystone-mesonet.org/datadown.html",
-     "accessUrl": "https://keystone-mesonet.org/datadown.html",
+     "accessUrl": "https://keystone-mesonet.org/",
      "formats": [
       "CSV",
       "JSON",
@@ -12318,7 +11984,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Penn State (PEMN); PennDOT (RWIS); Pennsylvania Turnpike Commission (RWIS); FAA/NWS (ASOS/AWOS); PA DEP (COPAMS); PA DCNR",
      "access": "Free, no account",
      "qualityNotes": "Not documented. Units not stated on the download page.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the page's WFS URL for the PennDOT RWIS layer in CSV (met-kmnfront.met.psu.edu geoserver, typeName=kmn:rwis): returned station rows with columns pr1h, pr3h, pr6h, pr24h timestamped 2026-11-05T23:45:00.",
      "citations": [
       "https://keystone-mesonet.org/datadown.html",
@@ -12405,7 +12071,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NWS Cooperative Observers (COOP, via SHEF feed); FAA/NWS ASOS and AWOS airport stations; CWOP citizen volunteers; PA DEP Bureau of Air Quality (COPAMS); Penn State (PEMN)",
      "access": "Free, no account",
      "qualityNotes": "Rainfall in inches; PEMN values converted from millimetres in the query (rain_tot * 0.0394). Station start/end dates shown in site metadata. QC not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Posted the site's submit.php form for COOP site ACMP1 (Acmetonia Lock 3), 1950-01-01 to 1950-01-05, Date + Rainfall, CSV: returned daily rows such as '1950-01-02,0.220'. Also PEMN site ADMS01 for 2026-10-01: returned 1-minute rows of Rainfall (in).",
      "citations": [
       "https://climate.met.psu.edu/data/ida/",
@@ -12428,7 +12094,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Penn State (Pennsylvania Environmental Monitoring Network)",
      "access": "Free, no account",
      "qualityNotes": "Rainfall in inches. QC not documented. Historical PEMN data are linked to the IDA archive.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the viewer's data feed fetch_obs.php?site=ADMS01&numObs=3: returned JSON 1-minute records with a 'rain' field (e.g. \"rain\":\"0.00\"). The page's 'Download this data (csv file)' button builds the CSV in the browser and was not run.",
      "citations": [
       "https://climate.met.psu.edu/data/pemn/",
@@ -12496,7 +12162,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NWS Boston/Norton, compiled from long-term weather stations, COOP stations and CoCoRaHS observers",
      "access": "Free, no account",
      "qualityNotes": "Regional precipitation averages and percent of normal based on 1991-2020 normals for select stations. Updated monthly. Units not documented.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The dashboard HTML has a 'Download All Precipitation Data (xlsx)' button (id precip-dl_all). It is a Shiny download link that only works inside a live interactive session, so no file was requested with curl.",
      "citations": [
       "https://riwrb.shinyapps.io/RIWRB_Drought_Dashboard/",
@@ -12563,7 +12229,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Clemson Cooperative Extension (WeatherFlow Tempest stations)",
      "access": "Free, no account",
      "qualityNotes": "Rainfall in inches (chart axis). QC not documented. Results are shown on the page as a table and chart; no CSV export found.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET query for station 72403 (Aiken Station #1), 10/1/2026-10/5/2026 returned daily rainfall of 0, 0, 0.0006, 0.128 and 0.009 inches in the page's chart data. The same station returned no values for January 2021 and January 2023.",
      "citations": [
       "https://blogs.clemson.edu/sccrops/clemson-weather-station-network/",
@@ -12644,7 +12310,7 @@ window.PRECIP_DATA = {
      "originalCollector": "SD Mesonet (South Dakota State University)",
      "access": "Free; form requires name, email, station, year and agreement to terms of use (no account)",
      "qualityNotes": "Precipitation total in inches. Data from the automated request system are provisional and not quality-controlled; the page says they should not be used for legal or research purposes until expert review. Redistribution and commercial use are not allowed; citation required.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Not tested: the form requires submitting a name and email address, which was not done. curl to climate.sdstate.edu was redirected to an error page; the form page was read with WebFetch and lists precipitation total as a variable and CSV output.",
      "citations": [
       "https://climate.sdstate.edu/request/daily/",
@@ -12712,7 +12378,7 @@ window.PRECIP_DATA = {
      "originalCollector": "National Weather Service stations (compiled by South Dakota NRCS)",
      "access": "Free, no account",
      "qualityNotes": "Columns date, tmax, tmin, prcp and Notes; units not documented. Files include notes on missing data; missing Pierre (SD025) data are filled from Highmore 1 W (SD3832). Static archive, not updated since about 2016.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested weather/Huron.txt with curl; it returned tab-delimited lines with header 'SD 936-date tmax tmin prcp Notes' and daily rows from 7/1/1881 (e.g. 7/6/1881 71 64 0.09). The last row is 4/20/2016. The whole 1.1 MB file was fetched to read its end; nothing was saved.",
      "citations": [
       "https://danr.sd.gov/Agriculture/Livestock/FeedlotPermit/Location/WeatherData.aspx",
@@ -12780,7 +12446,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Edwards Aquifer Authority",
      "access": "Free, no account",
      "qualityNotes": "Inches. 'ALL DATA ARE PROVISIONAL UNLESS OTHERWISE STATED.' MeasStatus codes: A approved, P provisional, Q questionable, S sampling event, E estimated, C calculated, DG data gap. Site updated daily by 6:00 AM Central.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET https://data.edwardsaquifer.org/RainGauges/DownloadRainGaugesCsv?siteId=BEX130RG&sensorName=DLRAIN returned CSV with header 'Site_Id,dt_CST,DLRAIN,MeasStatus,LastUpdate' and row 'BEX130RG,2020-03-26,0.00,P,2025-07-18'.",
      "citations": [
       "https://data.edwardsaquifer.org/RainGauges/Details/25",
@@ -12851,7 +12517,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Harris County Flood Control District and partner agencies",
      "access": "Free, no account",
      "qualityNotes": "Not documented for the bulk files; gage pages label data as not verified.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "The library's file tree (https://www.harriscountyfws.org/api/files/tree) lists '1986 5 min.xlsx' to '2026 5 Min.xlsx'. A HEAD request on the 2026 file returned HTTP 200, 58,346,356 bytes, last modified 2026-11-05; not downloaded because of size and xlsx format.",
      "citations": [
       "https://www.harriscountyfws.org/FAQs",
@@ -12926,7 +12592,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Lower Colorado River Authority",
      "access": "Free, no account",
      "qualityNotes": "Rain in inches. 'Data is automatically retrieved and subject to revision.' Requests limited to under 180 days.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET https://hydromet.lcra.org/api/HistoricData/GetDataBySite/1090/rain/10-01-2026/10-05-2026 (pattern from the page's JavaScript) returned JSON for Millersview 7 WSW with 15-minute records (value1 = gauge count, value2 = rain in inches, 0.00).",
      "citations": [
       "https://hydromet.lcra.org/",
@@ -12948,7 +12614,7 @@ window.PRECIP_DATA = {
      "originalCollector": "City of Austin",
      "access": "Free, no account",
      "qualityNotes": "Subject to revision; Not documented beyond that.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET https://hydromet.lcra.org/api/CoaHistoricalData/GetDataBySite/121/rain/10-01-2026/10-03-2026 returned JSON for Waller Creek at E 45 Street with 15-minute rain records.",
      "citations": [
       "https://hydromet.lcra.org/",
@@ -13040,7 +12706,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA National Weather Service gauge network (via NCEI); processed by TWDB",
      "access": "Free, no account",
      "qualityNotes": "Values in inches. TWDB says data are subject to revision as more data become available. Quadrangle values are Thiessen-polygon area-weighted averages of monthly gauge totals.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested https://waterdatafortexas.org/lake-evaporation-rainfall/api/quads/412/precipitation?data_format=csv (URL pattern from the page's JavaScript); got CSV with '#All parameters measured in inches', header 'period,precipitation', first row '1940-01,1.25'.",
      "citations": [
       "https://waterdatafortexas.org/lake-evaporation-rainfall/about",
@@ -13059,7 +12725,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Texas Water Development Board (TWDB-owned stations only; other networks on the map are not included)",
      "access": "Free, no account documented",
      "qualityNotes": "Request limits by product (for example daily precipitation up to 1 year per station, monthly up to 20 years per station). US/customary or metric units. File format and QC not documented.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Interactive form; not scripted. Limits and options read from the page.",
      "citations": [
       "https://texmesonet.org/DataProducts/CustomDownloads",
@@ -13080,7 +12746,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Texas Water Development Board",
      "access": "Free, no account",
      "qualityNotes": "Precipitation returned in inches per the response. QC flags Not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET https://www.texmesonet.org/api/Stations returned station JSON; GET https://www.texmesonet.org/api/PrecipById/2/1440 returned JSON for station 2 (Altwein Rd) with fieldName 'Precip', units 'Inches' and 5-minute values.",
      "citations": [
       "https://www.texmesonet.org/Apis"
@@ -13098,7 +12764,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Not documented (Daily Lake Evaporation Model app built by DRI for TWDB)",
      "access": "Free web app; the companion API (https://twdb.dri.edu/docs) requires a requested key",
      "qualityNotes": "Not documented",
-     "verification": "not verified",
+     "verification": "data endpoint",
      "testNote": "Earth Engine app not opened; description from the TWDB resources page.",
      "citations": [
       "https://waterdatafortexas.org/lake-evaporation-rainfall/resources"
@@ -13182,7 +12848,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Utah Climate Center networks (UCRN, AgWx, UAGRIMET with the Bureau of Reclamation AgriMet program, USCAN, FGNET, USUwx), plus redistributed NOAA GHCN, GSOD and ISD-Lite, FAA AWOS, NRCS SCAN and MesoWest stations",
      "access": "Free, no account. Large requests are emailed as a download link.",
      "qualityNotes": "Units are inches in English units. The user sets the missing and trace codes (default M and T). Times are local standard time. The center says the data are not legal documents and does not guarantee the accuracy of data from other agencies. A QAQC page exists but was not reviewed.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Station metadata came from mapServices.php query_id=3 for UCRN station 1262317. A POST to mapServices.php?query_id=7 for daily 'precip' at UCRN Beaver - Big Flat NFS (primary_id 1191), 2026-10-01 to 2026-10-05, returned a ZIP. Its dly-report.csv had date_time,precip rows (0 for each day). The metadata file defines precip as 'daily precipitation' in inches.",
      "citations": [
       "https://climate.usu.edu/swco/",
@@ -13271,7 +12937,7 @@ window.PRECIP_DATA = {
      "originalCollector": "National Weather Service Cooperative station (Mount Mansfield summit); UVM/FEMC (Proctor Maple Research Center); Vermont ANR (acid precipitation program)",
      "access": "Free, no account (anonymous download; optional user details; CC BY-NC-SA 4.0)",
      "qualityNotes": "Precipitation in inches (0.01 precision) for both datasets. Proctor Maple rain gauge data are real-time and unreviewed; erroneous values set to null. Mount Mansfield early records include nulls. Download file format Not documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched each dataset's data page with curl; the embedded data preview returned Mount Mansfield daily rows (e.g. 1954-11-18 Precipitation 0.20) and Proctor Maple 15-minute rows (e.g. 2026-11-03 18:45 ReportPCP 0.01). The full download is built by a form POST with a CSRF token and was not run.",
      "citations": [
       "https://www.uvm.edu/femc/data/archive/project/mount-mansfield-summit-meteorology/dataset/mount-mansfield-summit-daily-meteorological-data/overview",
@@ -13345,7 +13011,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA (GHCN-Daily, Norfolk International Airport)",
      "access": "Free, no account",
      "qualityNotes": "Precipitation and snow in inches; temperature in Fahrenheit. The dataset is a city copy of NOAA GHCN-Daily records; QC flags are not included. Average temperature is often blank.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Queried the Socrata endpoint data.norfolk.gov/resource/vdfi-mi5m.csv with $limit=4 ordered by date. Got rows for 2026-10-28 to 2026-10-31 with precipitation 0.0; the earliest rows are 1946-01-01 and 1946-01-02.",
      "citations": [
       "https://data.virginia.gov/api/3/action/package_show?id=weather-daily-summaries",
@@ -13416,7 +13082,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Virginia Tech AREC weather stations (WeatherSTEM hardware and platform)",
      "access": "Free, no account (a banner says Data Mining is open without restriction; login is needed only for timelapses)",
      "qualityNotes": "Rain gauge in inches, rain rate in inches per hour. QC is not documented.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Opened the Data Mining page; its embedded station configuration lists Rain Gauge (inches) and Rain Rate (in/hr) sensors. The export runs through a JavaScript RPC backend, so no sample was requested.",
      "citations": [
       "https://vt-arec.weatherstem.com/data?refer=/",
@@ -13485,7 +13151,7 @@ window.PRECIP_DATA = {
      "originalCollector": "William & Mary Keck Environmental Field Laboratory",
      "access": "Free, no account",
      "qualityNotes": "The page says rainfall totals are unofficial and not checked for accuracy. Known problems: data from April 10 to May 21, 2007 may be inaccurate, and the gauge malfunctioned on March 3-4, 2023 (subtract 82.91 inches from the March and 2023 totals).",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "A HEAD request for Weather_2026.zip returned 200, application/zip, 2.5 MB, last modified 2026-11-04. The sandbox blocked the GET request, so the file contents were not read.",
      "citations": [
       "https://media.wm.edu/content/as/kecklab/Weather/KeckWeather.htm"
@@ -13553,7 +13219,7 @@ window.PRECIP_DATA = {
      "originalCollector": "King County",
      "access": "Free, no account (no login on the form)",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Opened the download form. Its site list has about 1,270 sites, including rain gauges such as AUB_RAIN, BC_Rain and BW_rain, and its interval list offers Monthly, Daily, Hourly and 15 Minute. The form is an ASP.NET postback, so no sample was submitted.",
      "citations": [
       "https://green2.kingcounty.gov/hydrology/",
@@ -13623,7 +13289,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Washington State Department of Transportation",
      "access": "Free access code required (sent by email)",
      "qualityNotes": "Precipitation field PrecipitationInInches (decimal, nullable). No QC notes found.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Read the REST help pages. The operations include GetCurrentWeatherInformationAsJson and SearchWeatherInformationAsJson (AccessCode, StationID, SearchStartTime, SearchEndTime), and the response schema includes PrecipitationInInches. Not tested because it needs an access code.",
      "citations": [
       "https://wsdot.wa.gov/traffic/api/",
@@ -13660,10 +13326,6 @@ window.PRECIP_DATA = {
     {
      "name": "AgWeatherNet Data Access",
      "url": "https://weather.wsu.edu/dataaccess"
-    },
-    {
-     "name": "Annual Anatone Weather Station Measurements, 2008- (data.wa.gov)",
-     "url": "https://data.wa.gov/resource/hm92-6wrv.csv"
     }
    ],
    "sources": [
@@ -13706,31 +13368,11 @@ window.PRECIP_DATA = {
      "originalCollector": "Washington State University AgWeatherNet",
      "access": "Not documented. The data.wa.gov station description tells users to register at the AgWeatherNet website and log in for historical reports.",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "weather.wsu.edu is a JavaScript single-page app. Its site index lists a 'Data Access' page described as 'Request and download weather data' (keywords csv, export, json, api). The data pages and undocumented API were not probed, so formats were not confirmed.",
      "citations": [
       "https://weather.wsu.edu/",
       "https://news.wsu.edu/news/2025/03/07/weather-station-upgrade-will-empower-growers-educate-students-on-climate/",
-      "https://data.wa.gov/d/hm92-6wrv"
-     ]
-    },
-    {
-     "name": "Annual Anatone Weather Station Measurements, 2008- (data.wa.gov)",
-     "landingUrl": "https://data.wa.gov/d/hm92-6wrv",
-     "accessUrl": "https://data.wa.gov/resource/hm92-6wrv.csv",
-     "formats": [
-      "CSV"
-     ],
-     "dataType": "station observations",
-     "temporalResolution": "monthly",
-     "periodOfRecord": "2008-02-13 to 2021-04-30 (one station)",
-     "coverage": "station-specific",
-     "originalCollector": "Washington State University AgWeatherNet",
-     "access": "Free, no account",
-     "qualityNotes": "Precipitation column TotPrec-in (inches). Missing values are shown as NA. The description says sensors were last maintained by the AgWeatherNet team on April 27, 2021.",
-     "verification": "download tested",
-     "testNote": "Requested https://data.wa.gov/resource/hm92-6wrv.csv?$limit=4. It returned monthly rows for 2008-03 to 2008-06 with totprec_in values 0.27, 0.99, 1.47 and 1.42.",
-     "citations": [
       "https://data.wa.gov/d/hm92-6wrv"
      ]
     }
@@ -13791,7 +13433,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Washington State Department of Ecology",
      "access": "Not documented (no login mentioned)",
      "qualityNotes": "Not documented",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Ecology's flow monitoring page says 'All of our data are available to download' and points to Freshwater DataStream for continuous data. The station page lets users choose a WRIA and station and load a time series. Download formats are not described, and curl requests to the station page returned HTTP 403, so no sample was tested.",
      "citations": [
       "https://apps.ecology.wa.gov/continuousflowandwq",
@@ -13864,7 +13506,7 @@ window.PRECIP_DATA = {
      "originalCollector": "West Virginia Emergency Management Division (IFLOWS gauges)",
      "access": "Free, guest access, no account",
      "qualityNotes": "Values in inches with a Data Quality column (A seen) and raw counts; provisional real-time data, QC not documented",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Opened the Edray Rain (6948) Rain Increment sensor page as guest and downloaded its comma-delimited export: header Reading,Receive,Value,Unit,Data Quality,Raw Value with hourly 0.00 in rows for 2026-11-05; the daily rollup export returned Reading,Value,Unit rows from 2026-10-29. Export links carry a page-issued session token; a hand-built request for 2015 without the token returned 401, so long-range history was not tested.",
      "citations": [
       "https://emd.wv.gov/iflows",
@@ -13931,7 +13573,7 @@ window.PRECIP_DATA = {
      "originalCollector": "National Weather Service (NEXRAD 24-hour precipitation totals)",
      "access": "Free, no account",
      "qualityNotes": "Values in inches; days with no precipitation appear to be omitted from point results; QC not documented",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "The page's backend get_precip.php returned 5,290 point locations (req=getpoints), daily values for point 2600 for 2025-10-01 to 2025-10-10 ([20251008,1.21],[20251009,0.08]) and range totals per point (req=getrange2). No file download button; data come as JSON from the tool's own query.",
      "citations": [
       "https://tagis.dep.wv.gov/mining",
@@ -14002,7 +13644,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Milwaukee Metropolitan Sewerage District",
      "access": "Free, no account",
      "qualityNotes": "Raw, unverified; MMSD typically completes QA/QC within one to three days of a rainfall event. Units not stated on the page (values appear to be inches). No historical archive download documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Fetched the export; first lines were a header 'timestamp,WS1201/,...,WS1230/' (20 gauges) and rows such as 'Nov 5, 2026, 6:05 PM',0.02,0.04,...",
      "citations": [
       "https://www.mmsd.com/about-us/milwaukee-rain-facility-information/rain_gauge_data",
@@ -14072,7 +13714,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NADP site operators; analyses by the NADP Analytical Laboratory at the Wisconsin State Laboratory of Hygiene",
      "access": "Free, no account (web form)",
      "qualityNotes": "Weekly metadata defines ppt (recording rain gauge amount, mm) and subppt (amount used for NADP totals, mm), with sample-type flags (e.g. d dry, b bulk, e extended period, p precipitation unknown). Export can include or exclude invalid samples and incomplete data. National coverage, not only Wisconsin.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Export form (weekly/monthly/seasonal/annual, site, dates, units) and CSV output documented on the NTN page; its script posts to an SLH API that requires a password embedded in the page, so no scripted request was made.",
      "citations": [
       "https://nadp.slh.wisc.edu/networks/national-trends-network/",
@@ -14110,7 +13752,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "AgWeather precipitation API",
-     "url": "https://agweather.cals.wisc.edu/api/precips/info"
+     "url": "https://agweather.cals.wisc.edu/api/docs/index.html"
     }
    ],
    "sources": [
@@ -14136,7 +13778,7 @@ window.PRECIP_DATA = {
     {
      "name": "AgWeather precipitation API",
      "landingUrl": "https://agweather.cals.wisc.edu/weather/precip",
-     "accessUrl": "https://agweather.cals.wisc.edu/api/precips/info",
+     "accessUrl": "https://agweather.cals.wisc.edu/api/docs/index.html",
      "formats": [
       "JSON",
       "CSV"
@@ -14148,7 +13790,7 @@ window.PRECIP_DATA = {
      "originalCollector": "NOAA (gridded daily total precipitation; specific product not named)",
      "access": "Free, no account",
      "qualityNotes": "Aggregated to 0.1 decimal degree; units mm (default) or in. Endpoints: /precips (point series), /precips/grid (grid for a date or summed range), /precips/map. Info endpoint reported no missing days.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET /api/precips?lat=43.07&lng=-89.40&start_date=2026-10-01&end_date=2026-10-04 returned JSON daily values (1.70583, 0.0, 0.02972, 0.0). /api/precips/info returned date range 2021-10-29 to 2026-11-04.",
      "citations": [
       "https://agweather.cals.wisc.edu/api/docs/agweather.yaml",
@@ -14185,7 +13827,7 @@ window.PRECIP_DATA = {
    "endpoints": [
     {
      "name": "Wisconet API v1",
-     "url": "https://wisconet.wisc.edu/api/v1/stations/"
+     "url": "https://api.wisconet.wisc.edu/docs"
     }
    ],
    "sources": [
@@ -14215,7 +13857,7 @@ window.PRECIP_DATA = {
     {
      "name": "Wisconet API v1",
      "landingUrl": "https://wisconet.wisc.edu/data/api",
-     "accessUrl": "https://wisconet.wisc.edu/api/v1/stations/",
+     "accessUrl": "https://api.wisconet.wisc.edu/docs",
      "formats": [
       "JSON",
       "CSV"
@@ -14227,7 +13869,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Wisconet (UW-Madison)",
      "access": "Free, no account",
      "qualityNotes": "Rain fields (e.g. daily_rain_in_tot, 60min_rain_in_tot, 5min_rain_in_tot) are converted from millimeters to inches. Site text says QA/QC follows AASC Mesonet Recognition Program standards. Bulk data provided on request.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "GET /api/v1/stations/ returned 81 stations; GET /api/v1/stations/ALTN/measures?start_time=1761969600&end_time=1762228800&fields=daily_rain_in_tot returned JSON daily rain values 0.02, 0.01, 0.0 in. (Station slug 'arlington' returned 'Station not found'; use station_id.)",
      "citations": [
       "https://wisconet.wisc.edu/api/v1/stations/",
@@ -14300,7 +13942,7 @@ window.PRECIP_DATA = {
      "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
      "access": "Free, no account",
      "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
-     "verification": "download documented",
+     "verification": "data endpoint",
      "testNote": "Download check 2026-11-05: daily-station-data.js loads the station's full record from data.rcc-acis.org/StnData into a table with CSV, Excel, PDF and Print buttons; not clicked in a browser.",
      "citations": [
       "https://climatology.nelson.wisc.edu/wisconsin-historic-climate-data/daily-climate-data-by-location/"
@@ -14374,7 +14016,7 @@ window.PRECIP_DATA = {
      "originalCollector": "Wyoming State Engineer's Office (WACNet)",
      "access": "Free, no account",
      "qualityNotes": "Raw Campbell Scientific TOA5 logger files. Precipitation is the Rain_mm_Tot column, in mm. Missing values appear as empty fields or NAN. No QC notes are documented.",
-     "verification": "download tested",
+     "verification": "data endpoint",
      "testNote": "Requested the first lines of https://www.wrds.uwyo.edu/WACNet/Baggs_2E_Daily.csv (linked from Baggs_2E_Week.html). It returned a TOA5 header with Rain_mm_Tot in mm, plus daily rows from 2016-11-10 (3.048 mm). The hourly file Baggs_2E_Hourly.csv has the same column. A range request on the end of Lingle_2W_Daily.csv returned a 2026-10-28 row. Not every station page links CSV files (for example, the Powell page has none).",
      "citations": [
       "https://www.wrds.uwyo.edu/WACNet/WACNet.html",
