@@ -607,7 +607,7 @@ window.PRECIP_DATA = {
    "formats": [
     "CSV",
     "JSON",
-    "HTML",
+    "HTML table",
     "web tools"
    ],
    "volumeTB": null,
