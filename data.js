@@ -81,8 +81,8 @@ window.PRECIP_DATA = {
   "State agencies": {
    "title": "State-agency precipitation data",
    "notes": [
-    "50 of 50 states researched on 2026-11-05, one research run per state; 126 sources and 168 datasets, 114 of them download-tested.",
-    "Includes state agencies, state climate offices, mesonets, regional water agencies, county and city agencies and university networks hosted in the state. Pages that only link to federal tools, tools built on ACIS, static normals maps and the six regional climate centers (see NCEI-RWRC) are left out.",
+    "50 of 50 states researched on 2026-11-05, one research run per state; 129 sources and 178 datasets, 118 of them download-tested.",
+    "Includes state agencies, state climate offices, mesonets, regional water agencies, county and city agencies and university networks hosted in the state. Pages that only link to federal tools, ACIS-based tools without a file download, static normals maps and the six regional climate centers (see NCEI-RWRC) are left out.",
     "States with no qualifying source: Tennessee."
    ],
    "file": "state-agencies-sources.json"
@@ -5314,6 +5314,102 @@ window.PRECIP_DATA = {
    ]
   },
   {
+   "id": "state-agencies-ak-alaska-climate-research-center",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Alaska Climate Research Center",
+   "fullName": "Alaska Climate Research Center (Alaska State Climatologist)",
+   "host": "University of Alaska Fairbanks, Geophysical Institute",
+   "location": "Fairbanks, AK",
+   "discipline": "State climate office station data (from ACIS)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Alaska's state climate office at the University of Alaska Fairbanks offers a station data portal and precipitation time series that can be saved as CSV. The data come from ACIS, the Regional Climate Centers' system, mostly NWS stations.",
+   "holdings": [
+    "ACRC Data Portal (daily/monthly station data) (CSV)",
+    "ACRC Time Series Data (CSV, JSON)"
+   ],
+   "formats": [
+    "CSV",
+    "JSON"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "ACRC Data Portal (daily/monthly station data)",
+     "url": "https://akclimate.org/data/data-portal/"
+    },
+    {
+     "name": "ACRC Time Series Data",
+     "url": "https://akclimate.org/data/time-series-data/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AASC: Alaska State Climatologist",
+     "url": "https://stateclimate.org/state/alaska/"
+    },
+    {
+     "label": "ACRC data",
+     "url": "https://akclimate.org/data/"
+    }
+   ],
+   "state": "Alaska",
+   "stateCodes": [
+    "AK"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "ACRC Data Portal (daily/monthly station data)",
+     "landingUrl": "https://akclimate.org/data/data-portal/",
+     "accessUrl": "https://akclimate.org/data/data-portal/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; monthly",
+     "periodOfRecord": "Varies by station",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
+     "verification": "download documented",
+     "testNote": "Download check 2026-11-05: the table's 'Download CSV' button is in the page script acis_browser.js, which queries data.rcc-acis.org/StnData; not clicked in a browser.",
+     "citations": [
+      "https://akclimate.org/data/data-portal/"
+     ]
+    },
+    {
+     "name": "ACRC Time Series Data",
+     "landingUrl": "https://akclimate.org/data/time-series-data/",
+     "accessUrl": "https://akclimate.org/data/time-series-data/",
+     "formats": [
+      "CSV",
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "monthly; seasonal; annual",
+     "periodOfRecord": "Station period of record through December 2022",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
+     "verification": "download documented",
+     "testNote": "Download check 2026-11-05: 'Download CSV' buttons are in timeseries.js; the source file https://akclimate.org/acrc-data/summary_station_precip_data.json was fetched and holds precipitation by station.",
+     "citations": [
+      "https://akclimate.org/data/time-series-data/",
+      "https://akclimate.org/acrc-data/summary_station_precip_data.json"
+     ]
+    }
+   ]
+  },
+  {
    "id": "state-agencies-ak-dnr-dggs-weather-stations",
    "agency": "State agencies",
    "kind": "data-center",
@@ -6668,10 +6764,12 @@ window.PRECIP_DATA = {
    "blurb": "The official state climatology office runs CoAgMET, a network of about 130 agricultural weather stations (active and inactive) with 5-minute, hourly and daily precipitation since 1992. It also serves 5-minute and hourly archives, from 1996, for the Fort Collins weather station on the CSU main campus, whose daily record goes back to 1889. Its NOAA cooperative-station query tool draws on ACIS and is listed separately as non-qualifying.",
    "holdings": [
     "CoAgMET weather station data (5-minute, hourly, daily) via a URL-based API",
-    "Fort Collins (CSU main campus) weather station 5-minute and hourly archive, 1996-present"
+    "Fort Collins (CSU main campus) weather station 5-minute and hourly archive, 1996-present",
+    "Access Colorado Data: NOAA station data from ACIS, saved as CSV"
    ],
    "formats": [
     "CSV",
+    "HTML",
     "JSON",
     "XML"
    ],
@@ -6686,6 +6784,10 @@ window.PRECIP_DATA = {
     {
      "name": "Fort Collins Weather Station data archive",
      "url": "https://climate.colostate.edu/~autowx/fclwx_access.php"
+    },
+    {
+     "name": "Access Colorado Data (station data, CSV output)",
+     "url": "https://climate.colostate.edu/data_access_new.html"
     }
    ],
    "sources": [
@@ -6755,6 +6857,27 @@ window.PRECIP_DATA = {
      "citations": [
       "https://climate.colostate.edu/~autowx/fclwx_access.php",
       "https://climate.colostate.edu/~autowx/prec_disclaimer.html"
+     ]
+    },
+    {
+     "name": "Access Colorado Data (station data, CSV output)",
+     "landingUrl": "https://climate.colostate.edu/data_access_new.html",
+     "accessUrl": "https://climate.colostate.edu/data_access_new.html",
+     "formats": [
+      "CSV",
+      "HTML"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily; seasonal; annual",
+     "periodOfRecord": "Varies by station",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
+     "verification": "download tested",
+     "testNote": "Download check 2026-11-05: with Output set to CSV the page opens an ACIS StnData request with output=csv; a Fort Collins request for 2024-06-01 to 2024-06-05 returned text/csv with precipitation.",
+     "citations": [
+      "https://climate.colostate.edu/data_access_new.html"
      ]
     }
    ]
@@ -9702,6 +9825,102 @@ window.PRECIP_DATA = {
    ]
   },
   {
+   "id": "state-agencies-la-state-climate-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Louisiana Office of State Climatology",
+   "fullName": "Louisiana Office of State Climatology (LOSC)",
+   "host": "Louisiana State University",
+   "location": "Louisiana",
+   "discipline": "State climate office station summaries (from ACIS)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Louisiana's state climate office at LSU offers two tools that save station precipitation totals for a chosen period as CSV or Excel: a station dashboard and the Climate Explorer. The values are period totals, not daily data, and come from ACIS.",
+   "holdings": [
+    "LOSC Louisiana Weather Stations dashboard (CSV, XLSX)",
+    "LOSC Climate Explorer (CSV)"
+   ],
+   "formats": [
+    "CSV",
+    "XLSX"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "LOSC Louisiana Weather Stations dashboard",
+     "url": "https://nbushr2.github.io/losc-station-map/tables.html"
+    },
+    {
+     "name": "LOSC Climate Explorer",
+     "url": "https://losc-explorer--losc-explorer-afa84.us-central1.hosted.app/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AASC: Louisiana State Climatologist",
+     "url": "https://stateclimate.org/state/louisiana"
+    },
+    {
+     "label": "LOSC about",
+     "url": "https://lsu.edu/state-climate-office/about_losc/index.php"
+    }
+   ],
+   "state": "Louisiana",
+   "stateCodes": [
+    "LA"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "LOSC Louisiana Weather Stations dashboard",
+     "landingUrl": "https://lsu.edu/state-climate-office/climate-data/station-data.php",
+     "accessUrl": "https://nbushr2.github.io/losc-station-map/tables.html",
+     "formats": [
+      "CSV",
+      "XLSX"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "Totals for a chosen period (not daily)",
+     "periodOfRecord": "User-selected date range",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
+     "verification": "download documented",
+     "testNote": "Download check 2026-11-05: tables.html has 'Export to CSV' and 'Export to Excel' buttons; data come from data.rcc-acis.org/MultiStnData (precipitation sum, normal, maximum and wet days); not clicked in a browser.",
+     "citations": [
+      "https://lsu.edu/state-climate-office/climate-data/station-data.php",
+      "https://nbushr2.github.io/losc-station-map/tables.html"
+     ]
+    },
+    {
+     "name": "LOSC Climate Explorer",
+     "landingUrl": "https://lsu.edu/state-climate-office/climate_conditions/losc_climate_explorer.php",
+     "accessUrl": "https://losc-explorer--losc-explorer-afa84.us-central1.hosted.app/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "Totals for a chosen period (not daily)",
+     "periodOfRecord": "User-selected date range",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
+     "verification": "download documented",
+     "testNote": "Download check 2026-11-05: the station table's 'Download CSV' button saves losc_stations.csv (precipitation, normal and departure per station); the app passes requests to ACIS; not clicked in a browser.",
+     "citations": [
+      "https://lsu.edu/state-climate-office/climate_conditions/losc_climate_explorer.php"
+     ]
+    }
+   ]
+  },
+  {
    "id": "state-agencies-me-maine-climate-office",
    "agency": "State agencies",
    "kind": "data-center",
@@ -9718,7 +9937,8 @@ window.PRECIP_DATA = {
    "removalReason": null,
    "blurb": "The Maine Climate Office, overseen by State Climatologist Sean Birkel, hosts data from the new Maine Mesonet, a University of Maine-led network of research-grade stations planned to reach 26 sites in all 16 counties. Per-station monthly CSV files give 5-minute, hourly and daily values including total precipitation, snow depth, temperature, wind and soil moisture. UMaine Cooperative Extension installs the stations and the New York State Mesonet team at UAlbany collects, processes and quality-controls the data.",
    "holdings": [
-    "Maine Mesonet station data: 5-minute, hourly and daily CSV files per station and month, including total_precip [mm]"
+    "Maine Mesonet station data: 5-minute, hourly and daily CSV files per station and month, including total_precip [mm]",
+    "Statewide daily temperature and precipitation: one CSV per station, from ACIS"
    ],
    "formats": [
     "CSV"
@@ -9730,6 +9950,10 @@ window.PRECIP_DATA = {
     {
      "name": "Maine Mesonet station data",
      "url": "https://mco.umaine.edu/mesonet/"
+    },
+    {
+     "name": "Statewide Daily Temp & Precip (per-station CSV)",
+     "url": "https://mco.umaine.edu/climate/me_daily/"
     }
    ],
    "sources": [
@@ -9776,6 +10000,26 @@ window.PRECIP_DATA = {
       "https://mco.umaine.edu/mesonet/",
       "https://mco.umaine.edu/mesonet/js_v28/mesonet_chart.min.js",
       "https://www.albany.edu/news-center/news/2026-new-york-state-mesonet-collaborates-maine-statewide-weather-network"
+     ]
+    },
+    {
+     "name": "Statewide Daily Temp & Precip (per-station CSV)",
+     "landingUrl": "https://mco.umaine.edu/climate/me_daily/",
+     "accessUrl": "https://mco.umaine.edu/climate/me_daily/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Varies by station (Augusta from 1948-06-01)",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "No header row; columns appear to be max temp, min temp, mean temp, precipitation, snowfall, snow depth (not documented). Same data as ACIS.",
+     "verification": "download tested",
+     "testNote": "Download check 2026-11-05: the chart's 'Download CSV data' opens a ready-made file per station; https://mco.umaine.edu/climate/me_daily/csv_acis/USW00014605.csv (Augusta) returned daily rows 1948 to 2026-11-03.",
+     "citations": [
+      "https://mco.umaine.edu/climate/me_daily/"
      ]
     }
    ]
@@ -10681,10 +10925,12 @@ window.PRECIP_DATA = {
    "holdings": [
     "MNgage/HIDEN station precipitation retrieval (daily and monthly, by target location, multi-day totals, county annual reports)",
     "Gridded monthly precipitation database (10-km grid nodes)",
-    "Cooperative Stream Gaging precipitation downloads (daily, by site)"
+    "Cooperative Stream Gaging precipitation downloads (daily, by site)",
+    "Daily Data: NWS and CoCoRaHS station data from ACIS, CSV or Excel"
    ],
    "formats": [
     "CSV",
+    "Excel",
     "HTML"
    ],
    "volumeTB": null,
@@ -10702,6 +10948,10 @@ window.PRECIP_DATA = {
     {
      "name": "Cooperative Stream Gaging data download",
      "url": "https://webapps.dnr.state.mn.us/csg/api/v1/download"
+    },
+    {
+     "name": "DNR Daily Data (NWS and CoCoRaHS stations)",
+     "url": "https://www.dnr.state.mn.us/climate/historical/daily-data.html"
     }
    ],
    "sources": [
@@ -10794,6 +11044,27 @@ window.PRECIP_DATA = {
       "https://www.dnr.state.mn.us/waters/csg/index.html",
       "https://webapps.dnr.state.mn.us/csg/api/v1/sites",
       "https://maps.dnr.state.mn.us/ewr/csg/lib/config.js"
+     ]
+    },
+    {
+     "name": "DNR Daily Data (NWS and CoCoRaHS stations)",
+     "landingUrl": "https://www.dnr.state.mn.us/climate/historical/daily-data.html",
+     "accessUrl": "https://www.dnr.state.mn.us/climate/historical/daily-data.html",
+     "formats": [
+      "CSV",
+      "Excel"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Varies by station",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
+     "verification": "download documented",
+     "testNote": "Download check 2026-11-05: the table has CSV and Excel buttons and the page text says to use them; it queries data.rcc-acis.org/StnData; not clicked in a browser.",
+     "citations": [
+      "https://www.dnr.state.mn.us/climate/historical/daily-data.html"
      ]
     }
    ]
@@ -11863,7 +12134,8 @@ window.PRECIP_DATA = {
    "removalReason": null,
    "blurb": "The state climate office at Rutgers runs the NJ Weather Network. It combines its own mesonet of about 70 stations, polled every 5 minutes, with stations from ASOS (NWS), RWIS (NJDOT), RAWS and USGS, and some stations in nearby states. Its Tabular Data viewer exports 5-minute, hourly, daily and monthly precipitation by station.",
    "holdings": [
-    "NJ Weather Network Tabular Data viewer: 5-minute, hourly, daily and monthly station data, including precipitation, with CSV export"
+    "NJ Weather Network Tabular Data viewer: 5-minute, hourly, daily and monthly station data, including precipitation, with CSV export",
+    "Monthly station data: JSON files from ACIS for 58 stations"
    ],
    "formats": [
     "CSV",
@@ -11876,6 +12148,10 @@ window.PRECIP_DATA = {
     {
      "name": "NJ Weather Network Tabular Data",
      "url": "https://climate.rutgers.edu/data"
+    },
+    {
+     "name": "Monthly Station Data (JSON files)",
+     "url": "https://climate.rutgers.edu/inc/data/monthlydata/manifest.json"
     }
    ],
    "sources": [
@@ -11927,6 +12203,27 @@ window.PRECIP_DATA = {
       "https://climate.rutgers.edu/data",
       "https://climate.rutgers.edu/export/njwxnet-elements.csv",
       "https://climate.rutgers.edu/njwxnet"
+     ]
+    },
+    {
+     "name": "Monthly Station Data (JSON files)",
+     "landingUrl": "https://climate.rutgers.edu/monthly-data",
+     "accessUrl": "https://climate.rutgers.edu/inc/data/monthlydata/manifest.json",
+     "formats": [
+      "JSON"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "monthly; seasonal; annual",
+     "periodOfRecord": "Varies by station (Caldwell monthly precipitation from 1999)",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Files are ACIS StnData output saved by the NJ State Climate Office; names follow mly_summ_/sly_summ_/yly_summ_<element>_<station>.json.",
+     "verification": "download tested",
+     "testNote": "Download check 2026-11-05: the page has no download button, but its JSON files open directly; manifest.json lists 58 stations and https://climate.rutgers.edu/inc/data/monthlydata/mly_summ_pcpn_KCDW.json returned Caldwell monthly precipitation.",
+     "citations": [
+      "https://climate.rutgers.edu/monthly-data",
+      "https://climate.rutgers.edu/inc/data/monthlydata/manifest.json"
      ]
     }
    ]
@@ -12021,7 +12318,8 @@ window.PRECIP_DATA = {
    "removalReason": null,
    "blurb": "The NM Climate Center at New Mexico State University, home of the state climatologist, runs ZiaMet. This statewide mesonet has operated since 1985 and measures surface weather and soil conditions. Each station page has a public form that returns daily data, including rain, as a CSV file or table. NMSU collects the observations itself.",
    "holdings": [
-    "ZiaMet station daily data (air temperature, humidity, wind, rain, solar radiation) by date range, as CSV, table or plots"
+    "ZiaMet station daily data (air temperature, humidity, wind, rain, solar radiation) by date range, as CSV, table or plots",
+    "grACIS: daily COOP data from ACIS with growing degree days and reference ET, CSV"
    ],
    "formats": [
     "CSV"
@@ -12033,6 +12331,10 @@ window.PRECIP_DATA = {
     {
      "name": "ZiaMet station data request",
      "url": "https://weather.nmsu.edu/ziamet/"
+    },
+    {
+     "name": "NMSU grACIS (daily COOP data with GDD and reference ET)",
+     "url": "https://weather.nmsu.edu/products/gracis/station/data/"
     }
    ],
    "sources": [
@@ -12075,6 +12377,27 @@ window.PRECIP_DATA = {
       "https://weather.nmsu.edu/ziamet/station/sfwx/dly/raaasc/",
       "https://weather.nmsu.edu/about/",
       "https://weather.nmsu.edu/ziamet/"
+     ]
+    },
+    {
+     "name": "NMSU grACIS (daily COOP data with GDD and reference ET)",
+     "landingUrl": "https://weather.nmsu.edu/products/",
+     "accessUrl": "https://weather.nmsu.edu/products/gracis/station/data/",
+     "formats": [
+      "CSV"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Varies by station",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
+     "verification": "download tested",
+     "testNote": "Download check 2026-11-05: a request with output=csv for station 23050 1, 2026-10-01 to 2026-10-05, returned acis_data.csv with a Precipitation column.",
+     "citations": [
+      "https://weather.nmsu.edu/products/",
+      "https://weather.nmsu.edu/products/gracis/station/data/"
      ]
     }
    ]
@@ -15410,6 +15733,78 @@ window.PRECIP_DATA = {
       "https://wisconet.wisc.edu/api/v1/fields/",
       "https://pypi.org/project/wiscopy/",
       "https://wisconet.wisc.edu/"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "state-agencies-wi-state-climatology-office",
+   "agency": "State agencies",
+   "kind": "data-center",
+   "name": "Wisconsin State Climatology Office",
+   "fullName": "Wisconsin State Climatology Office",
+   "host": "University of Wisconsin-Madison",
+   "location": "Wisconsin",
+   "discipline": "State climate office daily station data (from ACIS)",
+   "topics": [
+    "gauges"
+   ],
+   "relevance": "primary",
+   "removalReason": null,
+   "blurb": "Wisconsin's state climatology office at UW-Madison loads each station's full daily record (temperature, precipitation, snow) into a table that can be saved as CSV, Excel or PDF. The data come from ACIS.",
+   "holdings": [
+    "Daily Climate Data by Location (CSV, Excel, PDF)"
+   ],
+   "formats": [
+    "CSV",
+    "Excel",
+    "PDF"
+   ],
+   "volumeTB": null,
+   "filesM": null,
+   "datasets": null,
+   "endpoints": [
+    {
+     "name": "Daily Climate Data by Location",
+     "url": "https://climatology.nelson.wisc.edu/wisconsin-historic-climate-data/daily-climate-data-by-location/"
+    }
+   ],
+   "sources": [
+    {
+     "label": "AASC: Wisconsin State Climatology Office",
+     "url": "https://stateclimate.org/state/wisconsin/"
+    },
+    {
+     "label": "Wisconsin State Climatology Office",
+     "url": "https://climatology.nelson.wisc.edu/"
+    }
+   ],
+   "state": "Wisconsin",
+   "stateCodes": [
+    "WI"
+   ],
+   "orgType": "state climatology office (university-hosted)",
+   "datasetDetails": [
+    {
+     "name": "Daily Climate Data by Location",
+     "landingUrl": "https://climatology.nelson.wisc.edu/wisconsin-historic-climate-data/daily-climate-data-by-location/",
+     "accessUrl": "https://climatology.nelson.wisc.edu/wisconsin-historic-climate-data/daily-climate-data-by-location/",
+     "formats": [
+      "CSV",
+      "Excel",
+      "PDF"
+     ],
+     "dataType": "station observations",
+     "temporalResolution": "daily",
+     "periodOfRecord": "Full station record (varies by station)",
+     "coverage": "statewide",
+     "originalCollector": "ACIS backend: NOAA NWS Cooperative Observer and other stations in ACIS (Regional Climate Centers)",
+     "access": "Free, no account",
+     "qualityNotes": "Same data as the Regional Climate Centers' ACIS tools; quality control as in ACIS.",
+     "verification": "download documented",
+     "testNote": "Download check 2026-11-05: daily-station-data.js loads the station's full record from data.rcc-acis.org/StnData into a table with CSV, Excel, PDF and Print buttons; not clicked in a browser.",
+     "citations": [
+      "https://climatology.nelson.wisc.edu/wisconsin-historic-climate-data/daily-climate-data-by-location/"
      ]
     }
    ]
